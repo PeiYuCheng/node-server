@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="58px" viewBox="0 0 26 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>4 - Ketchup (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="4---Ketchup-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M23.869,58 L2.131,58 C0.954,58 0,57.046 0,55.869 L0,12.621 C0,11.726 0.726,11 1.621,11 L24.379,11 C25.274,11 26,11.726 26,12.621 L26,55.869 C26,57.046 25.046,58 23.869,58" id="Fill-2262" fill="#ED7161" sketch:type="MSShapeGroup"></path>
+            <path d="M19,11 L7,11 L11.615,0 L14.385,0 L19,11" id="Fill-2263" fill="#D13834" sketch:type="MSShapeGroup"></path>
+            <path d="M0,17 L26,17 M5,11 L5,17 M10,11 L10,17 M15,11 L15,17 M21,11 L21,17" id="Stroke-2264" stroke="#D75A4A" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M23,36 C23,41.523 18.523,46 13,46 C7.477,46 3,41.523 3,36 C3,30.477 7.477,26 13,26 C18.523,26 23,30.477 23,36" id="Fill-2265" fill="#D13834" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

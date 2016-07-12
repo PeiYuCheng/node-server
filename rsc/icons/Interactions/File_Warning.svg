@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>556 - File Warning (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="556---File-Warning-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M45,14 L31,0 L0,0 L0,58 L45,58 L45,14" id="Fill-1746" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M10,23 L35,23 C35.552,23 36,22.553 36,22 C36,21.448 35.552,21 35,21 L10,21 C9.448,21 9,21.448 9,22 C9,22.553 9.448,23 10,23" id="Fill-1747" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M10,15 L20,15 C20.552,15 21,14.553 21,14 C21,13.448 20.552,13 20,13 L10,13 C9.448,13 9,13.448 9,14 C9,14.553 9.448,15 10,15" id="Fill-1748" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M35,29 L10,29 C9.448,29 9,29.447 9,30 C9,30.553 9.448,31 10,31 L35,31 C35.552,31 36,30.553 36,30 C36,29.447 35.552,29 35,29" id="Fill-1749" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M35,37 L10,37 C9.448,37 9,37.448 9,38 C9,38.553 9.448,39 10,39 L35,39 C35.552,39 36,38.553 36,38 C36,37.448 35.552,37 35,37" id="Fill-1750" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M35,45 L10,45 C9.448,45 9,45.448 9,46 C9,46.553 9.448,47 10,47 L35,47 C35.552,47 36,46.553 36,46 C36,45.448 35.552,45 35,45" id="Fill-1751" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M31,0 L31,14 L45,14 L31,0" id="Fill-1752" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M56.761,58 L33.07,58 C32.115,58 31.52,56.964 32.001,56.139 L43.846,35.833 C44.324,35.014 45.507,35.014 45.984,35.833 L57.83,56.139 C58.311,56.964 57.716,58 56.761,58" id="Fill-1780" fill="#F0C41A" sketch:type="MSShapeGroup"></path>
+            <path d="M45,51 C44.448,51 44,50.552 44,50 L44,42 C44,41.448 44.448,41 45,41 C45.552,41 46,41.448 46,42 L46,50 C46,50.552 45.552,51 45,51" id="Fill-1781" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M45,55 C44.74,55 44.48,54.89 44.29,54.71 C44.11,54.52 44,54.26 44,54 C44,53.74 44.11,53.48 44.29,53.29 C44.67,52.92 45.33,52.92 45.71,53.29 C45.89,53.48 46,53.74 46,54 C46,54.26 45.89,54.52 45.71,54.71 C45.52,54.89 45.27,55 45,55" id="Fill-1782" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="58px" viewBox="0 0 52 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>174 - Chair (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="174---Chair-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M16.853,33.708 L36.418,45.023 M35.147,33.708 L15.582,45.023" id="Stroke-316" stroke="#9E6C53" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M50.342,12 C46.042,12 42.051,9.937 39.405,6.548 C36.295,2.562 31.447,0 26,0 C20.553,0 15.705,2.562 12.595,6.548 C9.949,9.937 5.958,12 1.658,12 C0.742,12 0,12.742 0,13.657 L0,14 C0,14.549 0.442,15.009 0.991,15 C1.547,14.991 2,15.444 2,16 C2,25.941 10.059,34 20,34 L32,34 C41.941,34 50,25.941 50,16 C50,15.452 50.44,14.993 50.987,15 C51.545,15.007 52,14.556 52,14 L52,13.657 C52,12.742 51.258,12 50.342,12" id="Fill-1204" fill="#F8E7A1" sketch:type="MSShapeGroup"></path>
+            <path d="M38.873,32.634 C37.69,33.124 36.441,33.479 35.147,33.708 L37.761,56.974 C37.945,57.583 38.507,58 39.143,58 L40.125,58 C41.094,58 41.788,57.064 41.507,56.136 L38.873,32.634" id="Fill-1205" fill="#F8B563" sketch:type="MSShapeGroup"></path>
+            <path d="M13.127,32.634 L10.493,56.136 C10.212,57.064 10.906,58 11.875,58 L12.857,58 C13.493,58 14.055,57.583 14.239,56.974 L16.853,33.708 C15.559,33.479 14.31,33.124 13.127,32.634" id="Fill-1206" fill="#F8B563" sketch:type="MSShapeGroup"></path>
+            <path d="M40.139,11.475 C40.343,16.388 38.741,31.652 10.236,27.363 C12.863,29.624 16.271,31 20,31 L32,31 C40.271,31 47,24.271 47,16 C47,15.546 47.075,15.109 47.215,14.702 C44.643,14.208 42.231,13.098 40.139,11.475" id="Fill-3717" fill="#E2D28F" sketch:type="MSShapeGroup"></path>
+            <path d="M14.379,11.416 L15.11,11.26 C22.948,9.58 31.052,9.58 38.89,11.26 L39.621,11.416 C40.425,11.588 41,12.3 41,13.122 L41,14.553 C41,15.664 39.976,16.492 38.89,16.26 C31.052,14.58 22.948,14.58 15.11,16.26 C14.024,16.492 13,15.664 13,14.553 L13,13.122 C13,12.3 13.575,11.588 14.379,11.416" id="Fill-3720" fill="#FCF0BE" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

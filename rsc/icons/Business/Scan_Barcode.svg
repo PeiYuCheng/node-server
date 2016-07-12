@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="51px" viewBox="0 0 60 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>48 - Scan Barcode (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="48---Scan-Barcode-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+            <path d="M5,26 L5,43 M55,26 L55,43 M9,26 L9,35 M12,26 L12,35 M17,26 L17,35 M20,26 L20,35 M23,26 L23,35 M29,26 L29,35 M34,26 L34,35 M37,26 L37,35 M42,26 L42,35 M45,26 L45,35 M51,26 L51,35 M5,6 L5,20 M55,6 L55,20 M9,6 L9,20 M12,6 L12,20 M17,6 L17,20 M20,6 L20,20 M23,6 L23,20 M29,6 L29,20 M34,6 L34,20 M37,6 L37,20 M42,6 L42,20 M45,6 L45,20 M51,6 L51,20 M9,41 L9,40 M12,41 L12,40 M15,41 L15,40 M18,41 L18,40 M21,41 L21,40 M24,41 L24,40 M27,41 L27,40 M30,41 L30,40 M33,41 L33,40 M36,41 L36,40 M39,41 L39,40 M42,41 L42,40 M45,41 L45,40 M48,41 L48,40 M51,41 L51,40" id="Stroke-1373" stroke="#D1D4D1" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M1,43 L1,49 L8,49 M53,49 L59,49 L59,43 M59,6 L59,0 L52,0 M7,0 L1,0 L1,6" id="Stroke-1374" stroke="#8697CB" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M59,24 L1,24 C0.448,24 0,23.553 0,23 C0,22.447 0.448,22 1,22 L59,22 C59.552,22 60,22.447 60,23 C60,23.553 59.552,24 59,24" id="Fill-1375" fill="#D75A4A" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

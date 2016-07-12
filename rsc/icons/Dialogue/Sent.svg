@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="54px" viewBox="0 0 56 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>92 - Sent (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="92---Sent-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M39,32 L39,39 L17,39 L17,32 L0.052,32 C0.024,32 0,32.023 0,32.052 L0,51.616 C0,52.932 1.068,54 2.384,54 L53.616,54 C54.933,54 56,52.932 56,51.616 L56,32.052 C56,32.023 55.976,32 55.948,32 L39,32" id="Fill-130" fill="#25AE88" sketch:type="MSShapeGroup"></path>
+            <path d="M46,17 L10,17 L0.019,31.952 C0.01,31.975 0.027,32 0.051,32 L17,32 L17,39 L39,39 L39,32 L55.949,32 C55.973,32 55.99,31.975 55.981,31.952 L46,17" id="Fill-131" fill="#199172" sketch:type="MSShapeGroup"></path>
+            <path d="M36.707,9.293 L28.708,1.294 C28.707,1.293 28.707,1.293 28.706,1.292 L28,0.586 L27.294,1.292 L27.292,1.294 L19.293,9.293 C18.902,9.684 18.902,10.316 19.293,10.707 C19.684,11.098 20.316,11.098 20.707,10.707 L27,4.414 L27,32 C27,32.552 27.447,33 28,33 C28.553,33 29,32.552 29,32 L29,4.414 L35.293,10.707 C35.488,10.902 35.744,11 36,11 C36.256,11 36.512,10.902 36.707,10.707 C37.098,10.316 37.098,9.684 36.707,9.293" id="Fill-133" fill="#A4E869" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="55px" viewBox="0 0 54 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>184 - Refresh To Do List (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="184---Refresh-To-Do-List-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M43.636,52 L8.364,52 C3.745,52 0,48.256 0,43.637 L0,8.364 C0,3.745 3.745,0 8.364,0 L43.636,0 C48.255,0 52,3.745 52,8.364 L52,43.637 C52,48.256 48.255,52 43.636,52" id="Fill-1773" fill="#3ABCA7" sketch:type="MSShapeGroup"></path>
+            <path d="M26,13 L44,13 M26,27 L44,27 M26,41 L44,41 M18.929,8.001 L12.071,16 L7.5,12.572 M18.929,22 L12.071,30 L7.5,26.571 M18.929,37 L12.071,44.999 L7.5,41.57" id="Stroke-1774" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M54,42.5 C54,49.404 48.404,55 41.5,55 C34.596,55 29,49.404 29,42.5 C29,35.596 34.596,30 41.5,30 C48.404,30 54,35.596 54,42.5" id="Fill-1907" fill="#B1D3F0" sketch:type="MSShapeGroup"></path>
+            <path d="M41.5,32 C36.782,32 32.62,35.182 31.379,39.738 C31.233,40.27 31.548,40.82 32.081,40.965 C32.609,41.108 33.163,40.796 33.309,40.263 C34.313,36.575 37.682,34 41.5,34 C46.187,34 50,37.813 50,42.5 C50,47.187 46.187,51 41.5,51 C38.135,51 35.122,48.999 33.766,46 L39,46 L39,44 L31,44 L31,52 L33,52 L33,48.636 C34.933,51.31 38.066,53 41.5,53 C47.29,53 52,48.29 52,42.5 C52,36.711 47.29,32 41.5,32" id="Fill-1908" fill="#556080" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

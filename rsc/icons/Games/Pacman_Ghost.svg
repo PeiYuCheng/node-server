@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="57px" viewBox="0 0 44 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>48 - Pacman Ghost (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="48---Pacman-Ghost-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,22 L0,56.047 L5.047,51 L10.873,56.826 L16.699,51 L22.5,56.801 L28.301,51 L34.127,56.826 L39.953,51 L44,55.047 L44,22 C44,9.85 34.15,0 22,0 C9.85,0 0,9.85 0,22" id="Fill-50" fill="#4482C3" sketch:type="MSShapeGroup"></path>
+            <path d="M30,37 C29.665,37 29.353,36.833 29.168,36.555 L26,31.803 L22.832,36.555 C22.461,37.111 21.539,37.111 21.168,36.555 L18,31.803 L14.832,36.555 C14.461,37.111 13.539,37.111 13.168,36.555 L9.168,30.555 C8.862,30.095 8.986,29.474 9.445,29.168 C9.904,28.861 10.524,28.986 10.832,29.445 L14,34.197 L17.168,29.445 C17.539,28.889 18.461,28.889 18.832,29.445 L22,34.197 L25.168,29.445 C25.539,28.889 26.461,28.889 26.832,29.445 L30,34.197 L33.168,29.445 C33.474,28.986 34.094,28.861 34.555,29.168 C35.014,29.474 35.138,30.095 34.832,30.555 L30.832,36.555 C30.646,36.833 30.334,37 30,37" id="Fill-87" fill="#35638C" sketch:type="MSShapeGroup"></path>
+            <path d="M20,19 C20,21.209 18.209,23 16,23 C13.791,23 12,21.209 12,19 C12,16.791 13.791,15 16,15 C18.209,15 20,16.791 20,19" id="Fill-145" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M33,19 C33,21.209 31.209,23 29,23 C26.791,23 25,21.209 25,19 C25,16.791 26.791,15 29,15 C31.209,15 33,16.791 33,19" id="Fill-146" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M18,18 C18,18.552 17.552,19 17,19 C16.448,19 16,18.552 16,18 C16,17.448 16.448,17 17,17 C17.552,17 18,17.448 18,18" id="Fill-147" fill="#35638C" sketch:type="MSShapeGroup"></path>
+            <path d="M30,20 C30,20.552 29.552,21 29,21 C28.448,21 28,20.552 28,20 C28,19.448 28.448,19 29,19 C29.552,19 30,19.448 30,20" id="Fill-148" fill="#35638C" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

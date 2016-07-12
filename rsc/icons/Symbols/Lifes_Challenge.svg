@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>65 - Life's Challenge (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="65---Life's-Challenge-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M53,0 L53,16 L47,16 L47,0 L42,0 L42,16 L37,16 L37,0 L32,0 L32,16 L27,16 L27,0 L22,0 L22,16 L16,16 L16,0 L11,0 L11,16 L5,16 L5,0 L0,0 L0,27 L8,27 L8,20 L50,20 L50,27 L58,27 L58,0 L53,0" id="Fill-203" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M50,31 L50,38 L8,38 L8,31 L0,31 L0,58 L5,58 L5,42 L11,42 L11,58 L16,58 L16,42 L21,42 L21,58 L26,58 L26,42 L31,42 L31,58 L36,58 L36,42 L42,42 L42,58 L47,58 L47,42 L53,42 L53,58 L58,58 L58,31 L50,31" id="Fill-204" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M8,20 L50,20 L50,38 L8,38 L8,20 Z" id="Fill-257" fill="#559A92" sketch:type="MSShapeGroup"></path>
+            <path d="M8,20 L8,21.088 L47.462,38 L50,38 L50,36.912 L10.538,20 L8,20" id="Fill-258" fill="#D9B24C" sketch:type="MSShapeGroup"></path>
+            <path d="M8,36.912 L8,38 L10.538,38 L50,21.088 L50,20 L47.462,20 L8,36.912" id="Fill-259" fill="#D9B24C" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

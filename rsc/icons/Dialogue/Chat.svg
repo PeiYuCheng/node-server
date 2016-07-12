@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="52px" viewBox="0 0 58 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>90 - Chat (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="90---Chat-(Flat)" sketch:type="MSLayerGroup" fill="#25B99A">
+            <path d="M53,0 L5,0 C2.278,0 0,2.277 0,5 L0,38 C0,40.722 2.278,43 5,43 L32.681,43 L28.242,37.839 C27.882,37.42 27.929,36.789 28.348,36.429 C28.767,36.069 29.398,36.117 29.758,36.535 L34.757,42.346 L43,51.414 L43,43 L53,43 C55.723,43 58,40.722 58,38 L58,5 C58,2.277 55.723,0 53,0" id="Fill-45" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

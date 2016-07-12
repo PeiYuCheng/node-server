@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="42px" height="51px" viewBox="0 0 42 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>34 - Skeleton (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="34---Skeleton-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M38,47 L4,47 C1.8,47 0,45.2 0,43 L0,10 C0,7.8 1.8,6 4,6 L38,6 C40.2,6 42,7.8 42,10 L42,43 C42,45.2 40.2,47 38,47" id="Fill-70" fill="#DACBBE" sketch:type="MSShapeGroup"></path>
+            <path d="M18,23 C18,26.314 15.314,29 12,29 C8.686,29 6,26.314 6,23 C6,19.686 8.686,17 12,17 C15.314,17 18,19.686 18,23 L18,23 Z" id="Fill-201" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M18,23 C18,26.314 15.314,29 12,29 C8.686,29 6,26.314 6,23 C6,19.686 8.686,17 12,17 C15.314,17 18,19.686 18,23 L18,23 Z" id="Stroke-202" stroke="#AF8066" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M36,23 C36,26.314 33.314,29 30,29 C26.686,29 24,26.314 24,23 C24,19.686 26.686,17 30,17 C33.314,17 36,19.686 36,23 L36,23 Z" id="Fill-203" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M36,23 C36,26.314 33.314,29 30,29 C26.686,29 24,26.314 24,23 C24,19.686 26.686,17 30,17 C33.314,17 36,19.686 36,23 L36,23 Z" id="Stroke-204" stroke="#AF8066" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M32.695,51 L9.305,51 C8.584,51 8,50.415 8,49.695 L8,47 L34,47 L34,49.695 C34,50.415 33.416,51 32.695,51" id="Fill-261" fill="#C1B4AA" sketch:type="MSShapeGroup"></path>
+            <path d="M15.305,0 L26.695,0 C27.416,0 28,0.585 28,1.305 L28,6 L14,6 L14,1.305 C14,0.585 14.584,0 15.305,0" id="Fill-262" fill="#C1B4AA" sketch:type="MSShapeGroup"></path>
+            <path d="M11,38 L31,38 M13,36 L13,40 M17,36 L17,40 M21,36 L21,40 M25,36 L25,40 M29,36 L29,40" id="Stroke-349" stroke="#AF8066" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+
+@font-face {
+    font-family: 'thin';
+    src: url(/rsc/fonts/thin.woff) format('woff');
+    font-weight: normal; font-style: normal;
+}
+@font-face {
+    font-family: 'light';
+    src: url(/rsc/fonts/light.woff) format('woff');
+    font-weight: normal; font-style: normal;
+}
+@font-face {
+    font-family: 'regular';
+    src: url(/rsc/fonts/regular.woff) format('woff');
+    font-weight: normal; font-style: normal;
+
+}
+@font-face {
+    font-family: 'bold';
+    src: url(/rsc/fonts/bold.woff) format('woff');
+    font-weight: normal; font-style: normal;
+}

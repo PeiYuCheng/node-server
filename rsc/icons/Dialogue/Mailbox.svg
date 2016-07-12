@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="56px" viewBox="0 0 53 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>19 - Mailbox (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="19---Mailbox-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M45.864,14 L9,14 L9,14.025 C8.834,14.016 8.669,14 8.5,14 C3.806,14 0,17.806 0,22.5 L0,44 L53,44 L53,21.136 C53,17.195 49.805,14 45.864,14" id="Fill-20" fill="#2A55C5" sketch:type="MSShapeGroup"></path>
+            <path d="M23,44 L31,44 L31,56 L23,56 L23,44 Z" id="Fill-21" fill="#BE6E41" sketch:type="MSShapeGroup"></path>
+            <path d="M28,47 L31,47 M28,50 L31,50 M28,53 L31,53" id="Stroke-22" stroke="#6C4126" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M17,44 L0,44 L0,22.5 C0,17.806 3.806,14 8.5,14 C13.194,14 17,17.806 17,22.5 L17,44" id="Fill-135" fill="#167CD8" sketch:type="MSShapeGroup"></path>
+            <path d="M29,30 L29,30 C26.791,30 25,28.209 25,26 C25,23.791 26.791,22 29,22 C31.209,22 33,23.791 33,26 C33,28.209 31.209,30 29,30" id="Fill-136" fill="#38454F" sketch:type="MSShapeGroup"></path>
+            <path d="M41,8 L29,8 L29,0 L41,0 L38,4 L41,8" id="Fill-137" fill="#DD342E" sketch:type="MSShapeGroup"></path>
+            <path d="M29,26 L29,0" id="Stroke-138" stroke="#38454F" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

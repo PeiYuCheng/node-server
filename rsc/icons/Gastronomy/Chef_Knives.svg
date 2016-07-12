@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="55px" viewBox="0 0 58 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>2 - Chef Knives (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="2---Chef-Knives-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,5 L5,5 L5,13 L0,13 L0,5 Z" id="Fill-2272" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M11,5 L26,5 L26,13 L11,13 L11,5 Z" id="Fill-2273" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M32,5 L46,5 L46,13 L32,13 L32,5 Z" id="Fill-2274" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M52,5 L58,5 L58,13 L52,13 L52,5 Z" id="Fill-2275" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M11,18 L5,18 L5,3 C5,1.343 6.343,0 8,0 C9.657,0 11,1.343 11,3 L11,18" id="Fill-2276" fill="#A46F3E" sketch:type="MSShapeGroup"></path>
+            <path d="M32,19 L26,19 L26,3 C26,1.343 27.343,0 29,0 C30.657,0 32,1.343 32,3 L32,19" id="Fill-2277" fill="#A46F3E" sketch:type="MSShapeGroup"></path>
+            <path d="M16.454,51 L3,51 L3,18 L16.454,18 C17.308,18 18,18.692 18,19.546 L18,49.453 C18,50.307 17.308,51 16.454,51" id="Fill-2278" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M30,54 L30,54 L26,49 L26,19 L36,19 L36,19.768 C36,37.417 33.959,44.763 30,54" id="Fill-2279" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path id="Stroke-2280" stroke="#000000" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M29,28 C28.447,28 28,27.553 28,27 L28,22 C28,21.447 28.447,21 29,21 C29.553,21 30,21.447 30,22 L30,27 C30,27.553 29.553,28 29,28" id="Fill-2281" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M6,28 C5.447,28 5,27.553 5,27 L5,22 C5,21.447 5.447,21 6,21 C6.553,21 7,21.447 7,22 L7,27 C7,27.553 6.553,28 6,28" id="Fill-2282" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M52,18 L46,18 L46,3 C46,1.343 47.343,0 49,0 C50.657,0 52,1.343 52,3 L52,18" id="Fill-2283" fill="#A46F3E" sketch:type="MSShapeGroup"></path>
+            <path d="M50,54.602 L50,54.602 C46.748,50.05 45,44.595 45,39 L45,18 L54,18 C54,24.491 50,28.102 50,54.602" id="Fill-2284" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M13,18 L15,18 L15,51 L13,51 L13,18 Z" id="Fill-2289" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M48,28 C47.447,28 47,27.553 47,27 L47,22 C47,21.447 47.447,21 48,21 C48.553,21 49,21.447 49,22 L49,27 C49,27.553 48.553,28 48,28" id="Fill-2295" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

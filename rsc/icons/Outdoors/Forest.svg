@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="56px" viewBox="0 0 53 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>5 - Forest (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="5---Forest-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M35,32.489 C35,39.669 29.18,45.489 22,45.489 C14.82,45.489 9,39.669 9,32.489 C9,25.31 14.82,19.489 22,19.489 C29.18,19.489 35,25.31 35,32.489" id="Fill-499" fill="#88C057" sketch:type="MSShapeGroup"></path>
+            <path d="M39.649,6 L33.027,25.627 C34.27,27.621 35,29.967 35,32.489 C35,37.128 32.563,41.189 28.906,43.489 L52.299,43.489 L39.649,6" id="Fill-500" fill="#659C35" sketch:type="MSShapeGroup"></path>
+            <path d="M15.375,6.25 C16.819,6.25 18,7.544 18,9.125 C18,10.706 16.819,12 15.375,12 L3.75,12 C1.679,12 0,10.161 0,7.893 C0,5.625 1.679,3.786 3.75,3.786 C3.75,3.786 5.484,0.5 9.75,0.5 C12.422,0.5 15,1.989 15,6.25 L15.375,6.25" id="Fill-501" fill="#C6E3F8" sketch:type="MSShapeGroup"></path>
+            <path d="M19,37.489 L22,40.489 M25,37.489 L22,40.489 M22,40.489 L22,54.489 M37,37.489 L40,40.489 M43,37.489 L40,40.489 M40,40.489 L40,54.489" id="Stroke-733" stroke="#6C4126" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="56px" viewBox="0 0 54 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>276 - Pricetag Warning (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="276---Pricetag-Warning-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M43.472,0 L30.294,0 L5.848,24.367 L29.582,48.152 L54,23.815 L54,10.504 L43.472,0 L43.472,0 Z M42.015,14.87 C40.394,14.87 39.08,13.556 39.08,11.935 C39.08,10.314 40.394,9 42.015,9 C43.636,9 44.95,10.314 44.95,11.935 C44.95,13.556 43.636,14.87 42.015,14.87 L42.015,14.87 Z" id="Fill-939" fill="#E7D4B1" sketch:type="MSShapeGroup"></path>
+            <path d="M5.877,24.354 L0,30.215 L23.734,54 L29.637,48.113 L5.877,24.354" id="Fill-940" fill="#D3C2A4" sketch:type="MSShapeGroup"></path>
+            <path d="M42.015,9 C43.636,9 44.95,10.314 44.95,11.935 C44.95,13.556 43.636,14.87 42.015,14.87 C40.394,14.87 39.08,13.556 39.08,11.935 C39.08,10.314 40.394,9 42.015,9 M42.015,5 C38.191,5 35.08,8.111 35.08,11.935 C35.08,15.76 38.191,18.87 42.015,18.87 C45.839,18.87 48.95,15.76 48.95,11.935 C48.95,8.111 45.839,5 42.015,5" id="Fill-941" fill="#CCB292" sketch:type="MSShapeGroup"></path>
+            <path d="M47.761,56 L24.07,56 C23.115,56 22.52,54.964 23.001,54.139 L34.846,33.833 C35.324,33.014 36.507,33.014 36.984,33.833 L48.83,54.139 C49.311,54.964 48.716,56 47.761,56" id="Fill-2550" fill="#F0C41A" sketch:type="MSShapeGroup"></path>
+            <path d="M36,49 C35.448,49 35,48.552 35,48 L35,40 C35,39.448 35.448,39 36,39 C36.552,39 37,39.448 37,40 L37,48 C37,48.552 36.552,49 36,49" id="Fill-2551" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M36,53 C35.74,53 35.48,52.89 35.29,52.71 C35.11,52.52 35,52.26 35,52 C35,51.74 35.11,51.48 35.29,51.29 C35.67,50.92 36.33,50.92 36.71,51.29 C36.89,51.48 37,51.74 37,52 C37,52.26 36.89,52.52 36.71,52.71 C36.52,52.89 36.27,53 36,53" id="Fill-2552" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

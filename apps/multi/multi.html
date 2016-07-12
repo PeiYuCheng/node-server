@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name = "viewport" content = "width=device-width, initial-scale=.8, minimum-scale=.8, maximum-scale=.8, user-scalable=no"> 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link type="text/css" rel="stylesheet" href="../../rsc/css/shared.css">
+</head>
+
+<body onload='main();' style='overflow:hidden; border: 0px; background-color:#707070' leftmargin=0 topmargin=0>
+
+<div id='BDY'></div> 
+<div id='PLOT' onclick='centerTouch()' style='overflow: hidden; transition: all .5s; opacity: 0; position: absolute; border: 5px solid #808080; background-color:rgba(255,255,255,1); z-index: 1000; left: 50%; top: 100%; width: 0px; height: 0px; box-shadow: 0px 0px 30px rgba(0,0,0,.5); border-radius: 100%;'></div>
+</body>
+<script>
+function memset(mkey, mvalue) {localStorage.setItem((childOf == "" ? "" : childOf + "-") + mkey, mvalue);}
+function memget(mkey) {return localStorage.getItem((childOf == "" ? "" : childOf + "-") + mkey);}
+var childOf = "";
+var userid = memget("userid");
+if(userid == null || userid == "null") userid = "";
+</script>
+<script src="multi.js"></script>
+<script src="../../bin/shared/devices.js"></script>
+<script>
+
+var ROOT_URL = (document.location.origin ? document.location.origin : window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port: '')) + '/';
+//var resize_action = localStorage.getItem("multi_layout");
+var resize_action = memget("multi_layout");
+if(resize_action === null) resize_action = "resize_wall_2()";
+
+var izoom = '<svg style="padding-left: 13px; padding-top: 13px; width: 34px; height: 34px;" fill="#707070" version="1.1" width="640" height="640" viewBox="0 0 640 640"><path d="M592 224c-8.837 0-16-7.164-16-16v-64c0-8.822-7.178-16-16-16h-64c-8.837 0-16-7.164-16-16s7.163-16 16-16h64c26.468 0 48 21.533 48 48v64c0 8.836-7.163 16-16 16z"></path><path d="M16 224c-8.836 0-16-7.164-16-16v-64c0-26.467 21.533-48 48-48h64c8.836 0 16 7.164 16 16s-7.164 16-16 16h-64c-8.822 0-16 7.178-16 16v64c0 8.836-7.164 16-16 16z"></path><path d="M112 576h-64c-26.467 0-48-21.532-48-48v-64c0-8.837 7.164-16 16-16s16 7.163 16 16v64c0 8.822 7.178 16 16 16h64c8.836 0 16 7.163 16 16s-7.164 16-16 16z"></path><path d="M560 576h-64c-8.837 0-16-7.163-16-16s7.163-16 16-16h64c8.822 0 16-7.178 16-16v-64c0-8.837 7.163-16 16-16s16 7.163 16 16v64c0 26.468-21.532 48-48 48z"></path></svg>';
+var iunzoom = '<svg style="padding-left: 13px; padding-top: 13px; width: 34px; height: 34px;" fill="#D32B4F" version="1.1" width="640" height="640" viewBox="0 0 640 640"><path d="M464 288h-64c-26.468 0-48-21.532-48-48v-64c0-8.836 7.163-16 16-16s16 7.164 16 16v64c0 8.822 7.178 16 16 16h64c8.837 0 16 7.163 16 16s-7.163 16-16 16z"></path><path d="M208 288h-64c-8.836 0-16-7.163-16-16s7.164-16 16-16h64c8.822 0 16-7.178 16-16v-64c0-8.836 7.164-16 16-16s16 7.164 16 16v64c0 26.468-21.533 48-48 48z"></path><path d="M368 512c-8.837 0-16-7.163-16-16v-64c0-26.468 21.532-48 48-48h64c8.837 0 16 7.163 16 16s-7.163 16-16 16h-64c-8.822 0-16 7.178-16 16v64c0 8.837-7.163 16-16 16z"></path><path d="M240 512c-8.836 0-16-7.163-16-16v-64c0-8.822-7.178-16-16-16h-64c-8.836 0-16-7.163-16-16s7.164-16 16-16h64c26.467 0 48 21.532 48 48v64c0 8.837-7.164 16-16 16z"></path></svg>';
+var ihome = '<svg style="padding-left: 13px; padding-top: 13px; width: 34px; height: 34px;" fill="#D32B4F" version="1.1" width="640" height="640" viewBox="0 0 640 640"><path d="M15.995 384c-3.828 0-7.668-1.365-10.729-4.136-6.553-5.928-7.059-16.046-1.13-22.599l282.53-312.27c8.783-9.707 20.622-15.054 33.334-15.054 0 0 0 0 0 0 12.712 0 24.55 5.346 33.333 15.054l282.531 312.271c5.929 6.553 5.423 16.671-1.13 22.599-6.553 5.93-16.671 5.423-22.599-1.13l-282.531-312.272c-2.639-2.917-6.050-4.522-9.604-4.522s-6.966 1.606-9.605 4.523l-282.53 312.27c-3.158 3.492-7.506 5.266-11.87 5.266z"></path><path d="M496 640h-352c-26.467 0-48-21.533-48-48v-256c0-8.837 7.164-16 16-16s16 7.163 16 16v256c0 8.822 7.178 16 16 16h352c8.822 0 16-7.178 16-16v-256c0-8.837 7.163-16 16-16s16 7.163 16 16v256c0 26.467-21.533 48-48 48z"></path></svg>';
+var isize = '<svg style="padding-left: 13px; padding-top: 13px; width: 34px; height: 34px;" fill="#707070" version="1.1" width="640" height="640" viewBox="0 0 640 640"><path d="M251.314 228.686l-196.686-196.686h121.372c8.836 0 16-7.164 16-16s-7.164-16-16-16h-160c-8.836 0-16 7.164-16 16v160c0 8.836 7.164 16 16 16s16-7.164 16-16v-121.372l196.686 196.686c3.125 3.124 7.219 4.686 11.314 4.686s8.189-1.562 11.314-4.686c6.248-6.249 6.248-16.379 0-22.628z"></path><path d="M624 0h-160c-8.837 0-16 7.164-16 16s7.163 16 16 16h121.373l-196.685 196.686c-6.25 6.249-6.25 16.379 0 22.628 3.123 3.124 7.217 4.686 11.312 4.686s8.189-1.562 11.312-4.686l196.688-196.687v121.373c0 8.836 7.163 16 16 16s16-7.164 16-16v-160c0-8.836-7.163-16-16-16z"></path><path d="M251.314 388.688c-6.249-6.248-16.379-6.248-22.628 0l-196.686 196.685v-121.373c0-8.837-7.164-16-16-16s-16 7.163-16 16v160c0 8.837 7.164 16 16 16h160c8.836 0 16-7.163 16-16s-7.164-16-16-16h-121.373l196.687-196.688c6.248-6.247 6.248-16.377 0-22.624z"></path><path d="M624 448c-8.837 0-16 7.163-16 16v121.373l-196.688-196.685c-6.247-6.248-16.379-6.248-22.627 0-6.248 6.247-6.248 16.379 0 22.627l196.688 196.685h-121.373c-8.837 0-16 7.163-16 16s7.163 16 16 16h160c8.837 0 16-7.163 16-16v-160c0-8.837-7.163-16-16-16z"></path></svg>'
+var iunsize = '<svg style="padding-left: 13px; padding-top: 13px; width: 34px; height: 34px;" fill="#D32B4F" version="1.1" width="640" height="640" viewBox="0 0 640 640"><path d="M240 96c-8.836 0-16 7.164-16 16v89.372l-196.686-196.686c-6.249-6.248-16.379-6.248-22.628 0-6.248 6.249-6.248 16.379 0 22.628l196.686 196.686h-89.372c-8.836 0-16 7.164-16 16s7.164 16 16 16h128c8.836 0 16-7.164 16-16v-128c0-8.836-7.164-16-16-16z"></path><path d="M635.312 4.686c-6.248-6.248-16.379-6.248-22.627 0l-196.685 196.687v-89.373c0-8.836-7.163-16-16-16s-16 7.164-16 16v128c0 8.836 7.163 16 16 16h128c8.837 0 16-7.164 16-16s-7.163-16-16-16h-89.373l196.685-196.686c6.25-6.249 6.25-16.379 0-22.628z"></path><path d="M240 384h-128c-8.836 0-16 7.163-16 16s7.164 16 16 16h89.373l-196.687 196.688c-6.248 6.247-6.248 16.379 0 22.627 3.125 3.123 7.219 4.685 11.314 4.685s8.189-1.562 11.314-4.688l196.686-196.685v89.373c0 8.837 7.164 16 16 16s16-7.163 16-16v-128c0-8.837-7.164-16-16-16z"></path><path d="M635.312 612.688l-196.685-196.688h89.373c8.837 0 16-7.163 16-16s-7.163-16-16-16h-128c-8.837 0-16 7.163-16 16v128c0 8.837 7.163 16 16 16s16-7.163 16-16v-89.373l196.688 196.688c3.123 3.123 7.217 4.685 11.312 4.685s8.189-1.562 11.312-4.688c6.25-6.247 6.25-16.377 0-22.624z"></path></svg>'
+
+// up
+var a_up = '<svg style="width: 15px; height: 15px;" version="1.1" width="640" height="640" fill="#A0A0A0" viewBox="0 0 640 640"><path d="M292.687 20.687l-192 192c-6.248 6.248-6.248 16.379 0 22.627s16.379 6.249 22.628 0l164.685-164.686v521.372c0 8.836 7.163 16 16 16s16-7.164 16-16v-521.372l164.687 164.685c6.248 6.249 16.379 6.249 22.627 0 3.124-3.124 4.686-7.218 4.686-11.313s-1.562-8.189-4.687-11.313l-192-192c-6.248-6.249-16.378-6.249-22.626 0z"></path></svg>';
+// down
+var a_down = '<svg style="width: 15px; height: 15px;" version="1.1" width="640" height="640" fill="#A0A0A0" viewBox="0 0 640 640"><path d="M315.313 619.313l192-192c6.248-6.248 6.248-16.379 0-22.627s-16.379-6.249-22.628 0l-164.685 164.686v-521.372c0-8.836-7.163-16-16-16s-16 7.164-16 16v521.372l-164.687-164.685c-6.248-6.249-16.379-6.249-22.627 0-3.124 3.124-4.686 7.218-4.686 11.313s1.562 8.189 4.687 11.313l192 192c6.248 6.249 16.378 6.249 22.626 0z"></path></svg>';
+// left
+var a_left = '<svg style="width: 15px; height: 15px;" version="1.1" width="640" height="640" fill="#A0A0A0" viewBox="0 0 640 640"><path d="M20.687 324.687l192-192c6.248-6.248 16.379-6.248 22.627 0s6.249 16.379 0 22.628l-164.686 164.685h521.372c8.836 0 16 7.163 16 16s-7.164 16-16 16h-521.372l164.685 164.687c6.249 6.248 6.249 16.379 0 22.627-3.124 3.124-7.218 4.686-11.313 4.686s-8.189-1.562-11.313-4.687l-192-192c-6.249-6.248-6.249-16.378 0-22.626z"></path></svg>';
+// right
+var a_right = '<svg style="width: 15px; height: 15px;" version="1.1" width="640" height="640" fill="#A0A0A0" viewBox="0 0 640 640"><path d="M619.313 324.687l-192-192c-6.248-6.248-16.379-6.248-22.627 0s-6.249 16.379 0 22.628l164.686 164.685h-521.372c-8.836 0-16 7.163-16 16s7.164 16 16 16h521.372l-164.685 164.687c-6.249 6.248-6.249 16.379 0 22.627 3.124 3.124 7.218 4.686 11.313 4.686s8.189-1.562 11.313-4.687l192-192c6.249-6.248 6.249-16.378 0-22.626z"></path></svg>';
+
+
+var dlo = String(document.location);
+var fast = (dlo.indexOf("?fast") > -1 || dlo.indexOf("?fast") > -1);
+
+if(dlo.indexOf("?trace") > -1 || dlo.indexOf("?fps") > -1) {
+	var H = "<canvas id='CTRACE' style='z-index: 1000; width: 200px; height: 130px; position:absolute; pointer-events: none; opacity: .85;'></canvas>"
+	document.body.insertAdjacentHTML("afterend", H);
+	var ctx = DOM("CTRACE").getContext("2d");
+	ctx.fillStyle = "#bababa"
+	ctx.fillRect(0,0,200,100); 
+	
+	var min = 9999;
+	var lastTime = 0
+	var fpsAdd = 0;
+	var fpsCount = 0;
+	var fpsCounter = 0;
+	var fpsTotal = 0;
+	function repeatOften() {
+			deltaTime = Date.now() - lastTime ;
+			lastTime = Date.now();
+
+			var fps = ~~(1000 / (deltaTime / 1))
+			if(fps < min) {
+				min = fps
+			}
+			
+			ctx.drawImage(DOM("CTRACE"),1,0,199,100,0,0,199,100);
+			ctx.fillStyle = "#ba4a3a";
+			ctx.fillRect(199,0,1,100); 
+			ctx.fillStyle = "#408040";
+			ctx.fillRect(199,0,1,fps > 100 ? 100 : fps < 0 ? 0 : fps); 
+			
+			
+			fpsCounter++;
+			fpsTotal += fps;
+			if(fpsCounter == 20) {
+				
+				ctx.fillStyle = "#706560"
+				ctx.fillRect(0,100,200,30); 
+				ctx.font = "20px bold";
+				ctx.fillStyle = "#FFFFFF";
+				ctx.fillText(~~(fpsTotal / fpsCounter) + " fps",10,120);
+				ctx.fillText(min + " min",100,120);
+				
+				fpsTotal = 0;
+				fpsCounter = 0;
+				min = 9999;
+			}
+			
+			requestAnimationFrame(repeatOften);
+			//setTimeout(function() { requestAnimationFrame(repeatOften); }, 100)
+	}
+	repeatOften();
+}
+
+function main() {
+	var H = "";
+	
+	// Frames
+	H += of("MI", -10);
+	H += of("RE", 18);
+	H += of("FA", -10);
+	H += of("DO", 18);
+
+	// Layer
+	H += "<div id='OVERLAY' onclick='overlay_click()' style=' "+(fast ? "" : "transition: all 1s;") + " display: none; opacity: 0; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background-color:rgba(180,180,180,.5);'></div>";
+	
+	// Fullscreen
+	H += "<div id='FS' onclick='fullscreen_switch()' style='opacity:0; transition: all 1s; position: absolute; left: 50%; top:50%; z-index: 20000; margin-left: -32px; margin-top: -32px; border-radius: 100%; width: 60px; height: 60px; background-color:#FFFFFF; border: 2px solid #707070; box-shadow: 0px 0px 15px rgba(0,0,0,.5);'>"+izoom+"</div>";
+	
+	H += "<div id='HM' onclick='document.location = \"/\";' style='opacity:0; transition: all 1s; position: absolute; left: 50%; top:50%; z-index: 20000; margin-left: -32px; margin-top: -32px; border-radius: 100%; width: 60px; height: 60px; background-color:#FFFFFF; border: 2px solid #707070; box-shadow: 0px 0px 15px rgba(0,0,0,.5);'>"+ihome+"</div>";
+	
+	// Zoom
+	H += "<div id='FDO' onclick='FDO_click();' style='opacity:0; transition: all .3s; position: absolute; left: 50%; top:50%; z-index: 1000; margin-left: -32px; margin-top: -32px; border-radius: 100%; width: 60px; height: 60px; background-color:#FFFFFF; border: 2px solid #707070; box-shadow: 0px 0px 15px rgba(0,0,0,.5)'>"+isize+"</div>";
+	H += "<div id='FRE' onclick='FRE_click();' style='opacity:0; transition: all .35s; position: absolute; left: 50%; top:50%; z-index: 1000; margin-left: -32px; margin-top: -32px; border-radius: 100%; width: 60px; height: 60px; background-color:#FFFFFF; border: 2px solid #707070; box-shadow: 0px 0px 15px rgba(0,0,0,.5)'>"+isize+"</div>";
+	H += "<div id='FMI' onclick='FMI_click();' style='opacity:0; transition: all .4s; position: absolute; left: 50%; top:50%; z-index: 1000; margin-left: -32px; margin-top: -32px; border-radius: 100%; width: 60px; height: 60px; background-color:#FFFFFF; border: 2px solid #707070; box-shadow: 0px 0px 15px rgba(0,0,0,.5)'>"+isize+"</div>";
+	H += "<div id='FFA' onclick='FFA_click();' style='opacity:0; transition: all .45s; position: absolute; left: 50%; top:50%; z-index: 1000; margin-left: -32px; margin-top: -32px; border-radius: 100%; width: 60px; height: 60px; background-color:#FFFFFF; border: 2px solid #707070; box-shadow: 0px 0px 15px rgba(0,0,0,.5)'>"+isize+"</div>";
+	
+	DOM("BDY").innerHTML = H;
+	
+
+	if(isAndroid) {
+		DOM("FS").style.display = "none";
+	}
+	
+	window.setTimeout(function() { 
+		DOM("FDO").style.opacity = 1;
+		DOM("FRE").style.opacity = 1;
+		DOM("FMI").style.opacity = 1;
+		DOM("FFA").style.opacity = 1;
+		DOM("FS").style.opacity = 1;
+		DOM("HM").style.opacity = 1;
+		
+		DOM("DO").style.opacity = 1;
+		DOM("RE").style.opacity = 1;
+		DOM("MI").style.opacity = 1;
+		DOM("FA").style.opacity = 1;
+		DOM("PLOT").style.opacity = 1;
+		resize();
+	},1000);
+}
+
+
+var scr = { w: 0, h: 0 }; // Document size
+function resize(ignorePlotIntensity) {
+	scr = {
+		w: window.innerWidth,
+		h: window.innerHeight
+	}
+	eval(resize_action);
+
+	if(!plot_open || pageZoomActive != "") {
+		DOM("PLOT").style.width = "60px";
+		DOM("PLOT").style.height = "60px";
+		DOM("PLOT").style.marginLeft = "-30px";
+		DOM("PLOT").style.marginTop = "-30px";
+		DOM("PLOT").style.borderRadius = "100%";
+	} else {
+		DOM("PLOT").style.width = "320px";
+		DOM("PLOT").style.height = "240px";
+		DOM("PLOT").style.marginLeft = "-160px";
+		DOM("PLOT").style.marginTop = "-120px";
+		DOM("PLOT").style.borderRadius = "0%";
+	}
+	refresh_plot();
+	
+	DOM("DO").style.zIndex = 0;
+	DOM("RE").style.zIndex = 0;
+	DOM("MI").style.zIndex = 0;
+	DOM("FA").style.zIndex = 0;
+	if(pageZoomActive != "") {
+		DOM(pageZoomActive).style.zIndex = 100;
+		hideAllZoomDots();
+		if(resize_action == "resize_table_4()" && (pageZoomActive == "FA" || pageZoomActive == "DO")) {
+			DOM(pageZoomActive).style.transform = "rotate(180deg) ";
+			DOM(pageZoomActive).style.left = scr.w + "px";
+			DOM(pageZoomActive).style.top = scr.h + "px";
+			DOM("F" + pageZoomActive).style.left = "90%";
+			DOM("F" + pageZoomActive).style.top = "90%";
+		} else {
+			DOM(pageZoomActive).style.transform = "rotate(0deg) ";
+			DOM(pageZoomActive).style.left = "0px";
+			DOM(pageZoomActive).style.top = "0px";
+			DOM("F" + pageZoomActive).style.left = "10%";
+			DOM("F" + pageZoomActive).style.top = "10%";
+		}
+		DOM(pageZoomActive).style.width = ~~(scr.w) + "px";
+		DOM(pageZoomActive).style.height = ~~(scr.h) + "px";
+		
+		DOM("FS").style.left = "50%";
+		DOM("FS").style.top = "-200px";
+		
+		DOM("HM").style.left = "50%";
+		DOM("HM").style.top = "-200px";
+
+		DOM("PLOT").style.left = "50%";
+		DOM("PLOT").style.top = "150%";
+	}
+	
+}
+
+function rotate() {
+	setTimeout(function() {
+		window.scroll(0, 1);
+		resize();
+	}, 500);	
+}
+window.addEventListener('orientationchange', rotate);
+window.addEventListener('resize', resize);
+
+function DOMexists(strx) {return(document.getElementById(strx) !== null)}
+function DOM(s) { return document.getElementById(s); }
+function str_replace(str, src, tar) { return(str.split(src).join(tar)); }
+
+var ctr = 0;
+function of(id, angle) {
+	var F = "";
+	F += "<iframe id='"+ id +"' style=' "+(fast ? "" : "transition: all 1s;") + "opacity: 1; transform: rotate("+angle+"deg);  webkit-transform: rotate("+angle+"deg); position: absolute; left: 0%; top: 200%; width: 100%; height: 100%; border: 0px;' ";
+	F += " src='"+ROOT_URL+"'>";
+	F += "</iframe>";
+	return(F);
+}
+
+function overlay_click() {
+	plot_open = true; // To make sure it will be closed
+	centerTouch();
+}
+
+var plot_open = false;
+function centerTouch() {
+	plot_open = !plot_open;
+	resize(true);
+
+	if(plot_open) {
+		DOM("OVERLAY").style.display = "block";
+		window.setTimeout(function() {
+			DOM("OVERLAY").style.opacity = 1;
+		}, 100);
+	} else {
+		DOM("OVERLAY").style.opacity = 0;
+		window.setTimeout(function() {
+			if(!plot_open) {
+				DOM("OVERLAY").style.display = "none";
+			}
+		}, 1000);
+	}
+}
+
+function refresh_plot() {
+	var H = "";
+	if(plot_open) {
+		
+		// wall 2
+		color = (resize_action == "resize_wall_2()" ? "#F6C3BA" : "#E0E0E0");
+		pem = (resize_action == "resize_wall_2()" ? "#C28378" : "#A0A0A0");
+		H += "<table onclick='T1_click(); event.stopPropagation();' id='T1' cellspacing=0 cellpadding=0 style='opacity: 1; text-align: center; transition: all 1s; background-color:"+color+"; position: absolute; left: 30px; top: 30px; border: 1px solid "+pem+"; width: 100px; height: 56px;'><tr><td style='width:50px; height: 56px;'>"+a_down+"</td><td style='border-left: 1px solid "+pem+"; width:50px; height: 56px;'>"+a_down+"</td></tr></table>";
+		
+		// table 2
+		color = (resize_action == "resize_table_2()" ? "#F6C3BA" : "#E0E0E0");
+		pem = (resize_action == "resize_table_2()" ? "#C28378" : "#A0A0A0");
+		H += "<table onclick='T2_click(); event.stopPropagation();' id='T2' cellspacing=0 cellpadding=0 style='opacity: 1;  text-align: center;transition: all 1s; background-color:"+color+"; position: absolute; left: 30px; top: 150px; border: 1px solid "+pem+"; width: 100px; height: 56px;'><tr><td style='width:50px; height: 56px;'>"+a_left+"</td><td style='border-left: 1px solid "+pem+"; width:50px; height: 56px;'>"+a_right+"</td></tr></table>";
+		
+		// wall 4
+		color = (resize_action == "resize_wall_4()" ? "#F6C3BA" : "#E0E0E0");
+		pem = (resize_action == "resize_wall_4()" ? "#C28378" : "#A0A0A0");
+		H += "<table onclick='T3_click(); event.stopPropagation();' id='T3' cellspacing=0 cellpadding=0 style='opacity: 1;  text-align: center; text-align: center;transition: all 1s; background-color:"+color+"; position: absolute; left: 190px; top: 30px; border: 1px solid "+pem+"; width: 100px; height: 56px;'><tr><td style='width:50px; height: 28px;'>"+a_down+"</td><td style='border-left: 1px solid "+pem+"; width:50px; height: 28px;'>"+a_down+"</td></tr><tr><td style='width:50px; height: 28px; border-top: 1px solid "+pem+";;'>"+a_down+"</td><td style='border-left: 1px solid #A0A0A0; border-top: 1px solid "+pem+";; width:50px; height: 28px;'>"+a_down+"</td></tr></table>";
+		
+		// table 4
+		color = (resize_action == "resize_table_4()" ? "#F6C3BA" : "#E0E0E0");
+		pem = (resize_action == "resize_table_4()" ? "#C28378" : "#A0A0A0");
+		
+		H += "<table onclick='T4_click(); event.stopPropagation();' id='T4' cellspacing=0 cellpadding=0 style='opacity: 1;  text-align: center;transition: all 1s; background-color:"+color+"; position: absolute; left: 190px; top: 150px; border: 1px solid "+pem+"; width: 100px; height: 56px;;'><tr><td style='width:50px; height: 28px;'>"+a_up+"</td><td style='border-left: 1px solid "+pem+"; width:50px; height: 28px;'>"+a_up+"</td></tr><tr><td style='width:50px; height: 28px; border-top: 1px solid "+pem+";;'>"+a_down+"</td><td style='border-left: 1px solid #A0A0A0; border-top: 1px solid "+pem+";; width:50px; height: 28px;'>"+a_down+"</td></tr></table>";
+	}
+	DOM("PLOT").innerHTML = H;
+}
+
+function T1_click() {
+	resize_action = "resize_wall_2()";
+	//localStorage.setItem("multi_layout", resize_action);
+	memset("multi_layout", resize_action);
+	resize();
+}
+
+function T2_click() {
+	resize_action = "resize_table_2()";
+	//localStorage.setItem("multi_layout", resize_action);
+	memset("multi_layout", resize_action);
+	resize();
+}
+
+function T3_click() {
+	resize_action = "resize_wall_4()";
+	//localStorage.setItem("multi_layout", resize_action);
+	memset("multi_layout", resize_action);
+	resize();
+}
+
+function T4_click() {
+	resize_action = "resize_table_4()";
+	//localStorage.setItem("multi_layout", resize_action);
+	memset("multi_layout", resize_action);
+	resize();
+}
+
+
+</script>
+
+
+
+</html>

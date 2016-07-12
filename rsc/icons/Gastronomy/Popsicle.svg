@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="56px" viewBox="0 0 36 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>64 - Popsicle (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="64---Popsicle-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)">
+            <path d="M17,28 C16.32,28 15.654,27.94 15,27.846 L15,53.276 C15,54.377 15.9,55.277 17,55.277 C18.1,55.277 19,54.377 19,53.276 L19,27.846 C18.346,27.94 17.68,28 17,28" id="Fill-1301" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M30.846,12.035 C29.889,5.236 24.063,0 17,0 C9.937,0 4.111,5.236 3.154,12.035 C1.392,12.213 0,13.694 0,15.5 C0,17.425 1.575,19 3.5,19 L3.936,19 C5.95,24.259 11.032,28 17,28 C22.968,28 28.05,24.259 30.064,19 L30.5,19 C32.425,19 34,17.425 34,15.5 C34,13.694 32.608,12.213 30.846,12.035" id="Fill-1302" fill="#FBD490" sketch:type="MSShapeGroup"></path>
+            <path d="M7,19 L3.5,19 C1.575,19 0,17.425 0,15.5 C0,13.575 1.575,12 3.5,12 L6,12 M29,12 L30.5,12 C32.425,12 34,13.575 34,15.5 C34,17.425 32.425,19 30.5,19 L26,19" id="Stroke-1303" stroke="#EEAF4B" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M19,48 L15,50 L15,48 L19,46 L19,48" id="Fill-1304" fill="#ED3F32" sketch:type="MSShapeGroup"></path>
+            <path d="M19,46 L15,48 L15,46 L19,44 L19,46" id="Fill-1305" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M19,44 L15,46 L15,44 L19,42 L19,44" id="Fill-1306" fill="#ED3F32" sketch:type="MSShapeGroup"></path>
+            <path d="M19,42 L15,44 L15,42 L19,40 L19,42" id="Fill-1307" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M19,40 L15,42 L15,40 L19,38 L19,40" id="Fill-1308" fill="#ED3F32" sketch:type="MSShapeGroup"></path>
+            <path d="M19,38 L15,40 L15,38 L19,36 L19,38" id="Fill-1309" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M19,36 L15,38 L15,36 L19,34 L19,36" id="Fill-1310" fill="#ED3F32" sketch:type="MSShapeGroup"></path>
+            <path d="M19,34 L15,36 L15,34 L19,32 L19,34" id="Fill-1311" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

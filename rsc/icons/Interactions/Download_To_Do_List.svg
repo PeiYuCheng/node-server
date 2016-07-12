@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="55px" viewBox="0 0 54 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>186 - Download To Do List (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="186---Download-To-Do-List-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M43.636,52 L8.364,52 C3.745,52 0,48.256 0,43.637 L0,8.364 C0,3.745 3.745,0 8.364,0 L43.636,0 C48.255,0 52,3.745 52,8.364 L52,43.637 C52,48.256 48.255,52 43.636,52" id="Fill-1769" fill="#3ABCA7" sketch:type="MSShapeGroup"></path>
+            <path d="M26,13 L44,13 M26,27 L44,27 M26,41 L44,41 M18.929,8.001 L12.071,16 L7.5,12.572 M18.929,22 L12.071,30 L7.5,26.571 M18.929,37 L12.071,44.999 L7.5,41.57" id="Stroke-1770" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M32,33 L54,33 L54,55 L32,55 L32,33 Z" id="Fill-1888" fill="#21AE5E" sketch:type="MSShapeGroup"></path>
+            <path d="M42,34.586 L44,34.586 L44,50.586 L42,50.586 L42,34.586 Z" id="Fill-1889" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M43,52 L36,45.293 L37.476,43.879 L43,49.172 L48.524,43.879 L50,45.293 L43,52" id="Fill-1890" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

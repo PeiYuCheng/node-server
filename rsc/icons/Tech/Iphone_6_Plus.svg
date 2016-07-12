@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="58px" viewBox="0 0 34 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>69 - Iphone 6 Plus (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="69---Iphone-6-Plus-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)">
+            <path d="M30.038,58 L3.962,58 C2.326,58 1,56.674 1,55.038 L1,2.962 C1,1.326 2.326,0 3.962,0 L30.038,0 C31.674,0 33,1.326 33,2.962 L33,55.038 C33,56.674 31.674,58 30.038,58" id="Fill-921" fill="#38454F" sketch:type="MSShapeGroup"></path>
+            <path d="M1,6 L33,6 L33,50 L1,50 L1,6 Z" id="Fill-1367" fill="#ECBA16" sketch:type="MSShapeGroup"></path>
+            <path d="M21,2 L16,2 C15.448,2 15,2.447 15,3 C15,3.553 15.448,4 16,4 L21,4 C21.552,4 22,3.553 22,3 C22,2.447 21.552,2 21,2" id="Fill-1368" fill="#273035" sketch:type="MSShapeGroup"></path>
+            <path d="M13,2 L12,2 C11.448,2 11,2.447 11,3 C11,3.553 11.448,4 12,4 L13,4 C13.552,4 14,3.553 14,3 C14,2.447 13.552,2 13,2" id="Fill-1369" fill="#273035" sketch:type="MSShapeGroup"></path>
+            <path d="M0,9 L0,10 M0,13 L0,14 M0,17 L0,18" id="Stroke-1370" stroke="#CBD4D8" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M20,54 C20,55.657 18.657,57 17,57 C15.343,57 14,55.657 14,54 C14,52.343 15.343,51 17,51 C18.657,51 20,52.343 20,54" id="Fill-1371" fill="#273035" sketch:type="MSShapeGroup"></path>
+            <path d="M27.849,46 L24.151,46 C24.068,46 24,45.932 24,45.849 L24,42.151 C24,42.068 24.068,42 24.151,42 L27.849,42 C27.932,42 28,42.068 28,42.151 L28,45.849 C28,45.932 27.932,46 27.849,46" id="Fill-1372" fill="#DD342E" sketch:type="MSShapeGroup"></path>
+            <path d="M18.849,46 L15.151,46 C15.068,46 15,45.932 15,45.849 L15,42.151 C15,42.068 15.068,42 15.151,42 L18.849,42 C18.932,42 19,42.068 19,42.151 L19,45.849 C19,45.932 18.932,46 18.849,46" id="Fill-1373" fill="#3083C9" sketch:type="MSShapeGroup"></path>
+            <path d="M9.849,46 L6.151,46 C6.068,46 6,45.932 6,45.849 L6,42.151 C6,42.068 6.068,42 6.151,42 L9.849,42 C9.932,42 10,42.068 10,42.151 L10,45.849 C10,45.932 9.932,46 9.849,46" id="Fill-1374" fill="#A4E869" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

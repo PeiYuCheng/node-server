@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="52px" viewBox="0 0 60 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>173 - Add Folder to Cloud (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="173---Add-Folder-to-Cloud-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M25,7 L20,0 L0,0 L0,51 L58,51 L58,14 L30,14 L25,7" id="Fill-1715" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M30,14 L58,14 L58,7 L25,7 L30,14" id="Fill-1716" fill="#3D4451" sketch:type="MSShapeGroup"></path>
+            <path d="M54.434,41.111 C54.384,37.176 51.272,34 47.435,34 C44.868,34 42.629,35.426 41.41,37.546 C40.989,37.405 40.54,37.326 40.073,37.326 C38.01,37.326 36.288,38.819 35.865,40.81 C34.111,41.676 32.89,43.517 32.89,45.641 C32.89,48.588 35.233,51 38.097,51 L48.872,51 C48.933,51 48.992,50.993 49.052,50.991 C49.112,50.993 49.171,51 49.231,51 L53.541,51 C56.208,51 58.39,48.755 58.39,46.011 C58.39,43.581 56.678,41.546 54.434,41.111 L54.434,41.111 Z" id="Fill-1875" fill="#4AA0D8" sketch:type="MSShapeGroup"></path>
+            <path d="M54.434,41.111 C54.384,37.176 51.272,34 47.435,34 C44.868,34 42.629,35.426 41.41,37.546 C40.989,37.405 40.54,37.326 40.073,37.326 C38.01,37.326 36.288,38.819 35.865,40.81 C34.111,41.676 32.89,43.517 32.89,45.641 C32.89,48.588 35.233,51 38.097,51 L48.872,51 C48.933,51 48.992,50.993 49.052,50.991 C49.112,50.993 49.171,51 49.231,51 L53.541,51 C56.208,51 58.39,48.755 58.39,46.011 C58.39,43.581 56.678,41.546 54.434,41.111 L54.434,41.111 Z" id="Stroke-1876" stroke="#B1D3F0" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

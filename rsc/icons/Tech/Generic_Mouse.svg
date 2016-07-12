@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="59px" viewBox="0 0 36 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>71 - Generic Mouse (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="71---Generic-Mouse-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M2.916,31.656 C3.753,28.666 4.086,25.567 3.981,22.463 C3.817,17.602 2.261,12.091 3.253,8.23 C3.695,5.137 6.139,2.715 9.236,2.302 C16.266,0.529 22.79,0.6 28.764,2.302 C31.861,2.715 34.305,5.137 34.747,8.23 C36.231,14.006 36.43,20.038 35.331,25.9 L34.658,29.488 C35.516,31.966 36,34.666 36,37.5 C36,49.374 27.717,59 17.5,59 C7.283,59 0,52.874 0,41 C0,37.776 2.113,34.523 2.916,31.656" id="Fill-900" fill="#38454F" sketch:type="MSShapeGroup"></path>
+            <path d="M35.331,25.9 L34.658,29.488 C35.516,31.966 36,34.666 36,37.5 C36,40.521 35.459,43.393 34.491,46.001 C22.792,49.958 32.939,31.194 35.42,25.346 C35.388,25.53 35.366,25.716 35.331,25.9" id="Fill-901" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M0.027,40.644 C0.172,37.538 2.143,34.418 2.916,31.656 C3.753,28.666 4.086,25.567 3.981,22.463 C3.979,22.388 3.973,22.31 3.97,22.234 C6.642,31.726 9.82,45.361 0.027,40.644" id="Fill-902" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M19,21 L19,21 C20.1,21 21,20.1 21,19 L21,11 C21,9.9 20.1,9 19,9 C17.9,9 17,9.9 17,11 L17,19 C17,20.1 17.9,21 19,21 L19,21 Z" id="Fill-903" fill="#38454F" sketch:type="MSShapeGroup"></path>
+            <path d="M19,21 L19,21 C20.1,21 21,20.1 21,19 L21,11 C21,9.9 20.1,9 19,9 C17.9,9 17,9.9 17,11 L17,19 C17,20.1 17.9,21 19,21 L19,21 Z" id="Stroke-904" stroke="#546A79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M19,9 L19,1" id="Fill-905" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M19,9 L19,1" id="Stroke-906" stroke="#546A79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M19,21 L19,27" id="Stroke-907" stroke="#546A79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M14,44 C14,46.209 15.791,48 18,48 C20.209,48 22,46.209 22,44 C22,41.791 20.209,40 18,40 C15.791,40 14,41.791 14,44" id="Fill-908" fill="#839494" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

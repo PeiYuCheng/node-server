@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="57px" viewBox="0 0 50 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>29 - Zinc (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="29---Zinc-(Flat)" sketch:type="MSLayerGroup" fill="#556080">
+            <path d="M25,19 C14.523,19 6,27.523 6,38 C6,48.477 14.523,57 25,57 C35.477,57 44,48.477 44,38 C44,27.523 35.477,19 25,19 L25,19 Z M25,53 C16.716,53 10,46.284 10,38 C10,29.716 16.716,23 25,23 C33.284,23 40,29.716 40,38 C40,46.284 33.284,53 25,53 L25,53 Z" id="Fill-36" sketch:type="MSShapeGroup"></path>
+            <path d="M46.174,25.41 L25.33,6.302 C25.143,6.131 24.857,6.131 24.67,6.302 L3.826,25.41 C3.012,26.156 1.746,26.101 1,25.287 C0.254,24.473 0.309,23.207 1.123,22.461 L24.67,0.877 C24.857,0.705 25.143,0.705 25.33,0.877 L48.877,22.461 C49.691,23.207 49.747,24.473 49,25.287 C48.254,26.101 46.988,26.156 46.174,25.41" id="Fill-37" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

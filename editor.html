@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<title>Ormiboard</title>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name = "viewport" content = "width=device-width, initial-scale=.8, minimum-scale=.8, maximum-scale=.8, user-scalable=no"> 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link type="text/css" rel="stylesheet" href="rsc/css/shared.css?2">
+<link type="text/css" rel="stylesheet" href="rsc/css/editor.css?2">
+<link type="text/css" rel="stylesheet" href="rsc/css/icons.css?2">
+
+</HEAD>
+
+<BODY onload="main()" id='BDY'>
+
+<div class='waitboxBg' id='waitboxBg'><div class='waitbox' id='waitbox'>&nbsp;</div></div>
+
+<div id='ROOT' class='root' style="">
+	<DIV id="EGRID" style='display: none;'></DIV>
+
+	<div id='PICTURE_IMPORT' style='display:none;'></div>
+	<input type="file" accept=".htm, .html, .txt, .pdf, .ppt, .xml" id="fileInput" style='display: none; position: absolute;'>
+	<canvas  inputend="pal_end(inputId);" id='CANVASPAL' class='canvaspal' width=400 height=400></canvas>
+	<div id='SVG_CANVAS' inputstart="ink_start(inputId);" inputchange="ink_add(inputId);" inputend="ink_end(inputId);" class='svgcanvas'></div>
+	<div id='SELECTOR' class='selector_box'></div>
+	<div id='SELECTOR_resize' class='selector_resize' movable="true" inputchange="selector_resize(inputId)"></div>
+
+	<div id='SELNODE_0' name='SELNODE' class='selector_node' movable="true" inputchange="shape_node_move()"></div>
+	<div id='SELNODE_1' name='SELNODE' class='selector_node' movable="true" inputchange="shape_node_move()"></div>
+	<div id='SELNODE_2' name='SELNODE' class='selector_node' movable="true" inputchange="shape_node_move()"></div>
+	<div id='SELNODE_3' name='SELNODE' class='selector_node' movable="true" inputchange="shape_node_move()"></div>
+	<div id='SELNODE_4' name='SELNODE' class='selector_node' movable="true" inputchange="shape_node_move()"></div>
+	<div id='SELNODE_5' name='SELNODE' class='selector_node' movable="true" inputchange="shape_node_move()"></div>
+
+	<svg style='display: none;'><defs><path id="dotst" d="M4,25a29,29 0 1,0 64,0a29,29 0 1,0 -64,0"></path></defs></svg>
+
+	<!--- Main orb -->
+	<div id='dot_tools' class='dotToolsContainer' inputend='dot_refresh(dot_tools)'>
+
+		<!--- Main -->
+		<div orb clickable="true" class='dotRoot' id='dot_main' movable="true" movetarget="dot_tools">
+			<span class='icon icon-dotTools'></span>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_publish'><span class='icon icon-save'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">SAVE</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_settings'><span class='icon icon-more2'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PROPERTIES</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_play' movetarget="dot_tools"><span class='icon icon-presentation'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PLAY</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_plus' movetarget="dot_tools"><span class='icon icon-toolbox'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">EDIT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_page' movetarget="dot_tools"><div class='icon iconText-page'><span id='info_page' style='color:#808080'>1/1</span></div>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PAGE</textpath></text></svg>
+		</div>	
+
+		<!--- PLAY_MODE -->
+		<div orb clickable="true" class='dotItem' id='dot_play_previous'><span class='icon icon-arrow-left'><span></span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PREVIOUS</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_flashlight' movetarget="dot_tools"><span class='icon icon-flashlight'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">SPOTLIGHT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_play_stop' movetarget="dot_tools"><span class='icon icon-cross'><span></span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">STOP</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_play_next'><span class='icon icon-arrow-right'><span></span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">NEXT</textpath></text></svg>
+		</div>
+		
+		
+		<!--- PAGE -->
+		<div orb clickable="true" class='dotItem' id='dot_page_remove' movetarget="dot_tools"><span class='icon icon-trash'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">REMOVE</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_page_previous'><span class='icon icon-arrow-left'><span></span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PREVIOUS</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_page_clone'><span class='icon icon-clone'><span></span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">DUPLICATE</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_page_add'><span class='icon icon-add-slide'><span></span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">NEW PAGE</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_page_next'><span class='icon icon-arrow-right'><span></span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">NEXT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_background' movetarget="dot_tools"><span class='icon icon-background'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">BACKGROUND</textpath></text></svg>
+		</div>
+
+		<!--- Confirm Remove -->
+		<div orb clickable="true" class='dotItem' id='dot_page_remove_now' movetarget="dot_tools"><span class='icon icon-trash' style='color:#FFAAAA'><span></span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst" color="#FFAAAA">CONFIRM</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_page_remove_cancel' movetarget="dot_tools"><span class='icon icon-cross'><span></span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">CANCEL</textpath></text></svg>
+		</div>
+
+		<!--- Add -->
+		<div orb clickable="true" class='dotItem' id='dot_eraser' movetarget="dot_tools"><span class='icon icon-eraser'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">ERASER</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_shapes' movetarget="dot_tools"><span></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">SHAPES</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_text'  movetarget="dot_tools"><span class='icon iconText-typo'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TEXT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_draw' movetarget="dot_tools"><span class='icon icon-pen'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">DRAW</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_clipart' movetarget="dot_tools"><span class='icon icon-clipart'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">CLIPART</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_camera' movetarget="dot_tools"><span class='icon icon-camera'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PICTURE</textpath></text></svg>
+		</div>
+
+		<!--- IMAGE -->
+		<div orb clickable="true" class='dotItem' id='dot_image_sendtoback' movetarget="dot_tools"><span class='icon icon-sendToBack'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO BACK</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_image_bringtofront' movetarget="dot_tools"><span class='icon icon-bringToFront'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO FRONT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_image_action' movetarget="dot_tools"><span class='icon icon-more2'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PROPERTIES</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_image_add' movetarget="dot_tools"><span class='icon icon-plus  flash'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">ADD PICTURE</textpath></text></svg>
+		</div>
+		
+		<!--- CLIPART -->
+		<div orb clickable="true" class='dotItem' id='dot_clipart_sendtoback' movetarget="dot_tools"><span class='icon icon-sendToBack'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO BACK</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_clipart_bringtofront' movetarget="dot_tools"><span class='icon icon-bringToFront'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO FRONT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_clipart_action' movetarget="dot_tools"><span class='icon icon-more2'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PROPERTIES</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_clipart_color' movetarget="dot_tools" style='background-color: #37474F;'><span class='icon'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT' id='label_clipart_color'><textpath startOffset="25%" xlink:href="#dotst">COLOR</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_clipart_symbol' movetarget="dot_tools"><span class='icon icon-clipart_symbol'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT' id='label_clipart_wheel'><textpath startOffset="25%" xlink:href="#dotst">SYMBOLS</textpath></text></svg>
+		</div>		
+		<div orb clickable="true" class='dotItem' id='dot_clipart_object' movetarget="dot_tools"><span class='icon icon-clipart_object'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT' id='label_clipart_wheel'><textpath startOffset="25%" xlink:href="#dotst">OBJECTS</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_clipart_nature' movetarget="dot_tools"><span class='icon icon-clipart_nature'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT' id='label_clipart_wheel'><textpath startOffset="25%" xlink:href="#dotst">NATURE</textpath></text></svg>
+		</div>
+		
+
+		<!--- ABC -->
+		<div orb clickable="true" class='dotItem' id='dot_text_sendtoback' movetarget="dot_tools"><span class='icon icon-sendToBack'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO BACK</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_text_bringtofront' movetarget="dot_tools"><span class='icon icon-bringToFront'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO FRONT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_text_action' movetarget="dot_tools"><span class='icon icon-more2'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PROPERTIES</textpath></text></svg>
+		</div>		
+		<div orb clickable="true" class='dotItem' id='dot_text_add' movetarget="dot_tools"><span class='icon icon-plus flash'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">ADD TEXT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_text_style' movetarget="dot_tools"><span class='icon'>A</span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">STYLE</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_text_align' movetarget="dot_tools"><span class='icon icon-text-align-center'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">ALIGN</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_text_color' movetarget="dot_tools" style='background-color: #37474F;'><span class='icon'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT' id='label_text_color'><textpath startOffset="25%" xlink:href="#dotst">COLOR</textpath></text></svg>
+		</div>
+		
+		<!--- Text styles -->
+		<div orb clickable="true" class='dotItem' id='dot_TEXTSTYLE_0' movetarget="dot_tools">
+			<div class='icon' style='padding-top: 38%; position: absolute; left:0px; right:0px; top:-31px; font-size: 65px; font-family: bold;'>A</div>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_TEXTSTYLE_1' movetarget="dot_tools">
+			<div class='icon' style='padding-top: 38%; position: absolute; left:0px; right:0px; top:-12px; font-size: 36px; font-family: bold;'>A</div>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_TEXTSTYLE_2' movetarget="dot_tools">
+			<div class='icon' style='padding-top: 38%; position: absolute; left:0px; right:0px; top:-10px; font-size: 26px; font-family: bold;'>A</div>
+		</div>		
+		<div orb clickable="true" class='dotItem' id='dot_TEXTSTYLE_3' movetarget="dot_tools">
+			<div class='icon' style='padding-top: 38%; position: absolute; left:0px; right:0px; top:0px; font-size: 20px; font-family: regular;'>A</div>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_TEXTSTYLE_4' movetarget="dot_tools">
+			<div class='icon' style='padding-top: 38%; position: absolute; left:0px; right:0px;top:-8px; font-size: 24px; font-family: light;'>A</div>
+		</div>		
+		<div orb clickable="true" class='dotItem' id='dot_TEXTSTYLE_5' movetarget="dot_tools">
+			<div class='icon' style='padding-top: 38%; position: absolute; left:0px; right:0px;top:-12px; font-size: 34px; font-family: light;'>A</div>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_TEXTSTYLE_6' movetarget="dot_tools">
+			<div class='icon' style='padding-top: 38%; position: absolute; left:0px; right:0px; top:-30px; font-size: 65px; font-family: light;'>A</div>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_TEXTSTYLE_7' movetarget="dot_tools">
+			<div class='icon' style='padding-top: 38%; position: absolute; left:0px; right:0px; top:-42px; font-size: 80px; font-family: thin;'>A</div>
+		</div>
+
+		<!--- Text alignment -->
+		<div orb clickable="true" class='dotItem' id='dot_TEXTALIGN_left'><span class='icon icon-text-align-left'></span></div>
+		<div orb clickable="true" class='dotItem' id='dot_TEXTALIGN_center'><span class='icon icon-text-align-center'></span></div>
+		<div orb clickable="true" class='dotItem' id='dot_TEXTALIGN_right'><span class='icon icon-text-align-right'></span></div>
+		
+		<!--- Shapes -->
+		<div orb clickable="true" class='dotItem' id='dot_shape_6p' movetarget="dot_tools"><span></span></div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_5p' movetarget="dot_tools"><span></span></div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_4p' movetarget="dot_tools"><span></span></div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_3p' movetarget="dot_tools"><span></span></div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_2p' movetarget="dot_tools"><span></span></div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_arrow' movetarget="dot_tools"><span></span></div>
+
+		<!--- Pen -->
+		<div orb clickable="true" class='dotItem' id='dot_pen_sendtoback' movetarget="dot_tools"><span class='icon icon-sendToBack'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO BACK</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_pen_bringtofront' movetarget="dot_tools"><span class='icon icon-bringToFront'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO FRONT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_pen_action' movetarget="dot_tools"><span class='icon icon-more2'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PROPERTIES</textpath></text></svg>
+		</div>		
+		<div orb clickable="true" class='dotItem' id='dot_pen_add' movetarget="dot_tools"><span class='icon icon-plus flash'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">START DRAW</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_pen_line' movetarget="dot_tools"><span id='active_pen_line' style='pointer-events: none;'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">STYLE</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_pen_color' style="background-color: #37474F" movetarget="dot_tools"><span class='icon'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT' id='label_pen_color' style='fill:#37474F;'><textpath startOffset="25%" xlink:href="#dotst">COLOR</textpath></text></svg>
+		</div>
+		
+		<!--- Pen Line -->
+		<div orb clickable="true" class='dotItem' id='dot_PENLINE_0'><span class='icon'>0</span></div>
+		<div orb clickable="true" class='dotItem' id='dot_PENLINE_1'><span class='icon'>1</span></div>
+		<div orb clickable="true" class='dotItem' id='dot_PENLINE_2'><span class='icon'>2</span></div>
+		<div orb clickable="true" class='dotItem' id='dot_PENLINE_3'><span class='icon'>3</span></div>
+		<div orb clickable="true" class='dotItem' id='dot_PENLINE_4'><span class='icon'>4</span></div>
+		
+		<!--- Shape -->
+		<div orb clickable="true" class='dotItem' id='dot_shape_sendtoback' movetarget="dot_tools"><span class='icon icon-sendToBack'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO BACK</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_bringtofront' movetarget="dot_tools"><span class='icon icon-bringToFront'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">TO FRONT</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_action' movetarget="dot_tools"><span class='icon icon-more2'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">PROPERTIES</textpath></text></svg>
+		</div>		
+		<div orb clickable="true" class='dotItem' id='dot_shapeAdd' movetarget="dot_tools"><span class='icon icon-plus flash'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">ADD</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_line' movetarget="dot_tools"><span id='active_shape_line' style='pointer-events: none;'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT'><textpath startOffset="25%" xlink:href="#dotst">STYLE</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_bgcolor' style="background-color: #26C6DA;" movetarget="dot_tools"><span class='icon'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT' id='label_shape_bgcolor'><textpath startOffset="25%" xlink:href="#dotst">FILL</textpath></text></svg>
+		</div>
+		<div orb clickable="true" class='dotItem' id='dot_shape_color' style="background-color: #37474F" movetarget="dot_tools"><span class='icon'></span>
+			<svg class='orb_SVG'><text text-anchor="middle" class='orb_SVGT' id='label_shape_color'><textpath startOffset="25%" xlink:href="#dotst">COLOR</textpath></text></svg>
+		</div>
+		
+		<!--- Shape Line -->
+		<div orb clickable="true" class='dotItem' id='dot_SHAPELINE_0'><span class='icon'> </span></div>
+		<div orb clickable="true" class='dotItem' id='dot_SHAPELINE_1'><span class='icon'> </span></div>
+		<div orb clickable="true" class='dotItem' id='dot_SHAPELINE_2'><span class='icon'> </span></div>
+		<div orb clickable="true" class='dotItem' id='dot_SHAPELINE_3'><span class='icon'> </span></div>
+		<div orb clickable="true" class='dotItem' id='dot_SHAPELINE_4'><span class='icon'> </span></div>
+		<div orb clickable="true" class='dotItem' id='dot_SHAPELINE_5'><span class='icon'> </span></div>
+		<div orb clickable="true" class='dotItem' id='dot_SHAPELINE_6'><span class='icon'> </span></div>
+		
+	</div>
+
+	<div id='flashlight_left' class='flashRects'></div>
+	<div id='flashlight_top' class='flashRects'></div>
+	<div id='flashlight_right' class='flashRects'></div>
+	<div id='flashlight_bottom' class='flashRects'></div>
+	<div id='flashlight_block' class='flashBlock'>
+		<div id='flashcircle' class='flashCircle'>&nbsp;</div>
+	</div>
+
+	<div id='WTEMPLATES' class='wtemplates'></div>
+	<div id='PROPERTIES' movable="true" class='propertiesWindow'>
+
+		<div id='PRO_BT_CLOSE' inputpress='action_dialog_ok()' class="icon-cross propertiesWindowClose"></div>
+		<div id='ADV_CODE_BUTTON' inputpress='devwin_show()' class='propertiesWindowDev' style=''> Developer </div>
+
+		<div id='DOC_TAB' class='propertiesWindowTab'>
+			<div style="padding-bottom: 2px; padding-left: 5px; font-family: regular;">Board Title</div>
+			<input type='text' DEFAULT_BEHAVIOR oninput="propLiveChange('DOC_NAME_IN')" id='DOC_NAME_IN' style='pointer-events: all; width:360px;' class='PROP_INPUT' autocomplete="off" spellcheck="false">
+
+			<div style="padding-top: 10px; padding-bottom: 2px; padding-left: 5px; font-family: regular;">Description</div>
+			<textarea DEFAULT_BEHAVIOR oninput="propLiveChange('DOC_DESC_IN')" id='DOC_DESC_IN' style='pointer-events: all; width:360px; height: 100px;' class='PROP_INPUT' autocomplete="off" spellcheck="false"></textarea>
+
+			<div id='DOC_TAB_BOARDMORE' style='margin-top: 10px; line-height: 36px;'></div>
+			
+			<div id='DOC_TAB_BOTTTOM' class='propertiesWindowTabBottom'></div>
+		</div>
+		
+		<div id='EASY_TAB' style='padding-left: 5px; margin-top: 20px; width: 395px;  pointer-events: none;'>
+			<div style='padding-bottom: 5px; width: auto; padding-left: 5px; font-family: regular;' >Object Name</div>
+			<input type='text' oninput="propLiveChange('ACTION_NAME')" DEFAULT_BEHAVIOR id='ACTION_NAME' style='pointer-events: all; width:240px;' class='PROP_INPUT' autocomplete="off" spellcheck="false">
+			
+			<div style="margin-top: 20px; padding-bottom: 5px; padding-left: 5px; font-family: regular;">Action when click or touch</div>
+			<input type='text' DEFAULT_BEHAVIOR oninput="propLiveChange('ACTION_EASY')" id='ACTION_EASY' style='pointer-events: all; width:360px;' placeholder="URL or slide number" class='PROP_INPUT' autocomplete="off" spellcheck="false">
+			
+			<div id='OBJECT_PARAMS' style='padding-top: 20px; padding-left: 10px; line-height: 36px;'></div>
+			<div id='EASY_TAB_BOTTTOM' style='position: absolute; bottom: 0px; width: 380px; height: 40px; line-height: 40px; border-top: 1px solid #CACACA; color: #A0A0A0; text-align: center;'></div>
+		</div>
+	</div>
+</div>
+
+<div class='icon icon-eraser' id='ERASER_CURSOR' style='display: none; position: absolute; z-index: 100000; color:#FFFFFF; font-size: 30px;  text-shadow:0px 0px 2px #000000;'></div>
+<div id='GLOBAL_E' style="display:none"></div>
+<div id='SESSION_PANEL' class='sess-panel'></div> 
+<div id='SESSION_INFO' class='sess-info' inputpress='session_click()'><div id='SESSION_INFO_TITLE' class='sess-title'></div><div id='SESSION_INFO_ID' class='sess-id'></div></div>
+
+<canvas id='canvas_preview' style='display: none; position: absolute; width:384; height: 216;'></canvas>
+<script>var home = false; homegrid = false;</script>
+<script>document.write("<script src='bin/shared/shared.js?" + Date.now() + "'><"+"/script>");</script>
+<script>
+
+// Generate a session ID
+
+// ?id=id -> Edit id, may not exist on the server
+// ?id=id&template=did&owner=uid -> Load template if id not exists on the server
+// ?id=id&owner=uid -> Edit a document owned by someone else
+
+var pen_enable = false;
+var selection = null;
+var loadFileWhenReady = false;
+var willLoadFileWhenReady = false;
+var templateId = "";
+var templateOwner = ""; // From a template
+var autosave = false;
+if(typeof queryString.autosave !== "undefined") {
+	autosave = true;
+}
+
+if(typeof queryString.id !== "undefined") {
+	var docid = queryString.id;
+
+	if(typeof queryString.template !== "undefined") {
+		templateId = queryString.template;
+		templateOwner = queryString.owner;
+	} else {
+		if(typeof queryString.owner !== "undefined") {
+			//documentOwner = queryString.owner;
+			authorid = queryString.owner;
+		}	
+	}
+} else {
+	var docid = createId();
+}
+willLoadFileWhenReady = true;
+
+var editor = true;
+var loadError = false;
+var scrpt = new Array;
+for(var i = 0; i < 19; i++) {
+	scrpt[i] = document.createElement('script');
+	scrpt[i].onerror = function() { 
+		if(!loadError) {
+			loadError = true;
+			console.log("ERROR: " + event.target.src.split("?")[0].split("/")[3]);
+			setTimeout(function() {
+				document.location = document.location;
+			}, 2000);
+		}
+	}
+	scrpt[i].onload = function() { 
+		loaded_script_counter++;
+	};
+}
+
+
+
+scrpt[0].src=ROOT_URL + 'bin/shared/message.js?' + version;
+scrpt[1].src=ROOT_URL + 'bin/shared/flashlight.js?' + version;
+scrpt[2].src=ROOT_URL + 'bin/shared/slides.js?' + version;
+scrpt[3].src=ROOT_URL + 'bin/editor/input.js?' + version;
+scrpt[4].src=ROOT_URL + 'bin/editor/dot.js?' + version;
+scrpt[5].src=ROOT_URL + 'bin/editor/clipart.js?' + version;
+scrpt[6].src=ROOT_URL + 'bin/editor/textbox.js?' + version;
+scrpt[7].src=ROOT_URL + 'bin/editor/draw.js?' + version;
+scrpt[8].src=ROOT_URL + 'bin/editor/eraser.js?' + version;
+scrpt[9].src=ROOT_URL + 'bin/editor/picture.js?' + version;
+scrpt[10].src=ROOT_URL + 'bin/editor/selection.js?' + version;
+scrpt[11].src=ROOT_URL + 'bin/editor/shapes.js?' + version;
+scrpt[12].src=ROOT_URL + 'bin/editor/objectProperties.js?' + version;
+scrpt[13].src=ROOT_URL + 'bin/shared/physics.js?' + version;
+scrpt[14].src=ROOT_URL + 'bin/editor/preview.js?' + version;
+scrpt[15].src=ROOT_URL + 'bin/editor/iwb.js?' + version;
+scrpt[16].src=ROOT_URL + 'bin/editor/colors.js?' + version;
+scrpt[17].src=ROOT_URL + 'bin/editor/templates.js?' + version;
+scrpt[18].src=ROOT_URL + 'rsc/libs/svgsimplify/simplify.js';
+
+for(var i = 0; i < 19; i++) {
+	document.head.appendChild(scrpt[i]);
+}
+
+var docChecksum = 0;
+var loaded_script_counter = 0;
+var home = false;
+var silentMode = false;
+var editor_initialized = false;
+var board_description = "";
+
+// Immediate show at startup - before other includes
+
+
+//document.getElementById("waitboxBg").style.opacity = 1;
+//document.getElementById("waitboxBg").style.marginTop = "-110px";
+
+function main() {
+waitbox_start()
+
+	scr = {
+		w: document.documentElement.clientWidth,
+		h: document.documentElement.clientHeight
+	}
+
+	// Manage grid
+	var Egrid = '<svg width="1920" height="1080"><path stroke="#54657E" d="';
+	var vstep = grid_size;
+	for(var ptr = vstep; ptr < 1080; ptr += vstep) {
+		Egrid += "M0 "+ptr+" L1920 "+ptr+" ";
+	}
+	for(var ptr = vstep; ptr < 1920; ptr += vstep) {
+		Egrid += "M"+ptr+" 0 L"+ptr+" 1080 ";
+	}
+	Egrid += '"></svg>';
+	DOM("EGRID").innerHTML = Egrid;
+	DOM("EGRID").style.position = "absolute";
+	DOM("EGRID").style.opacity = ".3";
+	DOM("EGRID").style.pointerEvents = "none";
+	DOM("EGRID").style.zIndex = "18000";
+
+
+	// Avoid position detection to cancel startup transition
+	setTimeout(function() { 
+		app_ready = true; 
+		session_loop();
+		palette_refresh();
+	}, 500); 
+	
+	// Scan for busy timer to prevent multiple touchs or clicks
+	setInterval(function() {
+		busy = busytimer > Date.now();
+		if(loaded_script_counter == (localServer ? 28 : 29) && !editor_initialized) {
+	
+			DOM("ROOT").setAttribute("clickable", "true");
+			DOM("ROOT").setAttribute("inputpress", "slideInputPress()");
+			editor_initialized = true;
+			//slides_init();
+			dot_preinit();
+			userinput_init();
+			draw_init();
+			shapes_init();
+			text_init();
+			selection_init() ;
+			loadFileWhenReady = true;
+			slides_init();
+			dot_init();
+		}
+	}, editor_initialized ? 100  : 500);
+}
+
+function setAsBusy(durationMs) {
+	busytimer = Date.now() + durationMs;
+	busy = true;
+}
+var app_ready = false;
+var busy = true;
+var busytimer = 0;
+var scr = { w: 0, h: 0 }; // Document size
+function resize() {
+	scr = {
+		w: window.innerWidth,
+		h: window.innerHeight
+	}
+	dot_refresh(dot_tools);
+	clipart_refresh();
+	draw_resize();
+	flashligth_resize();
+	slides_refresh();	
+	selector_refreshPos();
+	shape_refreshPos();
+	physics_resize();
+	palette_refresh();
+	
+	if(currentSlide !== null) {
+		DOM("EGRID").style.left = currentSlide.style.left;
+		DOM("EGRID").style.top = currentSlide.style.top;
+		DOM("EGRID").style.width = currentSlide.style.width;
+		DOM("EGRID").style.height = currentSlide.style.height;
+		DOM("EGRID").style.transform = currentSlide.style.transform;
+	}
+	DOM("EGRID").style.display = current_show_grid && !playMode ? "block" : "none";
+
+}
+function rotate() {
+	setTimeout(function() {
+		window.scroll(0, 1);
+		resize();
+	}, 500);	
+}
+window.addEventListener('orientationchange', rotate);
+window.addEventListener('resize', resize);
+window.addEventListener('beforeunload', unload);
+function unload() {
+	if(!loadError && typeof docChecksum != "undefined" && docChecksum != getDocumentChecksum()) {
+		var message = "Your latest changes was not saved.";
+		var e = e || window.event;
+		if (e) e.returnValue = message;
+		return message;
+	}
+}
+
+
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>60 - Earth (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="60---Earth-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M28.5,57 C12.785,57 0,44.215 0,28.5 C0,12.785 12.785,0 28.5,0 C44.215,0 57,12.785 57,28.5 C57,44.215 44.215,57 28.5,57" id="Fill-12" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M26,26 L26,5.194 C15.162,6.553 6.553,15.162 5.194,26 L26,26" id="Fill-17" fill="#71C285" sketch:type="MSShapeGroup"></path>
+            <path d="M31,26 L51.806,26 C50.447,15.162 41.838,6.553 31,5.194 L31,26" id="Fill-18" fill="#71C285" sketch:type="MSShapeGroup"></path>
+            <path d="M26,31 L5.194,31 C6.553,41.838 15.162,50.447 26,51.806 L26,31" id="Fill-19" fill="#71C285" sketch:type="MSShapeGroup"></path>
+            <path d="M31,31 L31,51.806 C41.838,50.447 50.447,41.838 51.806,31 L31,31" id="Fill-20" fill="#71C285" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

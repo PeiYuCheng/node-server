@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="59px" height="46px" viewBox="0 0 59 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>14 - Still (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="14---Still-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M56.675,42.004 C47.327,41.059 40,32.94 40,23.096 C40,13.252 47.327,5.132 56.675,4.187 C57.706,4.083 58.5,3.237 58.5,2.2 C58.5,1.033 57.503,0.087 56.341,0.201 C46.703,1.143 38.842,8.336 36.638,17.752 L30,3 L22.672,19.285 C21.005,9.123 12.815,1.193 2.659,0.201 C1.497,0.087 0.5,1.033 0.5,2.2 C0.5,3.237 1.294,4.083 2.326,4.187 C11.673,5.132 19,13.252 19,23.096 C19,32.94 11.673,41.059 2.326,42.004 C1.294,42.108 0.5,42.955 0.5,43.991 C0.5,45.159 1.497,46.104 2.659,45.991 C12.911,44.988 21.155,36.916 22.713,26.615 L30,42 L36.567,28.137 C38.67,37.701 46.599,45.038 56.341,45.991 C57.503,46.104 58.5,45.159 58.5,43.991 C58.5,42.955 57.706,42.108 56.675,42.004" id="Fill-83" fill="#DF4D60" sketch:type="MSShapeGroup"></path>
+            <path d="M25.405,22.957 L30,12.747 L34.595,22.957 L30,32.656 L25.405,22.957" id="Fill-84" fill="#F3D55B" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

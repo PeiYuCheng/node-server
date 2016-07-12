@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="53px" viewBox="0 0 58 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>134 - Meatballs (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="134---Meatballs-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M56,36 L2,36 C0.9,36 0,35.1 0,34 C0,32.9 0.9,32 2,32 L56,32 C57.1,32 58,32.9 58,34 C58,35.1 57.1,36 56,36" id="Fill-1733" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M2.458,36 C5.421,40.629 18,46.205 18,53 L40,53 C40,46.205 52.579,40.629 55.542,36 L2.458,36" id="Fill-1734" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M9,29 C9,23.473 13.473,19 19,19 L21,19 M15,29 C15,26.789 16.789,25 19,25 L24,25" id="Stroke-1735" stroke="#DBB579" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M23,22 L19,22 C15.131,22 12,25.131 12,29 M19,28 L24,28 M48,29 C48,23.473 43.527,19 38,19 L31,19 M42,29 C42,26.789 40.211,25 38,25 L33,25" id="Stroke-1736" stroke="#FBD490" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M32,22 L38,22 C41.869,22 45,25.131 45,29 M38,28 L33,28" id="Stroke-1737" stroke="#DBB579" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M16,17 C16,15.894 16.894,15 18,15 C25.185,15 27,21.814 27,29" id="Stroke-1738" stroke="#FBD490" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M12,19 L12,18 C12,14.683 14.684,12 18,12 C26.844,12 30,20.156 30,29" id="Stroke-1739" stroke="#DBB579" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M30,6.5 C30,8.985 27.985,11 25.5,11 C23.015,11 21,8.985 21,6.5 C21,4.015 23.015,2 25.5,2 C27.985,2 30,4.015 30,6.5" id="Fill-1740" fill="#A46F3E" sketch:type="MSShapeGroup"></path>
+            <path d="M48,13.5 C48,15.985 45.985,18 43.5,18 C41.015,18 39,15.985 39,13.5 C39,11.015 41.015,9 43.5,9 C45.985,9 48,11.015 48,13.5" id="Fill-1741" fill="#A46F3E" sketch:type="MSShapeGroup"></path>
+            <path d="M38,12.5 C38,14.985 35.985,17 33.5,17 C31.015,17 29,14.985 29,12.5 C29,10.015 31.015,8 33.5,8 C35.985,8 38,10.015 38,12.5" id="Fill-1742" fill="#4C312C" sketch:type="MSShapeGroup"></path>
+            <path d="M44,4.5 C44,6.985 41.985,9 39.5,9 C37.015,9 35,6.985 35,4.5 C35,2.015 37.015,0 39.5,0 C41.985,0 44,2.015 44,4.5" id="Fill-1743" fill="#4C312C" sketch:type="MSShapeGroup"></path>
+            <path d="M41.383,49 L16.617,49 C17.053,49.654 17.403,50.32 17.641,51 L40.359,51 C40.597,50.32 40.947,49.654 41.383,49" id="Fill-1744" fill="#F85B57" sketch:type="MSShapeGroup"></path>
+            <path d="M41.383,49 C41.835,48.32 42.377,47.653 42.989,47 L15.011,47 C15.623,47.653 16.165,48.32 16.617,49 L41.383,49" id="Fill-1745" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M12.912,45 C13.662,45.653 14.373,46.319 15.011,47 L42.989,47 C43.627,46.319 44.338,45.653 45.088,45 L12.912,45" id="Fill-1746" fill="#88C057" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

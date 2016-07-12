@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>4 - Sagitarius (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="4---Sagitarius-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M56,28 C56,43.464 43.464,56 28,56 C12.536,56 0,43.464 0,28 C0,12.536 12.536,0 28,0 C43.464,0 56,12.536 56,28" id="Fill-16" fill="#E64C3C" sketch:type="MSShapeGroup"></path>
+            <path d="M13.716,43.284 C13.46,43.284 13.204,43.186 13.009,42.991 C12.618,42.601 12.618,41.968 13.009,41.577 L41.293,13.293 C41.684,12.902 42.316,12.902 42.707,13.293 C43.098,13.684 43.098,14.316 42.707,14.707 L14.423,42.991 C14.228,43.186 13.972,43.284 13.716,43.284" id="Fill-36" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+            <path d="M42,24.899 C41.447,24.899 41,24.452 41,23.899 L41,15 L32.101,15 C31.548,15 31.101,14.553 31.101,14 C31.101,13.447 31.548,13 32.101,13 L43,13 L43,23.899 C43,24.452 42.553,24.899 42,24.899" id="Fill-42" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+            <path d="M33.515,33.385 C33.259,33.385 33.003,33.287 32.808,33.092 L22.908,23.192 C22.518,22.802 22.518,22.169 22.908,21.778 C23.299,21.388 23.932,21.388 24.322,21.778 L34.222,31.678 C34.612,32.068 34.612,32.701 34.222,33.092 C34.026,33.287 33.771,33.385 33.515,33.385" id="Fill-43" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

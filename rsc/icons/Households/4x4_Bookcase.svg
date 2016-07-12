@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>170 - 4x4 Bookcase (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="170---4x4-Bookcase-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L58,0 L58,58 L0,58 L0,0 Z" id="Fill-422" fill="#381F16" sketch:type="MSShapeGroup"></path>
+            <path d="M3,43 L15,43 L15,55 L3,55 L3,43 Z" id="Fill-1213" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M3,43 L15,43 L15,55 L3,55 L3,43 Z" id="Stroke-1214" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M15,43 L29,43 L29,55 L15,55 L15,43 Z" id="Fill-1215" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M15,43 L29,43 L29,55 L15,55 L15,43 Z" id="Stroke-1216" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M29,43 L43,43 L43,55 L29,55 L29,43 Z" id="Fill-1217" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M29,43 L43,43 L43,55 L29,55 L29,43 Z" id="Stroke-1218" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M43,43 L55,43 L55,55 L43,55 L43,43 Z" id="Fill-1219" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M43,43 L55,43 L55,55 L43,55 L43,43 Z" id="Stroke-1220" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M3,29 L15,29 L15,43 L3,43 L3,29 Z" id="Fill-1221" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M3,29 L15,29 L15,43 L3,43 L3,29 Z" id="Stroke-1222" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M15,29 L29,29 L29,43 L15,43 L15,29 Z" id="Fill-1223" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M15,29 L29,29 L29,43 L15,43 L15,29 Z" id="Stroke-1224" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M29,29 L43,29 L43,43 L29,43 L29,29 Z" id="Fill-1225" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M29,29 L43,29 L43,43 L29,43 L29,29 Z" id="Stroke-1226" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M43,29 L55,29 L55,43 L43,43 L43,29 Z" id="Fill-1227" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M43,29 L55,29 L55,43 L43,43 L43,29 Z" id="Stroke-1228" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M3,15 L15,15 L15,29 L3,29 L3,15 Z" id="Fill-1229" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M3,15 L15,15 L15,29 L3,29 L3,15 Z" id="Stroke-1230" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M15,15 L29,15 L29,29 L15,29 L15,15 Z" id="Fill-1231" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M15,15 L29,15 L29,29 L15,29 L15,15 Z" id="Stroke-1232" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M29,15 L43,15 L43,29 L29,29 L29,15 Z" id="Fill-1233" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M29,15 L43,15 L43,29 L29,29 L29,15 Z" id="Stroke-1234" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M43,15 L55,15 L55,29 L43,29 L43,15 Z" id="Fill-1235" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M43,15 L55,15 L55,29 L43,29 L43,15 Z" id="Stroke-1236" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M3,3 L15,3 L15,15 L3,15 L3,3 Z" id="Fill-1237" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M3,3 L15,3 L15,15 L3,15 L3,3 Z" id="Stroke-1238" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M15,3 L29,3 L29,15 L15,15 L15,3 Z" id="Fill-1239" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M15,3 L29,3 L29,15 L15,15 L15,3 Z" id="Stroke-1240" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M29,3 L43,3 L43,15 L29,15 L29,3 Z" id="Fill-1241" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M29,3 L43,3 L43,15 L29,15 L29,3 Z" id="Stroke-1242" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M43,3 L55,3 L55,15 L43,15 L43,3 Z" id="Fill-1243" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M43,3 L55,3 L55,15 L43,15 L43,3 Z" id="Stroke-1244" stroke="#381F16" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M50,33 L53,33 L53,42 L50,42 L50,33 Z" id="Fill-1245" fill="#DD342E" sketch:type="MSShapeGroup"></path>
+            <path d="M47,33 L50,33 L50,42 L47,42 L47,33 Z" id="Fill-1246" fill="#EC7937" sketch:type="MSShapeGroup"></path>
+            <path d="M44,33 L47,33 L47,42 L44,42 L44,33 Z" id="Fill-1247" fill="#F0CE49" sketch:type="MSShapeGroup"></path>
+            <path d="M25,19 L28,19 L28,28 L25,28 L25,19 Z" id="Fill-1248" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M22,19 L25,19 L25,28 L22,28 L22,19 Z" id="Fill-1249" fill="#7383BF" sketch:type="MSShapeGroup"></path>
+            <path d="M19,19 L22,19 L22,28 L19,28 L19,19 Z" id="Fill-1250" fill="#BF4D90" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

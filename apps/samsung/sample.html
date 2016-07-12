@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta charset="utf-8">
+  <meta name="fragment" content="!">
+  
+  <style>
+    html, body {
+        height: 100%;
+    }
+    #wrapper:before {
+        content:'';
+        float: left;
+        height: 100%;
+    }
+    #wrapper {
+        height: 100%;
+    }
+    .logs {
+        position: relative;
+    }
+    .logs:after {
+        content:'';
+        display: block;
+        clear: both;
+    }
+    #log {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+    }
+    table {
+        width:100%;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;
+    }
+    table tr {
+        background-color: #eee;
+    }
+    table th {
+        background-color: black;
+        color: white;
+    }
+  </style>
+
+  <script src="cordova.js"></script>
+  <script src="libs/jquery.min.js"></script>
+
+</head>
+
+<body leftmargin=0 topmargin=0 rightmargin=0 bottommargin=0>
+  <div id="wrapper">
+    <table class="buttons">
+      <tr>
+        <th>Session</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="section">
+            session name: <input type="text" id="createSessionName" value="class1">&nbsp;&nbsp; 
+            user id: <input type="text" id="createSessionUserId" value="123">&nbsp;&nbsp;
+            username: <input type="text" id="createSessionUsername" value="teacher"><br>
+            <button type="button" id="sessionCreate">Create Session</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="section">
+            session name: <input type="text" id="joinSessionName" value="class1">&nbsp;&nbsp;
+            user id: <input type="text" id="joinSessionUserId" value="124">&nbsp;&nbsp;
+            username: <input type="text" id="joinSessionUsername" value="student"><br>
+            <button type="button" onclick="sessionJoin()">Join Session</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="exo.samsungapi.session.stop(function(ret){
+              $('#log').prepend('<br> <b>session.stop: </b>'+ JSON.stringify(ret));
+            })">Stop Session
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th>Lock/Unlock</th>
+      </tr>    
+      <tr>
+        <td>  
+          <button type="button" onclick="exo.samsungapi.device.hardwarekey.lock(function(ret){
+              $('#log').prepend('<br> <b>device.hardwarekey.lock: </b>'+JSON.stringify(ret));
+            })">Lock hardwarekey
+          </button>
+          <button type="button" onclick="exo.samsungapi.device.hardwarekey.unlock(function(ret){
+              $('#log').prepend('<br> <b>device.hardwarekey.unlock: </b>'+JSON.stringify(ret));
+            })">Unlock hardwarekey
+          </button>
+          <button type="button" onclick="exo.samsungapi.device.screen.lock(function(ret){
+              $('#log').prepend('<br> <b>device.screen.lock: </b>'+JSON.stringify(ret));
+            })">Lock screen
+          </button>
+          <button type="button" onclick="exo.samsungapi.device.screen.unlock(function(ret){
+              $('#log').prepend('<br> <b>device.screen.unlock: </b>'+JSON.stringify(ret));
+            })">Unlock screen
+          </button>
+          <button type="button" onclick="exo.samsungapi.device.statusbar.lock(function(ret){
+              $('#log').prepend('<br> <b>device.statusbar.lock: </b>'+JSON.stringify(ret));
+            })">Lock statusbar
+          </button>
+          <button type="button" onclick="exo.samsungapi.device.statusbar.unlock(function(ret){
+              $('#log').prepend('<br> <b>device.statusbar.unlock: </b>'+JSON.stringify(ret));
+            })">Unlock statusbar
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshot</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="section">
+            user id: <input type="text" id="getUserScreenshotUserId" value="124">&nbsp;&nbsp;
+            <button type="button" onclick="getUserScreenshot()">Get User's Screenshot</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="logs">
+      <div id="log">
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">  
+
+    document.addEventListener("deviceready", onDeviceReady, false);    
+    function onDeviceReady(){
+      //alert("onDeviceReady");
+      $("#log").prepend(" <br>onDeviceReady: device is ready!");
+      document.getElementById ("sessionCreate").addEventListener ("click", sessionCreate, false);
+
+var email = localStorage.getItem("email");
+if(email !== null && typeof email !== "undefined" && email.toLowerCase().indexOf("teacher") > -1) {
+	localStorage.setItem("samsungRole", "teacher");
+	sessionCreate();
+} else { 
+	localStorage.setItem("samsungRole", "sudent");
+	sessionJoin();
+}
+
+
+
+      function sessionCreate() {
+        var sessionName = document.getElementById("createSessionName").value;
+        var userId = document.getElementById("createSessionUserId").value;
+        var username = document.getElementById("createSessionUsername").value;
+        exo.samsungapi.session.create(sessionName, userId, username,
+          function(ret){
+            $('#log').prepend('<br> <b>session.create: </b>'+JSON.stringify(ret));
+          }
+        );      
+      }
+    }  
+    function onSamsungApiEvent(event) {
+      $("#log").prepend("<br><em><b>onSamsungApiEvent: </b></em>" + JSON.stringify(event));
+    }
+
+    function sessionJoin() {
+      var sessionName = document.getElementById("joinSessionName").value;
+      var userId = document.getElementById("joinSessionUserId").value;
+      var username = document.getElementById("joinSessionUsername").value;
+      exo.samsungapi.session.join(sessionName, userId, username, 
+        function(ret){
+          $('#log').prepend('<br> <b><i>session.join: </i></b>'+JSON.stringify(ret));
+        }
+      );
+    }
+    function getUserScreenshot() {
+      var userId = document.getElementById("getUserScreenshotUserId").value;
+    
+      exo.samsungapi.screenshot.getUserScreenshot(userId, function(ret){
+        $('#log').prepend('<br> <b>screenshot.getUserScreenshot: </b>'+JSON.stringify(ret));
+      });
+    }
+    function lock() {
+	exo.samsungapi.device.hardwarekey.lock(function(ret){
+              $('#log').prepend('<br> <b>device.hardwarekey.lock: </b>'+JSON.stringify(ret));
+            })
+	    
+	exo.samsungapi.device.statusbar.lock(function(ret){
+              $('#log').prepend('<br> <b>device.statusbar.lock: </b>'+JSON.stringify(ret));
+            })
+	    
+    }
+    function unlock() {
+	exo.samsungapi.device.hardwarekey.unlock(function(ret) {
+              $('#log').prepend('<br> <b>device.hardwarekey.unlock: </b>'+JSON.stringify(ret));
+            })
+	exo.samsungapi.device.statusbar.unlock(function(ret) {
+              $('#log').prepend('<br> <b>device.statusbar.unlock: </b>'+JSON.stringify(ret));
+            })
+    }
+
+  </script>
+</body>
+</html>

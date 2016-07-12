@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="53px" viewBox="0 0 60 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>169 - Lock Folder (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="169---Lock-Folder-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M25,7 L20,0 L0,0 L0,51 L58,51 L58,14 L30,14 L25,7" id="Fill-1723" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M30,14 L58,14 L58,7 L25,7 L30,14" id="Fill-1724" fill="#3D4451" sketch:type="MSShapeGroup"></path>
+            <path d="M39.39,37 L59.39,37 L59.39,53 L39.39,53 L39.39,37 Z" id="Fill-1846" fill="#B1D3F0" sketch:type="MSShapeGroup"></path>
+            <path d="M52.39,44 C52.39,42.343 51.046,41 49.39,41 C47.733,41 46.39,42.343 46.39,44 C46.39,45.318 47.244,46.424 48.425,46.827 C48.414,46.885 48.39,46.938 48.39,47 L48.39,49 C48.39,49.552 48.837,50 49.39,50 C49.942,50 50.39,49.552 50.39,49 L50.39,47 C50.39,46.938 50.365,46.885 50.355,46.827 C51.535,46.424 52.39,45.318 52.39,44" id="Fill-1847" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M44.39,35 C44.39,32.243 46.633,30 49.39,30 C52.146,30 54.39,32.243 54.39,35 L54.39,37 L56.39,37 L56.39,35 C56.39,31.14 53.249,28 49.39,28 C45.53,28 42.39,31.14 42.39,35 L42.39,37 L44.39,37 L44.39,35" id="Fill-1848" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

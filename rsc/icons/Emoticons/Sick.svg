@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>200 - Sick (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="200---Sick-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M42,21 C42,32.598 32.598,42 21,42 C9.402,42 0,32.598 0,21 C0,9.402 9.402,0 21,0 C32.598,0 42,9.402 42,21" id="Fill-154" fill="#FBD971" sketch:type="MSShapeGroup"></path>
+            <path d="M32,10 L26,15 L32,20 M10,10 L16,15 L10,20" id="Stroke-155" stroke="#F29C1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M8,27 L13,33 L18,27 L23,33 L28,27 L33,33" id="Stroke-156" stroke="#F0C419" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

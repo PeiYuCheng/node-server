@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>170 - Capsuled Pill (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="170---Capsuled-Pill-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M17.778,17.598 L4.671,30.706 C-1.552,36.928 -1.552,47.111 4.671,53.333 C10.893,59.556 21.076,59.556 27.298,53.333 L40.406,40.226 L17.778,17.598" id="Fill-109" fill="#DD342E" sketch:type="MSShapeGroup"></path>
+            <path d="M40.426,40.206 L53.333,27.298 C59.556,21.076 59.556,10.893 53.333,4.671 C47.11,-1.552 36.928,-1.552 30.706,4.671 L17.798,17.578 L40.426,40.206" id="Fill-2512" fill="#ECBA16" sketch:type="MSShapeGroup"></path>
+            <path d="M22.049,21.829 L4.939,38.939 C4.353,39.525 4.353,40.475 4.939,41.061 C5.232,41.354 5.616,41.5 6,41.5 C6.384,41.5 6.768,41.354 7.06,41.061 L24.171,23.95 L22.049,21.829" id="Fill-2513" fill="#F46767" sketch:type="MSShapeGroup"></path>
+            <path d="M24.169,23.952 L40.06,8.061 C40.646,7.475 40.646,6.525 40.06,5.939 C39.475,5.354 38.525,5.354 37.939,5.939 L22.048,21.831 L24.169,23.952" id="Fill-2514" fill="#FCD770" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

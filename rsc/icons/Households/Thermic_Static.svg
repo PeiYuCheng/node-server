@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="39px" height="58px" viewBox="0 0 39 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>23 - Thermic Static (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="23---Thermic-Static-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M38.567,58 L0.433,58 C0.194,58 0,57.806 0,57.567 L0,0 L39,0 L39,57.567 C39,57.806 38.806,58 38.567,58" id="Fill-94" fill="#D6CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M3,31 L23,31 L23,44 L3,44 L3,31 Z" id="Fill-95" fill="#AFA7A5" sketch:type="MSShapeGroup"></path>
+            <path d="M38.567,58 L0.433,58 C0.194,58 0,57.806 0,57.567 L0,46 L39,46 L39,57.567 C39,57.806 38.806,58 38.567,58" id="Fill-3210" fill="#EDE5E2" sketch:type="MSShapeGroup"></path>
+            <path d="M17,52 L22,52" id="Stroke-3211" stroke="#4B4C4F" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M5,33 L21,33 L21,42 L5,42 L5,33 Z" id="Fill-3212" fill="#A4CA83" sketch:type="MSShapeGroup"></path>
+            <path d="M8,36 L11,36 L11,39 L8,39 L8,36 Z" id="Fill-3213" fill="#475B34" sketch:type="MSShapeGroup"></path>
+            <path d="M15,36 L18,36 L18,39 L15,39 L15,36 Z" id="Fill-3214" fill="#475B34" sketch:type="MSShapeGroup"></path>
+            <path d="M34,38 C34,40.209 32.209,42 30,42 C27.791,42 26,40.209 26,38 C26,35.791 27.791,34 30,34 C32.209,34 34,35.791 34,38 L34,38 Z" id="Fill-3226" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M34,38 C34,40.209 32.209,42 30,42 C27.791,42 26,40.209 26,38 C26,35.791 27.791,34 30,34 C32.209,34 34,35.791 34,38 L34,38 Z" id="Stroke-3227" stroke="#556080" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M30,38 L33,35" id="Stroke-3228" stroke="#7383BF" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

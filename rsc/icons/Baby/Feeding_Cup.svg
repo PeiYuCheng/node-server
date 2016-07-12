@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="50px" viewBox="0 0 54 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>38 - Feeding Cup (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="38---Feeding-Cup-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M38.753,50 L15.247,50 C12.902,50 11,48.099 11,45.753 L11,14 L43,14 L43,45.753 C43,48.099 41.099,50 38.753,50" id="Fill-121" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M43,40 L44.404,40 C47.495,40 50,37.495 50,34.404 L50,27.596 C50,24.505 47.495,22 44.404,22 L43,22 L43,18 L44.404,18 C49.695,18 54,22.305 54,27.596 L54,34.404 C54,39.695 49.695,44 44.404,44 L43,44 L43,40" id="Fill-122" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M11,40 L9.596,40 C6.505,40 4,37.495 4,34.404 L4,27.596 C4,24.505 6.505,22 9.596,22 L11,22 L11,18 L9.596,18 C4.305,18 0,22.305 0,27.596 L0,34.404 C0,39.695 4.305,44 9.596,44 L11,44 L11,40" id="Fill-123" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M31,2.661 L31,2.017 C31,0.903 30.097,0 28.983,0 L25.017,0 C23.903,0 23,0.903 23,2.017 L23,2.661 C23,5.057 21.057,7 18.661,7 L12.492,7 C11.668,7 11,7.668 11,8.492 L11,14 L43,14 L43,8.492 C43,7.668 42.332,7 41.508,7 L35.34,7 C32.943,7 31,5.057 31,2.661" id="Fill-126" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M27.239,18.146 L30.935,25.635 C30.974,25.713 31.049,25.768 31.136,25.781 L39.401,26.982 C39.62,27.013 39.707,27.282 39.549,27.437 L33.568,33.266 C33.505,33.327 33.477,33.416 33.492,33.502 L34.903,41.733 C34.941,41.951 34.712,42.118 34.516,42.015 L27.124,38.128 C27.046,38.088 26.954,38.088 26.876,38.128 L19.484,42.015 C19.288,42.118 19.059,41.951 19.097,41.733 L20.508,33.502 C20.523,33.416 20.495,33.327 20.432,33.266 L14.451,27.437 C14.293,27.282 14.38,27.013 14.599,26.982 L22.864,25.781 C22.951,25.768 23.026,25.713 23.065,25.635 L26.761,18.146 C26.859,17.947 27.141,17.947 27.239,18.146" id="Fill-128" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

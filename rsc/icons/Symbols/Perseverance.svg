@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="57px" viewBox="0 0 54 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>102 - Perseverance (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="102---Perseverance-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M28.964,57 L25.036,57 C23.912,57 23,56.088 23,54.964 L23,2.036 C23,0.912 23.912,0 25.036,0 L28.964,0 C30.088,0 31,0.912 31,2.036 L31,54.964 C31,56.088 30.088,57 28.964,57" id="Fill-13" fill="#7F5B53" sketch:type="MSShapeGroup"></path>
+            <path d="M31,4.271 L31,11.351 C40.129,12.973 47,20.034 47,28.5 C47,36.966 40.129,44.027 31,45.649 L31,52.729 C43.997,50.97 54,40.776 54,28.5 C54,16.224 43.997,6.03 31,4.271" id="Fill-14" fill="#E4C05C" sketch:type="MSShapeGroup"></path>
+            <path d="M0,28.5 C0,40.776 10.003,50.97 23,52.729 L23,45.649 C13.871,44.027 7,36.966 7,28.5 C7,20.034 13.871,12.973 23,11.351 L23,4.271 C10.003,6.03 0,16.224 0,28.5" id="Fill-15" fill="#E4C05C" sketch:type="MSShapeGroup"></path>
+            <path d="M8.014,4.088 C12.42,4.401 13.066,6.409 13.082,7.519 C14.205,6.903 15.383,6.362 16.605,5.897 C14.214,-0.94 7.347,0.051 7.347,0.051 C6.284,0.207 5.878,0.809 5.785,1.5 C5.609,2.814 6.692,3.994 8.014,4.088" id="Fill-16" fill="#B19046" sketch:type="MSShapeGroup"></path>
+            <path d="M40.918,7.519 C40.934,6.409 41.58,4.401 45.985,4.088 C47.308,3.994 48.391,2.814 48.215,1.5 C48.122,0.809 47.716,0.207 46.653,0.051 C46.653,0.051 39.786,-0.94 37.395,5.897 C38.617,6.362 39.795,6.903 40.918,7.519" id="Fill-17" fill="#B19046" sketch:type="MSShapeGroup"></path>
+            <path d="M45.985,52.169 C42.397,51.914 41.307,50.534 41.015,49.43 C39.943,50.023 38.822,50.547 37.659,51.002 C40.248,57.113 46.653,56.206 46.653,56.206 C47.716,56.05 48.122,55.448 48.215,54.757 C48.391,53.443 47.308,52.263 45.985,52.169" id="Fill-18" fill="#B19046" sketch:type="MSShapeGroup"></path>
+            <path d="M12.985,49.43 C12.693,50.534 11.602,51.914 8.014,52.169 C6.692,52.263 5.609,53.443 5.785,54.757 C5.878,55.448 6.284,56.05 7.347,56.206 C7.347,56.206 13.752,57.113 16.341,51.002 C15.178,50.547 14.056,50.023 12.985,49.43" id="Fill-19" fill="#B19046" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

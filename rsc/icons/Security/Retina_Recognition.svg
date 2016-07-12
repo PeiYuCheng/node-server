@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>28 - Retina Recognition (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="28---Retina-Recognition-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,60 L60,60 L60,0 L0,0 L0,60 Z M6,6 L54.06,6 L54.06,54.06 L6,54.06 L6,6 Z" id="Fill-32" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M20,2 L2,2 L2,20 C2,20.552 2.448,21 3,21 C3.552,21 4,20.552 4,20 L4,4 L20,4 C20.552,4 21,3.552 21,3 C21,2.448 20.552,2 20,2" id="Fill-49" fill="#464F5D" sketch:type="MSShapeGroup"></path>
+            <path d="M57,40 C56.448,40 56,40.448 56,41 L56,56 L41,56 C40.448,56 40,56.448 40,57 C40,57.552 40.448,58 41,58 L58,58 L58,41 C58,40.448 57.552,40 57,40" id="Fill-50" fill="#464F5D" sketch:type="MSShapeGroup"></path>
+            <path d="M41,2 C40.448,2 40,2.448 40,3 C40,3.552 40.448,4 41,4 L56,4 L56,20 C56,20.552 56.448,21 57,21 C57.552,21 58,20.552 58,20 L58,2 L41,2" id="Fill-51" fill="#464F5D" sketch:type="MSShapeGroup"></path>
+            <path d="M20,56 L4,56 L4,41 C4,40.448 3.552,40 3,40 C2.448,40 2,40.448 2,41 L2,58 L20,58 C20.552,58 21,57.552 21,57 C21,56.448 20.552,56 20,56" id="Fill-52" fill="#464F5D" sketch:type="MSShapeGroup"></path>
+            <path d="M44.013,23.801 C35.41,18.822 24.839,18.606 16.065,23.154 C15.978,23.787 15.918,24.429 15.918,25.085 C15.918,27.197 16.382,29.199 17.215,30.997 C19.449,35.82 24.333,39.165 29.998,39.165 C35.661,39.165 40.544,35.821 42.779,31 C43.612,29.202 44.078,27.198 44.078,25.085 C44.078,24.652 44.051,24.224 44.013,23.801" id="Fill-276" fill="#48A0DC" sketch:type="MSShapeGroup"></path>
+            <path d="M27.864,26.365 C27.864,28.25 26.336,29.779 24.451,29.779 C22.566,29.779 21.038,28.25 21.038,26.365 C21.038,24.48 22.566,22.952 24.451,22.952 C26.336,22.952 27.864,24.48 27.864,26.365" id="Fill-277" fill="#285680" sketch:type="MSShapeGroup"></path>
+            <path d="M48.25,26.795 C48.192,26.737 48.131,26.682 48.069,26.63 C46.782,25.559 45.422,24.625 44.013,23.809 C44.051,24.23 44.078,24.655 44.078,25.085 C44.078,27.198 43.612,29.202 42.779,31 C40.544,35.821 35.661,39.165 29.998,39.165 C24.333,39.165 19.449,35.82 17.215,30.997 C16.382,29.199 15.918,27.197 15.918,25.085 C15.918,24.439 15.977,23.809 16.062,23.186 C14.2,24.152 12.409,25.307 10.745,26.703 L7.304,29.589 C6.174,30.537 6.172,32.275 7.3,33.225 L10.787,36.164 C21.589,45.267 37.361,45.296 48.195,36.251 C48.259,36.197 48.321,36.14 48.38,36.082 L53,31.485 L48.25,26.795" id="Fill-567" fill="#D1D4D1" sketch:type="MSShapeGroup"></path>
+            <path d="M0,37 L60,37 L60,39 L0,39 L0,37 Z" id="Fill-568" fill="#FF5364" sketch:type="MSShapeGroup"></path>
+            <path d="M30,28.587 C30,29.92 28.919,31 27.587,31 C26.254,31 25.173,29.92 25.173,28.587 C25.173,27.254 26.254,26.173 27.587,26.173 C28.919,26.173 30,27.254 30,28.587" id="Fill-574" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

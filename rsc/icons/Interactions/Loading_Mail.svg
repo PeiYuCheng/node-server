@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="59px" height="48px" viewBox="0 0 59 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>523 - Loading Mail (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="523---Loading-Mail-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L56,39 L56,0 L0,0 L0,39 Z" id="Fill-1626" fill="#DCD6CD" sketch:type="MSShapeGroup"></path>
+            <path d="M30.965,22.107 C29.327,23.569 26.673,23.569 25.035,22.107 L22.948,20.264 C16.419,26.092 0,39 0,39 L56,39 C56,39 39.581,26.092 33.052,20.264 L30.965,22.107" id="Fill-1627" fill="#E8E3D9" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L25.035,22.107 C26.673,23.569 29.327,23.569 30.965,22.107 L56,0 L0,0" id="Fill-1628" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M49,35 L47,35 C43.367,33.547 41,30.139 41,26.36 L41,23 L55,23 L55,26.36 C55,30.139 52.633,33.547 49,35" id="Fill-1873" fill="#91BAE1" sketch:type="MSShapeGroup"></path>
+            <path d="M47,35 L49,35 C52.633,36.454 55,39.862 55,43.64 L55,47 L41,47 L41,43.64 C41,39.862 43.367,36.454 47,35" id="Fill-1874" fill="#91BAE1" sketch:type="MSShapeGroup"></path>
+            <path d="M38,24 L58,24 C58.553,24 59,23.552 59,23 C59,22.448 58.553,22 58,22 L38,22 C37.447,22 37,22.448 37,23 C37,23.552 37.447,24 38,24" id="Fill-1875" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M57.999,45.998 L39.999,45.998 C39.996,45.998 39.993,46 39.989,46 L38,46 C37.447,46 37,46.448 37,47 C37,47.552 37.447,48 38,48 L41,48 C41.003,48 41.006,47.998 41.01,47.998 L57.999,47.998 C58.552,47.998 58.999,47.55 58.999,46.998 C58.999,46.446 58.552,45.998 57.999,45.998" id="Fill-1876" fill="#556080" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

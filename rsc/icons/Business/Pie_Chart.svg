@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>99 - Pie Chart (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="99---Pie-Chart-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M31,27 L57.924,27 C56.94,12.579 45.421,1.06 31,0.076 L31,27" id="Fill-707" fill="#F0785A" sketch:type="MSShapeGroup"></path>
+            <path d="M50.386,48.653 C54.729,43.943 57.537,37.795 58,31 L32.733,31 L50.386,48.653" id="Fill-708" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M27,28.172 L27,0.076 C11.918,1.105 0,13.657 0,29 C0,36.288 2.695,42.943 7.134,48.038 L27,28.172" id="Fill-712" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M28.414,32.414 L9.962,50.866 C15.057,55.305 21.712,58 29,58 C35.99,58 42.396,55.521 47.402,51.401 L28.414,32.414" id="Fill-713" fill="#71C285" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

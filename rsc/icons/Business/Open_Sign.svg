@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="53px" viewBox="0 0 58 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>68 - Open Sign (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="68---Open-Sign-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M25,4 L8,21 M33,4 L50,21" id="Stroke-186" stroke="#556080" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M33,4 C33,6.209 31.209,8 29,8 C26.791,8 25,6.209 25,4 C25,1.791 26.791,0 29,0 C31.209,0 33,1.791 33,4" id="Fill-1203" fill="#F9EBB0" sketch:type="MSShapeGroup"></path>
+            <path d="M0,21 L58,21 L58,53 L0,53 L0,21 Z" id="Fill-1204" fill="#E64C3C" sketch:type="MSShapeGroup"></path>
+            <path d="M11,47 L11,47 C8.8,47 7,45.2 7,43 L7,31 C7,28.8 8.8,27 11,27 C13.2,27 15,28.8 15,31 L15,43 C15,45.2 13.2,47 11,47 L11,47 Z M23,40 L23,40 C20.8,40 19,38.2 19,36 L19,31 C19,28.8 20.8,27 23,27 C25.2,27 27,28.8 27,31 L27,36 C27,38.2 25.2,40 23,40 L23,40 Z M31,47 L31,27 L31,47 Z M51,27 L51,47 L51,27 Z M43,47 L43,27 L43,47 Z M19,36 L19,47 L19,36 Z M39,37 L31,37 L39,37 Z M39,27 L31,27 L39,27 Z M39,47 L31,47 L39,47 Z M43,27 L51,47 L43,27 Z" id="Stroke-1205" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

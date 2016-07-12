@@ -1,0 +1,170 @@
+<!doctype html>
+<HTML>
+<HEAD>
+<title>Ormiboard Register</title>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name = "viewport" content = "width=device-width, initial-scale=.8, minimum-scale=.8, maximum-scale=.8, user-scalable=no"> 
+<meta name="apple-mobile-web-app-capable" content="no">
+<link type="text/css" rel="stylesheet" href="../../rsc/css/shared.css"/>
+<link type="text/css" rel="stylesheet" href="register.css"/>
+
+<script>
+document.write("<script src='../../bin/shared/weblib.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='../../bin/shared/sessions_lib.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='../../rsc/libs/fastclick.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='register_lib.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='accountAdd.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='accountCreate.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='accountCreateJoin.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='pin.js?" + Date.now() + "'><"+"/script>");
+</script>
+</HEAD>
+
+<BODY onload="main();" style='cursor: default; font-family: light; font-size:20px; text-align: center;'>
+<center>
+<img src='../../rsc/images/ob.svg' style='width: 54px; height: 54px; padding-top: 10px; '>
+<br>
+<div id="ADD_OR_CREATE" style='display: none; font-size: 20px; width: 340px; text-align: center;  overflow: hidden;'>
+	<div style='font-family: thin; font-size: 32px; padding-bottom: 8px; color: #606060; margin-bottom: 14px; text-align: center; width: 100%; '>Accounts</div>
+	<div id='ALL_USERS_LIST' style='display: flex; flex-flow: row wrap; justify-content: center;'></div>
+	<div style='display: flex; flex-flow: row wrap; justify-content: center;'>
+		<!--- <div onclick="cj_create();" id='CJ_CREATE' class='account_item' style='color: #D32B4F;'>Create a new account</div> --->
+		<div onclick="cj_add();" id='CJ_ADD' class='account_item' style='margin-top: 20px; margin-bottom: 6px; color: #D32B4F;'><svg fill="#D32B4F" width="14px" height="14px" viewBox="0 0 640 640"><path d="M592 320h-272v-272c0-8.836-7.164-16-16-16s-16 7.164-16 16v272h-272c-8.836 0-16 7.163-16 16s7.164 16 16 16h272v272c0 8.837 7.164 16 16 16s16-7.163 16-16v-272h272c8.837 0 16-7.163 16-16s-7.163-16-16-16z"></path></svg> Add an account</div>
+		<div onclick="cj_cancel();" id='CJ_CANCEL' class='account_item' style='margin-top: 6px; margin-bottom: 10px;'>Cancel</div>
+	</div>
+</div>
+
+<div id="ADD_USER" style='display: none; font-size: 20px; width: 340px; text-align: left;  overflow: hidden;'>
+	<div style='padding: 20px; align: center;'>
+		<div style='font-family: thin; font-size: 32px; padding-bottom: 8px; color: #606060; margin-bottom: 8px; text-align: center; width: 100%; '>Email</div>
+		<input  id="INPUT_ADD_EMAIL" onkeypress="input_validate_email(event, 'add_account()')" autocapitalize="off" autocorrect="off" type="text" style='width: 290px; text-align: center; margin: 0px; padding: 0px; padding-left: 10px; height: 40px; border: 1px solid #CACACA; font-size: 20px; '>
+		<br><br>
+		<div id='MOBILE_BLK_ADD' style='text-align: center; color: #606060;'>
+		Mobile Phone (optional)<div style='color:#A0A0A0; font-size:14px; font-family; regular; padding-bottom: 3px;'>Fill only if you want to get your PIN via SMS</div>
+		<input id="INPUT_PHONE_ADD" onkeypress="input_validate_phone(event, 'add_account()')" autocapitalize="off" autocorrect="off" type="text" style='width: 200px; text-align: center;  margin: 0px; padding: 0px; padding-left: 10px; height: 40px; border: 1px solid #CACACA; font-size: 20px;'>
+		</div><br><br><br>
+
+		<table cellspacing=0 cellpadding=0>
+			<tr>
+				<td onclick="cancel_add_account();" id='CANCEL_ADD' class='account_item' style='width: 200px;'>&lt; Back</td>
+				<td style='text-align: center; width: 20px; margin-left: 0px; height: 60px; line-height: 60px;'>&nbsp;</td>
+				<td onclick="add_account();" id='ADD_ACCOUNT' class='account_item' style='color: rgb(211,43,79)'>Next ></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="GET_INFO" style='display: none; font-size: 20px; width: 340px; background-color:#FFFFFF; text-align: left;  overflow: hidden;'>
+	<div style='font-family: thin; font-size: 32px; padding-bottom: 8px; color: #606060; margin-bottom: 14px; text-align: center; width: 100%; '>New Account</div>
+	<div style='padding: 20px;'>
+		First name<br>
+		<input  id="INPUT_FIRSTNAME" onkeypress="input_validate_name(event, 'create()')" type="text" autocorrect="off" style='width: 290px; margin: 0px; padding: 0px; padding-left: 10px; height: 40px; border: 1px solid #CACACA; font-size: 20px; '>
+		<br><br>
+		Last name<br>
+		<input id="INPUT_LASTNAME" onkeypress="input_validate_name(event, 'create()')" type="text" autocorrect="off" style='width: 290px; margin: 0px; padding: 0px; padding-left: 10px; height: 40px;  border: 1px solid #CACACA; font-size: 20px;'>
+		<br><br>
+	<!---	Your email address<br>
+		<input id="INPUT_EMAIL"  onkeypress="input_validate_email(event, 'create()')" autocapitalize="off" autocorrect="off" type="text" style='width: 290px;  margin: 0px; padding: 0px; padding-left: 10px; height: 40px; border: 1px solid #CACACA; font-size: 20px;'>
+		<br><br> --->
+<!--		<div id='MOBILE_BLK_CREATE'>
+		Mobile Phone (optional)<div style='color:#A0A0A0; font-size:14px; font-family; regular; padding-bottom: 3px;'>Fill only if you want to get your PIN via SMS</div>
+		<input id="INPUT_PHONE" onkeypress="input_validate_phone(event, 'create()')" autocapitalize="off" autocorrect="off" type="text" style='width: 200px;  margin: 0px; padding: 0px; padding-left: 10px; height: 40px; border: 1px solid #CACACA; font-size: 20px;'>
+		</div> -->
+		<br><br>
+		<script>if(!localServer) document.write('<div class="g-recaptcha" data-sitekey="6LfPlh8TAAAAAOPvpvpBGTqJmJ8CuzbCuv9R9NAO"></div>');</script>
+		<br>
+		
+		<table cellspacing=0 cellpadding=0>
+			<tr>
+				<td onclick="create_cancel();" id="CREATE_CANCEL"  class='account_item' style='width: 200px;' class='account_item'>&lt; Back</td>
+				<td style='text-align: center; width: 20px; margin-left: 0px; height: 60px; line-height: 60px;'>&nbsp;</td>
+				<td onclick="create();" id='CREATE_ACCOUNT' class='account_item' class='account_item' style='color: rgb(211,43,79)'>Create Account</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="GET_PIN" style='font-size: 20px; display:none; width: 340px; background-color:#FFFFFF; text-align: center; overflow: hidden;'>
+	<div style='padding: 20px;'>
+		<div style='font-family: bold; padding-bottom: 4px; color: #606060;'>PIN Access Code</div>
+		Please enter the PIN access code sent to your email address.
+		<br>
+		<input type="text" id='PIN_ID' style='transition: background-color .3s; width:160px; margin: 0 auto; font-family: thin; text-align: center; border: 1px solid #CACACA; margin-top: 15px; font-size: 36px; ' autocomplete='off' maxlength='4' onkeyup='pin_keypress(event)'>
+		<br><br><br>
+		<table cellspacing=0 cellpadding=0>
+			<tr>
+				<td onclick="pin_back()"  id='BT_PIN_BACK' class='account_item' style='width: 200px;'>&lt; Back</td>
+				<td style='text-align: center; width: 20px; margin-left: 0px; height: 60px; line-height: 60px;'>&nbsp;</td>
+				<td onclick="pin_activate();" id='BT_PIN_ACTIVATE' class='account_item' style='color: rgb(211,43,79)'>Activate</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="ERROR_MSG" class='errorMessage'></div>
+<div class='waitboxBg' id='waitboxBg'><div class='waitbox' id='waitbox'>&nbsp;</div></div>
+
+<script>
+
+
+window.addEventListener('contextmenu', function(e) { e.preventDefault(); } );
+
+function main() {
+	if(localServer) {
+		//DOM("MOBILE_BLK_CREATE").style.display = "none";
+		DOM("MOBILE_BLK_ADD").style.display = "none";
+	}
+
+ 	FastClick.attach(document.body);
+	createJoin_show();
+}
+
+function cancel_account_item() {
+	DOM("CANCEL_ACCOUNT_ITEM").style.backgroundColor = "#EAEAEA";
+	setTimeout(function() {
+		DOM("CANCEL_ACCOUNT_ITEM").style.backgroundColor = "#FFFFFF";
+		setTimeout(function() {
+			//window.close();
+			document.location = ROOT_URL;
+		}, 50);
+	}, 150);
+}
+
+function input_validate_name(event, pressEnter) {
+	var okchars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'- ";
+	var code = (event.charCode) ? event.charCode : ((event.which) ? event.which : event.keyCode);
+
+	if(code === 13) eval(pressEnter);
+	if(code !== 8 && code !== 9) {
+		var chr = removeDiacritics(String.fromCharCode(code)); 
+		if(okchars.indexOf(chr) === -1) event.preventDefault();
+	}
+}
+function input_validate_email(event, pressEnter) {
+	var okchars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.@!#$%&'*+-/=?_`{|}";
+	var code = (event.charCode) ? event.charCode : ((event.which) ? event.which : event.keyCode);
+	if(code === 13) eval(pressEnter);
+	if(code !== 8 && code !== 9) {
+		var chr = String.fromCharCode(code); 
+		if(okchars.indexOf(chr) === -1) event.preventDefault();
+	}
+}
+function input_validate_phone(event, pressEnter) {
+	var okchars = "0123456789.- ";
+	var code = (event.charCode) ? event.charCode : ((event.which) ? event.which : event.keyCode);
+	if(code === 13) eval(pressEnter);
+	if(code !== 8 && code !== 9) {	
+		var chr = String.fromCharCode(code); 
+		if(okchars.indexOf(chr) === -1) event.preventDefault();
+	}
+}
+
+// ------------------------------------------
+
+
+</script>
+<br><br>
+</center>
+</BODY>
+</HTML>

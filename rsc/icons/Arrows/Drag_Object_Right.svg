@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="59px" height="29px" viewBox="0 0 59 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>42 - Drag Object Right (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="42---Drag-Object-Right-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M58,16 L23,16 C22.447,16 22,15.553 22,15 C22,14.447 22.447,14 23,14 L58,14 C58.553,14 59,14.447 59,15 C59,15.553 58.553,16 58,16" id="Fill-631" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M44.887,29 C44.629,29 44.372,28.901 44.177,28.704 C43.788,28.311 43.79,27.679 44.183,27.29 L57.296,14.29 C57.688,13.9 58.321,13.904 58.71,14.296 C59.099,14.688 59.097,15.321 58.704,15.71 L45.591,28.71 C45.396,28.903 45.142,29 44.887,29" id="Fill-632" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M58,16 C57.742,16 57.485,15.901 57.29,15.704 L44.177,2.476 C43.788,2.084 43.79,1.451 44.183,1.062 C44.576,0.674 45.208,0.676 45.597,1.068 L58.71,14.296 C59.099,14.688 59.097,15.321 58.704,15.71 C58.509,15.903 58.255,16 58,16" id="Fill-633" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M1,4 L23,4 L23,26 L1,26 L1,4 Z" id="Fill-634" fill="#48A0DC" sketch:type="MSShapeGroup"></path>
+            <path d="M0,3 L24,3 L24,27 L0,27 L0,3 Z M2,25 L22,25 L22,5 L2,5 L2,25 Z" id="Fill-635" fill="#48A0DC" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

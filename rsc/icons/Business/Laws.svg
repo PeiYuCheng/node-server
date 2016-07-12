@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="55px" viewBox="0 0 61 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>133 - Laws (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="133---Laws-(Flat)" sketch:type="MSLayerGroup" transform="translate(2.000000, 1.000000)">
+            <path d="M29,15 L29,41 M29,1 L29,5" id="Stroke-797" stroke="#F0C419" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M24.525,12.19 L5,20 L24.525,12.19 Z M53,0 L33.746,8.502 L53,0 Z M5,20 L5,24 L5,20 Z M53,0 L53,4 L53,0 Z M57.324,11.511 L53,4.022 L48.676,11.511 C48.212,12.316 48.005,13.169 48.005,14 L57.995,14 C57.995,13.169 57.788,12.316 57.324,11.511 L57.324,11.511 Z" id="Stroke-798" stroke="#F3D55B" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M48.005,14 C48.005,16.607 50.086,19 53,19 C55.914,19 57.995,16.607 57.995,14 L48.005,14 L48.005,14 Z" id="Fill-799" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M48.005,14 C48.005,16.607 50.086,19 53,19 C55.914,19 57.995,16.607 57.995,14 L48.005,14 L48.005,14 Z" id="Stroke-800" stroke="#556080" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M9.324,31.716 L5,24.227 L0.676,31.716 C0.25,32.455 0.047,33.234 0.015,34 L9.985,34 C9.953,33.234 9.75,32.455 9.324,31.716 L9.324,31.716 Z" id="Stroke-801" stroke="#F3D55B" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M0.015,34 C-0.097,36.686 2.01,39.205 5,39.205 C7.99,39.205 10.097,36.686 9.985,34 L0.015,34 L0.015,34 Z" id="Fill-802" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M0.015,34 C-0.097,36.686 2.01,39.205 5,39.205 C7.99,39.205 10.097,36.686 9.985,34 L0.015,34 L0.015,34 Z" id="Stroke-803" stroke="#556080" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M44,54 L14,54 C14,49.582 17.582,46 22,46 L36,46 C40.418,46 44,49.582 44,54" id="Fill-804" fill="#7F6E5D" sketch:type="MSShapeGroup"></path>
+            <path d="M23,41 L35,41 L35,46 L23,46 L23,41 Z" id="Fill-805" fill="#CBB292" sketch:type="MSShapeGroup"></path>
+            <path d="M34,10 C34,12.761 31.761,15 29,15 C26.239,15 24,12.761 24,10 C24,7.239 26.239,5 29,5 C31.761,5 34,7.239 34,10" id="Fill-2183" fill="#556080" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="47px" viewBox="0 0 58 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>529 - Lock Mail (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="529---Lock-Mail-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L56,39 L56,0 L0,0 L0,39 Z" id="Fill-1590" fill="#DCD6CD" sketch:type="MSShapeGroup"></path>
+            <path d="M30.965,22.107 C29.327,23.569 26.673,23.569 25.035,22.107 L22.949,20.264 C16.419,26.092 0,39 0,39 L56,39 C56,39 39.581,26.092 33.052,20.264 L30.965,22.107" id="Fill-1591" fill="#E8E3D9" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L25.035,22.107 C26.673,23.569 29.327,23.569 30.965,22.107 L56,0 L0,0" id="Fill-1592" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M38,31 L58,31 L58,47 L38,47 L38,31 Z" id="Fill-1882" fill="#CCB292" sketch:type="MSShapeGroup"></path>
+            <path d="M51,38 C51,36.343 49.657,35 48,35 C46.343,35 45,36.343 45,38 C45,39.317 45.854,40.424 47.035,40.827 C47.024,40.885 47,40.939 47,41 L47,43 C47,43.552 47.448,44 48,44 C48.552,44 49,43.552 49,43 L49,41 C49,40.939 48.976,40.885 48.965,40.827 C50.146,40.424 51,39.317 51,38" id="Fill-1883" fill="#7F5B53" sketch:type="MSShapeGroup"></path>
+            <path d="M43,29 C43,26.243 45.243,24 48,24 C50.757,24 53,26.243 53,29 L53,31 L55,31 L55,29 C55,25.14 51.86,22 48,22 C44.14,22 41,25.14 41,29 L41,31 L43,31 L43,29" id="Fill-1884" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

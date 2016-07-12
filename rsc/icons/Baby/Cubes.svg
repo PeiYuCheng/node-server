@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="46px" viewBox="0 0 50 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>21 - Cubes (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="21---Cubes-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M21.423,46 L1.577,46 C0.706,46 0,45.294 0,44.423 L0,24.577 C0,23.706 0.706,23 1.577,23 L21.423,23 C22.294,23 23,23.706 23,24.577 L23,44.423 C23,45.294 22.294,46 21.423,46" id="Fill-240" fill="#4FBA6F" sketch:type="MSShapeGroup"></path>
+            <path d="M17.366,29.524 C22.603,37.243 14.243,45.603 6.524,40.367 C6.176,40.131 5.869,39.824 5.634,39.477 C0.397,31.757 8.757,23.398 16.477,28.633 C16.824,28.869 17.131,29.176 17.366,29.524" id="Fill-241" fill="#A4E869" sketch:type="MSShapeGroup"></path>
+            <path d="M48.423,46 L28.577,46 C27.706,46 27,45.294 27,44.423 L27,24.577 C27,23.706 27.706,23 28.577,23 L48.423,23 C49.294,23 50,23.706 50,24.577 L50,44.423 C50,45.294 49.294,46 48.423,46" id="Fill-242" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M30.423,23 L10.577,23 C9.706,23 9,22.294 9,21.423 L9,1.577 C9,0.706 9.706,0 10.577,0 L30.423,0 C31.294,0 32,0.706 32,1.577 L32,21.423 C32,22.294 31.294,23 30.423,23" id="Fill-243" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M28,11 L20.5,19 L13,11 L20.5,3.444 L28,11" id="Fill-244" fill="#F3D55B" sketch:type="MSShapeGroup"></path>
+            <path d="M46,41 L31,41 L38.5,26.444 L46,41" id="Fill-245" fill="#B0D3F0" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>72 - Fast Left (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="72---Fast-Left-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M27,53 L27,53 C41.359,53 53,41.359 53,27 C53,12.641 41.359,1 27,1 C12.641,1 1,12.641 1,27 C1,41.359 12.641,53 27,53" id="Fill-392" fill="#57B1E3" sketch:type="MSShapeGroup"></path>
+            <path d="M27,54 C12.112,54 0,41.888 0,27 C0,12.112 12.112,0 27,0 C41.888,0 54,12.112 54,27 C54,41.888 41.888,54 27,54 L27,54 Z M27,2 C13.215,2 2,13.215 2,27 C2,40.785 13.215,52 27,52 C40.785,52 52,40.785 52,27 C52,13.215 40.785,2 27,2 L27,2 Z" id="Fill-393" fill="#57B1E3" sketch:type="MSShapeGroup"></path>
+            <path d="M27,40 C26.744,40 26.488,39.902 26.293,39.707 L14.795,28.209 C14.128,27.542 14.128,26.458 14.795,25.791 L26.293,14.293 C26.684,13.902 27.316,13.902 27.707,14.293 C28.098,14.684 28.098,15.316 27.707,15.707 L16.414,27 L27.707,38.293 C28.098,38.684 28.098,39.316 27.707,39.707 C27.512,39.902 27.256,40 27,40" id="Fill-440" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M37,40 C36.744,40 36.488,39.902 36.293,39.707 L24.795,28.209 C24.128,27.542 24.128,26.458 24.795,25.791 L36.293,14.293 C36.684,13.902 37.316,13.902 37.707,14.293 C38.098,14.684 38.098,15.316 37.707,15.707 L26.414,27 L37.707,38.293 C38.098,38.684 38.098,39.316 37.707,39.707 C37.512,39.902 37.256,40 37,40" id="Fill-441" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

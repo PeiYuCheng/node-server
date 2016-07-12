@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="59px" viewBox="0 0 24 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>136 - Salt Shaker (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="136---Salt-Shaker-(Flat)" sketch:type="MSLayerGroup" transform="translate(-1.000000, 1.000000)">
+            <path d="M24.421,46.766 C24.894,46.12 25.116,45.281 24.94,44.395 C24.657,42.972 23.32,42 21.869,42 L4.131,42 C2.68,42 1.343,42.972 1.06,44.395 C0.884,45.281 1.106,46.12 1.579,46.766 C2.12,47.505 2.12,48.495 1.579,49.234 C1.106,49.879 0.884,50.718 1.06,51.604 C1.343,53.028 2.68,54 4.131,54 L21.869,54 C23.32,54 24.657,53.028 24.94,51.604 C25.116,50.718 24.894,49.879 24.421,49.234 C23.88,48.495 23.88,47.505 24.421,46.766" id="Fill-2296" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M22,54 L4,54 C2.575,54 1.378,52.991 1.077,51.653 C1.037,51.795 1,51.938 1,52.084 L1,58 L25,58 L25,52.084 C25,51.938 24.963,51.795 24.923,51.653 C24.622,52.991 23.425,54 22,54" id="Fill-2297" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M25,15 C25,14.255 24.465,13.551 23.53,12.916 C22.428,14.188 20.805,15 19,15 L7,15 C5.195,15 3.572,14.188 2.47,12.916 C1.535,13.551 1,14.255 1,15 L1,16.375 C1,18.035 1.384,19.666 2.052,21.185 C4.68,27.156 4.636,31.976 2.067,37.794 C1.391,39.325 1,40.966 1,42.64 L1,43 C1,43.281 1.099,43.554 1.244,43.822 C1.704,42.753 2.768,42 4,42 L22,42 C23.232,42 24.296,42.753 24.756,43.822 C24.901,43.554 25,43.281 25,43 L25,42.647 C25,40.969 24.606,39.323 23.927,37.789 C21.363,31.99 21.32,27.172 23.953,21.18 C24.619,19.664 25,18.037 25,16.381 L25,15" id="Fill-2298" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M9,34 L14.5,34 C15.875,34 17,32.875 17,31.5 C17,30.125 15.875,29 14.5,29 L11.5,29 C10.125,29 9,27.875 9,26.5 C9,25.125 10.125,24 11.5,24 L17,24" id="Stroke-2299" stroke="#D2D5D7" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M11,0 L15,0 L15,3 L11,3 L11,0 Z" id="Stroke-2300" stroke="#E6E6E6" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M19,15 L7,15 C3.7,15 1,12.3 1,9 C1,5.7 3.7,3 7,3 L19,3 C22.3,3 25,5.7 25,9 C25,12.3 22.3,15 19,15" id="Fill-2301" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M2,48 L6,48" id="Fill-2302" fill="#FAF6E5" sketch:type="MSShapeGroup"></path>
+            <path d="M24.273,48.945 C23.963,48.345 23.963,47.654 24.273,47.055 C24.184,47.029 24.097,47 24,47 L14,47 C13.448,47 13,47.447 13,48 C13,48.553 13.448,49 14,49 L24,49 C24.097,49 24.184,48.97 24.273,48.945" id="Fill-2303" fill="#FAF6E5" sketch:type="MSShapeGroup"></path>
+            <path d="M2,49 L6,49 C6.552,49 7,48.553 7,48 C7,47.447 6.552,47 6,47 L2,47 C1.903,47 1.816,47.029 1.727,47.055 C2.037,47.654 2.037,48.345 1.727,48.945 C1.816,48.97 1.903,49 2,49" id="Fill-2304" fill="#FAF6E5" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

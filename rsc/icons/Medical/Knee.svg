@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>106 - Knee (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="106---Knee-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M9.017,50 C10.79,41.272 15,33 15,33 L1.179,20.815 C0.416,23.412 0,26.156 0,29 C0,37.267 3.467,44.718 9.017,50" id="Fill-1359" fill="#7FABDA" sketch:type="MSShapeGroup"></path>
+            <path d="M48.805,28.778 L48,32 L48.807,50.164 C54.46,44.873 58,37.354 58,29 C58,13.506 45.848,0.851 30.556,0.042 L44.525,13.68 C48.535,17.594 50.164,23.342 48.805,28.778" id="Fill-1360" fill="#7FABDA" sketch:type="MSShapeGroup"></path>
+            <path d="M29,58 C36.661,58 43.623,55.024 48.808,50.172 L48,32 L48.805,28.778 C50.164,23.342 48.535,17.594 44.525,13.68 L30.556,0.042 C30.04,0.015 29.522,0 29,0 C15.827,0 4.713,8.786 1.179,20.815 L15,33 C15,33 10.789,41.275 9.016,50.004 C14.218,54.955 21.251,58 29,58" id="Fill-1361" fill="#FCCF9D" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

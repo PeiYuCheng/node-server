@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="49px" viewBox="0 0 53 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>194 - Mushroom (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="194---Mushroom-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M34.546,41.503 C30.87,37.526 30.718,29.344 30.86,25.611 C30.9,24.554 30.058,23.678 29,23.678 L23.851,23.678 C22.793,23.678 21.951,24.554 21.991,25.611 C22.133,29.344 21.981,37.526 18.305,41.503 C18.305,41.503 14.277,45.624 19.066,48.401 C19.339,48.559 19.659,48.633 19.974,48.633 L32.877,48.633 C33.192,48.633 33.512,48.559 33.785,48.401 C38.573,45.624 34.546,41.503 34.546,41.503" id="Fill-247" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M39.893,26.866 L39.893,26.866 C30.851,25.293 21.604,25.293 12.562,26.866 C5.699,26.866 0.084,21.251 0.084,14.389 C0.777,9.14 4.392,4.733 12.562,1.911 C21.522,-0.427 30.933,-0.427 39.893,1.911 C48.856,4.337 52.024,8.893 52.371,14.389 C52.371,21.251 46.756,26.866 39.893,26.866" id="Fill-248" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M18.175,5.967 C20.3,5.663 22.45,5.542 24.596,5.563 M5.742,16.484 C5.521,11.125 9.849,8.005 14.555,6.714" id="Stroke-249" stroke="#D2D5D7" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

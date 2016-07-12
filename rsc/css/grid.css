@@ -1,0 +1,244 @@
+
+body {
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: text; 
+	-moz-user-select: text; 
+	-ms-user-select: text; 
+	-ms-touch-action: text;
+	background-color: #ecf0f1;
+	overflow-y: scroll; 
+	font-family: light; 
+	font-size:26px;
+	transition: all 1s;
+	text-align: center;
+	outline: 0;
+}
+
+textarea {
+    resize: none;
+	outline-width: 0;
+	-ms-user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+}
+input {
+	 outline-width: 0;
+	-ms-user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;	
+ }
+ .container {
+	margin: 0 auto;
+	width: 840px;
+	max-width: 90%;
+	padding-top: 80px;
+	padding-bottom: 60px;
+ }
+ .uimenubt {
+	position: absolute;
+	margin-left: 21px;
+	margin-top: 10px;
+	padding-left: 76px;
+	padding-top: 0px;
+ }
+ .appmenu {
+	 position:absolute;
+	 z-index:100; 
+	 width:100px; 
+	 background-color:rgba(50,50,50,.9); 
+	 display:none;
+ }
+ .appmenuitem {
+	cursor:default;  
+	width:80px;
+	padding-left: 20px;
+	color:#FFFFFF;
+	font-family: regular;
+	font-size: 16px;
+	line-height: 34px;
+	text-align: left;
+ }
+ .appmenuitemSelected {
+	cursor:default;  
+	width:80px;
+	padding-left: 20px;
+	color:#FFFFFF;
+	font-family: regular;
+	font-size: 16px;
+	line-height: 34px;
+	text-align: left;
+	background-color: rgba(0,0,0,.5);
+ }
+ .iconscontainer {
+	margin: 0 auto;
+	width: auto;
+	text-align: center;
+    
+    display: flex;
+	display: -webkit-flex;
+    flex-flow: row wrap;
+	justify-content: center;
+	flex-direction: row;
+    -webkit-flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-webkit-flex-direction: row;
+
+ }
+ .caticons {
+	 text-align: center;
+	 font-family: thin;
+	 font-size: 65px;
+	 padding-top: 60px;
+	 padding-bottom: 20px;
+ }
+
+ .iconbox {
+	padding: 0px;
+	width: 140px;
+	height: 140px;
+	overflow: hidden;
+	text-align: center;
+	font-family: light;
+	font-size: 14px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	break-inside: avoid;
+	-webkit-break-inside: avoid;
+	float:left;
+	cursor: default;
+ }
+ .iconimage {
+	padding: 20px;
+	margin: 15px 20px 2px 20px;
+	background-color:#FFFFFF;
+	border-radius: 8px;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #dde3e7;
+ }
+ .iconimageSelected {
+	padding: 20px;
+	margin: 15px 20px 2px 20px;
+	background-color:#7f8c8d;
+	border-radius: 8px;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #dde3e7;
+	pointer-events: none;
+}
+.iconpicker_container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	z-index: 300000;
+	background-color: #ecf0f1;
+}
+ .iconpicker_sub {
+	margin: 0 auto;
+	width: 840px;
+	max-width: 90%;
+	padding-top: 00px;
+ }
+.urleditContainer_open {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255, .8);
+	z-index: 200000;
+	transition: all .5s;
+	-webkit-transition: all .5s;
+}
+.urleditContainer_close {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255, 0);
+	z-index: 200000;
+	transition: all .5s;
+	-webkit-transition: all .5s;
+}
+.urleditSub_open {
+	background-color: rgb(255,255,255);
+	width: 500px;
+	max-width: 95%;
+	border: 1px solid #A0A0A0;
+	padding: 0px;
+	margin: 0 auto;
+	transition: all .5s;
+	-webkit-transition: all .5s;
+}
+.urleditSub_close {
+	background-color: rgb(255,255,255);
+	width: 500px;
+	max-width: 95%;
+	border: 1px solid #A0A0A0;
+	padding: 0px;
+	margin: 0 auto;
+	margin-top: -500px;
+	transition: all .5s;
+	-webkit-transition: all .5s;
+}
+.dlgicon {
+	padding-top: 20px;
+}
+.finputcontainer {
+	border: 1px solid #E0E0E0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.finput {
+	 outline-width: 0;
+	-ms-user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;	
+	border: 0px;
+	font-size: 20px;
+	font-family: regular;
+	width: 100%;
+}
+.dlginputblock {
+	padding-top: 30px;
+	text-align: left;
+	line-height: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 5px;
+}
+.dlgtbl {
+	width: 100%;
+	height: 60px;
+	margin-top: 30px;
+}
+.dlgtblbt {
+	border-spacing: 0px;
+	width: 50%;
+	text-align: center;
+	vertical-align: middle;
+	cursor: default;
+	color: #e74c3c;
+}
+.dlgtblbt_sel {
+	border-spacing: 0px;
+	width: 50%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #34495e;
+	color: #FFFFFF;
+	cursor: default;
+}
+
+ 

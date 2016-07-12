@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="48px" viewBox="0 0 58 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>11 - Sea Shell (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="11---Sea-Shell-(Flat)" sketch:type="MSLayerGroup" transform="translate(-1.000000, 0.000000)">
+            <path d="M27.816,0.879 C28.882,-0.293 31.117,-0.293 32.184,0.879 L56.877,28.03 C59.708,30.675 59.708,34.963 56.877,37.607 C42.095,51.419 17.905,51.419 3.123,37.607 C0.292,34.963 0.292,30.675 3.123,28.03 L27.816,0.879" id="Fill-139" fill="#F4E6CE" sketch:type="MSShapeGroup"></path>
+            <path d="M30,11.124 C33.614,11.124 36.929,10.031 39.556,8.982 L32.184,0.879 C31.117,-0.293 28.882,-0.293 27.816,0.879 L20.444,8.982 C23.071,10.031 26.386,11.124 30,11.124" id="Fill-140" fill="#FBD490" sketch:type="MSShapeGroup"></path>
+            <path d="M51.686,41.656 C51.613,41.391 51.526,41.143 51.411,40.947 L51.233,40.642 L36.099,10.184 C34.229,10.727 32.17,11.124 30,11.124 C27.83,11.124 25.771,10.727 23.901,10.184 L8.767,40.643 L8.588,40.949 C8.473,41.144 8.387,41.391 8.314,41.656 C21.311,50.114 38.689,50.114 51.686,41.656" id="Fill-141" fill="#FBD490" sketch:type="MSShapeGroup"></path>
+            <path d="M30,11.124 C29.203,11.124 28.424,11.064 27.66,10.969 L19.792,46.701 C26.463,48.433 33.537,48.433 40.209,46.701 L32.34,10.969 C31.576,11.064 30.797,11.124 30,11.124" id="Fill-142" fill="#F4E6CE" sketch:type="MSShapeGroup"></path>
+            <path d="M32.184,0.879 L39,8.374 L39,2.788 C39,1.282 37.624,0.009 35.991,0.009 L30.585,0.009 C31.182,0.122 31.789,0.445 32.184,0.879" id="Fill-143" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M27.816,0.879 C28.211,0.445 28.818,0.122 29.415,0.009 L24.009,0.009 C22.376,0.009 21,1.282 21,2.788 L21,8.374 L27.816,0.879" id="Fill-144" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

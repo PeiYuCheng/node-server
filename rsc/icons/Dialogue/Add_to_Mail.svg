@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="58px" viewBox="0 0 54 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>11 - Add to Mail (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="11---Add-to-Mail-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M54,23.557 L31.966,2.017 C29.215,-0.672 24.785,-0.672 22.034,2.017 L0,23.557 L0,58 L54,58 L54,23.557" id="Fill-354" fill="#2A55C5" sketch:type="MSShapeGroup"></path>
+            <path d="M54,58 L31.446,40.533 C28.689,38.638 25.041,38.628 22.274,40.506 C14.524,45.767 0,58 0,58 L54,58" id="Fill-355" fill="#86D7FB" sketch:type="MSShapeGroup"></path>
+            <path d="M34.707,25.293 C34.316,24.902 33.684,24.902 33.293,25.293 L28,30.586 L28,14 C28,13.447 27.553,13 27,13 C26.447,13 26,13.447 26,14 L26,30.586 L20.707,25.293 C20.316,24.902 19.684,24.902 19.293,25.293 C18.902,25.684 18.902,26.316 19.293,26.707 L26.292,33.706 C26.384,33.799 26.495,33.872 26.618,33.923 C26.74,33.973 26.87,34 27,34 C27.13,34 27.26,33.973 27.382,33.923 C27.505,33.872 27.616,33.799 27.708,33.706 L34.707,26.707 C35.098,26.316 35.098,25.684 34.707,25.293" id="Fill-359" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M23.158,40 L23,40 L0,24 L0,58 C0,58 14.524,45.767 22.273,40.506 C22.558,40.313 22.857,40.153 23.158,40" id="Fill-704" fill="#31B6F3" sketch:type="MSShapeGroup"></path>
+            <path d="M31,40 L30.527,40 C30.841,40.16 31.15,40.33 31.446,40.533 L54,58 L54,24 L31,40" id="Fill-705" fill="#167CD8" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>134 - Diagonal Minimize (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="134---Diagonal-Minimize-(Flat)" sketch:type="MSLayerGroup" transform="translate(-1.000000, -1.000000)" fill="#8697CB">
+            <path d="M56,37 L36,37 C35.447,37 35,36.552 35,36 C35,35.448 35.447,35 36,35 L56,35 C56.553,35 57,35.448 57,36 C57,36.552 56.553,37 56,37" id="Fill-969" sketch:type="MSShapeGroup"></path>
+            <path d="M36,57 C35.447,57 35,56.552 35,56 L35,36 C35,35.448 35.447,35 36,35 C36.553,35 37,35.448 37,36 L37,56 C37,56.552 36.553,57 36,57" id="Fill-970" sketch:type="MSShapeGroup"></path>
+            <path d="M60,61 C59.744,61 59.488,60.902 59.293,60.707 L35.293,36.707 C34.902,36.316 34.902,35.683 35.293,35.293 C35.684,34.902 36.316,34.902 36.707,35.293 L60.707,59.293 C61.098,59.683 61.098,60.316 60.707,60.707 C60.512,60.902 60.256,61 60,61" id="Fill-971" sketch:type="MSShapeGroup"></path>
+            <path d="M26,27 L6,27 C5.447,27 5,26.552 5,26 C5,25.448 5.447,25 6,25 L26,25 C26.553,25 27,25.448 27,26 C27,26.552 26.553,27 26,27" id="Fill-972" sketch:type="MSShapeGroup"></path>
+            <path d="M26,27 C25.447,27 25,26.552 25,26 L25,6 C25,5.448 25.447,5 26,5 C26.553,5 27,5.448 27,6 L27,26 C27,26.552 26.553,27 26,27" id="Fill-973" sketch:type="MSShapeGroup"></path>
+            <path d="M26,27 C25.744,27 25.488,26.902 25.293,26.707 L1.293,2.707 C0.902,2.316 0.902,1.683 1.293,1.293 C1.684,0.902 2.316,0.902 2.707,1.293 L26.707,25.293 C27.098,25.683 27.098,26.316 26.707,26.707 C26.512,26.902 26.256,27 26,27" id="Fill-974" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="46px" viewBox="0 0 57 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>534 - Like Mail (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="534---Like-Mail-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L56,39 L56,0 L0,0 L0,39 Z" id="Fill-1617" fill="#DCD6CD" sketch:type="MSShapeGroup"></path>
+            <path d="M30.965,22.107 C29.327,23.569 26.673,23.569 25.035,22.107 L22.948,20.264 C16.419,26.092 0,39 0,39 L56,39 C56,39 39.581,26.092 33.052,20.264 L30.965,22.107" id="Fill-1618" fill="#E8E3D9" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L25.035,22.107 C26.673,23.569 29.327,23.569 30.965,22.107 L56,0 L0,0" id="Fill-1619" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M45,29.2 C45.969,27.017 48.109,25.001 50.684,25.001 C54.151,25.001 56.648,27.822 56.962,31.184 C56.962,31.184 57.131,32.018 56.758,33.521 C56.25,35.566 55.057,37.385 53.447,38.771 L45,46 L36.553,38.771 C34.943,37.384 33.75,35.566 33.242,33.52 C32.869,32.018 33.038,31.183 33.038,31.183 C33.352,27.821 35.849,25 39.316,25 C41.891,25 44.031,27.017 45,29.2" id="Fill-1864" fill="#F09372" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

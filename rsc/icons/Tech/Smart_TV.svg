@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="47px" viewBox="0 0 58 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>96 - Smart TV (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="96---Smart-TV-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L58,0 L58,38 L0,38 L0,0 Z" id="Fill-957" fill="#38454F" sketch:type="MSShapeGroup"></path>
+            <path d="M13.962,16 L11.038,16 C10.465,16 10,15.535 10,14.962 L10,12.038 C10,11.465 10.465,11 11.038,11 L13.962,11 C14.535,11 15,11.465 15,12.038 L15,14.962 C15,15.535 14.535,16 13.962,16" id="Fill-1301" fill="#61B972" sketch:type="MSShapeGroup"></path>
+            <path d="M24.962,16 L22.038,16 C21.465,16 21,15.535 21,14.962 L21,12.038 C21,11.465 21.465,11 22.038,11 L24.962,11 C25.535,11 26,11.465 26,12.038 L26,14.962 C26,15.535 25.535,16 24.962,16" id="Fill-1302" fill="#48A0DC" sketch:type="MSShapeGroup"></path>
+            <path d="M35.962,16 L33.038,16 C32.465,16 32,15.535 32,14.962 L32,12.038 C32,11.465 32.465,11 33.038,11 L35.962,11 C36.535,11 37,11.465 37,12.038 L37,14.962 C37,15.535 36.535,16 35.962,16" id="Fill-1303" fill="#ECBA16" sketch:type="MSShapeGroup"></path>
+            <path d="M46.962,16 L44.038,16 C43.465,16 43,15.535 43,14.962 L43,12.038 C43,11.465 43.465,11 44.038,11 L46.962,11 C47.535,11 48,11.465 48,12.038 L48,14.962 C48,15.535 47.535,16 46.962,16" id="Fill-1304" fill="#BF4D90" sketch:type="MSShapeGroup"></path>
+            <path d="M13.962,27 L11.038,27 C10.465,27 10,26.535 10,25.962 L10,23.038 C10,22.465 10.465,22 11.038,22 L13.962,22 C14.535,22 15,22.465 15,23.038 L15,25.962 C15,26.535 14.535,27 13.962,27" id="Fill-1305" fill="#DD342E" sketch:type="MSShapeGroup"></path>
+            <path d="M24.962,27 L22.038,27 C21.465,27 21,26.535 21,25.962 L21,23.038 C21,22.465 21.465,22 22.038,22 L24.962,22 C25.535,22 26,22.465 26,23.038 L26,25.962 C26,26.535 25.535,27 24.962,27" id="Fill-1306" fill="#A4E869" sketch:type="MSShapeGroup"></path>
+            <path d="M35.962,27 L33.038,27 C32.465,27 32,26.535 32,25.962 L32,23.038 C32,22.465 32.465,22 33.038,22 L35.962,22 C36.535,22 37,22.465 37,23.038 L37,25.962 C37,26.535 36.535,27 35.962,27" id="Fill-1307" fill="#50508A" sketch:type="MSShapeGroup"></path>
+            <path d="M46.962,27 L44.038,27 C43.465,27 43,26.535 43,25.962 L43,23.038 C43,22.465 43.465,22 44.038,22 L46.962,22 C47.535,22 48,22.465 48,23.038 L48,25.962 C48,26.535 47.535,27 46.962,27" id="Fill-1308" fill="#BE7C6D" sketch:type="MSShapeGroup"></path>
+            <path d="M30,44 L30,38 L28,38 L28,44 L15,44 L15,47 L43,47 L43,44 L30,44" id="Fill-1309" fill="#B0B6BB" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

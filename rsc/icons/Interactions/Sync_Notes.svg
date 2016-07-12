@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="58px" viewBox="0 0 56 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>485 - Sync Notes (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="485---Sync-Notes-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L44,0 L44,58 L0,58 L0,0 Z" id="Fill-1536" fill="#CCB292" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L8,0 L8,58 L0,58 L0,0 Z" id="Fill-1537" fill="#7F6E5D" sketch:type="MSShapeGroup"></path>
+            <path d="M15,10 L37,10 L37,22 L15,22 L15,10 Z" id="Fill-1538" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M19,13 L33,13 L33,15 L19,15 L19,13 Z" id="Fill-1539" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M19,17 L33,17 L33,19 L19,19 L19,17 Z" id="Fill-1540" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M56,45.5 C56,52.404 50.404,58 43.5,58 C36.596,58 31,52.404 31,45.5 C31,38.597 36.596,33 43.5,33 C50.404,33 56,38.597 56,45.5" id="Fill-2012" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M53.193,46.019 C52.643,45.906 52.125,46.265 52.018,46.807 C51.198,50.975 47.616,54 43.5,54 C40.149,54 37.152,51.995 35.711,49 L41,49 L41,47 L33,47 L33,55 L35,55 L35,51.659 C36.976,54.315 40.085,56 43.5,56 C48.568,56 52.976,52.296 53.981,47.194 C54.088,46.652 53.735,46.125 53.193,46.019" id="Fill-2013" fill="#C1BDDE" sketch:type="MSShapeGroup"></path>
+            <path d="M52,35.999 L52,39.34 C50.024,36.683 46.914,34.999 43.5,34.999 C38.432,34.999 34.023,38.702 33.019,43.805 C32.912,44.347 33.265,44.873 33.807,44.979 C34.356,45.092 34.875,44.733 34.981,44.192 C35.802,40.024 39.384,36.999 43.5,36.999 C46.851,36.999 49.847,39.004 51.289,41.999 L46,41.999 L46,43.999 L54,43.999 L54,35.999 L52,35.999" id="Fill-2014" fill="#C1BDDE" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

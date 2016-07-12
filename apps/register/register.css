@@ -1,0 +1,92 @@
+BODY { 
+	background-color:#FFFFFF; 
+	border: 0px; margin: 0px; 
+	text-align: center;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-ms-touch-action: none;
+	user-select: none; 	
+}
+input {
+	outline-width: 0;
+	-ms-user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;	
+ }
+ .account_item {
+	 border-radius: 6px;
+	background-color:#F0F1F4; 
+	border: 1px solid #DADBDD;
+	text-align: center;
+	vertical-align: middle; 
+	margin-bottom: 0px;  text-align: center; width: 340px; height: 64px; line-height: 64px; 
+ }
+ .account_item_selected {
+	border-radius: 6px;
+	border: 1px solid rgba(44,45,48, .15);
+	background-color: rgba(44,45,48, .15); 
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 0px;  text-align: center; width: 340px; height: 64px; line-height: 64px; 
+ }
+ .errorMessage {
+	z-index: 1000;
+	opacity: 0;
+	display: none;
+	transition: opacity .5s;
+	padding: 20px;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	font-size: 24px;
+	background-color:#994545;
+	color:#FFFFFF; 
+	text-align: center; 
+ }
+ 
+ 
+/* ----------------------------------- waitbox  -------------------------------- */
+
+@keyframes waitboxSpin {
+    0% {transform:rotate(0deg); border-radius: 10%;}
+    50% {transform:rotate(180deg);border-radius: 40%; }
+   100% {transform:rotate(360deg);border-radius: 10%; }
+}
+@-webkit-keyframes waitboxSpin {
+    0% {-webkit-transform:rotate(0deg); border-radius: 10%;}
+    50% {-webkit-transform:rotate(180deg);border-radius: 40%; }
+   100% {-webkit-transform:rotate(360deg);border-radius: 10%; }
+}
+
+.waitboxBg {
+	pointer-events: none;
+    position: absolute;
+	z-index: 100000;
+	left: 50%; top: 50%; margin: -40px; margin-top: -200px;
+	opacity: 0;
+    width: 80px; height: 80px;
+    background: rgba(0,0,0,.5);
+	border-radius: 100%;
+	transition: all .5s;
+}
+.waitbox {
+	pointer-events: none;
+	margin: 15px;
+    width: 50px; height: 50px;
+    background: rgba(255,255,255,.5);
+    animation-name: waitboxSpin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+	-webkit-animation-name: waitboxSpin;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+}

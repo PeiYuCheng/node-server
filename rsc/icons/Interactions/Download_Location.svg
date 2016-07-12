@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="53px" viewBox="0 0 40 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>506 - Download Location (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="506---Download-Location-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M31.64,5.324 L31.64,5.324 C24.542,-1.774 13.033,-1.774 5.934,5.324 C-0.462,11.72 -1.181,23.764 4.246,31 L18.787,52 L33.328,31 C38.756,23.764 38.036,11.72 31.64,5.324 L31.64,5.324 Z M18.964,24 C15.65,24 12.964,21.314 12.964,18 C12.964,14.687 15.65,12 18.964,12 C22.278,12 24.964,14.687 24.964,18 C24.964,21.314 22.278,24 18.964,24 L18.964,24 Z" id="Fill-1576" fill="#3192D0" sketch:type="MSShapeGroup"></path>
+            <path d="M18,31 L40,31 L40,53 L18,53 L18,31 Z" id="Fill-1922" fill="#21AE5E" sketch:type="MSShapeGroup"></path>
+            <path d="M28,32.586 L30,32.586 L30,48.586 L28,48.586 L28,32.586 Z" id="Fill-1923" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M29,50 L22,43.293 L23.476,41.879 L29,47.172 L34.524,41.879 L36,43.293 L29,50" id="Fill-1924" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

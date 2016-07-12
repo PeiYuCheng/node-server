@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="55px" viewBox="0 0 32 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>50 - Flower Pot (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="50---Flower-Pot-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)">
+            <path d="M15,33 L15,12" id="Stroke-2307" stroke="#23A24D" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M15,2.176 L10.009,0.415 C10.008,0.444 10,0.471 10,0.5 L10,8.5 C10,10.975 12.025,13 14.5,13 C14.671,13 14.834,12.968 15,12.949 L15,2.176" id="Fill-2308" fill="#DD691D" sketch:type="MSShapeGroup"></path>
+            <path d="M15,5 L19.991,3.238 C19.992,3.267 20,3.294 20,3.323 L20,8.5 C20,10.975 17.975,13 15.5,13 C15.329,13 15.166,12.968 15,12.949 L15,5" id="Fill-2309" fill="#ED8A19" sketch:type="MSShapeGroup"></path>
+            <path d="M15,23 C18.316,23 21,20.316 21,17 C17.684,17 15,19.683 15,23" id="Fill-2310" fill="#88C057" sketch:type="MSShapeGroup"></path>
+            <path d="M15,30 C15,26.683 12.316,24 9,24 C9,27.316 11.684,30 15,30" id="Fill-2311" fill="#88C057" sketch:type="MSShapeGroup"></path>
+            <path d="M22.327,53 L7.673,53 C6.7,53 5.863,52.313 5.672,51.359 L2,33 L28,33 L24.328,51.359 C24.137,52.313 23.3,53 22.327,53" id="Fill-3786" fill="#E8EDEE" sketch:type="MSShapeGroup"></path>
+            <path d="M4.6,46 L5.672,51.359 C5.863,52.313 6.7,53 7.673,53 L22.327,53 C23.3,53 24.137,52.313 24.328,51.359 L25.4,46 L4.6,46" id="Fill-3787" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M3,54 L27,54 M30,51 L27,54 M3,54 L0,51" id="Stroke-3788" stroke="#B0B6BB" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

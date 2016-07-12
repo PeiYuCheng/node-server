@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="59px" viewBox="0 0 36 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>179 - Dining Chair (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="179---Dining-Chair-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M3,36 L3,58 M33,36 L33,58" id="Stroke-106" stroke="#C7CBC7" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M7,36 L7,56 M29,36 L29,56" id="Stroke-107" stroke="#949493" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M3,40 L33,40" id="Stroke-108" stroke="#C7CBC7" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M5,28 L5,14 M31,28 L31,14" id="Stroke-109" stroke="#B0B6BB" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M36,32 C36,28.41 29.046,25 18,25 C6.954,25 0,28.41 0,32 L0.051,32 C0.027,32.165 0,32.329 0,32.5 C0,34.425 1.575,36 3.5,36 L32.5,36 C34.425,36 36,34.425 36,32.5 C36,32.329 35.973,32.165 35.949,32 L36,32" id="Fill-1180" fill="#7383BF" sketch:type="MSShapeGroup"></path>
+            <path d="M24.5,19 L11.5,19 C6.253,19 2,14.747 2,9.5 C2,4.253 6.253,0 11.5,0 L24.5,0 C29.747,0 34,4.253 34,9.5 C34,14.747 29.747,19 24.5,19" id="Fill-1181" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M30,31 L16,31 C15.448,31 15,31.447 15,32 C15,32.552 15.448,33 16,33 L30,33 C30.552,33 31,32.552 31,32 C31,31.447 30.552,31 30,31" id="Fill-1182" fill="#97A7DD" sketch:type="MSShapeGroup"></path>
+            <path d="M10,31 L6,31 C5.448,31 5,31.447 5,32 C5,32.552 5.448,33 6,33 L10,33 C10.553,33 11,32.552 11,32 C11,31.447 10.553,31 10,31" id="Fill-1183" fill="#97A7DD" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

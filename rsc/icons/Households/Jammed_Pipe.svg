@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="49px" height="58px" viewBox="0 0 49 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>85 - Jammed Pipe (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="85---Jammed-Pipe-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)">
+            <path d="M16,0 L32,0 L32,3 L16,3 L16,0 Z" id="Fill-2285" fill="#DD691D" sketch:type="MSShapeGroup"></path>
+            <path d="M16,55 L32,55 L32,58 L16,58 L16,55 Z" id="Fill-2286" fill="#DD691D" sketch:type="MSShapeGroup"></path>
+            <path d="M4,31 L2,33 M3,28 L0,28 M4,25 L1.879,22.879" id="Stroke-2292" stroke="#F8E7A1" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M36,29 C36,26.126 35.253,23.46 33.978,21.241 C32.71,19.036 32,16.558 32,14.014 L32,9 L16,9 L16,14.014 C16,16.558 15.29,19.036 14.022,21.241 C12.747,23.46 12,26.126 12,29 C12,31.874 12.747,34.54 14.022,36.759 C15.29,38.964 16,41.442 16,43.986 L16,49 L32,49 L32,43.986 C32,41.442 32.71,38.964 33.978,36.759 C35.253,34.54 36,31.874 36,29" id="Fill-2294" fill="#DD691D" sketch:type="MSShapeGroup"></path>
+            <path d="M43,24.879 L45,22.879 M44,28 L47,28 M43,30.879 L45.121,33" id="Stroke-2295" stroke="#F8E7A1" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M13,3 L35,3 L35,9 L13,9 L13,3 Z" id="Fill-3791" fill="#ED8A19" sketch:type="MSShapeGroup"></path>
+            <path d="M13,49 L35,49 L35,55 L13,55 L13,49 Z" id="Fill-3792" fill="#ED8A19" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

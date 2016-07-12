@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="54px" viewBox="0 0 58 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>232 - Search Window (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="232---Search-Window-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,14 L50,14 L50,49 L0,49 L0,14 Z" id="Fill-855" fill="#EDF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L50,0 L50,14 L0,14 L0,0 Z" id="Fill-856" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M10,7 C10,8.657 8.657,10 7,10 C5.343,10 4,8.657 4,7 C4,5.343 5.343,4 7,4 C8.657,4 10,5.343 10,7" id="Fill-857" fill="#ED7061" sketch:type="MSShapeGroup"></path>
+            <path d="M19,7 C19,8.657 17.657,10 16,10 C14.343,10 13,8.657 13,7 C13,5.343 14.343,4 16,4 C17.657,4 19,5.343 19,7" id="Fill-858" fill="#F0C41A" sketch:type="MSShapeGroup"></path>
+            <path d="M28,7 C28,8.657 26.657,10 25,10 C23.343,10 22,8.657 22,7 C22,5.343 23.343,4 25,4 C26.657,4 28,5.343 28,7" id="Fill-859" fill="#4FBA6E" sketch:type="MSShapeGroup"></path>
+            <path d="M53.573,38.796 C53.573,44.206 49.188,48.592 43.778,48.592 C38.367,48.592 33.982,44.206 33.982,38.796 C33.982,33.386 38.367,29 43.778,29 C49.188,29 53.573,33.386 53.573,38.796" id="Fill-2510" fill="#D0E8F9" sketch:type="MSShapeGroup"></path>
+            <path d="M47.33,29.675 L34.656,42.348 C35.362,44.158 36.586,45.706 38.151,46.808 L51.789,33.17 C50.687,31.604 49.14,30.38 47.33,29.675" id="Fill-2511" fill="#EBF7FD" sketch:type="MSShapeGroup"></path>
+            <path d="M57.723,52.291 L51.753,46.047 C53.499,44.128 54.573,41.588 54.573,38.796 C54.573,32.844 49.731,28 43.778,28 C37.824,28 32.982,32.844 32.982,38.796 C32.982,44.749 37.824,49.592 43.778,49.592 C46.219,49.592 48.466,48.768 50.277,47.396 L56.277,53.672 C56.474,53.878 56.736,53.982 57,53.982 C57.249,53.982 57.497,53.89 57.692,53.704 C58.09,53.323 58.105,52.689 57.723,52.291 L57.723,52.291 Z M34.982,38.796 C34.982,33.946 38.928,30 43.778,30 C48.627,30 52.573,33.946 52.573,38.796 C52.573,43.646 48.627,47.592 43.778,47.592 C38.928,47.592 34.982,43.646 34.982,38.796 L34.982,38.796 Z" id="Fill-2512" fill="#B1D3F0" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

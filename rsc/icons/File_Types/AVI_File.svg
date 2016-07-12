@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="43px" height="56px" viewBox="0 0 43 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>6 - AVI File (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="6---AVI-File-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M30.485,0 L1.463,0 C0.655,0 0,0.655 0,1.926 L0,55 C0,55.345 0.655,56 1.463,56 L41.537,56 C42.345,56 43,55.345 43,55 L43,12.978 C43,12.282 42.907,12.058 42.743,11.893 L31.107,0.257 C30.942,0.093 30.718,0 30.485,0" id="Fill-8" fill="#E9E9E0" sketch:type="MSShapeGroup"></path>
+            <path d="M31,0.151 L31,12 L42.849,12 L31,0.151" id="Fill-19" fill="#D9D7CA" sketch:type="MSShapeGroup"></path>
+            <path d="M41.537,56 L1.463,56 C0.655,56 0,55.345 0,54.537 L0,39 L43,39 L43,54.537 C43,55.345 42.345,56 41.537,56" id="Fill-227" fill="#D75D72" sketch:type="MSShapeGroup"></path>
+            <path d="M9.861,53 L13.389,42.938 L15.016,42.938 L18.516,53 L16.82,53 L16.096,50.908 L12.309,50.908 L11.57,53 L9.861,53 L9.861,53 Z M12.691,49.801 L15.699,49.801 L14.209,45.453 L12.691,49.801 L12.691,49.801 Z" id="Fill-228" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M23.328,53.055 L20.197,42.924 L22.07,42.924 L24.408,51.619 L26.883,42.924 L28.742,42.924 L25.461,53.055 L23.328,53.055" id="Fill-229" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M30.82,42.924 L32.488,42.924 L32.488,53 L30.82,53 L30.82,42.924 Z" id="Fill-230" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M17,28 L17,14 L28,21 L17,28" id="Fill-250" fill="#C8BDB8" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

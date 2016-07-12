@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>9 - Shopping Basket (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="9---Shopping-Basket-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,20 L58,20 L58,26 L0,26 L0,20 Z" id="Fill-1711" fill="#C03A2B" sketch:type="MSShapeGroup"></path>
+            <path d="M52.433,58 L5.567,58 C3.597,58 2,56.403 2,54.433 L2,26 L56,26 L56,54.433 C56,56.403 54.403,58 52.433,58" id="Fill-1712" fill="#E64C3C" sketch:type="MSShapeGroup"></path>
+            <path d="M29,23 L48.092,3.908" id="Stroke-1713" stroke="#556080" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M9,32 L13,32 M9,36 L13,36 M9,40 L13,40 M9,44 L13,44 M9,48 L13,48 M9,52 L13,52 M21,32 L25,32 M21,36 L25,36 M21,40 L25,40 M21,44 L25,44 M21,48 L25,48 M21,52 L25,52 M33,32 L37,32 M33,36 L37,36 M33,40 L37,40 M33,44 L37,44 M33,48 L37,48 M33,52 L37,52 M45,32 L49,32 M45,36 L49,36 M45,40 L49,40 M45,44 L49,44 M45,48 L49,48 M45,52 L49,52" id="Stroke-1714" stroke="#ED7161" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M29,23 L9.908,3.908" id="Stroke-1715" stroke="#556080" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M14,4 C14,6.209 12.209,8 10,8 C7.791,8 6,6.209 6,4 C6,1.791 7.791,0 10,0 C12.209,0 14,1.791 14,4" id="Fill-2208" fill="#F3D55B" sketch:type="MSShapeGroup"></path>
+            <path d="M52,4 C52,6.209 50.209,8 48,8 C45.791,8 44,6.209 44,4 C44,1.791 45.791,0 48,0 C50.209,0 52,1.791 52,4" id="Fill-2209" fill="#F3D55B" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

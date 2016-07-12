@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>36 - Soap (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="36---Soap-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M26.483,53.483 L0.517,27.517 C0.232,27.231 0.232,26.769 0.517,26.483 L26.483,0.517 C26.768,0.231 27.232,0.231 27.517,0.517 L53.483,26.483 C53.768,26.769 53.768,27.231 53.483,27.517 L27.517,53.483 C27.232,53.769 26.768,53.769 26.483,53.483" id="Fill-62" fill="#FF5364" sketch:type="MSShapeGroup"></path>
+            <path d="M6.174,26.483 L26.483,6.174 C26.768,5.889 27.232,5.889 27.517,6.174 L47.826,26.483 C48.111,26.769 48.111,27.231 47.826,27.517 L27.517,47.826 C27.232,48.111 26.768,48.111 26.483,47.826 L6.174,27.517 C5.889,27.231 5.889,26.769 6.174,26.483" id="Fill-63" fill="#F3D55B" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

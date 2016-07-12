@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="53px" viewBox="0 0 56 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>93 - Received (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="93---Received-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M39,31 L39,38 L17,38 L17,31 L0.053,31 C0.024,31 0,31.023 0,31.052 L0,50.616 C0,51.932 1.068,53 2.384,53 L53.616,53 C54.933,53 56,51.932 56,50.616 L56,31.052 C56,31.023 55.976,31 55.948,31 L39,31" id="Fill-127" fill="#7383BF" sketch:type="MSShapeGroup"></path>
+            <path d="M46,16 L10,16 L0.019,30.952 C0.01,30.975 0.027,31 0.051,31 L17,31 L17,38 L39,38 L39,31 L55.949,31 C55.973,31 55.99,30.975 55.981,30.952 L46,16" id="Fill-128" fill="#536396" sketch:type="MSShapeGroup"></path>
+            <path d="M36.707,22.293 C36.316,21.902 35.684,21.902 35.293,22.293 L29,28.586 L29,1 C29,0.448 28.553,0 28,0 C27.447,0 27,0.448 27,1 L27,28.586 L20.707,22.293 C20.316,21.902 19.684,21.902 19.293,22.293 C18.902,22.684 18.902,23.316 19.293,23.707 L27.292,31.706 C27.293,31.707 27.293,31.707 27.294,31.708 L28,32.414 L28.706,31.708 C28.707,31.707 28.707,31.707 28.708,31.706 L36.707,23.707 C37.098,23.316 37.098,22.684 36.707,22.293" id="Fill-129" fill="#38454F" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="58px" viewBox="0 0 56 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>498 - Delete Notes (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="498---Delete-Notes-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L44,0 L44,58 L0,58 L0,0 Z" id="Fill-1471" fill="#CCB292" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L8,0 L8,58 L0,58 L0,0 Z" id="Fill-1472" fill="#7F6E5D" sketch:type="MSShapeGroup"></path>
+            <path d="M15,10 L37,10 L37,22 L15,22 L15,10 Z" id="Fill-1473" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M19,13 L33,13 L33,15 L19,15 L19,13 Z" id="Fill-1474" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M19,17 L33,17 L33,19 L19,19 L19,17 Z" id="Fill-1475" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M56,46 C56,52.627 50.627,58 44,58 C37.373,58 32,52.627 32,46 C32,39.373 37.373,34 44,34 C50.627,34 56,39.373 56,46" id="Fill-2026" fill="#ED7061" sketch:type="MSShapeGroup"></path>
+            <path d="M45.414,46 L48.95,42.464 C49.34,42.074 49.34,41.441 48.95,41.051 C48.559,40.66 47.926,40.66 47.536,41.051 L44,44.586 L40.464,41.051 C40.074,40.66 39.441,40.66 39.05,41.051 C38.66,41.441 38.66,42.074 39.05,42.464 L42.586,46 L39.05,49.536 C38.66,49.926 38.66,50.559 39.05,50.95 C39.246,51.145 39.502,51.243 39.757,51.243 C40.013,51.243 40.269,51.145 40.464,50.95 L44,47.414 L47.536,50.95 C47.731,51.145 47.987,51.243 48.243,51.243 C48.499,51.243 48.754,51.145 48.95,50.95 C49.34,50.559 49.34,49.926 48.95,49.536 L45.414,46" id="Fill-2027" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

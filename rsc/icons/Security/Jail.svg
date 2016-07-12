@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>1 - Jail (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="1---Jail-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L58,0 L58,58 L0,58 L0,0 Z" id="Fill-511" fill="#A5A5A4" sketch:type="MSShapeGroup"></path>
+            <path d="M7,7 L51,7 L51,51 L7,51 L7,7 Z" id="Fill-512" fill="#38454F" sketch:type="MSShapeGroup"></path>
+            <path d="M11,52 C10.447,52 10,51.553 10,51 L10,7 C10,6.447 10.447,6 11,6 C11.553,6 12,6.447 12,7 L12,51 C12,51.553 11.553,52 11,52" id="Fill-513" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M20,52 C19.447,52 19,51.553 19,51 L19,7 C19,6.447 19.447,6 20,6 C20.553,6 21,6.447 21,7 L21,51 C21,51.553 20.553,52 20,52" id="Fill-514" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M29,52 C28.447,52 28,51.553 28,51 L28,7 C28,6.447 28.447,6 29,6 C29.553,6 30,6.447 30,7 L30,51 C30,51.553 29.553,52 29,52" id="Fill-515" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M38,52 C37.447,52 37,51.553 37,51 L37,7 C37,6.447 37.447,6 38,6 C38.553,6 39,6.447 39,7 L39,51 C39,51.553 38.553,52 38,52" id="Fill-516" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M47,52 C46.447,52 46,51.553 46,51 L46,7 C46,6.447 46.447,6 47,6 C47.553,6 48,6.447 48,7 L48,51 C48,51.553 47.553,52 47,52" id="Fill-517" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M6,6 L52,6 L52,52 L6,52 L6,6 Z M8,50 L50,50 L50,8 L8,8 L8,50 Z" id="Fill-527" fill="#556080" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

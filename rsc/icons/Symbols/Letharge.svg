@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="58px" viewBox="0 0 40 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>46 - Letharge (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="46---Letharge-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, -1.000000)">
+            <path d="M37.769,48 C36.836,48 36.033,48.648 35.825,49.558 C35.115,52.67 32.324,55 29,55 C25.141,55 22.046,51.859 22.046,48 L22,41 C32.258,39.977 40.259,31.071 39.994,20.49 C39.736,10.179 31.398,1.583 21.099,1.029 C9.574,0.41 0,9.608 0,21 C0,31.351 7.91,39.99 18,41 L18.046,48 C18.046,51.859 14.859,55 11,55 C7.676,55 4.885,52.67 4.175,49.558 C3.967,48.648 3.164,48 2.231,48 C0.937,48 -0.011,49.209 0.28,50.47 C1.404,55.35 5.784,59 11,59 C14.499,59 17.616,57.084 19.632,54.497 C19.822,54.253 20.178,54.253 20.368,54.497 C22.384,57.084 25.501,59 29,59 C34.216,59 38.596,55.35 39.72,50.47 C40.011,49.209 39.064,48 37.769,48" id="Fill-57" fill="#26B99A" sketch:type="MSShapeGroup"></path>
+            <path d="M4,21 C4,12.163 11.163,5 20,5 C28.837,5 36,12.163 36,21 C36,29.836 28.837,37 20,37 C11.163,37 4,29.836 4,21" id="Fill-87" fill="#13A085" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

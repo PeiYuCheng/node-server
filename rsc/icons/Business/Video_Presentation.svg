@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="59px" viewBox="0 0 58 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>114 - Video Presentation (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="114---Video-Presentation-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L58,0 L58,6 L0,6 L0,0 Z" id="Fill-669" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M2,6 L56,6 L56,48 L2,48 L2,6 Z" id="Fill-670" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M44,27 C44,35.284 37.284,42 29,42 C20.716,42 14,35.284 14,27 C14,18.716 20.716,12 29,12 C37.284,12 44,18.716 44,27" id="Fill-831" fill="#E64C3C" sketch:type="MSShapeGroup"></path>
+            <path d="M25,34 L25,20 L36,27 L25,34" id="Fill-832" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M0,48 L58,48 L0,48 Z" id="Path" stroke="#556080" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M29,48 L29,51 L29,48 Z" id="Path" stroke="#556080" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M32,55 C32,56.657 30.657,58 29,58 C27.343,58 26,56.657 26,55 C26,53.343 27.343,52 29,52 C30.657,52 32,53.343 32,55 L32,55 Z" id="Path" stroke="#556080" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

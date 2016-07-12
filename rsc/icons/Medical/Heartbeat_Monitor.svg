@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="47px" viewBox="0 0 58 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>114 - Heartbeat Monitor (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="114---Heartbeat-Monitor-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M55.537,44 L2.463,44 C1.103,44 0,42.897 0,41.537 L0,2.463 C0,1.103 1.103,0 2.463,0 L55.537,0 C56.897,0 58,1.103 58,2.463 L58,41.537 C58,42.897 56.897,44 55.537,44" id="Fill-279" fill="#3E465B" sketch:type="MSShapeGroup"></path>
+            <path d="M4,4 L54,4 L54,38 L4,38 L4,4 Z" id="Fill-280" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M39.754,24 L35.962,10.726 C35.839,10.296 35.446,10 35,10 C34.553,10 34.161,10.297 34.038,10.726 L30.674,22.535 L28.859,19.488 C28.66,19.153 28.29,18.966 27.893,19.006 C27.504,19.048 27.175,19.312 27.052,19.684 L24.933,26.039 L20.934,15.641 C20.781,15.246 20.394,14.995 19.977,15 C19.556,15.01 19.185,15.283 19.052,15.684 L16.279,24 L4,24 L4,26 L17,26 C17.431,26 17.812,25.725 17.948,25.316 L20.067,18.961 L24.066,29.359 C24.216,29.746 24.587,30 25,30 L25.022,30 C25.444,29.99 25.815,29.717 25.948,29.316 L28.258,22.388 L30.141,25.55 C30.345,25.893 30.737,26.081 31.129,26.029 C31.525,25.979 31.852,25.696 31.962,25.312 L35.001,14.645 L38.038,25.274 C38.161,25.704 38.554,26 39,26 L54,26 L54,24 L39.754,24" id="Fill-822" fill="#2BDA72" sketch:type="MSShapeGroup"></path>
+            <path d="M4,44 L10,44 L10,47 L4,47 L4,44 Z" id="Fill-823" fill="#363D4B" sketch:type="MSShapeGroup"></path>
+            <path d="M48,44 L54,44 L54,47 L48,47 L48,44 Z" id="Fill-824" fill="#363D4B" sketch:type="MSShapeGroup"></path>
+            <path d="M53,42 L52,42 C51.447,42 51,41.553 51,41 C51,40.447 51.447,40 52,40 L53,40 C53.553,40 54,40.447 54,41 C54,41.553 53.553,42 53,42" id="Fill-825" fill="#A4E869" sketch:type="MSShapeGroup"></path>
+            <path d="M49,42 L48,42 C47.447,42 47,41.553 47,41 C47,40.447 47.447,40 48,40 L49,40 C49.553,40 50,40.447 50,41 C50,41.553 49.553,42 49,42" id="Fill-826" fill="#48A0DC" sketch:type="MSShapeGroup"></path>
+            <path d="M45,42 L44,42 C43.447,42 43,41.553 43,41 C43,40.447 43.447,40 44,40 L45,40 C45.553,40 46,40.447 46,41 C46,41.553 45.553,42 45,42" id="Fill-827" fill="#DD342E" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

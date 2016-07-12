@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="27px" viewBox="0 0 60 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>25 - Jobs (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="25---Jobs-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <path d="M26,12.5 C26,19.404 20.404,25 13.5,25 C6.596,25 1,19.404 1,12.5 C1,5.596 6.596,0 13.5,0 C20.404,0 26,5.596 26,12.5 L26,12.5 Z" id="Fill-497" fill="#D0E8F9" sketch:type="MSShapeGroup"></path>
+            <path d="M26,12.5 C26,19.404 20.404,25 13.5,25 C6.596,25 1,19.404 1,12.5 C1,5.596 6.596,0 13.5,0 C20.404,0 26,5.596 26,12.5 L26,12.5 Z" id="Stroke-498" stroke="#464F5D" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M57,12.5 C57,19.404 51.404,25 44.5,25 C37.596,25 32,19.404 32,12.5 C32,5.596 37.596,0 44.5,0 C51.404,0 57,5.596 57,12.5 L57,12.5 Z" id="Fill-499" fill="#D0E8F9" sketch:type="MSShapeGroup"></path>
+            <path d="M57,12.5 C57,19.404 51.404,25 44.5,25 C37.596,25 32,19.404 32,12.5 C32,5.596 37.596,0 44.5,0 C51.404,0 57,5.596 57,12.5 L57,12.5 Z" id="Stroke-500" stroke="#464F5D" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M25,13 C25,10.789 26.789,9 29,9 M33,13 C33,10.789 31.211,9 29,9 M42,15 C42,10.025 46.025,6 51,6 L50,6 L58,6 M16,15 C16,10.025 11.975,6 7,6 L8,6 L0,6" id="Stroke-501" stroke="#464F5D" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

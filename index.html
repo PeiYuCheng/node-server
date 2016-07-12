@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<title>Ormiboard Home</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="no">
+	<link type="text/css" rel="stylesheet" href="rsc/css/shared.css"/>
+	<link type="text/css" rel="stylesheet" href="rsc/css/home.css"/>
+	<link type="text/css" rel="stylesheet" href="/rsc/css/grid.css"/>
+</HEAD>
+
+<BODY onload="main()" style='overflow-y: scroll; font-family: light; font-size:26px; text-align: center; background-color: #F4F5F8;'>
+<img style='display:none; z-index: 1000; position: fixed; right: 10px; top: 15px; width: 75px; opacity: .75;' src='/rsc/images/samsung.png'>
+<script>
+window.addEventListener('contextmenu', function(e) { e.preventDefault(); } );
+var docid = "";
+var editor = false;
+var home = true;
+var loaded_script_counter = 0;
+var feaidx = 0;
+var featured = [];
+var brand = localStorage.getItem("branding");
+// featured: third param is version of preview, to increase to force refresh
+var imgver = 7;
+if(brand == "qomo") {
+	featured[feaidx++] = [ 1464908388412, "gmailcompixinuum", imgver, "QOMO and Ormiboard" ]
+}
+if(brand == "panasonic") {
+	featured[feaidx++] = [ 1464907806137, "gmailcompixinuum", imgver, "Panasonic and Ormiboard" ]
+}
+//featured[feaidx++] = [ 1465303828219, "exoucomakutney", imgver, "Ormiboard Overview" ]
+
+featured[feaidx++] = [ 1467021158625, "gmailcompixinuum", imgver, "Mission to Mars" ];
+featured[feaidx++] = [ 1465728761106, "gmailcompixinuum", imgver, "Tree Roots" ];
+featured[feaidx++] = [ 1466868167388, "gmailcompixinuum", imgver, "Poll" ];
+featured[feaidx++] = [ 1464257912606, "gmailcompixinuum", imgver, "Quick Poll" ];
+featured[feaidx++] = [ 1465266456024, "gmailcompixinuum", imgver, "Multiply and Divide" ];
+featured[feaidx++] = [ 1466985740202, "gmailcompixinuum", imgver, "pronoun and Noun" ];
+featured[feaidx++] = [ 1459678175377, "gmailcompixinuum", imgver, "Solar System Simulator" ];
+featured[feaidx++] = [ 1459341243058, "gmailcompixinuum", imgver, "Monuments in the world" ];
+featured[feaidx++] = [ 1459401044894, "gmailcompixinuum", imgver, "The Maths Game" ];
+featured[feaidx++] = [ 1458615214769, "gmailcompixinuum", imgver, "2 Players Chess Game" ];
+featured[feaidx++] = [ 1459583428834, "gmailcompixinuum", imgver, "Force of Gravity" ];
+featured[feaidx++] = [ 1459523582060, "gmailcompixinuum", imgver, "Newton Cradle" ];
+featured[feaidx++] = [ 1459162889660, "gmailcompixinuum", imgver, "Flags of the world" ];
+featured[feaidx++] = [ 1459162889675, "gmailcompixinuum", imgver, "Reflexion"];
+featured[feaidx++] = [ "1465799505031", "examplecommano", 0, "Roots system"];
+featured[feaidx++] = [ "1465783475396", "examplecommano", 0, "How Plants Grow"];
+featured[feaidx++] = [ "1465783650248", "examplecommano", 0, "The Water Cycle"];
+featured[feaidx++] = [ "1465783969267", "examplecommano", 0, "Electicity Workshop"];
+featured[feaidx++] = [ "1465785569739", "examplecommano", 0, "Offshore Wind Platforms"];
+featured[feaidx++] = [ "1465785716352", "examplecommano", 0, "World Map"];
+featured[feaidx++] = [ "1465785776192", "examplecommano", 0, "Layers of the Earth"];
+featured[feaidx++] = [ "1465785824794", "examplecommano", 0, "Seeds"];
+featured[feaidx++] = [ "1465785878886", "examplecommano", 0, "Periodic table of elements"];
+featured[feaidx++] = [ "1465785952839", "examplecommano", 0, "The solar system"];
+featured[feaidx++] = [ "1465786026831", "examplecommano", 0, "Fruits and vegetables"];
+featured[feaidx++] = [ "1465786098006", "examplecommano", 0, "The lava"];
+featured[feaidx++] = [ "1465786204372", "examplecommano", 0, "From Troposphere to Exosphere"];
+featured[feaidx++] = [ "1465786259929", "examplecommano", 0, "Leonardo Da Vinci - Mona Lisa"];
+featured[feaidx++] = [ "1465786366972", "examplecommano", 0, "Music Sheet for Beginner piano"];
+featured[feaidx++] = [ "1465786554442", "examplecommano", 0, "Earth's Layers"];
+featured[feaidx++] = [ "1465786613510", "examplecommano", 0, "Life Cycle"];
+featured[feaidx++] = [ "1465786679003", "examplecommano", 0, "Earth view"];
+featured[feaidx++] = [ "1465786801678", "examplecommano", 0, "Stratosphere and Troposphere"];
+featured[feaidx++] = [ "1465786951900", "examplecommano", 0, "Bacterias photo album"];
+featured[feaidx++] = [ "1465787029720", "examplecommano", 0, "Bacterial Cell"];
+featured[feaidx++] = [ "1465787143148", "examplecommano", 0, "Fruits Idioms"];
+featured[feaidx++] = [ "1465787246366", "examplecommano", 0, "What is a nucleolus?"];
+featured[feaidx++] = [ "1465787623985", "examplecommano", 0, "Forest layers"];
+featured[feaidx++] = [ "1465788882995", "examplecommano", 0, "Animals of the farm"];
+featured[feaidx++] = [ "1465789085268", "examplecommano", 0, "Shapes and polygons"];
+featured[feaidx++] = [ "1465789309111", "examplecommano", 0, "Minerals"];
+featured[feaidx++] = [ "1465783594059", "examplecommano", 0, "Pythagorean theorem"];
+
+
+
+</script>
+
+<div id='SESSION_PANEL' class='sess-panel'></div>
+<div id='SESSION_INFO' class='sess-info' onclick='session_click()'><div id='SESSION_INFO_TITLE' class='sess-title'></div><div id='SESSION_INFO_ID' class='sess-id'></div></div>
+<div id='GRID' style='display: none; padding-top: 80px; '></div>
+<div id='URLEDIT_CONTAINER'></div>
+
+<script>
+document.write("<script src='bin/shared/shared.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='bin/shared/message.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='bin/home/index.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='bin/home/boards_features.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='bin/home/boards_cloud.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='bin/home/header.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='bin/home/grid.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='bin/home/iconpicker.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='bin/home/urledit.js?" + Date.now() + "'><"+"/script>");
+document.write("<script src='/rsc/libs/spin.js'><"+"/script>");
+
+</script>
+
+<div style='position: fixed; top: 0px; left: 0px ;right: 0px; z-index: 100; border-bottom: 2px solid #EDEFF5; background-color:rgba(255,255,255,.92); padding-bottom: 10px; '>
+<div style='height: 80px;'></div>
+<table cellspacing=0 cellpadding=0 style="margin: 0px auto;">
+	<tr>
+		<td id='TITLE_SHARED' onclick="cat_click_featured()" class='cat_tab' style=''>FEATURED</td>
+		<td id='TITLE_GRID' onclick="cat_click_grid()" class='cat_tab' style=''><svg id='GRIDICON' version="1.1" width="20" height="20" fill='#9EAABB' viewBox="0 0 512 512"><path d="M0 0h224v224h-224zM288 0h224v224h-224zM0 288h224v224h-224zM288 288h224v224h-224z"></path></svg></td>
+		<td id='TITLE_LOCAL' onclick="cat_click_local()" class='cat_tab' style=''>MY BOARDS</td>
+	</tr>
+</table>
+</div>
+
+<div style='height: 125px;'></div>
+<div id='INFO_HEADER_CONTAINER' style='position: relative;  margin:0 auto; overflow: hidden; '>
+<div id='INFO_HEADER' style='cursor: default; display: none; text-align:center;-webkit-transform-origin: 0 0; transform-origin: 0 0; margin-top: 20px; color:#FFFFFF; background-image: url(rsc/images/home_header.jpg); background-size: cover;  background-repeat: no-repeat; background-position: center center;'>
+	<div id='GROUP_CREATE_OR_JOIN' style='display: none; text-align: center;'>
+		<div id='GROUP_CREATEGROUP_INFO' class='title' style='display: block; font-size: 24px; padding-top:50px; margin-bottom: 20px;'>
+			<div><img src='rsc/images/ormiboard_home.svg' style='width: 310px; height: 80px; '></div>
+			Create or join a session to collaborate.
+		</div>
+		<span id='GROUP_JOIN' class='groupAction' style='display: block; line-height: 24px; padding-top: 10px; padding-bottom: 10px;' onclick='session_join_button()'>Create or join<br>a session</span>
+	</div>
+	<div id='GROUP_HOST' style='display: none; font-size: 24px; padding-top:60px;'>
+		<div><img src='rsc/images/ormiboard_home.svg' style='width: 310px; height: 80px;'></div>
+		You host the session <span id='HOSTED_SESSION'>&nbsp;</span>.
+		<div id='GROUP_CLOSE' class='groupAction' onclick='session_close_button()' style='margin-top: 20px; display: block;'>Close session</div>
+	</div>
+	<div id='GROUP_ACTIVE' style='display: none; font-size: 24px; padding-top:50px; margin-bottom: 10px;'>
+		<div><img src='rsc/images/ormiboard_home.svg' style='width: 310px; height: 80px; '></div>
+		You participate to the session <span id='ACTIVE_SESSION'></span>.<div id='ACTIVE_HOST'></div>
+	</div>
+	<div id='GROUP_QUIT' class='groupAction' onclick='session_quit_button()' style=' margin-top: 20px;'>Quit session</div>
+
+	<div id='GROUP_LOGIN' style='font-size: 24px; padding-top:70px; margin-bottom: 20px; display: none;'>
+		<div><img src='rsc/images/ormiboard_home.svg' style='width: 310px; height: 80px;'></div>
+		Please sign-in to create a document or to join a session.
+		<span id='GROUP_SIGNIN' class='groupAction' style='margin-top: 20px; display: block;' onclick='session_signin_button()'>Sign-in</span>
+	</div>
+</div>
+</div>
+
+<div id='PREVIEW_CONTAINER' style='display: none; margin:0 auto; opacity: 0; width: 100%; transition: opacity 800ms; padding-top: 30px; padding-bottom: 70px;'>
+	<div id='FILES_LOCAL' style='display: none; min-height: 210px; padding-top: 0px; padding-bottom: 30px; text-align: left; '></div>
+	<div id='FILES_SHARED' style='display: none; padding-top: 0px; padding-bottom: 10px; text-align: left; '></div>
+</div>
+<div id='MENU' class='dropMenu'>
+<div id='MENU_SUB' class='dropMenuSub'>
+	<div id='MENU_OPEN' class='dropMenuItem' onclick='slide_open(this)'>Open</div>
+	<div id='MENU_EDIT' class='dropMenuItem' onclick='slide_edit(this)'>Edit</div>
+	<div id='MENU_COPY' class='dropMenuItem' onclick='slide_clone(this)'>Duplicate</div>
+	<div id='MENU_DEL' class='dropMenuItem' style='border-bottom: 0px;' onclick='slide_delete(this)'>Delete</div>
+</div>
+</div>
+
+<table id='MENU_L' style='display: none; position: absolute; overflow:hidden; color:#FFFFFF; height: 53px; font-family:thin; font-size: 20px; border: 0px; background-color:rgba(120,120,120,.9);' cellspacing=0 cellpadding=0>
+	<tr>
+		<td style='cursor: pointer; padding: 15px;' onclick='slide_delete(this)'><svg fill="#FFFFFF" style="width:18px; height:18px;" version="1.1" width="640" height="640" viewBox="0 0 640 640"><path d="M496 64h-112v-16c0-26.467-21.533-48-48-48h-64c-26.467 0-48 21.533-48 48v16h-112c-26.467 0-48 21.533-48 48v32c0 20.858 13.377 38.643 32 45.248v402.752c0 26.468 21.533 48 48 48h320c26.468 0 48-21.532 48-48v-402.752c18.623-6.605 32-24.39 32-45.248v-32c0-26.467-21.532-48-48-48zM256 48c0-8.822 7.178-16 16-16h64c8.822 0 16 7.178 16 16v16h-96v-16zM464 608h-320c-8.822 0-16-7.178-16-16v-400h352v400c0 8.822-7.178 16-16 16zM512 144c0 8.822-7.178 16-16 16h-384c-8.822 0-16-7.178-16-16v-32c0-8.822 7.178-16 16-16h384c8.822 0 16 7.178 16 16v32z"></path><path d="M400 224c-8.837 0-16 7.164-16 16v320c0 8.837 7.163 16 16 16s16-7.163 16-16v-320c0-8.836-7.163-16-16-16z"></path><path d="M304 224c-8.836 0-16 7.164-16 16v320c0 8.837 7.164 16 16 16s16-7.163 16-16v-320c0-8.836-7.164-16-16-16z"></path><path d="M208 224c-8.836 0-16 7.164-16 16v320c0 8.837 7.164 16 16 16s16-7.163 16-16v-320c0-8.836-7.164-16-16-16z"></path></svg></td>
+		<td style='cursor: pointer; padding: 15px;' onclick='slide_clone(this)'>Copy</td>
+		<td style='width:100%;'></td>
+		<td id='MENU_L_EDIT' style='display: none; cursor: pointer; font-family: bold; padding: 15px;' onclick='slide_edit(this)'>Edit</td>
+		<td style='cursor: pointer; font-family: bold; padding: 15px;' onclick='slide_open(this)'>Open</td>
+	</tr>
+</table>
+<table id='MENU_F' style='display: none; position: absolute; overflow:hidden; color:#FFFFFF; height: 53px; font-family:thin; font-size: 20px; border: 0px; background-color:rgba(120,120,120,.9);' cellspacing=0 cellpadding=0>
+	<tr>
+		<td id="BARBT_NEW_COPY" style='cursor: pointer; padding: 15px;' onclick='slide_clone(this)'>Copy</td>
+		<td style='width: 100%; vertical-align:middle;'>&nbsp;</td>
+		<td style='cursor: pointer; font-family: bold; padding: 15px;' onclick='slide_open(this)'>Open</td>
+	</tr>
+</table>
+<table id='MENU_DELETE' style="display: none; position: absolute; color:#FFFFFF; height: 53px; font-family:thin; font-size: 20px; border: 0px; background-color:rgba(180,0,0,.9);" cellspacing=0 cellpadding=0>
+	<tr>
+		<td style='cursor: default; padding: 15px; width: 100%; text-align: left;'>Sure?</td>
+		<td style='cursor: pointer; padding: 15px;' onclick='deleteNow(this);'>Delete</td>
+		<td style='cursor: pointer; padding: 15px;' onclick='hideCancelbar(this);'>Cancel</td>
+	</tr>
+</table>
+
+<div id='BT_CREATE' onclick="currentTab === 'grid' ? grid_add() : newFile();" class='bt_create'>+</div>
+
+<div class='waitboxBg' id='waitboxBg'><div class='waitbox' id='waitbox'>&nbsp;</div></div>
+<script>
+
+// Immediate show at startup - before other includes
+document.getElementById("waitboxBg").style.opacity = 1;
+document.getElementById("waitboxBg").style.marginTop = "-110px";
+</script>
+
+<script src="rsc/libs/fastclick.js"></script>
+
+<script>
+var currentTab = "featured";
+var ormiboard_home = true;
+var maybe_sessionid = "";
+function main() {
+ 	FastClick.attach(document.body);
+	featuredLoadMax = featured.length;
+	setInterval(function() {
+		if( hideMenubarAt && Date.now() > hideMenubarAt) {
+			hideMenubar();
+		}
+	}, 150);
+	window.onscroll = function() { hideMenubar(false) };
+	if(userid == "") {
+		list_render_featured();
+		loadNextFeaturedPreview();
+	}
+	session_initialize();
+	DOM("MENU_L_EDIT").style.display = "block";
+	refreshGroupDisplay();
+	server_loadSlidesList();
+	resize();
+	DOM("INFO_HEADER").style.display = "block";
+	waitbox_end();
+	
+	currentTab = memget("home_tab");
+	if(!exists(currentTab)) currentTab = "featured";
+	if(currentTab == "cloud") {
+		cat_click_local();
+	} else if(currentTab == "grid") {
+		cat_click_grid();
+	} else {
+		cat_click_featured();
+	}
+	grid_init();
+}
+
+function local_sessionEvent_join() {
+	//refreshGroupDisplay();
+}
+function local_sessionEvent_end() {
+	//refreshGroupDisplay();
+}
+
+
+var scr = { w: 0, h: 0 }; // Document size
+function wresize() {
+	hideMenubar();
+	resize();
+}
+function resize() {
+	scr = {
+		w: window.innerWidth,
+		h: window.innerHeight
+	}
+	slideWidth = masterSlideWidth > scr.w - 40 ? scr.w - 40 : masterSlideWidth;
+
+	if(scr.w > slideWidth + 40) {
+		slideWidth = (scr.w - 40) / 2 - 20;
+	} else {
+		slideWidth = scr.w - 40;
+	}
+	if(slideWidth > masterSlideWidth) slideWidth = masterSlideWidth;
+	var hwidth = (slideWidth * 2 + 24);
+	var groupWidth = (hwidth > scr.w - 40 ? scr.w - 40 : hwidth);
+	if(scr.w > 640 && groupWidth < 600) groupWidth = 600;
+	var iscale = groupWidth / 800 ;
+	iscale = iscale > 1 ? 1 : iscale;
+	DOM("INFO_HEADER").style.webkitTransform = "scale("+iscale+") ";
+	DOM("INFO_HEADER").style.transform = "scale("+iscale+")";
+	DOM("INFO_HEADER_CONTAINER").style.width = (800 * iscale) + "px";
+	DOM("INFO_HEADER_CONTAINER").style.height = (340 * iscale) + "px";
+	DOM("INFO_HEADER").style.width = "800px";
+	DOM("INFO_HEADER").style.height = "340px";
+	
+	DOM("MENU_L").style.width = (slideWidth + 20) + "px";
+	DOM("MENU_F").style.width = (slideWidth + 20) + "px";
+	slideHeight = slideWidth / slideRatio;
+	DOM("PREVIEW_CONTAINER").style.width = (groupWidth + 20) + "px";
+	
+	var elements = document.getElementsByName("shared_preview");
+	var elementsCount = elements.length;
+	for(var index = 0; index < elementsCount; index++) {
+		elements[index].style.width = slideWidth + "px";
+		elements[index].style.height = slideHeight + "px";
+	}
+	var elements = document.getElementsByName("shared_preview_container");
+	var elementsCount = elements.length;
+	for(var index = 0; index < elementsCount; index++) {
+		elements[index].style.width = slideWidth + "px";
+		elements[index].style.height = slideHeight + "px";
+	}
+	
+	var elements = document.getElementsByName("shared_title");
+	var elementsCount = elements.length;
+	for(var index = 0; index < elementsCount; index++) {
+		elements[index].style.width = (slideWidth - 40) + "px";
+	}
+	
+	DOM("BT_CREATE").style.right = (scr.w / 2 - 480 < 10 ? 10 : scr.w / 2 - 480) + "px";
+	DOM("BT_CREATE").style.top = (userid === null || userid === "" ? "-90px" : "90px");
+}
+window.addEventListener('resize', wresize);
+
+
+function getScrollbarWidth() {
+    var outer = document.createElement("div");
+    outer.style.visibility = "hidden";
+    outer.style.width = "100px";
+    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+    document.body.appendChild(outer);
+
+    var widthNoScroll = outer.offsetWidth;
+    // force scrollbars
+    outer.style.overflow = "scroll";
+
+    // add innerdiv
+    var inner = document.createElement("div");
+    inner.style.width = "100%";
+    outer.appendChild(inner);        
+
+    var widthWithScroll = inner.offsetWidth;
+
+    // remove divs
+    outer.parentNode.removeChild(outer);
+
+    return widthNoScroll - widthWithScroll;
+}
+
+
+document.onkeydown = function (event) {
+	if (!event) event = window.event;
+	var keyCode = event.keyCode;
+	if (keyCode == 13) {
+		if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+			event.stopPropagation();
+		} else {
+			event.returnValue = false;
+		}
+		return false;
+	}
+	if (keyCode == 8 &&
+		((event.target || event.srcElement).tagName != "TEXTAREA") && 
+		((event.target || event.srcElement).tagName != "INPUT")) { 
+		if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+			event.stopPropagation();
+		} else {
+			event.returnValue = false;
+		}
+		return false;
+	}
+};	
+
+</script>
+<!---
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<div id='GCLASSROOM' style='position: absolute; right: 5px; top: 5px; z-index: 1000; display: none; opacity: .5;'>
+	<g:sharetoclassroom url="http://url-to-share" size="32" theme="light"></g:sharetoclassroom>
+</div>
+--->
+</BODY>
+</HTML>

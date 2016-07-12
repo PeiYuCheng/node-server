@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>62 - Map (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="62---Map-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L58,0 L58,58 L0,58 L0,0 Z" id="Fill-79" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L58,0 L58,12 L0,12 L0,0 Z" id="Fill-80" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M9,6 C9,7.657 7.657,9 6,9 C4.343,9 3,7.657 3,6 C3,4.343 4.343,3 6,3 C7.657,3 9,4.343 9,6" id="Fill-81" fill="#ED7161" sketch:type="MSShapeGroup"></path>
+            <path d="M18,6 C18,7.657 16.657,9 15,9 C13.343,9 12,7.657 12,6 C12,4.343 13.343,3 15,3 C16.657,3 18,4.343 18,6" id="Fill-82" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M27,6 C27,7.657 25.657,9 24,9 C22.343,9 21,7.657 21,6 C21,4.343 22.343,3 24,3 C25.657,3 27,4.343 27,6" id="Fill-83" fill="#4FBA6F" sketch:type="MSShapeGroup"></path>
+            <path d="M50,46 L8,46 M14,50 L14,22 M23,26 L8,26 M50,26 L39,26 M26,36 L8,36 M50,36 L36,36 M42,32 L42,51" id="Stroke-932" stroke="#F0C419" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M38.895,22.742 C38.51,19.805 36.974,16 30.947,16 C24.92,16 23.385,19.805 23,22.742 C22.789,24.352 22.907,25.987 23.243,27.576 C25.085,36.309 29.639,41.545 30.716,42.687 C30.843,42.82 31.052,42.82 31.179,42.687 C32.256,41.545 36.81,36.309 38.652,27.576 C38.987,25.987 39.106,24.352 38.895,22.742 L38.895,22.742 Z M30.947,27.426 C28.926,27.426 27.287,25.788 27.287,23.766 C27.287,21.745 28.926,20.107 30.947,20.107 C32.969,20.107 34.607,21.745 34.607,23.766 C34.607,25.788 32.969,27.426 30.947,27.426 L30.947,27.426 Z" id="Fill-933" fill="#4FBA6F" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

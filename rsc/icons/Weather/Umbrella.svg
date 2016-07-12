@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="54px" viewBox="0 0 50 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>30 - Umbrella (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="30---Umbrella-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <path d="M24,27 L24,41" id="Stroke-262" stroke="#7F6E5D" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M22,41 L22,47 C22,48.102 21.103,49 20,49 C19.239,49 18.576,48.572 18.238,47.945 C17.91,47.337 17.233,47 16.542,47 C14.983,47 14.037,48.698 14.829,50.041 C15.873,51.81 17.8,53 20,53 C23.309,53 26,50.309 26,47 L26,41 L22,41" id="Fill-263" fill="#CB8252" sketch:type="MSShapeGroup"></path>
+            <path d="M22,37 L24,37" id="Stroke-264" stroke="#7F6E5D" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M23,4 C23,4 12.969,8.219 13,25 C13,25 17.781,20.594 23,25 L23,4" id="Fill-1044" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M27,3.562 C27,3.562 46.778,7.108 47.876,26 C47.876,26 42.524,20.922 36.897,26 C36.897,26 33.724,8.228 27,3.562" id="Fill-1045" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M25,4 C25,4 35.031,8.219 35,25 C35,25 30.219,20.594 25,25 L25,4" id="Fill-1046" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M18.896,4.563 C18.896,4.563 2,7.792 1,25 C1,25 5.875,20.375 11,25 C11,25 12.771,8.812 18.896,4.563" id="Fill-1047" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M12,27 C8.684,23 3.316,23 0,27 M24,27 C20.684,23 15.316,23 12,27 M36,27 C32.684,23 27.316,23 24,27 M48,27 C44.684,23 39.316,23 36,27 M0,27 C0,13.745 10.745,3 24,3 C37.255,3 48,13.745 48,27 M12,27 C12,13.734 17.815,3 25,3 M36,27 C36,13.734 30.186,3 23,3 M24,27 L24,3 M12,27 L12,29 M0,27 L0,29 M36,27 L36,29 M48,27 L48,29 M24,3 L24,0" id="Stroke-1048" stroke="#546A79" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

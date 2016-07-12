@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="57px" viewBox="0 0 58 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>15 - Italic (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="15---Italic-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L58,0 L58,57 L0,57 L0,0 Z" id="Fill-571" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M15.001,16 C14.929,16 14.856,15.992 14.783,15.977 C14.244,15.857 13.904,15.322 14.023,14.783 L14.912,10.783 C15.032,10.244 15.571,9.912 16.106,10.023 C16.644,10.144 16.984,10.678 16.865,11.217 L15.977,15.217 C15.873,15.683 15.459,16 15.001,16" id="Fill-586" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+            <path d="M43.889,12 L15.889,12 C15.336,12 14.889,11.553 14.889,11 C14.889,10.447 15.336,10 15.889,10 L43.889,10 C44.441,10 44.889,10.447 44.889,11 C44.889,11.553 44.441,12 43.889,12" id="Fill-587" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+            <path d="M43.001,16 C42.929,16 42.856,15.992 42.783,15.977 C42.244,15.857 41.904,15.322 42.023,14.783 L42.912,10.783 C43.032,10.244 43.568,9.912 44.106,10.023 C44.644,10.144 44.984,10.678 44.865,11.217 L43.977,15.217 C43.873,15.683 43.459,16 43.001,16" id="Fill-588" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+            <path d="M21.89,48 C21.817,48 21.745,47.992 21.672,47.977 C21.133,47.856 20.793,47.322 20.912,46.783 L28.912,10.783 C29.032,10.244 29.57,9.912 30.105,10.023 C30.644,10.144 30.984,10.678 30.865,11.217 L22.865,47.217 C22.762,47.683 22.348,48 21.89,48" id="Fill-589" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+            <path d="M27.889,48 L15.889,48 C15.336,48 14.889,47.553 14.889,47 C14.889,46.447 15.336,46 15.889,46 L27.889,46 C28.441,46 28.889,46.447 28.889,47 C28.889,47.553 28.441,48 27.889,48" id="Fill-590" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

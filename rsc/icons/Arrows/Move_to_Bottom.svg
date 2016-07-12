@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="54px" viewBox="0 0 34 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>157 - Move to Bottom (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="157---Move-to-Bottom-(Flat)" sketch:type="MSLayerGroup" transform="translate(-1.000000, 0.000000)" fill="#57B1E3">
+            <path d="M18,47 C17.448,47 17,46.552 17,46 L17,1 C17,0.448 17.448,0 18,0 C18.552,0 19,0.448 19,1 L19,46 C19,46.552 18.552,47 18,47" id="Fill-118" sketch:type="MSShapeGroup"></path>
+            <path d="M18,47 C17.744,47 17.488,46.902 17.293,46.707 L1.293,30.707 C0.902,30.316 0.902,29.683 1.293,29.293 C1.684,28.902 2.316,28.902 2.707,29.293 L18.707,45.293 C19.098,45.683 19.098,46.316 18.707,46.707 C18.512,46.902 18.256,47 18,47" id="Fill-119" sketch:type="MSShapeGroup"></path>
+            <path d="M18,47 C17.744,47 17.488,46.902 17.293,46.707 C16.902,46.316 16.902,45.683 17.293,45.293 L33.293,29.293 C33.684,28.902 34.316,28.902 34.707,29.293 C35.098,29.683 35.098,30.316 34.707,30.707 L18.707,46.707 C18.512,46.902 18.256,47 18,47" id="Fill-120" sketch:type="MSShapeGroup"></path>
+            <path d="M34,54 L2,54 C1.448,54 1,53.552 1,53 C1,52.448 1.448,52 2,52 L34,52 C34.552,52 35,52.448 35,53 C35,53.552 34.552,54 34,54" id="Fill-121" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

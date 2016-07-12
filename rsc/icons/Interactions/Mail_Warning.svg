@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="48px" viewBox="0 0 58 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>536 - Mail Warning (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="536---Mail-Warning-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L56,39 L56,0 L0,0 L0,39 Z" id="Fill-1605" fill="#DCD6CD" sketch:type="MSShapeGroup"></path>
+            <path d="M30.965,22.107 C29.327,23.569 26.673,23.569 25.035,22.107 L22.948,20.264 C16.419,26.092 0,39 0,39 L56,39 C56,39 39.581,26.092 33.052,20.264 L30.965,22.107" id="Fill-1606" fill="#E8E3D9" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L25.035,22.107 C26.673,23.569 29.327,23.569 30.965,22.107 L56,0 L0,0" id="Fill-1607" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M56.761,48 L33.07,48 C32.115,48 31.52,46.964 32.001,46.139 L43.846,25.833 C44.324,25.014 45.507,25.014 45.984,25.833 L57.83,46.139 C58.311,46.964 57.716,48 56.761,48" id="Fill-1860" fill="#F0C41A" sketch:type="MSShapeGroup"></path>
+            <path d="M45,41 C44.448,41 44,40.552 44,40 L44,32 C44,31.448 44.448,31 45,31 C45.552,31 46,31.448 46,32 L46,40 C46,40.552 45.552,41 45,41" id="Fill-1861" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M45,45 C44.74,45 44.48,44.89 44.29,44.71 C44.11,44.52 44,44.26 44,44 C44,43.74 44.11,43.48 44.29,43.29 C44.67,42.92 45.33,42.92 45.71,43.29 C45.89,43.48 46,43.74 46,44 C46,44.26 45.89,44.52 45.71,44.71 C45.52,44.89 45.27,45 45,45" id="Fill-1862" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

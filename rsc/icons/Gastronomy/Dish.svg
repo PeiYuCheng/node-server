@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="38px" viewBox="0 0 55 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>60 - Dish (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="60---Dish-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+            <path d="M47.966,37 L7.034,37 C5.209,37 3.496,36.118 2.435,34.633 L0.175,31.468 C-0.264,30.854 0.175,30 0.93,30 L54.07,30 C54.825,30 55.264,30.854 54.825,31.468 L52.565,34.633 C51.504,36.118 49.791,37 47.966,37" id="Fill-1469" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M2,30 C2,16.193 13.193,5 27,5 C40.807,5 52,16.193 52,30 L2,30" id="Fill-1470" fill="#F4C44E" sketch:type="MSShapeGroup"></path>
+            <path d="M27,5 C28.282,5 29.541,5.097 30.771,5.283 C30.909,4.878 31,4.452 31,4 C31,1.791 29.209,0 27,0 C24.791,0 23,1.791 23,4 C23,4.452 23.091,4.878 23.229,5.283 C24.459,5.097 25.718,5 27,5 L27,5 Z" id="Stroke-1471" stroke="#F4C44E" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M22.346,9.513 C23.872,9.169 25.436,8.999 27,9 M7,26 C8.064,20.167 11.524,14.802 16.66,11.76" id="Stroke-1472" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

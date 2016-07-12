@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="50px" viewBox="0 0 57 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>126 - Frying Pan (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="126---Frying-Pan-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+            <path d="M7.625,39 C3.656,41.999 4.627,42.325 7.625,46.294 C11.595,43.295 10.624,42.969 7.625,39" id="Fill-942" fill="#EF771D" sketch:type="MSShapeGroup"></path>
+            <path d="M19.625,39 C15.656,41.999 16.627,42.325 19.625,46.294 C23.595,43.295 22.624,42.969 19.625,39" id="Fill-943" fill="#F9DA49" sketch:type="MSShapeGroup"></path>
+            <path d="M31.374,39 C27.405,41.999 28.376,42.325 31.374,46.294 C35.344,43.295 34.373,42.969 31.374,39" id="Fill-944" fill="#EF771D" sketch:type="MSShapeGroup"></path>
+            <path d="M31.407,35 L7.593,35 C4.736,35 2.421,32.671 2.421,29.798 L2.421,29.336 C2.421,28.462 2.184,27.604 1.737,26.854 L0.106,24.12 C-0.188,23.627 0.165,23 0.737,23 L38.263,23 C38.835,23 39.188,23.627 38.894,24.12 L37.263,26.854 C36.816,27.604 36.579,28.462 36.579,29.336 L36.579,29.798 C36.579,32.671 34.264,35 31.407,35" id="Fill-945" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M6,32 L19,32 M6,29 L15.286,29" id="Stroke-946" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M55,25 L38.369,25 L37.263,26.854 C36.873,27.507 36.655,28.243 36.602,29 L55,29 C56.1,29 57,28.1 57,27 C57,25.9 56.1,25 55,25" id="Fill-947" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M3,48 L37,48 M11,0.515 C13.345,2.86 13.345,6.655 11,9 C8.655,11.345 8.655,15.14 11,17.485 M23.241,0.515 C25.586,2.86 25.586,6.655 23.241,9 C20.896,11.345 20.896,15.14 23.241,17.485" id="Stroke-948" stroke="#E6E6E6" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

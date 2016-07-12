@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<title>Ormiboard Dev</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="no">
+	<link type="text/css" rel="stylesheet" href="../../rsc/css/shared.css"/>
+	<link type="text/css" rel="stylesheet" href="../../rsc/libs/codemirror/lib/codemirror.css"/>
+<style>
+BODY {
+	scroll: no;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+.PROP_TAB {
+	width:140px;
+	top: 10px;
+	height: 50px;
+	color: #404040;
+	padding-top: 5px; padding-bottom: 5px;
+	text-align: center;
+	position: absolute;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.PROP_TAB_ACT {
+	width:140px;
+	top: 10px;
+	height: 50px;
+	color: #000000;
+	background-color: #FFFFFF;
+	 
+	padding-top: 5px; padding-bottom: 5px;
+	text-align: center;
+	position: absolute;
+	cursor: default;
+	vertical-align: middle;
+}
+.PROP_INPUT {
+	padding-left: 10px; padding-right: 10px; padding-top:4px; padding-bottom: 4px;
+	font-family:light; 
+	font-size: 20px; 
+	background-color: #F0F0F0; 
+	border-radius: 5px;
+	border: 0px;
+}
+
+</style>
+</HEAD>
+<script src='../../bin/global/api.js'></script>
+<script src='../../rsc/libs/codemirror/lib/codemirror.js'></script>
+<script src='../../rsc/libs/codemirror/mode/javascript/javascript.js'></script>
+
+<BODY onload='main()'>
+
+<div id='ACTION_BT_ainit' onclick='setActiveCode("ainit")' class='PROP_TAB' style='left: 0px; padding-top: 15px;' >Initialize</div>
+<div id='ACTION_BT_atick' onclick='setActiveCode("atick")' class='PROP_TAB'  style='left: 140px; padding-top: 15px;'>Tick</div>
+<div id='ACTION_BT_astart' onclick='setActiveCode("astart")' class='PROP_TAB' style='left: 280px;' >Mouse Down<br>or Touch Start</div>
+<div id='ACTION_BT_amv' onclick='setActiveCode("amv")' class='PROP_TAB'  style='left: 420px;'>Mouse Move<br>or Touch Move</div>
+<div id='ACTION_BT_aend' onclick='setActiveCode("aend")' class='PROP_TAB'  style='left: 560px;'>Mouse Up<br>or Touch End</div>
+<div id='ACTION_BT_aclk' onclick='setActiveCode("aclk")' class='PROP_TAB'   style='left: 700px;'>Mouse Click<br>or Tap</div>
+<div id='ACTION_BT_style' onclick='setActiveCode("style")' class='PROP_TAB'   style='left: 840px; padding-top: 15px;'>CSS</div>
+
+<div id='CEDIT' style='display: block; position: absolute; left: 0px; top: 60px;'></div>
+
+</BODY>
+<script>
+
+var docid = "";
+var activeCodeEventName = "ainit";
+var codeEditor = null;
+var activeSelection = null;
+
+window.addEventListener("focus", function(event) { 
+	console.log("window has focus"); 
+}, false);
+window.addEventListener("blur", function(event) { 
+	console.log("window lost focus");
+}, false);
+
+function setActiveCode(get_activeCode) {
+	activeCodeEventName = get_activeCode;
+	DOM("ACTION_BT_ainit").setAttribute("class", activeCodeEventName == "ainit" ? "PROP_TAB_ACT" : "PROP_TAB");
+	DOM("ACTION_BT_atick").setAttribute("class", activeCodeEventName == "atick" ? "PROP_TAB_ACT" : "PROP_TAB");
+	DOM("ACTION_BT_astart").setAttribute("class", activeCodeEventName == "astart" ? "PROP_TAB_ACT" : "PROP_TAB");
+	DOM("ACTION_BT_amv").setAttribute("class", activeCodeEventName == "amv" ? "PROP_TAB_ACT" : "PROP_TAB");
+	DOM("ACTION_BT_aend").setAttribute("class", activeCodeEventName == "aend" ? "PROP_TAB_ACT" : "PROP_TAB");
+	DOM("ACTION_BT_aclk").setAttribute("class", activeCodeEventName == "aclk" ? "PROP_TAB_ACT" : "PROP_TAB");
+	DOM("ACTION_BT_style").setAttribute("class", activeCodeEventName == "style" ? "PROP_TAB_ACT" : "PROP_TAB");
+	
+	var source;
+	if(opener.selection === null) {
+		source = opener.DOM("GLOBAL_E").getAttribute(activeCodeEventName);
+	} else {
+		source = opener.selection.getAttribute(activeCodeEventName);
+	}
+	if(source == null) {
+		codeEditor.doc.setValue("");
+	} else {
+		if(activeCodeEventName === "style") {
+			codeEditor.doc.setValue(opener.deCodeStyle(source));
+		} else {
+			codeEditor.doc.setValue(opener.deCode(source));
+		}
+	}
+}
+
+function main() {
+	if(opener !== null || opener.docid === docid) {
+		docid = opener.docid;
+		activeSelection = opener.selection;
+		codeEditor = CodeMirror(DOM("CEDIT"), { mode: "javascript", lineNumbers: true, autofocus:true });
+		resize();
+		setActiveCode(activeCodeEventName);
+		refreshTabsFields();
+	
+		codeEditor.on("change", function(element, changes) {
+			if(opener !== null && opener.docid === docid && activeCodeEventName !== "") {
+				if(activeCodeEventName === "style") {
+					var coded = opener.enCodeStyle(codeEditor.doc.getValue());
+				} else {
+					var coded = opener.enCode(codeEditor.doc.getValue());
+				}
+				opener.action_assign_code(opener.selection, activeCodeEventName, coded);
+				refreshTabsFields();
+				if(activeCodeEventName === "style") {
+					opener.selector_refreshPos();
+				}
+			}
+		});
+	}
+	loop();
+}
+function refreshTabsFields() {
+	if(opener !== null) {
+		var targetElement = opener.selection === null ? opener.DOM("GLOBAL_E") : opener.selection;
+		DOM("ACTION_BT_ainit").style.display = "block";
+		DOM("ACTION_BT_atick").style.display = "block";
+		DOM("ACTION_BT_aclk").style.display = (opener.selection === null ? "none" : "block");
+		DOM("ACTION_BT_astart").style.display = (opener.selection === null ? "none" : "block");
+		DOM("ACTION_BT_amv").style.display = (opener.selection === null ? "none" : "block");
+		DOM("ACTION_BT_aend").style.display = (opener.selection === null ? "none" : "block");
+		DOM("ACTION_BT_style").style.display = (opener.selection === null ? "none" : "block");
+		
+		DOM("ACTION_BT_ainit").style.fontFamily = targetElement.hasAttribute("ainit") ? "bold" : "light";
+		DOM("ACTION_BT_atick").style.fontFamily = targetElement.hasAttribute("atick") ? "bold" : "light";
+		DOM("ACTION_BT_aclk").style.fontFamily = targetElement.hasAttribute("aclk") ? "bold" : "light";
+		DOM("ACTION_BT_astart").style.fontFamily = targetElement.hasAttribute("astart") ? "bold" : "light";
+		DOM("ACTION_BT_amv").style.fontFamily = targetElement.hasAttribute("amv") ? "bold" : "light";
+		DOM("ACTION_BT_aend").style.fontFamily = targetElement.hasAttribute("aend") ? "bold" : "light";
+		DOM("ACTION_BT_style").style.fontFamily = targetElement.hasAttribute("style") ? "bold" : "light";
+	}
+}
+function loop() {
+	if(opener === null || opener.docid !== docid) {
+		window.close();
+	} else {
+		if(activeSelection !== opener.selection) {
+			activeSelection = opener.selection;
+			refreshTabsFields();
+			setActiveCode(activeCodeEventName);
+		}
+		window.scroll(0, 0);
+		setTimeout(loop, 250);
+	}
+}
+
+var scr = { w: 0, h: 0 }; // Document size
+function resize() {
+	scr = {
+		w: window.innerWidth,
+		h: window.innerHeight
+	}
+	codeEditor.setSize(scr.w, scr.h - 60);
+}
+function rotate() {
+	setTimeout(function() {
+		
+		resize();
+	}, 500);	
+}
+window.addEventListener('orientationchange', rotate);
+window.addEventListener('resize', resize);
+window.addEventListener('beforeunload', unload);
+function unload() {
+	opener.devwin = null;
+}
+
+</script>
+
+</HTML>

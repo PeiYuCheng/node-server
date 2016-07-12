@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="58px" viewBox="0 0 56 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>77 - Democracy (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="77---Democracy-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M39.5,0 C35.115,0 30.989,3.281 28.089,7.859 C28.047,7.925 27.953,7.925 27.911,7.859 C25.021,3.28 21.385,0 17,0 C7.594,0 0.5,12.467 0.5,29 C0.5,45.533 7.594,58 17,58 C21.385,58 25.021,54.72 27.911,50.141 C27.953,50.075 28.047,50.075 28.089,50.141 C30.989,54.719 35.115,58 39.5,58 C48.906,58 56,45.533 56,29 C56,12.467 48.906,0 39.5,0" id="Fill-73" fill="#7F5B53" sketch:type="MSShapeGroup"></path>
+            <path d="M39.5,4 C34.753,4 30.402,9.213 28.267,17 L40,17 C40,17 35.647,22.082 32.996,25.68 C31.921,24.065 30.086,23 28,23 C25.914,23 24.079,24.065 23.004,25.68 C20.352,22.082 16,17 16,17 L27.737,17 C25.639,9.213 21.746,4 17,4 C10.096,4 4.5,15.193 4.5,29 C4.5,42.807 10.096,54 17,54 C21.746,54 25.639,48.787 27.737,41 L16,41 C16,41 20.419,36.028 23.063,32.407 C24.146,33.972 25.952,35 28,35 C30.048,35 31.854,33.972 32.936,32.407 C35.581,36.028 40,41 40,41 L28.267,41 C30.402,48.787 34.753,54 39.5,54 C46.404,54 52,42.807 52,29 C52,15.193 46.404,4 39.5,4" id="Fill-146" fill="#AF8066" sketch:type="MSShapeGroup"></path>
+            <path d="M34,29 C34,32.314 31.314,35 28,35 C24.686,35 22,32.314 22,29 C22,25.686 24.686,23 28,23 C31.314,23 34,25.686 34,29" id="Fill-214" fill="#D9B24C" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

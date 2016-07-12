@@ -71,13 +71,12 @@ coverage/
 ######################
 # Binary and compiled files
 ######################
-.ipa
-.apk
-.exe
-.zip
-.dmg
-.jar
-.zip
+*.ipa
+*.apk
+*.exe
+*.zip
+*.dmg
+*.jar
 
 ######################
 # Projects checked out to this root

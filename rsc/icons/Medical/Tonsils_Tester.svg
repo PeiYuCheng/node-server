@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>127 - Tonsils Tester (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="127---Tonsils-Tester-(Flat)" sketch:type="MSLayerGroup" transform="translate(-1.000000, 0.000000)">
+            <path d="M32.08,26.92 C31.065,25.905 30.59,24.563 30.63,23.234 C30.566,23.285 30.495,23.324 30.437,23.383 L2.073,51.746 C0.642,53.177 0.642,55.497 2.073,56.927 C3.503,58.358 5.823,58.358 7.254,56.927 L35.815,28.366 C34.469,28.419 33.107,27.948 32.08,26.92" id="Fill-286" fill="#FCCF9D" sketch:type="MSShapeGroup"></path>
+            <path d="M9.197,55.985 C8.817,55.985 8.454,55.767 8.286,55.398 L5.048,48.274 C4.82,47.772 5.042,47.179 5.545,46.951 C6.044,46.722 6.64,46.944 6.869,47.447 L10.106,54.571 C10.335,55.073 10.113,55.666 9.61,55.895 C9.476,55.956 9.335,55.985 9.197,55.985" id="Fill-697" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M13.082,52.099 C12.703,52.099 12.339,51.881 12.172,51.513 L8.934,44.39 C8.705,43.887 8.927,43.294 9.43,43.065 C9.932,42.836 10.524,43.059 10.754,43.562 L13.992,50.685 C14.221,51.187 13.998,51.78 13.496,52.009 C13.362,52.07 13.221,52.099 13.082,52.099" id="Fill-698" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M16.968,48.214 C16.588,48.214 16.225,47.996 16.057,47.627 L12.819,40.503 C12.591,40.001 12.813,39.408 13.316,39.18 C13.815,38.951 14.41,39.172 14.64,39.676 L17.877,46.8 C18.106,47.302 17.884,47.895 17.381,48.124 C17.247,48.185 17.106,48.214 16.968,48.214" id="Fill-699" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M32.08,26.92 L32.08,26.92 C30.127,24.968 30.127,21.802 32.08,19.849 L50.464,1.464 C52.417,-0.488 55.583,-0.488 57.535,1.464 C59.488,3.417 59.488,6.583 57.535,8.536 L39.151,26.92 C37.198,28.873 34.032,28.873 32.08,26.92" id="Fill-702" fill="#F8B563" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

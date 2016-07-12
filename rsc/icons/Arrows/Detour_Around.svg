@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="25px" viewBox="0 0 60 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>106 - Detour Around (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="106---Detour-Around-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M44,17 C43.448,17 43,16.552 43,16 C43,8.28 36.72,2 29,2 C21.28,2 15,8.28 15,16 C15,16.552 14.552,17 14,17 C13.448,17 13,16.552 13,16 C13,7.177 20.178,0 29,0 C37.822,0 45,7.177 45,16 C45,16.552 44.552,17 44,17" id="Fill-797" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M14,17 L1,17 C0.448,17 0,16.552 0,16 C0,15.447 0.448,15 1,15 L14,15 C14.552,15 15,15.447 15,16 C15,16.552 14.552,17 14,17" id="Fill-798" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M59,17 L44,17 C43.448,17 43,16.552 43,16 C43,15.447 43.448,15 44,15 L59,15 C59.553,15 60,15.447 60,16 C60,16.552 59.553,17 59,17" id="Fill-799" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M59,17 C58.744,17 58.488,16.902 58.293,16.707 L50.293,8.707 C49.902,8.316 49.902,7.683 50.293,7.293 C50.684,6.902 51.316,6.902 51.707,7.293 L59.707,15.293 C60.098,15.683 60.098,16.316 59.707,16.707 C59.512,16.902 59.256,17 59,17" id="Fill-800" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M51,25 C50.744,25 50.488,24.902 50.293,24.707 C49.902,24.316 49.902,23.683 50.293,23.293 L58.293,15.293 C58.684,14.902 59.316,14.902 59.707,15.293 C60.098,15.683 60.098,16.316 59.707,16.707 L51.707,24.707 C51.512,24.902 51.256,25 51,25" id="Fill-801" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M37,16 C37,20.418 33.418,24 29,24 C24.582,24 21,20.418 21,16 C21,11.582 24.582,8 29,8 C33.418,8 37,11.582 37,16" id="Fill-806" fill="#F3D55B" sketch:type="MSShapeGroup"></path>
+            <path d="M29,25 C24.038,25 20,20.963 20,16 C20,11.037 24.038,7 29,7 C33.962,7 38,11.037 38,16 C38,20.963 33.962,25 29,25 L29,25 Z M29,9 C25.14,9 22,12.141 22,16 C22,19.859 25.14,23 29,23 C32.86,23 36,19.859 36,16 C36,12.141 32.86,9 29,9 L29,9 Z" id="Fill-807" fill="#F3D55B" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

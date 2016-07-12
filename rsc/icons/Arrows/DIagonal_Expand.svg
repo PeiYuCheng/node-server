@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>92 - DIagonal Expand (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="92---DIagonal-Expand-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M1,1 L53,1 L53,53 L1,53 L1,1 Z" id="Fill-378" fill="#337742" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L54,0 L54,54 L0,54 L0,0 Z M2,52 L52,52 L52,2 L2,2 L2,52 Z" id="Fill-379" fill="#337742" sketch:type="MSShapeGroup"></path>
+            <path d="M6,49 C5.744,49 5.488,48.902 5.293,48.707 C4.902,48.316 4.902,47.684 5.293,47.293 L22.293,30.293 C22.684,29.902 23.316,29.902 23.707,30.293 C24.098,30.683 24.098,31.316 23.707,31.707 L6.707,48.707 C6.512,48.902 6.256,49 6,49" id="Fill-380" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M20.143,49 L5,49 L5,33.857 L7,33.857 L7,47 L20.143,47 L20.143,49" id="Fill-381" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M31,24 C30.744,24 30.488,23.902 30.293,23.707 C29.902,23.316 29.902,22.683 30.293,22.293 L47.293,5.293 C47.684,4.902 48.316,4.902 48.707,5.293 C49.098,5.684 49.098,6.316 48.707,6.707 L31.707,23.707 C31.512,23.902 31.256,24 31,24" id="Fill-394" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M49,20.142 L47,20.142 L47,7 L33.857,7 L33.857,5 L49,5 L49,20.142" id="Fill-395" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>6 - Paragraph (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="6---Paragraph-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L57,0 L57,57 L0,57 L0,0 Z" id="Fill-664" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M36,48 C35.448,48 35,47.553 35,47 L35,11 L25,11 L25,47 C25,47.553 24.552,48 24,48 C23.448,48 23,47.553 23,47 L23,9 L37,9 L37,47 C37,47.553 36.552,48 36,48" id="Fill-675" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+            <path d="M45,11 L36,11 C35.448,11 35,10.553 35,10 C35,9.447 35.448,9 36,9 L45,9 C45.552,9 46,9.447 46,10 C46,10.553 45.552,11 45,11" id="Fill-676" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+            <path d="M20,26 L24,26 L24,10 L20,10 C15.582,10 12,13.582 12,18 C12,22.418 15.582,26 20,26" id="Fill-677" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+            <path d="M25,27 L20,27 C15.038,27 11,22.963 11,18 C11,13.037 15.038,9 20,9 L25,9 L25,27 L25,27 Z M20,11 C16.14,11 13,14.141 13,18 C13,21.859 16.14,25 20,25 L23,25 L23,11 L20,11 L20,11 Z" id="Fill-678" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

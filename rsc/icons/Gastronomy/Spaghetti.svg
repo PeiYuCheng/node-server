@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="53px" viewBox="0 0 56 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>157 - Spaghetti (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="157---Spaghetti-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+            <path d="M6,46 C6,40.473 10.473,36 16,36 L18,36 M12,46 C12,43.789 13.789,42 16,42 L21,42 M20,39 L16,39 C12.131,39 9,42.131 9,46 M16,45 L21,45 M48,46 C48,40.473 43.527,36 38,36 L31,36 M42,46 C42,43.789 40.211,42 38,42 L33,42 M32,39 L38,39 C41.869,39 45,42.131 45,46 M38,45 L33,45 M34,33 C34,29.683 31.316,27 28,27 M37,33 C37,28.025 32.975,24 28,24 M31,33 C31,31.342 29.658,30 28,30 M22,25 C22,22.789 23.789,21 26,21 L28,21 C34.633,21 40,26.367 40,33 M25,27 C25,25.342 26.342,24 28,24 M13,34 C13,32.894 13.895,32 15,32 C22.185,32 24,38.814 24,46 M9,36 L9,35 C9,31.683 11.684,29 15,29 C23.844,29 27,37.156 27,46 L30,46 C30,35.498 25.502,26 15,26 L14,26 C9.025,26 5,30.025 5,35 L5,40" id="Stroke-1520" stroke="#FBD490" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M19,5.003 C14.633,5.003 14,5 14,5" id="Stroke-1521" stroke="#231F1F" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M7,5 L3,5 M7,8 L3,8 M7,2 L3,2" id="Stroke-1522" stroke="#E6E6E6" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M14,1 L20,1 C22.2,1 24,2.8 24,5 C24,7.2 22.2,9 20,9 L14,9 L14,1" id="Fill-1523" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M23.441,3 C23.787,3.591 24,4.269 24,5 C24,5.731 23.787,6.409 23.441,7 L52,7 C53.105,7 54,6.104 54,5 C54,3.895 53.105,3 52,3 L23.441,3" id="Fill-1524" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M48.409,52 L7.591,52 C5.347,52 3.253,50.879 2.008,49.012 L0,46 L56,46 L53.992,49.012 C52.747,50.879 50.653,52 48.409,52" id="Fill-1525" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M14,0 L14,10" id="Fill-1526" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M14,0 L14,10" id="Stroke-1527" stroke="#FBD490" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M11,0 L11,10" id="Fill-1528" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M11,0 L11,10" id="Stroke-1529" stroke="#FBD490" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M11,13 L11,23" id="Fill-1530" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M11,13 L11,23" id="Stroke-1531" stroke="#FBD490" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M8,14 L8,24" id="Fill-1532" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M8,14 L8,24" id="Stroke-1533" stroke="#FBD490" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M8,0 L8,11.289" id="Fill-1534" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M8,0 L8,11.289" id="Stroke-1535" stroke="#FBD490" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

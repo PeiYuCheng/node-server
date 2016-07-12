@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="46px" viewBox="0 0 48 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>43 - Projection (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="43---Projection-(Flat)" sketch:type="MSLayerGroup" fill="#EEAF4B">
+            <path d="M48,2.1 L48,2.1 C48,0.932 46.998,-0.008 45.834,0.101 C34.823,1.134 26.048,9.965 25.093,21 L22.908,21 C21.952,9.965 13.177,1.134 2.166,0.101 C1.002,-0.008 0,0.932 0,2.1 C0,3.142 0.802,3.988 1.838,4.088 C10.796,4.952 17.953,12.064 18.893,21 L8.999,21 C7.895,21 7,21.895 7,22.999 L7,23.001 C7,24.105 7.895,25 8.999,25 L18.893,25 C17.953,33.936 10.796,41.048 1.838,41.912 C0.802,42.012 0,42.858 0,43.899 C0,45.068 1.002,46.008 2.166,45.899 C13.177,44.866 21.952,36.034 22.908,25 L25.093,25 C26.048,36.034 34.823,44.866 45.834,45.899 C46.998,46.008 48,45.068 48,43.899 C48,42.858 47.198,42.012 46.162,41.912 C37.204,41.048 30.047,33.936 29.107,25 L39.001,25 C40.105,25 41,24.105 41,23.001 L41,22.999 C41,21.895 40.105,21 39.001,21 L29.107,21 C30.047,12.064 37.204,4.952 46.162,4.088 C47.198,3.988 48,3.142 48,2.1" id="Fill-40" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

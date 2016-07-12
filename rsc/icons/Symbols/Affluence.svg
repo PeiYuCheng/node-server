@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="50px" viewBox="0 0 52 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>74 - Affluence (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="74---Affluence-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M31,23 L42.854,23 C47.905,23 52,18.905 52,13.854 L52,0 L38.146,0 C33.095,0 29,4.095 29,9.146 L29,18.751" id="Fill-150" fill="#559A92" sketch:type="MSShapeGroup"></path>
+            <path d="M20,23 L9.146,23 C4.095,23 0,18.905 0,13.854 L0,0 L13.854,0 C18.905,0 23,4.095 23,9.146 L23,18.751" id="Fill-151" fill="#559A92" sketch:type="MSShapeGroup"></path>
+            <path d="M20,27 L9.146,27 C4.095,27 0,31.095 0,36.146 L0,50 L13.854,50 C18.905,50 23,45.905 23,40.854 L23,31" id="Fill-152" fill="#559A92" sketch:type="MSShapeGroup"></path>
+            <path d="M32,27 L42.854,27 C47.905,27 52,31.095 52,36.146 L52,50 L38.146,50 C33.095,50 29,45.905 29,40.854 L29,31.249" id="Fill-153" fill="#559A92" sketch:type="MSShapeGroup"></path>
+            <path d="M31.976,21.459 L40.752,12.49 C41.457,11.785 41.629,10.651 41.047,9.843 C40.305,8.812 38.859,8.727 38,9.586 L29.148,18.63 C27.301,20.477 24.306,20.477 22.459,18.63 L14,10.247 C13.295,9.543 12.161,9.371 11.353,9.953 C10.322,10.695 10.237,12.141 11.096,13 L19.63,21.459 C21.477,23.306 21.477,26.301 19.63,28.148 L11.247,36.51 C10.543,37.214 10.371,38.349 10.953,39.157 C11.695,40.187 13.141,40.273 14,39.414 L22.459,30.976 C24.306,29.129 27.301,29.129 29.148,30.976 L38,39.753 C38.704,40.457 39.839,40.629 40.647,40.046 C41.677,39.304 41.763,37.859 40.904,37 L31.976,28.148 C30.129,26.301 30.129,23.306 31.976,21.459" id="Fill-215" fill="#556080" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

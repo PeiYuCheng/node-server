@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>67 - Substract Anchor Point Tool (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-482.000000, -1078.000000)">
+            <g id="67---Substract-Anchor-Point-Tool-(Flat)" sketch:type="MSLayerGroup" transform="translate(482.000000, 1078.000000)">
+                <path d="M30.811,41.89 L14.804,46.179 L13.504,41.326 C12.361,37.06 7.976,34.528 3.71,35.671 L0,36.665 L11.472,1.729 L38.875,26.249 L35.166,27.243 C30.899,28.386 28.368,32.771 29.511,37.037 L30.811,41.89" id="Fill-463" fill="#F0CE49" sketch:type="MSShapeGroup"></path>
+                <path d="M18.211,27.884 C17.77,27.884 17.366,27.59 17.246,27.143 L10.506,1.988 C10.363,1.455 10.68,0.906 11.213,0.764 C11.747,0.619 12.295,0.937 12.438,1.471 L19.178,26.625 C19.321,27.158 19.004,27.707 18.471,27.85 C18.384,27.873 18.297,27.884 18.211,27.884" id="Fill-464" fill="#F8E7A1" sketch:type="MSShapeGroup"></path>
+                <path d="M32.343,47.607 L16.336,51.896 L14.804,46.179 L30.811,41.89 L32.343,47.607" id="Fill-465" fill="#434C6D" sketch:type="MSShapeGroup"></path>
+                <path d="M19.129,34.866 C17.074,34.866 15.267,33.479 14.735,31.491 C14.42,30.317 14.582,29.091 15.19,28.038 C15.797,26.985 16.779,26.232 17.953,25.918 C18.339,25.815 18.737,25.762 19.134,25.762 C21.188,25.762 22.995,27.149 23.527,29.136 C24.177,31.56 22.733,34.06 20.309,34.71 C19.923,34.813 19.526,34.866 19.129,34.866 L19.129,34.866 Z M19.134,27.762 C18.912,27.762 18.689,27.791 18.471,27.85 C17.813,28.026 17.262,28.448 16.922,29.038 C16.581,29.629 16.491,30.315 16.667,30.974 C17.022,32.303 18.449,33.141 19.792,32.778 C21.15,32.414 21.96,31.012 21.596,29.653 C21.297,28.54 20.285,27.762 19.134,27.762 L19.134,27.762 Z" id="Fill-466" fill="#F8E7A1" sketch:type="MSShapeGroup"></path>
+                <path d="M57,47 C57,52.523 52.523,57 47,57 C41.477,57 37,52.523 37,47 C37,41.477 41.477,37 47,37 C52.523,37 57,41.477 57,47" id="Fill-467" fill="#25B99A" sketch:type="MSShapeGroup"></path>
+                <path d="M53,48 L41,48 C40.448,48 40,47.553 40,47 C40,46.447 40.448,46 41,46 L53,46 C53.552,46 54,46.447 54,47 C54,47.553 53.552,48 53,48" id="Fill-468" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

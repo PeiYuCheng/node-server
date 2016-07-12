@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>163 - Vampire (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="163---Vampire-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M42,21 C42,32.598 32.598,42 21,42 C9.402,42 0,32.598 0,21 C0,9.402 9.402,0 21,0 C32.598,0 42,9.402 42,21" id="Fill-29" fill="#FBD971" sketch:type="MSShapeGroup"></path>
+            <path d="M16,30 L14,36 L12,30 L16,30" id="Fill-264" fill="#E64C3C" sketch:type="MSShapeGroup"></path>
+            <path d="M30,30 L28,36 L26,30 L30,30" id="Fill-265" fill="#E64C3C" sketch:type="MSShapeGroup"></path>
+            <path d="M10.116,12.016 C11.199,13.098 12.902,13.119 13.984,12.036 M28.132,11.178 C29.214,12.26 30.918,12.281 32,11.198" id="Stroke-266" stroke="#F0C419" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M7.674,15.451 C7.255,16.028 7,16.732 7,17.5 C7,19.433 8.567,21 10.5,21 C12.433,21 14,19.433 14,17.5 C14,17.302 13.973,17.112 13.942,16.923 C11.741,17.253 9.356,16.758 7.674,15.451" id="Fill-335" fill="#AF8066" sketch:type="MSShapeGroup"></path>
+            <path d="M34.326,15.451 C34.745,16.028 35,16.732 35,17.5 C35,19.433 33.433,21 31.5,21 C29.567,21 28,19.433 28,17.5 C28,17.302 28.027,17.112 28.058,16.923 C30.259,17.253 32.644,16.758 34.326,15.451" id="Fill-336" fill="#AF8066" sketch:type="MSShapeGroup"></path>
+            <path d="M12,30 L30,30" id="Stroke-376" stroke="#F0C419" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

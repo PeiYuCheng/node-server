@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="57px" viewBox="0 0 58 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>83 - Valve (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="83---Valve-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M49,35 L55,35 L55,57 L49,57 L49,35 Z" id="Fill-2276" fill="#949493" sketch:type="MSShapeGroup"></path>
+            <path d="M9,38 L49,38 L49,54 L9,54 L9,38 Z" id="Fill-2277" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M55,38 L58,38 L58,54 L55,54 L55,38 Z" id="Fill-2278" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M3,35 L9,35 L9,57 L3,57 L3,35 Z" id="Fill-2279" fill="#949493" sketch:type="MSShapeGroup"></path>
+            <path d="M0,38 L3,38 L3,54 L0,54 L0,38 Z" id="Fill-2280" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M14,32 L44,32 L44,38 L14,38 L14,32 Z" id="Fill-2503" fill="#E8EDEE" sketch:type="MSShapeGroup"></path>
+            <path d="M17,29 L41,29 L41,32 L17,32 L17,29 Z" id="Fill-2504" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M24,21 L34,21 L34,29 L24,29 L24,21 Z" id="Fill-2505" fill="#949493" sketch:type="MSShapeGroup"></path>
+            <path d="M27,12 L31,12 L31,21 L27,21 L27,12 Z" id="Fill-2506" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M32.586,2.414 L32.414,2.586 C31.509,3.491 30.281,4 29,4 C27.719,4 26.491,3.491 25.586,2.586 L25.414,2.414 C24.509,1.509 23.281,1 22,1 L16.746,1 C14.125,1 12,3.125 12,5.746 L12,10.254 C12,12.875 14.125,15 16.746,15 L24,15 L24,12 L34,12 L34,15 L41.254,15 C43.875,15 46,12.875 46,10.254 L46,5.746 C46,3.125 43.875,1 41.254,1 L36,1 C34.719,1 33.491,1.509 32.586,2.414" id="Fill-2507" fill="#B12621" sketch:type="MSShapeGroup"></path>
+            <path d="M29,4 C29.699,4 30.376,3.836 31,3.551 L31,0 L27,0 L27,3.551 C27.624,3.836 28.301,4 29,4" id="Fill-2508" fill="#556080" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

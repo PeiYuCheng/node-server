@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="51px" height="52px" viewBox="0 0 51 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>17 - Cereals (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="17---Cereals-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M6.976,49 L0,46 L0,0 L6.976,0 L6.976,49" id="Fill-1843" fill="#B27C4F" sketch:type="MSShapeGroup"></path>
+            <path d="M14.527,34.121 L14.527,34.017 C14.527,31.646 22.49,29.724 32.312,29.724 C33.341,29.724 34.342,29.749 35.323,29.79 L38,19.75 L38,0 L7.007,0 L7.007,49 L22.584,49 C17.736,45.823 14.527,40.35 14.527,34.121" id="Fill-1844" fill="#A46F3E" sketch:type="MSShapeGroup"></path>
+            <path d="M20,23.228 L16.342,23.228 C13.391,23.228 11,20.836 11,17.886 L11,14.228 L14.658,14.228 C17.608,14.228 20,16.619 20,19.569 L20,23.228" id="Fill-1845" fill="#F9EB80" sketch:type="MSShapeGroup"></path>
+            <path d="M24,23.228 L27.658,23.228 C30.608,23.228 33,20.836 33,17.886 L33,14.228 L29.342,14.228 C26.391,14.228 24,16.619 24,19.569 L24,23.228" id="Fill-1846" fill="#F9EB80" sketch:type="MSShapeGroup"></path>
+            <path d="M21.992,18.728 L24.579,16.141 C26.665,14.055 26.665,10.673 24.579,8.587 L21.992,6 L19.405,8.587 C17.319,10.673 17.319,14.055 19.405,16.141 L21.992,18.728" id="Fill-1847" fill="#F9EB80" sketch:type="MSShapeGroup"></path>
+            <path d="M39.25,30.063 L43,16 C43,15.45 42.55,15 42,15 L40,15 C39.45,15 39,15.45 39,16 L35.323,29.79 C34.342,29.749 33.341,29.724 32.312,29.724 C22.49,29.724 14.527,31.646 14.527,34.017 L14.527,34.121 C14.527,43.943 22.49,51.906 32.312,51.906 C42.135,51.906 50.098,43.943 50.098,34.121 L50.098,34.017 C50.098,32.24 45.625,30.716 39.25,30.063" id="Fill-1848" fill="#EFE7D0" sketch:type="MSShapeGroup"></path>
+            <path d="M39.25,30.063 L43,16 C43,15.45 42.55,15 42,15 L40,15 C39.45,15 39,15.45 39,16 L35.323,29.79 C34.342,29.749 33.341,29.724 32.312,29.724 C22.49,29.724 14.527,31.646 14.527,34.017 C14.527,36.388 22.49,38.31 32.312,38.31 C42.135,38.31 50.098,36.388 50.098,34.017 C50.098,32.24 45.625,30.716 39.25,30.063" id="Fill-1849" fill="#FFF6BB" sketch:type="MSShapeGroup"></path>
+            <path d="M39.25,30.063 L43,16 C43,15.45 42.55,15 42,15 L40,15 C39.45,15 39,15.45 39,16 L35.323,29.79 L34.667,32.292 L38.542,33 L39.25,30.063" id="Fill-1850" fill="#D2D5D7" sketch:type="MSShapeGroup"></path>
+            <path d="M23,35 C23,33.895 23.895,33 25,33 C26.105,33 27,33.895 27,35 M31,36 C31,34.895 31.895,34 33,34 C34.105,34 35,34.895 35,36" id="Stroke-1851" stroke="#ED8F1F" stroke-width="2" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

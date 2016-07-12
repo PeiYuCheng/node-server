@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="54px" viewBox="0 0 60 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>449 - Lock Video (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="449---Lock-Video-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <path d="M0,0 L56,0 L56,44 L0,44 L0,0 Z" id="Fill-210" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L56,0 L56,44 L0,44 L0,0 Z" id="Stroke-211" stroke="#535D73" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M24,29 L24,15 L35,22 L24,29" id="Fill-212" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L10,0 L10,11 L0,11 L0,0 Z" id="Fill-213" fill="#687492" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L10,0 L10,11 L0,11 L0,0 Z" id="Stroke-214" stroke="#535D73" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M0,11 L10,11 L10,22 L0,22 L0,11 Z" id="Fill-215" fill="#687492" sketch:type="MSShapeGroup"></path>
+            <path d="M0,11 L10,11 L10,22 L0,22 L0,11 Z" id="Stroke-216" stroke="#535D73" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M0,22 L10,22 L10,33 L0,33 L0,22 Z" id="Fill-217" fill="#687492" sketch:type="MSShapeGroup"></path>
+            <path d="M0,22 L10,22 L10,33 L0,33 L0,22 Z" id="Stroke-218" stroke="#535D73" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M0,33 L10,33 L10,44 L0,44 L0,33 Z" id="Fill-219" fill="#687492" sketch:type="MSShapeGroup"></path>
+            <path d="M0,33 L10,33 L10,44 L0,44 L0,33 Z" id="Stroke-220" stroke="#535D73" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M46,0 L56,0 L56,11 L46,11 L46,0 Z" id="Fill-221" fill="#687492" sketch:type="MSShapeGroup"></path>
+            <path d="M46,0 L56,0 L56,11 L46,11 L46,0 Z" id="Stroke-222" stroke="#535D73" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M46,11 L56,11 L56,22 L46,22 L46,11 Z" id="Fill-223" fill="#687492" sketch:type="MSShapeGroup"></path>
+            <path d="M46,11 L56,11 L56,22 L46,22 L46,11 Z" id="Stroke-224" stroke="#535D73" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M46,22 L56,22 L56,33 L46,33 L46,22 Z" id="Fill-225" fill="#687492" sketch:type="MSShapeGroup"></path>
+            <path d="M46,22 L56,22 L56,33 L46,33 L46,22 Z" id="Stroke-226" stroke="#535D73" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M46,33 L56,33 L56,44 L46,44 L46,33 Z" id="Fill-227" fill="#687492" sketch:type="MSShapeGroup"></path>
+            <path d="M46,33 L56,33 L56,44 L46,44 L46,33 Z" id="Stroke-228" stroke="#535D73" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M39,37 L59,37 L59,53 L39,53 L39,37 Z" id="Fill-2058" fill="#B1D3F0" sketch:type="MSShapeGroup"></path>
+            <path d="M52,44 C52,42.343 50.657,41 49,41 C47.343,41 46,42.343 46,44 C46,45.317 46.854,46.424 48.035,46.827 C48.024,46.885 48,46.939 48,47 L48,49 C48,49.552 48.448,50 49,50 C49.552,50 50,49.552 50,49 L50,47 C50,46.939 49.976,46.885 49.965,46.827 C51.146,46.424 52,45.317 52,44" id="Fill-2059" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M44,35 C44,32.243 46.243,30 49,30 C51.757,30 54,32.243 54,35 L54,37 L56,37 L56,35 C56,31.14 52.86,28 49,28 C45.14,28 42,31.14 42,35 L42,37 L44,37 L44,35" id="Fill-2060" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

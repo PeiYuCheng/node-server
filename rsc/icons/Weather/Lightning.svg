@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="31px" height="60px" viewBox="0 0 31 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>18 - Lightning (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="18---Lightning-(Flat)" sketch:type="MSLayerGroup" transform="translate(3.000000, 1.000000)">
+            <path d="M13,0 L3,17 L9,17 L1,33 L7,33 L0,53 L20,27 L15,27 L24,10 L20,10 L26,0 L13,0 L13,0 Z" id="Fill-392" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M13,0 L3,17 L9,17 L1,33 L7,33 L0,53 L20,27 L15,27 L24,10 L20,10 L26,0 L13,0 L13,0 Z" id="Stroke-393" stroke="#BDC3C7" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

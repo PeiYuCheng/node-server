@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="48px" viewBox="0 0 58 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>540 - Add Mail (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="540---Add-Mail-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L56,39 L56,0 L0,0 L0,39 Z" id="Fill-1581" fill="#DCD6CD" sketch:type="MSShapeGroup"></path>
+            <path d="M30.965,22.107 C29.327,23.569 26.673,23.569 25.035,22.107 L22.949,20.264 C16.419,26.092 0,39 0,39 L56,39 C56,39 39.581,26.092 33.052,20.264 L30.965,22.107" id="Fill-1582" fill="#E8E3D9" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L25.035,22.107 C26.673,23.569 29.327,23.569 30.965,22.107 L56,0 L0,0" id="Fill-1583" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M58,36 C58,42.627 52.627,48 46,48 C39.373,48 34,42.627 34,36 C34,29.373 39.373,24 46,24 C52.627,24 58,29.373 58,36" id="Fill-1880" fill="#71C386" sketch:type="MSShapeGroup"></path>
+            <path d="M52,35 L47,35 L47,30 C47,29.448 46.552,29 46,29 C45.448,29 45,29.448 45,30 L45,35 L40,35 C39.448,35 39,35.448 39,36 C39,36.552 39.448,37 40,37 L45,37 L45,42 C45,42.552 45.448,43 46,43 C46.552,43 47,42.552 47,42 L47,37 L52,37 C52.552,37 53,36.552 53,36 C53,35.448 52.552,35 52,35" id="Fill-1881" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

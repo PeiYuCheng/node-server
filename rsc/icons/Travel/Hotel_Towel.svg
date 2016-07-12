@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="44px" viewBox="0 0 58 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>21 - Hotel Towel (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="21---Hotel-Towel-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M39.912,0 L19,0 L14.5,0 C16.975,0 19,2.025 19,4.5 L19,44 L45,44 L45,5.088 C45,2.278 42.722,0 39.912,0" id="Fill-22" fill="#F4E6CE" sketch:type="MSShapeGroup"></path>
+            <path d="M39,16 L37.91,16 C37.756,15.091 37.4,14.251 36.885,13.529 L37.657,12.758 C38.048,12.367 38.048,11.734 37.657,11.343 C37.267,10.953 36.634,10.953 36.243,11.343 L35.471,12.115 C34.749,11.6 33.909,11.244 33,11.09 L33,10 C33,9.448 32.553,9 32,9 C31.447,9 31,9.448 31,10 L31,11.09 C30.091,11.244 29.251,11.6 28.529,12.115 L27.757,11.343 C27.366,10.953 26.733,10.953 26.343,11.343 C25.952,11.734 25.952,12.367 26.343,12.758 L27.115,13.529 C26.6,14.251 26.244,15.091 26.09,16 L25,16 C24.447,16 24,16.448 24,17 C24,17.552 24.447,18 25,18 L26.09,18 C26.244,18.909 26.6,19.749 27.115,20.471 L26.343,21.242 C25.952,21.633 25.952,22.266 26.343,22.657 C26.538,22.852 26.794,22.95 27.05,22.95 C27.306,22.95 27.562,22.852 27.757,22.657 L28.529,21.885 C29.251,22.4 30.091,22.756 31,22.91 L31,24 C31,24.552 31.447,25 32,25 C32.553,25 33,24.552 33,24 L33,22.91 C33.909,22.756 34.749,22.4 35.471,21.885 L36.243,22.657 C36.438,22.852 36.694,22.95 36.95,22.95 C37.206,22.95 37.462,22.852 37.657,22.657 C38.048,22.266 38.048,21.633 37.657,21.242 L36.885,20.471 C37.4,19.749 37.756,18.909 37.91,18 L39,18 C39.553,18 40,17.552 40,17 C40,16.448 39.553,16 39,16 L39,16 Z M32,21 C29.794,21 28,19.206 28,17 C28,14.794 29.794,13 32,13 C34.206,13 36,14.794 36,17 C36,19.206 34.206,21 32,21 L32,21 Z" id="Fill-306" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M19,29 L45,29 L45,31 L19,31 L19,29 Z" id="Fill-307" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M19,33 L45,33 L45,35 L19,35 L19,33 Z" id="Fill-308" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M58,7 C58,8.657 56.657,10 55,10 C53.343,10 52,8.657 52,7 C52,5.343 53.343,4 55,4 C56.657,4 58,5.343 58,7" id="Fill-309" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M19,37 L45,37 L45,39 L19,39 L19,37 Z" id="Fill-310" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M10,9 L19,9 L19,20 L10,20 L10,9 Z" id="Fill-311" fill="#FBD490" sketch:type="MSShapeGroup"></path>
+            <path d="M14.5,0 C12.025,0 10,2.025 10,4.5 L10,5 L19,5 L19,4.5 C19,2.025 16.975,0 14.5,0" id="Fill-312" fill="#FBD490" sketch:type="MSShapeGroup"></path>
+            <path d="M6,7 C6,8.657 4.657,10 3,10 C1.343,10 0,8.657 0,7 C0,5.343 1.343,4 3,4 C4.657,4 6,5.343 6,7" id="Fill-313" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M5.221,5 C5.7,5.532 6,6.228 6,7 C6,7.772 5.7,8.468 5.221,9 L19,9 L19,5 L5.221,5" id="Fill-314" fill="#95A5A5" sketch:type="MSShapeGroup"></path>
+            <path d="M53,5 L45,5 L45,9 L53,9 C53.552,9 54,8.105 54,7 C54,5.895 53.552,5 53,5" id="Fill-605" fill="#95A5A5" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

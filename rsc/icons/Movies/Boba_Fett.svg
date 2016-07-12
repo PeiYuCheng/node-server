@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="46px" height="54px" viewBox="0 0 46 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>20 - Boba Fett (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="20---Boba-Fett-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+            <path d="M17.752,28.259 L5,23 L5,42 L19.877,52.91 C19.928,52.947 20,52.911 20,52.848 L20,31 C20.049,29.679 19.048,28.518 17.752,28.259" id="Fill-143" fill="#406051" sketch:type="MSShapeGroup"></path>
+            <path d="M28.25,28.259 L41.002,23 L41.002,42 L26.124,52.91 C26.073,52.947 26.002,52.911 26.002,52.848 L26.002,31 C25.953,29.679 26.954,28.518 28.25,28.259" id="Fill-144" fill="#406051" sketch:type="MSShapeGroup"></path>
+            <path d="M5,42 L2.639,40.583 C1.002,39.601 0,37.832 0,35.922 L0,22 L5,22 L5,42" id="Fill-504" fill="#E3C798" sketch:type="MSShapeGroup"></path>
+            <path d="M41,42 L43.361,40.583 C44.998,39.601 46,37.832 46,35.922 L46,22 L41,22 L41,42" id="Fill-505" fill="#E3C798" sketch:type="MSShapeGroup"></path>
+            <path d="M30.418,2.637 C28.351,1.674 26.071,1.097 23.656,1.012 C13.416,0.648 5,8.841 5,19 L5,20 C16.918,21.986 29.082,21.986 41,20 L41,19.431 C41,16.657 40.369,14.009 39.267,11.617 C39.267,11.617 36.148,4.931 30.418,2.637" id="Fill-506" fill="#7C9382" sketch:type="MSShapeGroup"></path>
+            <path d="M2,22 L2,2" id="Stroke-649" stroke="#464F5D" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M2,0 L9,0 L9,3 L2,3 L2,0 Z" id="Fill-650" fill="#464F5D" sketch:type="MSShapeGroup"></path>
+            <path d="M2,0 L9,0 L9,3 L2,3 L2,0 Z" id="Stroke-651" stroke="#464F5D" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M31,12 C31,12.552 30.552,13 30,13 C29.448,13 29,12.552 29,12 C29,11.448 29.448,11 30,11 C30.552,11 31,11.448 31,12" id="Fill-652" fill="#DADADB" sketch:type="MSShapeGroup"></path>
+            <path d="M33,10 C33,10.552 32.552,11 32,11 C31.448,11 31,10.552 31,10 C31,9.448 31.448,9 32,9 C32.552,9 33,9.448 33,10" id="Fill-653" fill="#DADADB" sketch:type="MSShapeGroup"></path>
+            <path d="M35,12 C35,12.552 34.552,13 34,13 C33.448,13 33,12.552 33,12 C33,11.448 33.448,11 34,11 C34.552,11 35,11.448 35,12" id="Fill-654" fill="#DADADB" sketch:type="MSShapeGroup"></path>
+            <path d="M33,14 C33,14.552 32.552,15 32,15 C31.448,15 31,14.552 31,14 C31,13.448 31.448,13 32,13 C32.552,13 33,13.448 33,14" id="Fill-655" fill="#DADADB" sketch:type="MSShapeGroup"></path>
+            <path d="M29,14 C29,14.552 28.552,15 28,15 C27.448,15 27,14.552 27,14 C27,13.448 27.448,13 28,13 C28.552,13 29,13.448 29,14" id="Fill-656" fill="#DADADB" sketch:type="MSShapeGroup"></path>
+            <path d="M29,10 C29,10.552 28.552,11 28,11 C27.448,11 27,10.552 27,10 C27,9.448 27.448,9 28,9 C28.552,9 29,9.448 29,10" id="Fill-657" fill="#DADADB" sketch:type="MSShapeGroup"></path>
+            <path d="M17,44.067 L17,50.842 L19.929,53 L26.071,53 L29,50.842 L29.001,44.066 C29.002,36.263 33.715,29.233 40.933,26.268 L41,26.241 L41,20 C29.082,21.986 16.918,21.986 5,20 L5,26.24 L5.068,26.268 C12.287,29.232 17,36.263 17,44.067" id="Fill-885" fill="#D25627" sketch:type="MSShapeGroup"></path>
+            <path d="M5,23 L5,23 L17.752,28.259 C19.047,28.518 20.049,29.679 20,31 L20,53 L26,53 L26,40 L26.002,40 L26.002,31 C25.953,29.679 26.954,28.518 28.25,28.259 L41,23.001 L41,23 C29.082,24.986 16.918,24.986 5,23" id="Fill-886" fill="#000000" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

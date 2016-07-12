@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="55px" viewBox="0 0 54 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>183 - Loading To Do List (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="183---Loading-To-Do-List-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M43.636,52 L8.364,52 C3.745,52 0,48.256 0,43.637 L0,8.364 C0,3.745 3.745,0 8.364,0 L43.636,0 C48.255,0 52,3.745 52,8.364 L52,43.637 C52,48.256 48.255,52 43.636,52" id="Fill-1775" fill="#3ABCA7" sketch:type="MSShapeGroup"></path>
+            <path d="M26,13 L44,13 M26,27 L44,27 M26,41 L44,41 M18.929,8.001 L12.071,16 L7.5,12.572 M18.929,22 L12.071,30 L7.5,26.571 M18.929,37 L12.071,44.999 L7.5,41.57" id="Stroke-1776" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M44,42 L42,42 C38.367,40.547 36,37.139 36,33.36 L36,30 L50,30 L50,33.36 C50,37.139 47.633,40.547 44,42" id="Fill-1891" fill="#D0E8F9" sketch:type="MSShapeGroup"></path>
+            <path d="M42,42 L44,42 C47.633,43.453 50,46.862 50,50.64 L50,54 L36,54 L36,50.64 C36,46.862 38.367,43.453 42,42" id="Fill-1892" fill="#D0E8F9" sketch:type="MSShapeGroup"></path>
+            <path d="M33,31 L53,31 C53.553,31 54,30.552 54,30 C54,29.448 53.553,29 53,29 L33,29 C32.447,29 32,29.448 32,30 C32,30.552 32.447,31 33,31" id="Fill-1893" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M52.999,52.998 L34.999,52.998 C34.996,52.998 34.993,53 34.989,53 L33,53 C32.447,53 32,53.448 32,54 C32,54.552 32.447,55 33,55 L36,55 C36.003,55 36.006,54.998 36.01,54.998 L52.999,54.998 C53.552,54.998 53.999,54.551 53.999,53.998 C53.999,53.446 53.552,52.998 52.999,52.998" id="Fill-1894" fill="#556080" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

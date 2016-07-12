@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="52px" viewBox="0 0 60 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>180 - Add Folder (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="180---Add-Folder-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M25,7 L20,0 L0,0 L0,51 L58,51 L58,14 L30,14 L25,7" id="Fill-1701" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M30,14 L58,14 L58,7 L25,7 L30,14" id="Fill-1702" fill="#3D4451" sketch:type="MSShapeGroup"></path>
+            <path d="M59.39,40 C59.39,46.628 54.017,52 47.39,52 C40.762,52 35.39,46.628 35.39,40 C35.39,33.373 40.762,28 47.39,28 C54.017,28 59.39,33.373 59.39,40" id="Fill-1880" fill="#71C386" sketch:type="MSShapeGroup"></path>
+            <path d="M53.39,39 L48.39,39 L48.39,34 C48.39,33.448 47.942,33 47.39,33 C46.837,33 46.39,33.448 46.39,34 L46.39,39 L41.39,39 C40.837,39 40.39,39.448 40.39,40 C40.39,40.552 40.837,41 41.39,41 L46.39,41 L46.39,46 C46.39,46.552 46.837,47 47.39,47 C47.942,47 48.39,46.552 48.39,46 L48.39,41 L53.39,41 C53.942,41 54.39,40.552 54.39,40 C54.39,39.448 53.942,39 53.39,39" id="Fill-1881" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

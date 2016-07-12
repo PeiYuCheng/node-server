@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="48px" viewBox="0 0 58 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>530 - Hide Mail (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="530---Hide-Mail-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L56,39 L56,0 L0,0 L0,39 Z" id="Fill-1584" fill="#DCD6CD" sketch:type="MSShapeGroup"></path>
+            <path d="M30.965,22.107 C29.327,23.569 26.673,23.569 25.035,22.107 L22.949,20.264 C16.419,26.092 0,39 0,39 L56,39 C56,39 39.581,26.092 33.052,20.264 L30.965,22.107" id="Fill-1585" fill="#E8E3D9" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L25.035,22.107 C26.673,23.569 29.327,23.569 30.965,22.107 L56,0 L0,0" id="Fill-1586" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M56.805,38.68 L56.698,38.843 C49.578,49.719 37.926,49.719 30.805,38.843 L30.912,38.68 C38.033,27.803 49.685,27.803 56.805,38.68" id="Fill-1885" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M49.478,36.397 C49.478,39.661 46.832,42.307 43.569,42.307 C40.305,42.307 37.66,39.661 37.66,36.397 C37.66,33.134 40.305,30.488 43.569,30.488 C46.832,30.488 49.478,33.134 49.478,36.397" id="Fill-1886" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M43.752,48 C38.498,48 33.604,44.942 29.969,39.391 L29.61,38.844 L30.075,38.132 C33.71,32.58 38.605,29.523 43.859,29.523 C49.112,29.523 54.007,32.58 57.642,38.131 L58,38.679 L57.535,39.39 C53.9,44.942 49.005,48 43.752,48 L43.752,48 Z M32.008,38.839 C35.214,43.463 39.365,46 43.752,46 C48.188,46 52.382,43.406 55.602,38.683 C52.396,34.059 48.246,31.523 43.859,31.523 C39.422,31.523 35.229,34.116 32.008,38.839 L32.008,38.839 Z" id="Fill-1887" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

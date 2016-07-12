@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="42px" height="48px" viewBox="0 0 42 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>156 - Superhero (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="156---Superhero-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M42,27 C42,38.598 32.598,48 21,48 C9.402,48 0,38.598 0,27 C0,15.402 9.402,6 21,6 C32.598,6 42,15.402 42,27" id="Fill-251" fill="#FBD971" sketch:type="MSShapeGroup"></path>
+            <path d="M37,13.417 L37,1 C35.857,5.342 33.461,7.96 32.068,9.177 C28.851,7.176 25.067,6 21,6 C17.468,6 14.144,6.882 11.223,8.422 C9.9,7.337 7.228,4.667 6,0 L6,12.317 C2.292,16.104 0,21.282 0,27 L18.59,34.082 C20.142,34.673 21.858,34.673 23.41,34.082 L42,27 C42,21.816 40.113,17.08 37,13.417" id="Fill-252" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M17,22 L15.786,24.01 L14,27 L5,19 L17,22" id="Fill-253" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M25,22 L26.192,24.01 L28,27 L37,19 L25,22" id="Fill-254" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M16,41 L26,41" id="Stroke-255" stroke="#F0C419" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

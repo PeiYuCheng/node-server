@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>37 - Tile All Horizontally (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-481.000000, -1438.000000)">
+            <g id="37---Tile-All-Horizontally-(Flat)" sketch:type="MSLayerGroup" transform="translate(481.000000, 1438.000000)">
+                <path d="M0,0 L58,0 L58,58 L0,58 L0,0 Z" id="Fill-639" fill="#556080" sketch:type="MSShapeGroup"></path>
+                <path d="M5,37 L53,37 L53,45 L5,45 L5,37 Z" id="Fill-640" fill="#556080" sketch:type="MSShapeGroup"></path>
+                <path d="M4,36 L54,36 L54,46 L4,46 L4,36 Z M6,44 L52,44 L52,38 L6,38 L6,44 Z" id="Fill-641" fill="#25B99A" sketch:type="MSShapeGroup"></path>
+                <path d="M5,45 L53,45 L53,53 L5,53 L5,45 Z" id="Fill-642" fill="#556080" sketch:type="MSShapeGroup"></path>
+                <path d="M4,44 L54,44 L54,54 L4,54 L4,44 Z M6,52 L52,52 L52,46 L6,46 L6,52 Z" id="Fill-643" fill="#25B99A" sketch:type="MSShapeGroup"></path>
+                <path d="M5,29 L53,29 L53,37 L5,37 L5,29 Z" id="Fill-644" fill="#556080" sketch:type="MSShapeGroup"></path>
+                <path d="M4,28 L54,28 L54,38 L4,38 L4,28 Z M6,36 L52,36 L52,30 L6,30 L6,36 Z" id="Fill-645" fill="#25B99A" sketch:type="MSShapeGroup"></path>
+                <path d="M5,21 L53,21 L53,29 L5,29 L5,21 Z" id="Fill-646" fill="#556080" sketch:type="MSShapeGroup"></path>
+                <path d="M4,20 L54,20 L54,30 L4,30 L4,20 Z M6,28 L52,28 L52,22 L6,22 L6,28 Z" id="Fill-647" fill="#25B99A" sketch:type="MSShapeGroup"></path>
+                <path d="M5,13 L53,13 L53,21 L5,21 L5,13 Z" id="Fill-648" fill="#556080" sketch:type="MSShapeGroup"></path>
+                <path d="M4,12 L54,12 L54,22 L4,22 L4,12 Z M6,20 L52,20 L52,14 L6,14 L6,20 Z" id="Fill-649" fill="#25B99A" sketch:type="MSShapeGroup"></path>
+                <path d="M5,5 L53,5 L53,13 L5,13 L5,5 Z" id="Fill-650" fill="#556080" sketch:type="MSShapeGroup"></path>
+                <path d="M4,4 L54,4 L54,14 L4,14 L4,4 Z M6,12 L52,12 L52,6 L6,6 L6,12 Z" id="Fill-651" fill="#25B99A" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

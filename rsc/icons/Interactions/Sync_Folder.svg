@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="59px" height="53px" viewBox="0 0 59 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>165 - Sync Folder (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="165---Sync-Folder-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M25,7 L20,0 L0,0 L0,51 L58,51 L58,14 L30,14 L25,7" id="Fill-1731" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M30,14 L58,14 L58,7 L25,7 L30,14" id="Fill-1732" fill="#3D4451" sketch:type="MSShapeGroup"></path>
+            <path d="M58.39,40.5 C58.39,47.404 52.793,53 45.89,53 C38.986,53 33.39,47.404 33.39,40.5 C33.39,33.596 38.986,28 45.89,28 C52.793,28 58.39,33.596 58.39,40.5" id="Fill-1852" fill="#B1D3F0" sketch:type="MSShapeGroup"></path>
+            <path d="M55.583,41.019 C55.033,40.907 54.514,41.265 54.408,41.807 C53.588,45.975 50.005,49 45.889,49 C42.539,49 39.542,46.995 38.101,44 L43.389,44 L43.389,42 L35.389,42 L35.389,50 L37.389,50 L37.389,46.659 C39.365,49.316 42.475,51 45.889,51 C50.958,51 55.366,47.297 56.371,42.193 C56.477,41.651 56.125,41.125 55.583,41.019" id="Fill-1853" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M54.39,30.999 L54.39,34.34 C52.413,31.683 49.304,29.999 45.89,29.999 C40.821,29.999 36.413,33.702 35.408,38.805 C35.302,39.347 35.654,39.873 36.196,39.979 C36.746,40.092 37.265,39.734 37.371,39.192 C38.191,35.024 41.773,31.999 45.89,31.999 C49.24,31.999 52.237,34.004 53.678,36.999 L48.39,36.999 L48.39,38.999 L56.39,38.999 L56.39,30.999 L54.39,30.999" id="Fill-1854" fill="#556080" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

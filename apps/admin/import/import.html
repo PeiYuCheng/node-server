@@ -1,0 +1,162 @@
+<!doctype html>
+<HTML>
+<HEAD>
+<title>Ormiboard Admin</title>
+<meta charset="utf-8">
+<META HTTP-EQUIV="EXPIRES" CONTENT="-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="no">
+<link type="text/css" rel="stylesheet" href="../../../rsc/css/shared.css"/>
+<STYLE>
+BODY { 
+	background-color:#FAFAFA; 
+	border: 0px; margin: 0px; 
+	text-align: center;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-ms-touch-action: none;
+	user-select: none; 
+	font-family: regular; 
+	font-size: 20px; 
+	text-align: center;
+}
+input {
+	outline-width: 0;
+	-ms-user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;	
+	border: 1px solid #90A4AE;
+	padding: 10px;
+	width: 90%; max-width: 600px; font-size: 16px;
+	font-family: light;
+ }
+ .btNormal {
+	cursor: pointer;
+	font-size:36px; font-family: light; color: #D8394D; 
+	margin-top: 70px; border-radius: 5px; border: 2px solid #D7354D; 
+	width: 260px; height: 60px; line-height: 60px;
+ }
+ .btActing {
+	cursor: default;
+	font-size:36px; font-family: light; color: #FFFFFF; 
+	margin-top: 70px; border-radius: 5px; 
+	border: 2px solid #D7354D;
+	width: 260px; height: 60px; line-height: 60px;
+	background-color: #D7354D;
+ }
+a { text-decoration: none; }
+</STYLE>
+</HEAD>
+
+<BODY onload='main();'>
+<br>
+<center>
+<div style='display: none;' id='DISPLAY'>
+
+	<img src='/rsc/images/ormiboard.svg' style='width:60px; height: 60px;'>
+	<br><span style='font-size:36px; font-family: light; color: #D7354D;'>Import Tool</span>
+	<div style='padding-top: 70px; font-size:26px; color:#90A4AE; font-family:light;'>Ormiboard Document URL</div>
+	<div id='MSG' style='padding-bottom: 4px; font-size:16px; color:#90A4AE; font-family:regular;'>Open the document to import, copy the link and paste it below.</div>
+	<input id='IN_URL' placeholder="http://" type='text'>
+	
+	<div id='BT_IMPORT' onclick='go_import()' class='btNormal'>Import</div>
+
+</div>
+<script src="../../../rsc/libs/fastclick.js"></script>
+
+<script>
+function DOM(s) { return document.getElementById(s); }
+
+var childOf = (window.frameElement !== null ? window.frameElement.id : "");
+function memset(mkey, mvalue) {localStorage.setItem((childOf == "" ? "" : childOf + "-)") + mkey, mvalue);}
+function memget(mkey) {return localStorage.getItem((childOf == "" ? "" : childOf + "-)") + mkey);}
+
+
+//var userid = localStorage.getItem("userid");
+var userid = memget("userid");
+if(userid == null || userid == "null") userid = "";
+if(userid === "") {
+	document.write("</div><br><br>");
+	document.write("<span style='color:#D8394D;'>Please sign-in to use this tool.");
+} else {
+	DOM("DISPLAY").style.display = "block";
+}
+
+var importing = false;
+var targetdocid = "";
+
+function go_import() {
+	if(!importing) {
+		DOM("BT_IMPORT").className = "btActing"; 
+		
+		DOM("MSG").innerHTML = "&nbsp;";
+		var URL = DOM("IN_URL").value;
+		if(URL !== "") {
+		
+				if(URL.indexOf("/editor.html?") > -1) {
+					DOM("MSG").innerHTML = "Please copy the URL when viewing the document, not when editing the document.";
+					DOM("MSG").style.color = "#D8394D";
+					DOM("BT_IMPORT").className = "btNormal"; 
+				} else {
+					if(URL.indexOf("/users/") == -1) {
+						DOM("MSG").innerHTML = "This is not a valid Ormiboard document URL.";
+						DOM("MSG").style.color = "#D8394D";
+						DOM("BT_IMPORT").className = "btNormal"; 
+					} else {
+						DOM("BT_IMPORT").innerHTML = "Importing..."; 
+						importing = true;
+						document_import(URL);
+					}
+				}
+			
+		} else {
+		
+//http://vr/editor.html?id=1464062245948		
+// http://vr/users/exoucomjbmartinoli/1464042992592.html?nocache=1464062279800		
+			DOM("MSG").innerHTML = "Please enter the URL to import.";
+			DOM("MSG").style.color = "#D8394D";
+			DOM("BT_IMPORT").className = "btNormal"; 
+		}
+	}
+}
+
+function document_import(import_url) {
+	var http = new XMLHttpRequest();
+	http.onreadystatechange = function() {
+		if (http.readyState == XMLHttpRequest.DONE ) {
+			if(http.status == 200) {
+				if(http.responseText.indexOf("error") > -1) alert(http.responseText)
+				if(http.responseText == "OK") {
+					document.location = "../../../editor.html?id=" + targetdocid + "&autosave";
+				}
+				if(http.responseText  == "COPY_FAILED") {
+					DOM("MSG").innerHTML = "Failed to copy file from the source.";
+					DOM("MSG").style.color = "#D8394D";
+					DOM("BT_IMPORT").className = "btNormal"; 					
+				}
+			}
+		}
+	}
+	targetdocid = Date.now()
+	http.open("GET", "import_api.php?import=" + import_url + "&userid=" + userid + "&targetdocid=" + targetdocid, true);
+	http.send();
+}
+
+function main() {
+	FastClick.attach(document.body);
+	document.getElementById("IN_URL").focus();
+}
+
+</script>
+
+
+</center>
+</BODY>
+</HTML>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="37px" viewBox="0 0 55 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>31 - Into the Wild (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="31---Into-the-Wild-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,22 C0,14.575 6.075,10 13.5,10 L36.5,10 C43.925,10 50,14.575 50,22 L0,22" id="Fill-417" fill="#F6EFCA" sketch:type="MSShapeGroup"></path>
+            <path d="M28.571,19 L17.429,19 C16.64,19 16,18.36 16,17.571 L16,16.429 C16,15.64 16.64,15 17.429,15 L28.571,15 C29.36,15 30,15.64 30,16.429 L30,17.571 C30,18.36 29.36,19 28.571,19" id="Fill-418" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M47.198,15 L34.35,15 C33.604,15 33,15.604 33,16.35 L33,17.65 C33,18.396 33.604,19 34.35,19 L49.374,19 C48.895,17.521 48.146,16.179 47.198,15" id="Fill-419" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M0.626,19 L11.571,19 C12.36,19 13,18.36 13,17.571 L13,16.429 C13,15.64 12.36,15 11.571,15 L2.802,15 C1.854,16.179 1.105,17.521 0.626,19" id="Fill-420" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M45,5 C45,7.761 35.27,10 24.5,10 C13.73,10 5,7.761 5,5 L45,5" id="Fill-421" fill="#F18D46" sketch:type="MSShapeGroup"></path>
+            <path d="M27.647,5 C27.866,4.543 28,4.038 28,3.5 C28,1.575 26.425,0 24.5,0 L17.5,0 C15.575,0 14,1.575 14,3.5 C14,4.038 14.133,4.543 14.353,5 L27.647,5" id="Fill-422" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M50,34 L45,34 C43.75,32.126 43.252,29 41,29 L37,29 C34.748,29 34.25,32.126 33,34 L17,34 C15.75,32.126 13.647,31 11.395,31 L10.605,31 C8.353,31 6.25,32.126 5,34 L0,34 L0,22 L50,22 L50,34" id="Fill-423" fill="#527F72" sketch:type="MSShapeGroup"></path>
+            <path d="M22.982,25.009 L24.1,26.427 L25.397,25.17 L25.185,26.963 L26.991,26.991 L25.573,28.11 L26.83,29.406 L25.037,29.194 L25.009,31 L23.89,29.582 L22.594,30.839 L22.806,29.046 L21,29.018 L22.418,27.9 L21.161,26.603 L22.954,26.815 L22.982,25.009 L22.982,25.009 Z" id="Stroke-424" stroke="#71C285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M52.5,32 L52.5,32 C51.125,32 50,30.875 50,29.5 L50,24.5 C50,23.125 51.125,22 52.5,22 C53.875,22 55,23.125 55,24.5 L55,29.5 C55,30.875 53.875,32 52.5,32" id="Fill-425" fill="#464F5D" sketch:type="MSShapeGroup"></path>
+            <path d="M37,22 L38.633,22.726 C43.419,24.853 47.401,29.452 50,34 L50,22 L37,22" id="Fill-872" fill="#71C285" sketch:type="MSShapeGroup"></path>
+            <path d="M11.395,31 L10.605,31 C9.368,31 8.182,31.35 7.152,31.966 C7.063,32.298 7,32.64 7,33 C7,35.209 8.791,37 11,37 C13.209,37 15,35.209 15,33 C15,32.64 14.937,32.298 14.848,31.966 C13.818,31.35 12.632,31 11.395,31" id="Fill-873" fill="#464F5D" sketch:type="MSShapeGroup"></path>
+            <path d="M41.818,29.163 C41.572,29.06 41.303,29 41,29 L37,29 C36.697,29 36.428,29.06 36.182,29.163 C35.453,29.887 35,30.89 35,32 C35,34.209 36.791,36 39,36 C41.209,36 43,34.209 43,32 C43,30.89 42.547,29.887 41.818,29.163" id="Fill-874" fill="#464F5D" sketch:type="MSShapeGroup"></path>
+            <path d="M13,33 C13,34.105 12.104,35 11,35 C9.895,35 9,34.105 9,33 C9,31.895 9.895,31 11,31 C12.104,31 13,31.895 13,33" id="Fill-875" fill="#D3B08D" sketch:type="MSShapeGroup"></path>
+            <path d="M41,32 C41,33.105 40.105,34 39,34 C37.895,34 37,33.105 37,32 C37,30.895 37.895,30 39,30 C40.105,30 41,30.895 41,32" id="Fill-876" fill="#D3B08D" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

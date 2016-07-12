@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="53px" viewBox="0 0 61 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>171 - Folder Settings (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="171---Folder-Settings-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M25,7 L20,0 L0,0 L0,51 L58,51 L58,14 L30,14 L25,7" id="Fill-1719" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M30,14 L58,14 L58,7 L25,7 L30,14" id="Fill-1720" fill="#3D4451" sketch:type="MSShapeGroup"></path>
+            <path d="M60.39,39.846 L58.946,39.569 C56.803,39.157 55.82,36.653 57.111,34.893 L58.017,33.657 L56.059,31.699 L54.842,32.524 C53.035,33.747 50.57,32.672 50.238,30.515 L50.005,29 L47.236,29 L46.877,30.865 C46.474,32.961 44.059,33.961 42.292,32.764 L40.72,31.699 L38.762,33.657 L39.669,34.893 C40.959,36.653 39.976,39.157 37.833,39.569 L36.39,39.846 L36.39,42.615 L37.905,42.849 C40.061,43.18 41.137,45.646 39.913,47.453 L39.089,48.669 L41.047,50.627 L42.283,49.721 C44.042,48.431 46.546,49.414 46.958,51.556 L47.236,53 L50.005,53 L50.169,51.935 C50.508,49.73 53.065,48.671 54.863,49.99 L55.733,50.627 L57.691,48.669 L56.866,47.453 C55.643,45.646 56.718,43.18 58.875,42.849 L60.39,42.615 L60.39,39.846" id="Fill-1877" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+            <path d="M52.39,41 C52.39,43.209 50.599,45 48.39,45 C46.181,45 44.39,43.209 44.39,41 C44.39,38.791 46.181,37 48.39,37 C50.599,37 52.39,38.791 52.39,41 L52.39,41 Z" id="Fill-1878" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M52.39,41 C52.39,43.209 50.599,45 48.39,45 C46.181,45 44.39,43.209 44.39,41 C44.39,38.791 46.181,37 48.39,37 C50.599,37 52.39,38.791 52.39,41 L52.39,41 Z" id="Stroke-1879" stroke="#EDF0F1" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

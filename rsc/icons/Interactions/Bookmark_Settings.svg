@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="43px" height="55px" viewBox="0 0 43 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>311 - Bookmark Settings (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="311---Bookmark-Settings-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M16,0 L0,0 L0,53.444 C0,53.938 0.598,54.186 0.948,53.836 L16,38.784 L31.052,53.836 C31.402,54.186 32,53.938 32,53.444 L32,0 L16,0" id="Fill-1113" fill="#D85A4A" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L32,0 L32,11 L0,11 L0,0 Z" id="Fill-1818" fill="#C13B2A" sketch:type="MSShapeGroup"></path>
+            <path d="M43,41.846 L41.556,41.569 C39.413,41.157 38.431,38.653 39.721,36.893 L40.627,35.657 L38.669,33.699 L37.452,34.524 C35.646,35.748 33.18,34.672 32.849,32.515 L32.615,31 L29.846,31 L29.488,32.865 C29.084,34.961 26.67,35.961 24.903,34.764 L23.331,33.699 L21.373,35.657 L22.279,36.893 C23.569,38.653 22.587,41.157 20.444,41.569 L19,41.846 L19,44.616 L20.515,44.849 C22.672,45.181 23.747,47.646 22.523,49.452 L21.699,50.67 L23.657,52.628 L24.893,51.721 C26.653,50.431 29.156,51.414 29.569,53.556 L29.846,55 L32.615,55 L32.779,53.935 C33.119,51.73 35.675,50.671 37.474,51.99 L38.343,52.628 L40.301,50.67 L39.477,49.452 C38.253,47.646 39.328,45.181 41.485,44.849 L43,44.616 L43,41.846" id="Fill-2609" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M35,43 C35,45.209 33.209,47 31,47 C28.791,47 27,45.209 27,43 C27,40.791 28.791,39 31,39 C33.209,39 35,40.791 35,43 L35,43 Z" id="Fill-2610" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M35,43 C35,45.209 33.209,47 31,47 C28.791,47 27,45.209 27,43 C27,40.791 28.791,39 31,39 C33.209,39 35,40.791 35,43 L35,43 Z" id="Stroke-2611" stroke="#EDF0F1" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="57px" viewBox="0 0 55 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>191 - To Do List Settings (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="191---To-Do-List-Settings-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M43.636,52 L8.364,52 C3.745,52 0,48.255 0,43.636 L0,8.364 C0,3.745 3.745,0 8.364,0 L43.636,0 C48.255,0 52,3.745 52,8.364 L52,43.636 C52,48.255 48.255,52 43.636,52" id="Fill-1759" fill="#3ABCA7" sketch:type="MSShapeGroup"></path>
+            <path d="M26,13 L44,13 M26,27 L44,27 M26,41 L44,41 M18.928,8 L12.072,16 L7.5,12.571 M18.928,22 L12.072,30 L7.5,26.572 M18.928,37 L12.072,45 L7.5,41.571" id="Stroke-1760" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M55,43.846 L53.556,43.568 C51.413,43.157 50.431,40.653 51.721,38.893 L52.627,37.657 L50.669,35.699 L49.452,36.523 C47.646,37.747 45.18,36.672 44.849,34.515 L44.615,33 L41.846,33 L41.488,34.865 C41.084,36.961 38.669,37.961 36.903,36.764 L35.331,35.699 L33.373,37.657 L34.279,38.893 C35.569,40.653 34.587,43.157 32.444,43.568 L31,43.846 L31,46.615 L32.515,46.849 C34.672,47.18 35.747,49.646 34.523,51.452 L33.699,52.669 L35.657,54.627 L36.893,53.721 C38.653,52.431 41.156,53.414 41.568,55.556 L41.846,57 L44.615,57 L44.779,55.935 C45.119,53.73 47.675,52.671 49.474,53.99 L50.343,54.627 L52.301,52.669 L51.477,51.452 C50.253,49.646 51.328,47.18 53.485,46.849 L55,46.615 L55,43.846" id="Fill-1929" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M47,45 C47,47.209 45.209,49 43,49 C40.791,49 39,47.209 39,45 C39,42.791 40.791,41 43,41 C45.209,41 47,42.791 47,45 L47,45 Z" id="Fill-1930" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M47,45 C47,47.209 45.209,49 43,49 C40.791,49 39,47.209 39,45 C39,42.791 40.791,41 43,41 C45.209,41 47,42.791 47,45 L47,45 Z" id="Stroke-1931" stroke="#EDF0F1" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="56px" viewBox="0 0 54 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>39 - The Matrix (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="39---The-Matrix-(Flat)" sketch:type="MSLayerGroup">
+            <path id="Stroke-852" stroke="#0096E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M11.5,56 C17.851,56 23,50.851 23,44.5 L23,26.289 C16.644,32.57 6.356,32.57 0,26.289 L0,44.5 C0,50.851 5.149,56 11.5,56" id="Fill-853" fill="#1979A3" sketch:type="MSShapeGroup"></path>
+            <path id="Stroke-854" stroke="#0096E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M50.632,31.368 L37.755,18.491 C37.704,26.919 31.232,33.868 23.001,34.676 L23,35 L23,36.263 L34.368,47.632 C38.859,52.123 46.141,52.123 50.632,47.632 C55.123,43.141 55.123,35.859 50.632,31.368" id="Fill-855" fill="#E64C3C" sketch:type="MSShapeGroup"></path>
+            <path d="M11.5,0 C5.149,0 0,5.149 0,11.5 L0,26.289 C6.356,32.57 16.644,32.57 23,26.289 L23,11.5 C23,5.149 17.851,0 11.5,0" id="Fill-856" fill="#0096E6" sketch:type="MSShapeGroup"></path>
+            <path d="M23,35 L23.001,34.676 C31.232,33.868 37.704,26.919 37.755,18.491 L27.297,8.034 C25.477,6.214 23.198,5.145 20.834,4.8 C22.191,6.688 23,8.997 23,11.5 L23,35" id="Fill-857" fill="#C03A2B" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

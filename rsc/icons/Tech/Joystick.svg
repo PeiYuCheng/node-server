@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="41px" height="57px" viewBox="0 0 41 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>49 - Joystick (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="49---Joystick-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M35.679,16 L28.432,16 C26.606,18.708 23.511,20.488 20,20.488 C16.489,20.488 13.394,18.708 11.568,16 L5.321,16 C2.382,16 0,18.382 0,21.321 L0,51.679 C0,54.618 2.382,57 5.321,57 L35.679,57 C38.618,57 41,54.618 41,51.679 L41,21.321 C41,18.382 38.618,16 35.679,16" id="Fill-939" fill="#B0B6BB" sketch:type="MSShapeGroup"></path>
+            <path d="M20,20.488 C18.956,20.488 17.948,20.33 17,20.037 L17,35.163 C17,36.82 18.343,38.163 20,38.163 C21.657,38.163 23,36.82 23,35.163 L23,20.037 C22.052,20.33 21.044,20.488 20,20.488" id="Fill-1482" fill="#E8EDEE" sketch:type="MSShapeGroup"></path>
+            <path d="M10,49.233 C10,50.761 8.761,52 7.233,52 C5.704,52 4.465,50.761 4.465,49.233 C4.465,47.704 5.704,46.465 7.233,46.465 C8.761,46.465 10,47.704 10,49.233" id="Fill-1483" fill="#DD342E" sketch:type="MSShapeGroup"></path>
+            <path d="M29,53 C33.422,53 37,49.422 37,45" id="Stroke-1484" stroke="#E8EDEE" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M23,22.362 L23,35.163 C23,36.82 21.657,38.163 20,38.163 C18.343,38.163 17,36.82 17,35.163 L17,22.362 C11.269,23.718 7,28.855 7,35 C7,42.18 12.82,48 20,48 C27.18,48 33,42.18 33,35 C33,28.855 28.731,23.718 23,22.362" id="Fill-1485" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M23,25.659 L23,35.163 C23,36.82 21.657,38.163 20,38.163 C18.343,38.163 17,36.82 17,35.163 L17,25.659 C13.271,26.913 10.581,30.43 10.581,34.581 C10.581,39.783 14.798,44 20,44 C25.202,44 29.419,39.783 29.419,34.581 C29.419,30.43 26.729,26.913 23,25.659" id="Fill-1486" fill="#38454F" sketch:type="MSShapeGroup"></path>
+            <path d="M30.163,10.326 C30.163,15.938 25.613,20.489 20,20.489 C14.387,20.489 9.837,15.938 9.837,10.326 C9.837,4.713 14.387,0.163 20,0.163 C25.613,0.163 30.163,4.713 30.163,10.326" id="Fill-1856" fill="#DD342E" sketch:type="MSShapeGroup"></path>
+            <path d="M14,11 C13.448,11 13,10.553 13,10 C13,6.691 15.691,4 19,4 C19.552,4 20,4.447 20,5 C20,5.553 19.552,6 19,6 C16.794,6 15,7.794 15,10 C15,10.553 14.552,11 14,11" id="Fill-1857" fill="#ED7161" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

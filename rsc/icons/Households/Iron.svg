@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="34px" viewBox="0 0 58 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>4 - Iron (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="4---Iron-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M58,34 L0,34 L0.782,32.827 C1.543,31.685 2.824,29.827 4.196,30 L58,30 L58,34" id="Fill-3544" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M55.267,13.966 C54.149,14.088 52.949,13.914 51.554,12.853 C50.071,11.725 49.066,10.011 49.183,8.151 C49.341,5.625 51.206,3.564 53.637,3.1 L53.172,0 L37.8,2.402 C27.402,4.026 16.417,11.083 14.006,23 L14,23.012 C14,23.013 14.016,23.084 14.001,23.204 C10.149,24.416 7.457,25.218 4.79,28.773 L4,30 L56,30 L56.701,26.495 C57.546,22.271 57.044,17.889 55.267,13.966 L55.267,13.966 Z M21.266,19 L22.938,17.299 C25.458,12 32.489,7.279 38.418,6.354 L45.638,5.225 L45.356,6.631 C45.273,7.046 45.218,7.474 45.19,7.903 C45.048,10.189 45.826,12.483 47.382,14.362 L48.737,16 L21.266,19 L21.266,19 Z" id="Fill-3545" fill="#7383BF" sketch:type="MSShapeGroup"></path>
+            <path d="M37.8,2.402 L38,2.37 L38,0 L33,0 L33,3.555 C34.557,3.055 36.157,2.658 37.8,2.402" id="Fill-3546" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M31.172,17.918 L42.172,16.717 L42.172,13 L31.172,13 L31.172,17.918" id="Fill-3554" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M25,7.34 L25,5.141 C25,4.511 24.489,4 23.859,4 L21.141,4 C20.511,4 20,4.511 20,5.141 L20,11 L20.526,11 C21.888,9.626 23.391,8.403 25,7.34" id="Fill-3555" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M4.79,28.773 L4,30 L56,30 L56.701,26.495 C57.236,23.82 57.227,21.081 56.7,18.436 L14.001,23.204 C10.149,24.416 7.457,25.218 4.79,28.773" id="Fill-3905" fill="#F0CE49" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

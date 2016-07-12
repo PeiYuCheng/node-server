@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="58px" viewBox="0 0 44 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>46 - Antivirus Autopilot (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="46---Antivirus-Autopilot-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M22,0 C22,0 15.333,8 0,8 L0,27.085 C0,37.051 4.328,46.662 12.164,52.82 C14.937,55 18.208,56.875 22,58 C25.792,56.875 29.062,55 31.836,52.82 C39.672,46.662 44,37.051 44,27.085 L44,8 C28.667,8 22,0 22,0" id="Fill-115" fill="#D75A4A" sketch:type="MSShapeGroup"></path>
+            <path d="M22,51.661 C19.877,50.828 17.822,49.636 15.872,48.103 C9.69,43.245 6,35.388 6,27.085 L6,13.628 C13.391,12.686 18.639,10.114 22,7.831 L22,51.661" id="Fill-116" fill="#ED7161" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

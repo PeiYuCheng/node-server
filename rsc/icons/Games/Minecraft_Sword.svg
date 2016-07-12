@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>60 - Minecraft Sword (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="60---Minecraft-Sword-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M26.364,45.255 L9.393,28.284 L9.93,21.305 C9.968,20.818 10.648,20.734 10.802,21.198 L12.222,25.456 L29.192,42.426 L32.758,43.318 C33.23,43.436 33.203,44.115 32.723,44.195 L26.364,45.255" id="Fill-51" fill="#7D7D7D" sketch:type="MSShapeGroup"></path>
+            <path d="M7.726,55 L1.274,55 C0.57,55 0,54.43 0,53.726 L0,47.274 C0,46.57 0.57,46 1.274,46 L7.726,46 C8.43,46 9,46.57 9,47.274 L9,53.726 C9,54.43 8.43,55 7.726,55" id="Fill-52" fill="#7D7D7D" sketch:type="MSShapeGroup"></path>
+            <path d="M7.726,46 C8.43,46 9,46.57 9,47.274 L9,49.891 L20,38.891 L15.757,34.648 L4.406,46 L7.726,46" id="Fill-53" fill="#A5A5A4" sketch:type="MSShapeGroup"></path>
+            <path d="M24,32 C23.744,32 23.488,31.902 23.293,31.707 C22.902,31.316 22.902,30.684 23.293,30.293 L53.585,0 L47.577,0 L17.172,30.406 L24.243,37.477 L55,7.071 L55,1.414 L24.707,31.707 C24.512,31.902 24.256,32 24,32" id="Fill-474" fill="#A5A5A4" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="58px" viewBox="0 0 54 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>21 - Traffic Warning (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="21---Traffic-Warning-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,12 L54,12 L54,24 L0,24 L0,12 Z" id="Fill-348" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M8,24 L1,24 L7,12 L14,12 L8,24" id="Fill-349" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M28,24 L21,24 L27,12 L34,12 L28,24" id="Fill-350" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M47,24 L40,24 L46,12 L53,12 L47,24" id="Fill-351" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M17,4.5 C17,6.985 14.985,9 12.5,9 C10.015,9 8,6.985 8,4.5 C8,2.015 10.015,0 12.5,0 C14.985,0 17,2.015 17,4.5" id="Fill-352" fill="#DF4D60" sketch:type="MSShapeGroup"></path>
+            <path d="M46,4.5 C46,6.985 43.985,9 41.5,9 C39.015,9 37,6.985 37,4.5 C37,2.015 39.015,0 41.5,0 C43.985,0 46,2.015 46,4.5" id="Fill-353" fill="#DF4D60" sketch:type="MSShapeGroup"></path>
+            <path d="M12.5,9 C11.574,9 10.715,8.719 10,8.24 L10,12 L15,12 L15,8.24 C14.285,8.719 13.426,9 12.5,9" id="Fill-354" fill="#CBB292" sketch:type="MSShapeGroup"></path>
+            <path d="M41.5,9 C40.574,9 39.715,8.719 39,8.24 L39,12 L44,12 L44,8.24 C43.285,8.719 42.426,9 41.5,9" id="Fill-355" fill="#CBB292" sketch:type="MSShapeGroup"></path>
+            <path d="M44,58 L51,58 L39,24 L32,24 L35.857,36 L18.143,36 L22,24 L15,24 L3,58 L10,58 L16,42 L38,42 L44,58" id="Fill-357" fill="#7F5B53" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

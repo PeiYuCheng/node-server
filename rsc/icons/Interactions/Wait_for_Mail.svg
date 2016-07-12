@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="47px" viewBox="0 0 57 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>521 - Wait for Mail (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="521---Wait-for-Mail-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L56,39 L56,0 L0,0 L0,39 Z" id="Fill-1638" fill="#DCD6CD" sketch:type="MSShapeGroup"></path>
+            <path d="M30.965,22.107 C29.327,23.569 26.673,23.569 25.035,22.107 L22.948,20.264 C16.419,26.092 0,39 0,39 L56,39 C56,39 39.581,26.092 33.052,20.264 L30.965,22.107" id="Fill-1639" fill="#E8E3D9" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L25.035,22.107 C26.673,23.569 29.327,23.569 30.965,22.107 L56,0 L0,0" id="Fill-1640" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M57,36 C57,42.075 52.075,47 46,47 C39.925,47 35,42.075 35,36 C35,29.925 39.925,25 46,25 C52.075,25 57,29.925 57,36" id="Fill-1878" fill="#76C9B0" sketch:type="MSShapeGroup"></path>
+            <path d="M52,35 L47,35 L47,30 C47,29.448 46.553,29 46,29 C45.447,29 45,29.448 45,30 L45,36 C45,36.552 45.447,37 46,37 L52,37 C52.553,37 53,36.552 53,36 C53,35.448 52.553,35 52,35" id="Fill-1879" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

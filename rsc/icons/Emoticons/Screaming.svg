@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="51px" height="57px" viewBox="0 0 51 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>137 - Screaming (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="137---Screaming-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M25.5,0 C11.475,0 0,11.475 0,25.5 L0,50 C0,52.2 1.8,54 4,54 L10.778,54 C14.937,56.021 20.014,57 25.5,57 C30.986,57 36.063,56.021 40.223,54 L47,54 C49.2,54 51,52.2 51,50 L51,25.5 C51,11.475 39.525,0 25.5,0" id="Fill-35" fill="#6E5847" sketch:type="MSShapeGroup"></path>
+            <path id="Stroke-186" stroke="#0096E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M0.869,29.894 C0.305,32.001 0,34.215 0,36.5 C0,50.583 11.417,57 25.5,57 C39.583,57 51,50.583 51,36.5 C51,22.842 39.495,11.66 26,11 L25,11 C11.505,11.66 0,22.842 0,36.5 C0,50.583 11.417,57 25.5,57 C39.583,57 51,50.583 51,36.5" id="Fill-187" fill="#FDC794" sketch:type="MSShapeGroup"></path>
+            <path d="M14,29 C14,25.684 16.684,23 20,23 C17.655,20.655 13.345,20.655 11,23 M37,29 C37,25.684 34.316,23 31,23 C33.345,20.655 37.655,20.655 40,23" id="Stroke-198" stroke="#F9A671" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M35.5,41 C35.5,47.075 30.799,52 25,52 C19.201,52 14.5,47.075 14.5,41 C14.5,34.925 19.201,30 25,30 C30.799,30 35.5,34.925 35.5,41" id="Fill-199" fill="#802D40" sketch:type="MSShapeGroup"></path>
+            <path d="M25.023,52 C27.743,52 30.212,50.908 32.077,49.131 L32.023,49 C32.023,45.432 28.889,42.539 25.023,42.539 C21.157,42.539 18.023,45.432 18.023,49 L18,49.16 C19.861,50.92 22.319,52 25.023,52" id="Fill-237" fill="#E64C3C" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

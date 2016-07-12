@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>19 - Sick Girl (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="19---Sick-Girl-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M49,26 L49,49 C49,51.03 47.004,53 44.816,53 L11.015,53 C8.827,53 7,51.03 7,49 L7,26 C7,26 27.855,25.135 34,16 C34,16 40.757,30.869 49,26" id="Fill-50" fill="#FFDB2B" sketch:type="MSShapeGroup"></path>
+            <path d="M56.164,43.062 C54.05,38.323 53.346,29.726 53.114,24.195 C52.933,19.913 51.687,15.716 49.299,12.157 C45.442,6.41 41.209,3.727 37.416,2.067 C31.118,-0.689 23.872,-0.689 17.573,2.067 C13.986,3.637 9.761,5.964 6.469,11.108 C4.189,14.672 3.068,18.845 2.985,23.075 C2.878,28.546 2.366,38.164 0.178,43.228 C-0.286,44.303 0.187,45.539 1.257,46.013 C2.341,46.493 5.5,46.781 7,47 L7,26 C7,26 27.855,25.135 34,16 C34,16 40.757,30.869 49,26 L49,47 C51.031,46.594 53.739,46.408 55,45.919 C56.141,45.476 56.662,44.18 56.164,43.062" id="Fill-51" fill="#5E5F62" sketch:type="MSShapeGroup"></path>
+            <path d="M19,40 C21.209,40 23,41.791 23,44 C23,46.209 21.209,48 19,48 M38,40 C35.791,40 34,41.791 34,44 C34,46.209 35.791,48 38,48 M23,44.5 C23,43.119 25.462,42 28.5,42 C31.538,42 34,43.119 34,44.5" id="Stroke-83" stroke="#F18D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M21.793,30 C21.793,31.104 20.898,32 19.793,32 C18.689,32 17.793,31.104 17.793,30 C17.793,28.895 18.689,28 19.793,28 C20.898,28 21.793,28.895 21.793,30" id="Fill-396" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M37.793,30 C37.793,31.104 36.898,32 35.793,32 C34.689,32 33.793,31.104 33.793,30 C33.793,28.895 34.689,28 35.793,28 C36.898,28 37.793,28.895 37.793,30" id="Fill-397" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M39.218,57 L15.829,57 C15.108,57 14.524,56.415 14.524,55.695 L14.524,53 L40.523,53 L40.523,55.695 C40.523,56.415 39.939,57 39.218,57" id="Fill-398" fill="#FEC722" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

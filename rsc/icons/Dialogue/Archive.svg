@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="46px" viewBox="0 0 56 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>100 - Archive (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="100---Archive-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,12 L0,29.044 L56,29.022 L56,12 L43,0 L13,0 L0,12" id="Fill-125" fill="#6B5B4B" sketch:type="MSShapeGroup"></path>
+            <path d="M37.797,12.012 C36.866,16.571 32.833,20 28,20 C23.174,20 19.147,16.536 18.208,11.988 L0.061,12 C0.027,12 0,12.027 0,12.061 L0,29.044 L56,29.022 L56,12.096 C56,12.043 55.957,12 55.904,12 L37.797,12.012" id="Fill-679" fill="#BFA380" sketch:type="MSShapeGroup"></path>
+            <path d="M37.797,29 C36.866,33.558 32.833,36.956 28,36.956 C23.174,36.956 19.147,33.548 18.208,29 L0,29 L0,46 L56,45.978 L56,29 L37.797,29" id="Fill-699" fill="#A88E6F" sketch:type="MSShapeGroup"></path>
+            <path d="M28,36.956 C32.833,36.956 36.866,33.558 37.797,29 L18.208,29 C19.147,33.548 23.174,36.956 28,36.956" id="Fill-700" fill="#6B5B4B" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

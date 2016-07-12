@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="47px" height="47px" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>152 - Arrow Top Left (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="152---Arrow-Top-Left-(Flat)" sketch:type="MSLayerGroup" transform="translate(-1.000000, -1.000000)" fill="#57B1E3">
+            <path d="M29,3 L2,3 C1.447,3 1,2.552 1,2 C1,1.448 1.447,1 2,1 L29,1 C29.553,1 30,1.448 30,2 C30,2.552 29.553,3 29,3" id="Fill-232" sketch:type="MSShapeGroup"></path>
+            <path d="M2,30 C1.447,30 1,29.552 1,29 L1,2 C1,1.448 1.447,1 2,1 C2.553,1 3,1.448 3,2 L3,29 C3,29.552 2.553,30 2,30" id="Fill-233" sketch:type="MSShapeGroup"></path>
+            <path d="M47,48 C46.744,48 46.488,47.902 46.293,47.707 L1.293,2.707 C0.902,2.316 0.902,1.683 1.293,1.293 C1.684,0.902 2.316,0.902 2.707,1.293 L47.707,46.293 C48.098,46.683 48.098,47.316 47.707,47.707 C47.512,47.902 47.256,48 47,48" id="Fill-234" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

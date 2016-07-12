@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="48px" viewBox="0 0 56 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>69 - Upload (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="69---Upload-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, -1.000000)" fill="#4482C3">
+            <path d="M28,41 C27.448,41 27,40.553 27,40 L27,2 C27,1.447 27.448,1 28,1 C28.552,1 29,1.447 29,2 L29,40 C29,40.553 28.552,41 28,41" id="Fill-465" sketch:type="MSShapeGroup"></path>
+            <path d="M16,15 C15.744,15 15.488,14.902 15.293,14.707 C14.902,14.316 14.902,13.683 15.293,13.293 L27.293,1.293 C27.684,0.902 28.316,0.902 28.707,1.293 C29.098,1.683 29.098,2.316 28.707,2.707 L16.707,14.707 C16.512,14.902 16.256,15 16,15" id="Fill-466" sketch:type="MSShapeGroup"></path>
+            <path d="M40,15 C39.744,15 39.488,14.902 39.293,14.707 L27.293,2.707 C26.902,2.316 26.902,1.683 27.293,1.293 C27.684,0.902 28.316,0.902 28.707,1.293 L40.707,13.293 C41.098,13.683 41.098,14.316 40.707,14.707 C40.512,14.902 40.256,15 40,15" id="Fill-467" sketch:type="MSShapeGroup"></path>
+            <path d="M40,15 C39.744,15 39.488,14.902 39.293,14.707 L27.293,2.707 C26.902,2.316 26.902,1.683 27.293,1.293 C27.684,0.902 28.316,0.902 28.707,1.293 L40.707,13.293 C41.098,13.683 41.098,14.316 40.707,14.707 C40.512,14.902 40.256,15 40,15" id="Fill-468" sketch:type="MSShapeGroup"></path>
+            <path d="M56,49 L0,49 L0,36 C0,35.447 0.448,35 1,35 C1.552,35 2,35.447 2,36 L2,47 L54,47 L54,36 C54,35.447 54.448,35 55,35 C55.552,35 56,35.447 56,36 L56,49" id="Fill-469" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="58px" viewBox="0 0 22 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>86 - Straight Pipe (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="86---Straight-Pipe-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,3 L22,3 L22,9 L0,9 L0,3 Z" id="Fill-2271" fill="#ED8A19" sketch:type="MSShapeGroup"></path>
+            <path d="M3,9 L19,9 L19,49 L3,49 L3,9 Z" id="Fill-2272" fill="#DD691D" sketch:type="MSShapeGroup"></path>
+            <path d="M3,0 L19,0 L19,3 L3,3 L3,0 Z" id="Fill-2273" fill="#DD691D" sketch:type="MSShapeGroup"></path>
+            <path d="M0,49 L22,49 L22,55 L0,55 L0,49 Z" id="Fill-2274" fill="#ED8A19" sketch:type="MSShapeGroup"></path>
+            <path d="M3,55 L19,55 L19,58 L3,58 L3,55 Z" id="Fill-2275" fill="#DD691D" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

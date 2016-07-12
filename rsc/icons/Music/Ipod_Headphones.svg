@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="59px" viewBox="0 0 55 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>8 - Ipod Headphones (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="8---Ipod-Headphones-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M15,6 L8,6 C3.582,6 0,9.582 0,14 L0,30.32 C0,31.248 0.752,32 1.68,32 L6.32,32 C7.248,32 8,31.248 8,30.32 L8,19.68 C8,18.752 8.752,18 9.68,18 L15,18 L15,6" id="Fill-181" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M40,28 L47,28 C51.418,28 55,31.582 55,36 L55,52.32 C55,53.248 54.248,54 53.32,54 L48.68,54 C47.752,54 47,53.248 47,52.32 L47,41.68 C47,40.752 46.248,40 45.32,40 L40,40 L40,28" id="Fill-182" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M10,6 L12,6 L12,18 L10,18 L10,6 Z" id="Fill-1515" fill="#D1D4D1" sketch:type="MSShapeGroup"></path>
+            <path d="M43,28 L45,28 L45,40 L43,40 L43,28 Z" id="Fill-1516" fill="#D1D4D1" sketch:type="MSShapeGroup"></path>
+            <path d="M51,54 L51,59 M4,32 L4,59" id="Stroke-1517" stroke="#D1D4D1" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M30,12 C30,11.158 30.09,10.338 30.257,9.545 C30.417,8.784 30.332,7.985 30.025,7.27 C28.189,2.995 23.947,0 19,0 C16.791,0 15,1.791 15,4 L15,20 C15,22.209 16.791,24 19,24 C23.947,24 28.189,21.004 30.025,16.73 C30.332,16.015 30.417,15.216 30.257,14.455 C30.09,13.662 30,12.842 30,12" id="Fill-1518" fill="#E3E2E8" sketch:type="MSShapeGroup"></path>
+            <path d="M36,22 C31.053,22 26.811,24.996 24.975,29.27 C24.668,29.985 24.583,30.784 24.743,31.545 C24.91,32.338 25,33.158 25,34 C25,34.842 24.91,35.662 24.743,36.455 C24.583,37.216 24.668,38.015 24.975,38.73 C26.811,43.004 31.053,46 36,46 C38.209,46 40,44.209 40,42 L40,26 C40,23.791 38.209,22 36,22" id="Fill-1519" fill="#E3E2E8" sketch:type="MSShapeGroup"></path>
+            <path d="M30.025,7.27 C28.633,4.028 25.855,1.525 22.436,0.504 C21.539,3.698 21,7.673 21,12 C21,16.327 21.539,20.302 22.436,23.496 C25.855,22.475 28.633,19.972 30.025,16.73 C30.332,16.015 30.417,15.216 30.257,14.455 C30.09,13.662 30,12.842 30,12 C30,11.158 30.09,10.338 30.257,9.545 C30.417,8.784 30.332,7.985 30.025,7.27" id="Fill-1846" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M24.975,38.73 C26.367,41.972 29.145,44.475 32.564,45.496 C33.461,42.302 34,38.327 34,34 C34,29.674 33.461,25.698 32.564,22.504 C29.145,23.525 26.367,26.028 24.975,29.27 C24.668,29.985 24.583,30.784 24.743,31.545 C24.91,32.338 25,33.158 25,34 C25,34.842 24.91,35.663 24.743,36.455 C24.583,37.216 24.668,38.015 24.975,38.73" id="Fill-1847" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

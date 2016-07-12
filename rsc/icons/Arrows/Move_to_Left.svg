@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="34px" viewBox="0 0 54 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>155 - Move to Left (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="155---Move-to-Left-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, -1.000000)" fill="#57B1E3">
+            <path d="M46,19 L1,19 C0.447,19 0,18.552 0,18 C0,17.448 0.447,17 1,17 L46,17 C46.553,17 47,17.448 47,18 C47,18.552 46.553,19 46,19" id="Fill-126" sketch:type="MSShapeGroup"></path>
+            <path d="M46,19 C45.744,19 45.488,18.902 45.293,18.707 L29.293,2.707 C28.902,2.316 28.902,1.683 29.293,1.293 C29.684,0.902 30.316,0.902 30.707,1.293 L46.707,17.293 C47.098,17.683 47.098,18.316 46.707,18.707 C46.512,18.902 46.256,19 46,19" id="Fill-127" sketch:type="MSShapeGroup"></path>
+            <path d="M30,35 C29.744,35 29.488,34.902 29.293,34.707 C28.902,34.316 28.902,33.683 29.293,33.293 L45.293,17.293 C45.684,16.902 46.316,16.902 46.707,17.293 C47.098,17.683 47.098,18.316 46.707,18.707 L30.707,34.707 C30.512,34.902 30.256,35 30,35" id="Fill-128" sketch:type="MSShapeGroup"></path>
+            <path d="M53,35 C52.447,35 52,34.552 52,34 L52,2 C52,1.448 52.447,1 53,1 C53.553,1 54,1.448 54,2 L54,34 C54,34.552 53.553,35 53,35" id="Fill-129" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

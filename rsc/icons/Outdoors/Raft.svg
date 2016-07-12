@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="58px" viewBox="0 0 50 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>31 - Raft (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="31---Raft-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <path d="M24,10 L24,0 L15,3 L24,6" id="Fill-70" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M24,10 L24,0 L15,3 L24,6" id="Stroke-71" stroke="#556080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M7,53.5 C7,55.433 5.433,57 3.5,57 C1.567,57 0,55.433 0,53.5 C0,51.567 1.567,50 3.5,50 C5.433,50 7,51.567 7,53.5" id="Fill-294" fill="#6C4126" sketch:type="MSShapeGroup"></path>
+            <path d="M14,53.5 C14,55.433 12.433,57 10.5,57 C8.567,57 7,55.433 7,53.5 C7,51.567 8.567,50 10.5,50 C12.433,50 14,51.567 14,53.5" id="Fill-295" fill="#BE6E41" sketch:type="MSShapeGroup"></path>
+            <path d="M21,53.5 C21,55.433 19.433,57 17.5,57 C15.567,57 14,55.433 14,53.5 C14,51.567 15.567,50 17.5,50 C19.433,50 21,51.567 21,53.5" id="Fill-296" fill="#6C4126" sketch:type="MSShapeGroup"></path>
+            <path d="M28,53.5 C28,55.433 26.433,57 24.5,57 C22.567,57 21,55.433 21,53.5 C21,51.567 22.567,50 24.5,50 C26.433,50 28,51.567 28,53.5" id="Fill-297" fill="#BE6E41" sketch:type="MSShapeGroup"></path>
+            <path d="M35,53.5 C35,55.433 33.433,57 31.5,57 C29.567,57 28,55.433 28,53.5 C28,51.567 29.567,50 31.5,50 C33.433,50 35,51.567 35,53.5" id="Fill-298" fill="#6C4126" sketch:type="MSShapeGroup"></path>
+            <path d="M42,53.5 C42,55.433 40.433,57 38.5,57 C36.567,57 35,55.433 35,53.5 C35,51.567 36.567,50 38.5,50 C40.433,50 42,51.567 42,53.5" id="Fill-299" fill="#BE6E41" sketch:type="MSShapeGroup"></path>
+            <path d="M49,53.5 C49,55.433 47.433,57 45.5,57 C43.567,57 42,55.433 42,53.5 C42,51.567 43.567,50 45.5,50 C47.433,50 49,51.567 49,53.5" id="Fill-300" fill="#6C4126" sketch:type="MSShapeGroup"></path>
+            <path d="M22,42 L26,42 L26,47 L22,47 L22,42 Z" id="Fill-301" fill="#BE6E41" sketch:type="MSShapeGroup"></path>
+            <path d="M22,9.033 L26,9.033 L26,13.017 L22,13.017 L22,9.033 Z" id="Fill-302" fill="#BE6E41" sketch:type="MSShapeGroup"></path>
+            <path d="M35.277,40.12 C34.404,37.851 34.319,36.785 34,34 L33,33.4 L32.5,31.9 L29,31.4 L31.5,29.9 L30.5,27.9 L33.219,27.123 C33.256,22.729 33.939,18.36 35.277,14.88 L35.282,14.866 C35.628,13.966 34.965,13 34.001,13 L13.999,13 C13.035,13 12.372,13.966 12.718,14.866 L12.72,14.873 C15.475,22.035 15.475,32.965 12.72,40.127 L12.718,40.134 C12.372,41.034 13.035,42 13.999,42 L34.001,42 C34.965,42 35.628,41.034 35.282,40.134 L35.277,40.12" id="Fill-303" fill="#F3EDBF" sketch:type="MSShapeGroup"></path>
+            <path d="M0,47 L48,47" id="Stroke-679" stroke="#6B5B4B" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

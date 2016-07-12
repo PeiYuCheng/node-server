@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>5 - Scorpio (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="5---Scorpio-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M56,28 C56,43.464 43.464,56 28,56 C12.536,56 0,43.464 0,28 C0,12.536 12.536,0 28,0 C43.464,0 56,12.536 56,28" id="Fill-15" fill="#AF8066" sketch:type="MSShapeGroup"></path>
+            <path d="M16,40 C15.447,40 15,39.553 15,39 L15,20 C15,17.459 12.968,15.615 10.167,15.615 C7.627,15.615 5,17.255 5,20 C5,20.553 4.553,21 4,21 C3.447,21 3,20.553 3,20 C3,16.42 6.148,13.615 10.167,13.615 C14.063,13.615 17,16.36 17,20 L17,39 C17,39.553 16.553,40 16,40" id="Fill-33" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+            <path d="M28,40 C27.447,40 27,39.553 27,39 L27,20 C27,17.459 24.968,15.615 22.167,15.615 C19.627,15.615 17,17.255 17,20 C17,20.553 16.553,21 16,21 C15.447,21 15,20.553 15,20 C15,16.42 18.148,13.615 22.167,13.615 C26.062,13.615 29,16.36 29,20 L29,39 C29,39.553 28.553,40 28,40" id="Fill-34" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+            <path d="M43,48 C42.744,48 42.488,47.902 42.293,47.707 C41.902,47.316 41.902,46.684 42.293,46.293 L45.68,42.906 L43.2,39.6 C42.868,39.158 42.958,38.531 43.4,38.2 C43.841,37.868 44.469,37.957 44.8,38.4 L48.32,43.094 L43.707,47.707 C43.512,47.902 43.256,48 43,48" id="Fill-40" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+            <path d="M47,44 L44,44 C41.243,44 39,41.757 39,39 L39,20 C39,17.459 36.968,15.615 34.167,15.615 C31.627,15.615 29,17.255 29,20 C29,20.553 28.553,21 28,21 C27.447,21 27,20.553 27,20 C27,16.42 30.148,13.615 34.167,13.615 C38.063,13.615 41,16.36 41,20 L41,39 C41,40.654 42.346,42 44,42 L47,42 C47.553,42 48,42.447 48,43 C48,43.553 47.553,44 47,44" id="Fill-41" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

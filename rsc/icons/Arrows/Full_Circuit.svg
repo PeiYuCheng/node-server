@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="46px" viewBox="0 0 60 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>66 - Full Circuit (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="66---Full-Circuit-(Flat)" sketch:type="MSLayerGroup" transform="translate(-1.000000, 0.000000)">
+            <path d="M53,24 C52.447,24 52,23.553 52,23 C52,11.421 42.58,2 31,2 C19.42,2 10,11.421 10,23 C10,23.553 9.552,24 9,24 C8.448,24 8,23.553 8,23 C8,10.317 18.318,0 31,0 C43.682,0 54,10.317 54,23 C54,23.553 53.553,24 53,24" id="Fill-2" fill="#B1E97C" sketch:type="MSShapeGroup"></path>
+            <path d="M53,24 C52.744,24 52.488,23.902 52.293,23.707 C51.902,23.316 51.902,22.683 52.293,22.293 L59.293,15.293 C59.684,14.902 60.316,14.902 60.707,15.293 C61.098,15.684 61.098,16.316 60.707,16.707 L53.707,23.707 C53.512,23.902 53.256,24 53,24" id="Fill-3" fill="#B1E97C" sketch:type="MSShapeGroup"></path>
+            <path d="M53,24 C52.744,24 52.488,23.902 52.293,23.707 L45.293,16.707 C44.902,16.316 44.902,15.684 45.293,15.293 C45.684,14.902 46.316,14.902 46.707,15.293 L53.707,22.293 C54.098,22.683 54.098,23.316 53.707,23.707 C53.512,23.902 53.256,24 53,24" id="Fill-4" fill="#B1E97C" sketch:type="MSShapeGroup"></path>
+            <path d="M31,46 C18.318,46 8,35.682 8,23 C8,22.447 8.448,22 9,22 C9.552,22 10,22.447 10,23 C10,34.579 19.42,44 31,44 C42.58,44 52,34.579 52,23 C52,22.447 52.447,22 53,22 C53.553,22 54,22.447 54,23 C54,35.682 43.682,46 31,46" id="Fill-484" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M2,31 C1.744,31 1.488,30.902 1.293,30.707 C0.902,30.316 0.902,29.683 1.293,29.293 L8.293,22.293 C8.684,21.902 9.316,21.902 9.707,22.293 C10.098,22.683 10.098,23.316 9.707,23.707 L2.707,30.707 C2.512,30.902 2.256,31 2,31" id="Fill-485" fill="#546A79" sketch:type="MSShapeGroup"></path>
+            <path d="M16,31 C15.744,31 15.488,30.902 15.293,30.707 L8.293,23.707 C7.902,23.316 7.902,22.683 8.293,22.293 C8.684,21.902 9.316,21.902 9.707,22.293 L16.707,29.293 C17.098,29.683 17.098,30.316 16.707,30.707 C16.512,30.902 16.256,31 16,31" id="Fill-486" fill="#546A79" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

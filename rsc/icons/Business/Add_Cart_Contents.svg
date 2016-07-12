@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="53px" viewBox="0 0 58 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>17 - Add Cart Contents (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="17---Add-Cart-Contents-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M49,13 L9,13 L9,37 L57,37 L57,13 L49,13 L49,13 Z M9,4 L9,13 L9,4 Z M9,37 L9,44 L9,37 Z" id="Stroke-1674" stroke="#BDC3C7" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M23,49 C23,51.209 21.209,53 19,53 C16.791,53 15,51.209 15,49 C15,46.791 16.791,45 19,45 C21.209,45 23,46.791 23,49" id="Fill-1675" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M47,49 C47,51.209 45.209,53 43,53 C40.791,53 39,51.209 39,49 C39,46.791 40.791,45 43,45 C45.209,45 47,46.791 47,49" id="Fill-1676" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M9,44 L52,44" id="Stroke-1677" stroke="#BDC3C7" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M46,13 C46,20.18 40.18,26 33,26 C25.82,26 20,20.18 20,13 C20,5.82 25.82,0 33,0 C40.18,0 46,5.82 46,13" id="Fill-1678" fill="#71C285" sketch:type="MSShapeGroup"></path>
+            <path d="M33,5 L33,21 M33,21 L40,14 M33,21 L26,14" id="Stroke-1679" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M4,4 L9,4" id="Path" stroke="#BDC3C7" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M6,4 C6,5.657 4.657,7 3,7 C1.343,7 0,5.657 0,4 C0,2.343 1.343,1 3,1 C4.657,1 6,2.343 6,4" id="Fill-2191" fill="#D8625E" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

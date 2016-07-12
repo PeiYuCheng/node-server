@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>35 - Wax (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="35---Wax-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M35,2 C35,3.105 32.314,4 29,4 C25.686,4 23,3.105 23,2 C23,0.895 25.686,0 29,0 C32.314,0 35,0.895 35,2" id="Fill-64" fill="#41767F" sketch:type="MSShapeGroup"></path>
+            <path d="M23,56 C23,54.895 25.686,54 29,54 C32.314,54 35,54.895 35,56 C35,57.105 32.314,58 29,58 C25.686,58 23,57.105 23,56" id="Fill-65" fill="#41767F" sketch:type="MSShapeGroup"></path>
+            <path d="M56,35 C54.896,35 54,32.314 54,29 C54,25.686 54.896,23 56,23 C57.105,23 58,25.686 58,29 C58,32.314 57.105,35 56,35" id="Fill-66" fill="#41767F" sketch:type="MSShapeGroup"></path>
+            <path d="M48.897,27 C47.956,17.566 40.434,10.042 31,9.101 L31,4 L27,4 L27,9.101 C17.566,10.042 10.045,17.566 9.103,27 L4,27 L4,31 L9.103,31 C10.045,40.434 17.566,47.957 27,48.899 L27,54 L31,54 L31,48.897 C40.434,47.956 47.958,40.434 48.899,31 L54,31 L54,27 L48.897,27" id="Fill-67" fill="#71C285" sketch:type="MSShapeGroup"></path>
+            <path d="M2,23 C3.105,23 4,25.686 4,29 C4,32.314 3.105,35 2,35 C0.895,35 0,32.314 0,29 C0,25.686 0.895,23 2,23" id="Fill-68" fill="#41767F" sketch:type="MSShapeGroup"></path>
+            <path d="M45,29 C45,37.837 37.837,45 29,45 C20.163,45 13,37.837 13,29 C13,20.163 20.163,13 29,13 C37.837,13 45,20.163 45,29" id="Fill-89" fill="#41767F" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

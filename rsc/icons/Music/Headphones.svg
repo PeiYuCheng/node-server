@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="58px" viewBox="0 0 53 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>10 - Headphones (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="10---Headphones-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <path d="M45.909,47.096 C47.66,44.271 50.99,31.969 51,28.005 C51.012,23.297 50.467,18.464 48.482,14.194 C42.3,0.893 30.743,-0.056 26.819,0.006 C25.857,0.021 24.895,-0.013 23.934,0.006 C19.938,0.086 8.703,0.893 2.591,14.194 C0.62,18.485 0.076,23.284 0.092,28.005 C0.105,31.96 2.165,44.282 3.91,47.096" id="Stroke-1504" stroke="#BDC3C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M14.392,55.822 L13.053,56.076 C11.702,56.332 10.387,55.437 10.13,54.086 L6.316,33.991 C6.059,32.64 6.955,31.325 8.306,31.069 L9.645,30.814 C10.996,30.558 12.311,31.453 12.568,32.804 L16.382,52.899 C16.639,54.25 15.743,55.565 14.392,55.822" id="Fill-1505" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M35.438,55.822 L36.778,56.076 C38.128,56.332 39.443,55.437 39.7,54.086 L43.515,33.991 C43.771,32.64 42.876,31.325 41.525,31.069 L40.185,30.814 C38.834,30.558 37.519,31.453 37.263,32.804 L33.448,52.899 C33.192,54.25 34.087,55.565 35.438,55.822" id="Fill-1506" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M7.203,38.668 L2.986,40.577 L5.037,51.846 L9.764,52.153 L7.203,38.668" id="Fill-1507" fill="#D1D4D1" sketch:type="MSShapeGroup"></path>
+            <path d="M42.626,38.673 L40.067,52.153 L44.782,51.846 L46.833,40.577 L42.626,38.673" id="Fill-1508" fill="#D1D4D1" sketch:type="MSShapeGroup"></path>
+            <path d="M26.834,0.006 C26.363,0.013 25.893,0.009 25.422,0.005 C24.934,0.001 24.443,-0.004 23.953,0.006 C18.366,0.117 13.605,1.845 9.815,5.057 C14.495,6.126 20.071,6.75 26.062,6.75 C31.693,6.75 36.958,6.2 41.457,5.247 C36.054,0.535 29.894,-0.051 26.834,0.006 L26.834,0.006 Z" id="Stroke-1509" stroke="#BDC3C7" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

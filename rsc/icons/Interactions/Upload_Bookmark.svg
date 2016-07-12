@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="55px" viewBox="0 0 45 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>307 - Upload Bookmark (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="307---Upload-Bookmark-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M16,0 L0,0 L0,53.444 C0,53.938 0.598,54.186 0.948,53.836 L16,38.784 L31.052,53.836 C31.402,54.186 32,53.938 32,53.444 L32,0 L16,0" id="Fill-1102" fill="#D85A4A" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L32,0 L32,11 L0,11 L0,0 Z" id="Fill-1807" fill="#C13B2A" sketch:type="MSShapeGroup"></path>
+            <path d="M23,33 L45,33 L45,55 L23,55 L23,33 Z" id="Fill-2565" fill="#4AA0D8" sketch:type="MSShapeGroup"></path>
+            <path d="M33,39 L35,39 L35,55 L33,55 L33,39 Z" id="Fill-2566" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M39.293,45.707 L34,40.414 L28.707,45.707 L27.293,44.293 L34,37.586 L40.707,44.293 L39.293,45.707" id="Fill-2567" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

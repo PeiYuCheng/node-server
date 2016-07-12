@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="58px" viewBox="0 0 57 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>5 - Boling Pot (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="5---Boling-Pot-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M56,16 L45.878,16 C41.757,6.039 36.384,0 30.5,0 C24.398,0 18.844,6.489 14.669,17.119 C14.122,17.048 13.567,17 13,17 C5.82,17 0,22.82 0,30 C0,35.612 3.564,40.38 8.546,42.2 C8.03,45.98 7.632,49.922 7.372,54 L53.623,54 C52.891,42.493 51.089,32.02 48.503,23.428 C51.063,19.275 56,16 56,16 L56,16 Z M4,30 C4,25.029 8.029,21 13,21 C13.089,21 13.175,21.011 13.264,21.013 C11.592,26.049 10.201,31.819 9.159,38.13 C6.112,36.687 4,33.594 4,30 L4,30 Z" id="Fill-319" fill="#C7CBC7" sketch:type="MSShapeGroup"></path>
+            <path d="M44.534,13 C40.618,4.846 35.765,0 30.5,0 C25.231,0 20.368,4.836 16.45,13 L44.534,13" id="Fill-3539" fill="#23A24D" sketch:type="MSShapeGroup"></path>
+            <path d="M4,54 L57,54 L57,58 L4,58 L4,54 Z" id="Fill-3540" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M26,50 L26,50 C23.8,50 22,48.2 22,46 L22,22 C22,19.8 23.8,18 26,18 C28.2,18 30,19.8 30,22 L30,46 C30,48.2 28.2,50 26,50 L26,50 Z" id="Fill-3541" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M26,50 L26,50 C23.8,50 22,48.2 22,46 L22,22 C22,19.8 23.8,18 26,18 C28.2,18 30,19.8 30,22 L30,46 C30,48.2 28.2,50 26,50 L26,50 Z" id="Stroke-3542" stroke="#949493" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M27,44 L30,44 M27,40 L30,40 M27,36 L30,36 M27,32 L30,32 M27,28 L30,28 M27,24 L30,24" id="Stroke-3543" stroke="#949493" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

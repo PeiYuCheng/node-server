@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="46px" viewBox="0 0 58 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>43 - Laptop Encryption (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="43---Laptop-Encryption-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M34.907,42 C34.7,42.58 34.149,43 33.5,43 L25.5,43 C24.851,43 24.3,42.58 24.093,42 L0.578,42 C0.259,42 0,42.259 0,42.578 L0,45.422 C0,45.741 0.259,46 0.578,46 L57.422,46 C57.741,46 58,45.741 58,45.422 L58,42.578 C58,42.259 57.741,42 57.422,42 L34.907,42" id="Fill-124" fill="#D1D4D1" sketch:type="MSShapeGroup"></path>
+            <path d="M24.093,42 C24.3,42.58 24.851,43 25.5,43 L33.5,43 C34.149,43 34.7,42.58 34.907,42 L55,42 L55,3.067 C55,1.373 53.627,0 51.933,0 L6.067,0 C4.373,0 3,1.373 3,3.067 L3,42 L24.093,42" id="Fill-125" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M6,3 L52,3 L52,39 L6,39 L6,3 Z" id="Fill-126" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M21,19 L36,19 L36,31 L21,31 L21,19 Z" id="Fill-130" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M24,19 L24,15.5 C24,13.025 26.025,11 28.5,11 C30.975,11 33,13.025 33,15.5 L33,19" id="Stroke-131" stroke="#556080" stroke-width="2" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

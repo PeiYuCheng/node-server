@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>99 - Rugby Ball (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="99---Rugby-Ball-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,51.058 L0,44.412 C0,19.884 19.884,0 44.412,0 L51.058,0 C53.787,0 56,2.213 56,4.942 L56,11.588 C56,36.116 36.116,56 11.588,56 L4.942,56 C2.213,56 0,53.787 0,51.058" id="Fill-464" fill="#E6E6E6" sketch:type="MSShapeGroup"></path>
+            <path d="M55.505,4.447 L55.505,4.447 C53.875,4.447 52.553,5.768 52.553,7.398 L52.553,8.141 C52.553,32.669 32.669,52.553 8.141,52.553 L5.951,52.553 C4.321,52.553 3,53.875 3,55.505 L3,55.602 C3.596,55.857 4.252,56 4.942,56 L11.588,56 C36.116,56 56,36.116 56,11.588 L56,4.942 C55.807,4.749 55.697,4.639 55.505,4.447" id="Fill-465" fill="#E64C3C" sketch:type="MSShapeGroup"></path>
+            <path d="M6,48.48 C5.895,48.48 5.788,48.463 5.683,48.428 C5.159,48.252 4.876,47.686 5.052,47.162 C6.34,43.312 7.719,39.754 9.151,36.587 C9.379,36.084 9.972,35.86 10.475,36.088 C10.977,36.316 11.201,36.908 10.974,37.412 C9.569,40.517 8.215,44.011 6.948,47.797 C6.808,48.215 6.418,48.48 6,48.48" id="Fill-473" fill="#9777A8" sketch:type="MSShapeGroup"></path>
+            <path d="M14.258,30 C14.08,30 13.9,29.953 13.737,29.853 C13.266,29.565 13.118,28.949 13.406,28.478 C21.758,14.824 32.747,8.875 46.678,4.142 C47.204,3.965 47.769,4.245 47.947,4.767 C48.124,5.29 47.845,5.858 47.322,6.036 C33.802,10.628 23.15,16.38 15.112,29.522 C14.923,29.83 14.595,30 14.258,30" id="Fill-474" fill="#9777A8" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

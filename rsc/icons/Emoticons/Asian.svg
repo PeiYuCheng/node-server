@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="57px" viewBox="0 0 56 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>142 - Asian (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="142---Asian-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M28.176,26 L3,26 L3,50 C3,52.2 4.8,54 7,54 L13.777,54 C17.937,56.021 23.014,57 28.5,57 C33.986,57 39.063,56.021 43.223,54 L50,54 C52.2,54 54,52.2 54,50 L54,26 L28.176,26" id="Fill-38" fill="#6E5847" sketch:type="MSShapeGroup"></path>
+            <path d="M56,26 L0,26 L26.857,0.474 C27.488,-0.158 28.512,-0.158 29.144,0.474 L56,26" id="Fill-74" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M28.176,26 L5.4,26 C4.802,27.25 4.308,28.554 3.926,29.901 L3.869,29.894 C3.534,31.145 3,36.007 3,36.5 C3,50.583 14.417,57 28.5,57 C42.583,57 54,50.583 54,36.5 C54,32.758 53.132,29.205 51.6,26 L28.176,26" id="Fill-81" fill="#FDC794" sketch:type="MSShapeGroup"></path>
+            <path d="M24,48.203 C29.102,50.329 35.322,48.075 37.448,42.973" id="Stroke-165" stroke="#F9A671" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path id="Stroke-166" stroke="#0096E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path id="Fill-167" fill="#FDC794" sketch:type="MSShapeGroup"></path>
+            <path d="M14,30 L23,36 M43,30 L34,36" id="Stroke-168" stroke="#F9A671" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

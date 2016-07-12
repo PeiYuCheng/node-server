@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>9 - Cancer (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="9---Cancer-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M56,28 C56,43.464 43.464,56 28,56 C12.536,56 0,43.464 0,28 C0,12.536 12.536,0 28,0 C43.464,0 56,12.536 56,28" id="Fill-9" fill="#F29C1F" sketch:type="MSShapeGroup"></path>
+            <path d="M37.5,32 C33.364,32 30,28.636 30,24.5 C30,20.364 33.364,17 37.5,17 C41.636,17 45,20.364 45,24.5 C45,28.636 41.636,32 37.5,32 L37.5,32 Z M37.5,19 C34.467,19 32,21.468 32,24.5 C32,27.532 34.467,30 37.5,30 C40.533,30 43,27.532 43,24.5 C43,21.468 40.533,19 37.5,19 L37.5,19 Z" id="Fill-21" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+            <path d="M18.5,40 C14.364,40 11,36.636 11,32.5 C11,28.364 14.364,25 18.5,25 C22.636,25 26,28.364 26,32.5 C26,36.636 22.636,40 18.5,40 L18.5,40 Z M18.5,27 C15.467,27 13,29.468 13,32.5 C13,35.532 15.467,38 18.5,38 C21.533,38 24,35.532 24,32.5 C24,29.468 21.533,27 18.5,27 L18.5,27 Z" id="Fill-22" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+            <path d="M44,25 C43.448,25 43,24.553 43,24 C43,20.206 37.047,17 30,17 C22.447,17 14,19.566 14,23 C14,23.553 13.552,24 13,24 C12.448,24 12,23.553 12,23 C12,17.482 22.526,15 30,15 C38.411,15 45,18.953 45,24 C45,24.553 44.552,25 44,25" id="Fill-24" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+            <path d="M26,42 C17.589,42 11,38.047 11,33 C11,32.447 11.448,32 12,32 C12.552,32 13,32.447 13,33 C13,36.794 18.953,40 26,40 C33.553,40 42,37.434 42,34 C42,33.447 42.448,33 43,33 C43.552,33 44,33.447 44,34 C44,39.518 33.474,42 26,42" id="Fill-25" fill="#EDEDED" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="53px" viewBox="0 0 57 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>37 - Remote Camera (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="37---Remote-Camera-(Flat)" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+            <path d="M6.843,38.886 L3.579,41.198 L0.111,36.302 L3.375,33.99 L6.843,38.886" id="Fill-33" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M9.006,33.972 L7.452,32.824 L7.171,32.859 C6.002,33.004 4.831,32.265 3.876,31.184 L2.219,32.358 L8,40.518 L12.759,38.473 C11.147,37.624 9.743,35.799 9.006,33.972" id="Fill-34" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M41.191,41.912 C41.702,42.795 42,43.817 42,44.912 C42,46.006 41.702,47.028 41.191,47.912 L51,47.912 L51,41.912 L41.191,41.912" id="Fill-35" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M30.681,42.14 C31.466,40.638 32.868,39.513 34.552,39.095 C32.199,36.947 32.001,33.123 31.437,29.912 L22.934,35.175 C25.715,37.229 29.301,39.22 29.898,42.625 L30.681,42.14" id="Fill-36" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M44.265,13.988 L8.624,35.832 C6.458,37.159 2.582,34.775 1.255,32.609 L0,30.562 L43.483,3.912 L44.738,5.959 C46.065,8.125 46.431,12.661 44.265,13.988" id="Fill-37" fill="#BDC3C7" sketch:type="MSShapeGroup"></path>
+            <path d="M47.875,11.078 L47.427,10.347 C47.208,9.991 46.792,9.81 46.379,9.888 C45.968,9.97 45.652,10.299 45.586,10.712 C45.483,11.366 45.227,12.226 44.595,12.613 L9.325,34.23 C9.084,34.377 8.917,34.619 8.865,34.896 C8.812,35.172 8.878,35.458 9.048,35.683 C10.528,37.653 13.502,39.647 16.321,39.647 L16.322,39.647 C17.242,39.647 18.065,39.429 18.769,38.997 L46.743,21.852 C48.236,20.938 49.111,19.115 49.207,16.721 C49.289,14.714 48.778,12.551 47.875,11.078" id="Fill-38" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M57,52 L53.088,52 C51.935,52 51,51.065 51,49.912 L51,40 C51,38.847 51.935,37.912 53.088,37.912 L57,37.912 L57,52" id="Fill-154" fill="#363E51" sketch:type="MSShapeGroup"></path>
+            <path d="M36,37.912 C32.14,37.912 29,41.052 29,44.912 C29,48.772 32.14,51.912 36,51.912 C39.86,51.912 43,48.772 43,44.912 C43,41.052 39.86,37.912 36,37.912 L36,37.912 Z M36,46.912 C34.897,46.912 34,46.015 34,44.912 C34,43.809 34.897,42.912 36,42.912 C37.103,42.912 38,43.809 38,44.912 C38,46.015 37.103,46.912 36,46.912 L36,46.912 Z" id="Fill-160" fill="#90BAE1" sketch:type="MSShapeGroup"></path>
+            <path d="M45,17 L53,17 L53,0" id="Stroke-232" stroke="#556080" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

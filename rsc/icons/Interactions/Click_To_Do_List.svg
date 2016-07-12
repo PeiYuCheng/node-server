@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="54px" viewBox="0 0 53 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>182 - Click To Do List (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="182---Click-To-Do-List-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M43.636,52 L8.364,52 C3.745,52 0,48.256 0,43.637 L0,8.364 C0,3.745 3.745,0 8.364,0 L43.636,0 C48.255,0 52,3.745 52,8.364 L52,43.637 C52,48.256 48.255,52 43.636,52" id="Fill-1777" fill="#3ABCA7" sketch:type="MSShapeGroup"></path>
+            <path d="M26,13 L44,13 M26,27 L44,27 M26,41 L44,41 M18.929,8.001 L12.072,16 L7.5,12.572 M18.929,22 L12.072,30 L7.5,26.571 M18.929,37 L12.072,44.999 L7.5,41.57" id="Stroke-1778" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M52.707,52.293 L45.91,45.496 L52.393,42.255 L34.756,35.756 L41.255,53.394 L44.496,46.91 L51.293,53.707 C51.488,53.903 51.744,54 52,54 C52.256,54 52.512,53.903 52.707,53.707 C53.098,53.317 53.098,52.684 52.707,52.293" id="Fill-1895" fill="#3D324C" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

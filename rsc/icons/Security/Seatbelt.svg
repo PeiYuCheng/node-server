@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="53px" viewBox="0 0 58 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>22 - Seatbelt (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="22---Seatbelt-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L12,39 L12,51 L0,51 L0,39 Z" id="Fill-341" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M49,39 L58,39 L58,51 L49,51 L49,39 Z" id="Fill-342" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M46.649,53 L36.351,53 C35.053,53 34,51.948 34,50.649 L34,39.351 C34,38.052 35.053,37 36.351,37 L46.649,37 C47.948,37 49,38.052 49,39.351 L49,50.649 C49,51.948 47.948,53 46.649,53" id="Fill-343" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M39,42 L44,42 L44,48 L39,48 L39,42 Z" id="Fill-344" fill="#D75A4A" sketch:type="MSShapeGroup"></path>
+            <path d="M24,50 L21,53 L16,53 L16,37 L21,37 L24,40 L24,50" id="Fill-345" fill="#C9CFD3" sketch:type="MSShapeGroup"></path>
+            <path d="M27.896,50 L24,50 L24,40 L27.896,40 C29.058,40 30,40.942 30,42.104 L30,47.896 C30,49.058 29.058,50 27.896,50" id="Fill-346" fill="#E6E7E8" sketch:type="MSShapeGroup"></path>
+            <path d="M27,43 L27,47" id="Stroke-347" stroke="#BDC3C7" stroke-width="2" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M40,0 L0,39 L12,39 L12,37 L19.456,37 L56.971,0 L40,0" id="Fill-356" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M8,37 L16,37 L16,53 L8,53 L8,37 Z" id="Fill-558" fill="#40495E" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

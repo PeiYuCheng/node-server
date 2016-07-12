@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>33 - Mario Coin (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="33---Mario-Coin-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M22,44 C9.869,44 0,34.131 0,22 C0,9.869 9.869,0 22,0 C34.131,0 44,9.869 44,22 C44,34.131 34.131,44 22,44" id="Fill-91" fill="#F0C419" sketch:type="MSShapeGroup"></path>
+            <path d="M22.745,32 L21.255,32 C20.009,32 19,30.991 19,29.745 L19,13.255 C19,12.009 20.009,11 21.255,11 L22.745,11 C23.991,11 25,12.009 25,13.255 L25,29.745 C25,30.991 23.991,32 22.745,32" id="Fill-92" fill="#FBD490" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

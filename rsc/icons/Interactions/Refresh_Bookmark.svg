@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="55px" viewBox="0 0 45 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>304 - Refresh Bookmark (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="304---Refresh-Bookmark-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M16,0 L0,0 L0,53.444 C0,53.938 0.598,54.186 0.948,53.836 L16,38.784 L31.052,53.836 C31.402,54.186 32,53.938 32,53.444 L32,0 L16,0" id="Fill-1108" fill="#D85A4A" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L32,0 L32,11 L0,11 L0,0 Z" id="Fill-1813" fill="#C13B2A" sketch:type="MSShapeGroup"></path>
+            <path d="M45,42.5 C45,49.404 39.404,55 32.5,55 C25.596,55 20,49.404 20,42.5 C20,35.597 25.596,30 32.5,30 C39.404,30 45,35.597 45,42.5" id="Fill-2587" fill="#B1D3F0" sketch:type="MSShapeGroup"></path>
+            <path d="M32.5,32 C27.782,32 23.62,35.182 22.379,39.738 C22.233,40.27 22.548,40.82 23.081,40.965 C23.609,41.108 24.163,40.797 24.309,40.263 C25.314,36.575 28.682,34 32.5,34 C37.187,34 41,37.813 41,42.5 C41,47.187 37.187,51 32.5,51 C29.135,51 26.122,48.999 24.766,46 L30,46 L30,44 L22,44 L22,52 L24,52 L24,48.636 C25.933,51.31 29.066,53 32.5,53 C38.29,53 43,48.29 43,42.5 C43,36.711 38.29,32 32.5,32" id="Fill-2588" fill="#556080" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

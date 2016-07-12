@@ -1,0 +1,516 @@
+
+body {
+	font-size: 19px;
+	font-family: thin;
+	user-select: none; 
+	-ms-touch-action: none; 
+	touch-action: none; 
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	scroll: no;
+}
+p { padding: 0px; margin: 0px; }
+
+.root {
+	width:100%; 
+	height:100%;
+	position: absolute; 
+	left:0px; 
+	top: 0px;
+	overflow: hidden;
+}
+.canvaspal {
+	position: absolute; 
+	transform: scale(0.2) rotate(90deg);
+	-webkit-transform: scale(0.2) rotate(90deg);
+	transition: transform 500ms, opacity 500ms;
+	z-index: 19000;
+	display: none; 
+	width: 280px; 
+	height: 280px;	
+}
+
+.PROP_TAB {
+	margin:2px;
+	width:135px;
+	color: #404040;
+	border-radius:10px;
+	padding-top: 5px; padding-bottom: 5px;
+	text-align: center;
+}
+.PROP_INPUT {
+	padding-left: 10px; padding-right: 10px; padding-top:4px; padding-bottom: 4px;
+	font-family:light; 
+	font-size: 20px; 
+	background-color: #F0F0F0; 
+	border-radius: 5px;
+	border: 0px;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  z-index:10;
+  position: absolute;
+}
+
+.slide {
+	transition: background-color 1s, opacity 1s;
+	-ms-touch-action: none; 
+	touch-action: none; 
+	position: absolute; 
+	display: none;
+	overflow: hidden;
+	
+	width: 100%; 
+	height: 100%; 
+	opacity: 0; 	
+}
+
+.svgcanvas {
+	touch-action: none;
+	-ms-touch-action: none;
+	z-index: 190; 
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	position: absolute; 
+	display: block;
+}
+
+
+/* ------------------------------------ Flashlight ------------------------------------ */
+
+.flashRects {
+	z-index:1; 
+	z-index:15010; 
+	display:none; 
+	position: absolute; 
+	background-color: rgba(0,0,0,.7);
+}
+.flashBlock {
+	z-index:15010; 
+	display:none; 
+	position: absolute; 
+	width: 300px; 
+	height:300px; 
+	overflow: hidden;
+}
+.flashCircle {
+	margin-left: -100px; 
+	margin-top: -100px; 
+	width: 300px; height:300px; 
+	border:100px solid rgba(0,0,0,.7); border-radius: 100%;
+}
+
+/* ------------------------------------ Selector ------------------------------------ */
+
+.selector_box {
+	pointer-events: none; 
+	display: none;
+	z-index: 10000; 
+	position: absolute; 
+	outline: 5px solid rgba(80,80,80,.4);
+	border-radius: 5px;
+}
+.selector_resize {
+	display: none;
+	touch-action: none;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgba(230,230,230,.5);
+	background-color:rgba(80,80,80,.5);
+	border-radius:100%;
+	z-index: 10001;
+}
+.selector_node {
+	display: none;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgba(230,230,230,.5);
+	background-color:rgba(80,80,80,.5);
+	border-radius:100%;
+	z-index: 10001;
+}
+
+.vectorSelectSvg {
+	pointer-events: none;
+	z-index: 10000;
+	position: absolute;
+	display: none;
+}
+.vectorSelectPath {
+	fill: none;
+	stroke: rgba(255,255,255,.3);
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+}
+.vectorSelectPathStatic {
+	fill: none;
+	stroke: rgba(0,0,0,.3);
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+}
+
+/* ------------------------------------ text based icons ------------------------------------ */
+
+.icon {
+	position: relative;
+	top: 28%;
+}
+.iconText-typo:before {
+	content:"Abc";
+}
+.iconText-typo {
+	font-family: thin;
+}
+.iconText-page {
+	font-family: thin;
+	pointer-events: none;
+	font-size: 30px;
+}
+
+/* ------------------------------------ dots ------------------------------------ */
+
+.dotRoot {
+	position: absolute;
+	text-align: center;
+	background-color: #FFFFFF;
+	color:#D32B4F;
+	border-radius: 100%;
+	font-family: light;
+	border: 2px solid #D3DCE9;
+	z-index: 20010;
+	cursor: default;
+	top: 100%;
+	touch-action: none;
+	overflow: hidden;
+}
+.dotRootSub {
+	position: absolute;
+	text-align: center;
+	touch-action: none;
+	background-color: #FFFFFF;
+	color:#8493A8;
+	border-radius: 100%;
+	font-family: light;
+	border: 2px solid #D3DCE9;
+	z-index: 16;
+	cursor: default;
+	width: 1px; /* force initial transition */
+	overflow: hidden;
+}
+
+.dotToolsContainer {
+	transition: bottom .5s;
+	touch-action: none;
+	z-index: 20000;
+	position: absolute; 
+	bottom: -300px;
+}
+
+.orb_SVG {
+	position: absolute;
+	z-index: 0;
+	left: -1px;
+	top: 10px;
+	opacity: 0;
+	transition: all 1s 500ms;	
+	pointer-events: none;
+}
+
+.orb_SVGT {
+	font-size: 11px; 
+	font-family: regular; 
+	z-index: 0;
+	stroke: none; 
+	fill: #8493A8;
+	stroke-width: 1px; 
+	letter-spacing: 1px;
+	pointer-events: none;
+	-moz-user-select: none; 
+}
+
+.dotItem {
+	position: absolute;
+	text-align: center;
+	background-color: rgb(255,255,255);
+	color:#B3BCC9;
+	border-radius: 100%;
+	z-index: 205;
+	cursor: default;
+	border: 2px solid #D3DCE9;
+	
+	width: 1px; /* force initial transition */
+	overflow: hidden;
+}
+
+.dotItemSelected {
+	position: absolute;
+	text-align: center;
+	background-color: #D32B4F;
+	color:#FFFFFF;
+	border-radius: 100%;
+	z-index: 20005;
+	cursor: default;
+	border: 2px solid #D3DCE9;
+	/*width: 1px; /* force initial transition */
+	overflow: hidden;
+}
+
+.dotItemActive {
+	position: absolute;
+	text-align: center;
+	background-color: rgb(255,0,255);
+	color:#B3BCC9;
+	border-radius: 100%;
+	z-index: 20005;
+	cursor: default;
+	border: 2px solid #D3DCE9;
+	/*width: 1px; /* force initial transition */
+	overflow: hidden;
+}
+
+/* ------------------------------------ clipart ------------------------------------ */
+
+.shapeElement {
+	position: absolute;
+	font-size: 0px;
+	z-index: 1;
+	-moz-user-select: none;
+	pointer-events: none;
+	transition: color 500ms;
+}
+
+.shapePath {
+	pointer-events: painted;
+	transition: color 500ms;
+}
+
+.imageElement {
+	position: absolute;
+	z-index: 1;
+	-moz-user-select: none; 
+}
+.svgElement {
+	position: absolute;
+	z-index: 1;
+	-moz-user-select: none; 
+}
+.clipartElement {
+	position: absolute;
+	transition: color 500ms;
+	-moz-user-select: none; 
+	pointer-events: none;
+}
+
+/* ------------------------------------ Text element ------------------------------------ */
+
+.textElement {
+	cursor: default; 
+	position: absolute;
+	border: 0;
+	z-index: 1;
+	margin: auto;
+	width: 200px;
+	height: 50px; 
+	transition: color .5s;
+	background-color: transparent;
+	-webkit-user-select: text;
+    user-select: text;	
+	outline: 0px solid transparent;
+}
+
+/* ------------------------------------ Properties window ------------------------------------ */
+
+.propertiesWindow {
+	transition: width 300ms;
+	touch-action: none;
+	height 400ms;
+	display: none;
+	font-family: light;
+	overflow: hidden;
+	padding: 10px;
+	position: absolute; 
+	left: 56px; top: 50px; width:400px; height: 400px; 
+	z-index:20009; 
+	background-color:#FFFFFF; 
+	box-shadow: 0px 0px 25px rgba(0,0,0,.4); 
+	overflow: hidden;
+}
+.propertiesWindowDev {
+	position: absolute; 
+	top: 6px;
+	right: 40px; 
+	text-align: center; 
+	cursor: default; 
+	vertical-align: middle; 
+	font-family: light; 
+	font-size: 16px; 
+	color:#D32B4F; 
+	padding: 5px; 
+	border-radius: 8px;
+}
+.propertiesWindowTabBottom {
+	position: absolute; 
+	bottom: 0px; 
+	width: 380px; 
+	height: 40px; 
+	color: #A0A0A0; 
+	text-align: center;
+}
+.propertiesWindowTab {
+	display: none; 
+	pointer-events: none; 
+	touch-action: none; 
+	padding-left: 10px; 
+	padding-top: 50px; 
+	width: 360px;
+}
+.icon-cross.propertiesWindowClose {
+	border-radius:100%;
+	position: absolute; 
+	right: 0px; top: 0px; 
+	width: 40px; height: 40px; 
+	line-height: 40px;
+	cursor: default;
+	text-align: center;
+}
+	
+	
+/* ------------------------------------ Draw element ------------------------------------ */
+
+.renderingPath {
+	stroke-width: 0;
+	pointer-events: painted;
+}
+.renderingPathShape {
+	pointer-events: painted;
+}
+
+.drawElement {
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+}
+.drawPath {
+	stroke-linecap: round;
+	pointer-events: painted;
+	fill: none;
+	-moz-user-select: none;
+}
+
+/* ----------------------------------- Window -------------------------------- */
+
+.clipart_wimage {
+	-webkit-clip-path: inset(0px 340px 340px 0px);
+}
+.clipart_window {
+	cursor: default;
+	position: absolute; 
+	border-radius: 320px;
+	overflow: hidden;
+	z-index: 100;
+	width: 640px;
+	height: 640px;
+	bottom: -640px;
+	right: -640px;
+	touch-action: none;
+	-webkit-clip-path: inset(0px 340px 340px 0px);
+	-moz-user-select: none; 
+}
+
+.bgItem {
+	float: left;
+	margin: 5px;
+	width: 80px;
+	height: 50px;
+	border: rgba(0,0,0,.1);
+}
+
+.wtemplates {
+	position: absolute;
+	left: -800px;
+	transition: left .5s;
+	top: 0px;
+	width: 100%;
+	max-width: 800px;
+	height: 100%;
+	z-index: 250000;
+	display: none;
+	border-right: 1px solid rgba(84,105,86,.3);
+	background-color:rgb(255,255,255);
+}
+
+.templates_list {
+	padding-top: 80px;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+.template_item_preview {
+	font-family: light;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: default;
+	color: #54657E;
+	padding-left: 20px;
+	
+}
+.template_item_selected {
+	font-family: light;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: default;
+	color: #34455E;
+	padding-left: 20px;
+	background-color: rgba(84,105,86,.15);
+}
+.template_zoom {
+	background-color:  rgba(84,105,86,.15);
+	height: 0px;
+	transition: height .25s;
+	overflow: hidden;
+	font-family: light;
+	line-height: 26px;
+}
+.template_preview {
+	border: 1px solid rgba(84,105,86,.15);
+}
+.template_table {
+	padding-left: 20px;
+	font-size: 24px;
+	font-family: light;
+}
+.template_tr1 {
+	padding: 0px;
+	font-size: 24px;
+	font-family: light;
+}
+.template_tr2 {
+	padding-left: 40px;
+	vertical-align: top;
+	font-size: 24px;
+	font-family: light;
+}
+.btTemplateAction {
+	cursor: pointer;
+	margin-top: -40px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: auto;
+	margin-right: 10px;
+	width: 100px;
+	text-align: right;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+.btTemplateActionSub {
+	cursor: pointer;
+	width: 100px;
+	text-align: center;
+}

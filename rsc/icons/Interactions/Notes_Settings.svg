@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="58px" viewBox="0 0 55 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>491 - Notes Settings (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="491---Notes-Settings-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L44,0 L44,58 L0,58 L0,0 Z" id="Fill-1506" fill="#CCB292" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L8,0 L8,58 L0,58 L0,0 Z" id="Fill-1507" fill="#7F6E5D" sketch:type="MSShapeGroup"></path>
+            <path d="M15,10 L37,10 L37,22 L15,22 L15,10 Z" id="Fill-1508" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M19,13 L33,13 L33,15 L19,15 L19,13 Z" id="Fill-1509" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M19,17 L33,17 L33,19 L19,19 L19,17 Z" id="Fill-1510" fill="#D5D0BB" sketch:type="MSShapeGroup"></path>
+            <path d="M55,44.846 L53.556,44.569 C51.414,44.157 50.431,41.653 51.721,39.893 L52.627,38.657 L50.669,36.699 L49.452,37.524 C47.646,38.748 45.18,37.672 44.849,35.515 L44.615,34 L41.846,34 L41.488,35.865 C41.084,37.96 38.67,38.961 36.903,37.764 L35.331,36.699 L33.373,38.657 L34.279,39.893 C35.569,41.653 34.587,44.157 32.444,44.569 L31,44.846 L31,47.616 L32.515,47.849 C34.672,48.181 35.747,50.646 34.523,52.452 L33.699,53.669 L35.657,55.627 L36.893,54.721 C38.653,53.431 41.156,54.414 41.568,56.556 L41.846,58 L44.615,58 L44.779,56.935 C45.119,54.73 47.675,53.671 49.474,54.99 L50.343,55.627 L52.301,53.669 L51.477,52.452 C50.253,50.646 51.328,48.181 53.485,47.849 L55,47.616 L55,44.846" id="Fill-2037" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M47,46 C47,48.209 45.209,50 43,50 C40.791,50 39,48.209 39,46 C39,43.791 40.791,42 43,42 C45.209,42 47,43.791 47,46 L47,46 Z" id="Fill-2038" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M47,46 C47,48.209 45.209,50 43,50 C40.791,50 39,48.209 39,46 C39,43.791 40.791,42 43,42 C45.209,42 47,43.791 47,46 L47,46 Z" id="Stroke-2039" stroke="#EDF0F1" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

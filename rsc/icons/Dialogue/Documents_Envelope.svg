@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="46px" height="58px" viewBox="0 0 46 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>2 - Documents Envelope (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="2---Documents-Envelope-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,0 L46,0 L46,58 L0,58 L0,0 Z" id="Fill-57" fill="#F1AF74" sketch:type="MSShapeGroup"></path>
+            <path d="M35.905,14 L10.095,14 C10.034,14.067 9.976,14.043 9.933,14 L0.39,0.39 C0.246,0.246 0.348,0 0.552,0 L45.449,0 C45.652,0 45.754,0.246 45.61,0.39 L36.067,14 C36.024,14.043 35.966,14.067 35.905,14" id="Fill-360" fill="#FEDAAC" sketch:type="MSShapeGroup"></path>
+            <path d="M35.905,50 L10.095,50 C10.034,49.933 9.976,49.957 9.933,50 L0.39,57.61 C0.246,57.754 0.348,58 0.552,58 L45.449,58 C45.652,58 45.754,57.754 45.61,57.61 L36.067,50 C36.024,49.957 35.966,49.933 35.905,50" id="Fill-361" fill="#FEDAAC" sketch:type="MSShapeGroup"></path>
+            <path d="M22,14 L24,14 L24,49.933 L22,49.933 L22,14 Z" id="Fill-362" fill="#C18757" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

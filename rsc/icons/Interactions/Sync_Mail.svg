@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="59px" height="48px" viewBox="0 0 59 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>525 - Sync Mail (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="525---Sync-Mail-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L56,39 L56,0 L0,0 L0,39 Z" id="Fill-1614" fill="#DCD6CD" sketch:type="MSShapeGroup"></path>
+            <path d="M30.965,22.107 C29.327,23.569 26.673,23.569 25.035,22.107 L22.948,20.264 C16.419,26.092 0,39 0,39 L56,39 C56,39 39.581,26.092 33.052,20.264 L30.965,22.107" id="Fill-1615" fill="#E8E3D9" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L25.035,22.107 C26.673,23.569 29.327,23.569 30.965,22.107 L56,0 L0,0" id="Fill-1616" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M59,35.5 C59,42.404 53.404,48 46.5,48 C39.596,48 34,42.404 34,35.5 C34,28.597 39.596,23 46.5,23 C53.404,23 59,28.597 59,35.5" id="Fill-1888" fill="#8697CB" sketch:type="MSShapeGroup"></path>
+            <path d="M56.193,36.019 C55.643,35.906 55.125,36.265 55.018,36.807 C54.198,40.975 50.616,44 46.5,44 C43.149,44 40.152,41.995 38.711,39 L44,39 L44,37 L36,37 L36,45 L38,45 L38,41.659 C39.976,44.315 43.085,46 46.5,46 C51.568,46 55.976,42.297 56.981,37.194 C57.088,36.651 56.735,36.125 56.193,36.019" id="Fill-1889" fill="#C1BDDE" sketch:type="MSShapeGroup"></path>
+            <path d="M55,25.999 L55,29.34 C53.024,26.683 49.914,24.999 46.5,24.999 C41.432,24.999 37.023,28.702 36.019,33.805 C35.912,34.347 36.265,34.873 36.807,34.979 C37.356,35.092 37.875,34.733 37.981,34.192 C38.802,30.024 42.384,26.999 46.5,26.999 C49.851,26.999 52.847,29.004 54.289,31.999 L49,31.999 L49,33.999 L57,33.999 L57,25.999 L55,25.999" id="Fill-1890" fill="#C1BDDE" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

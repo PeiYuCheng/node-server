@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="49px" viewBox="0 0 57 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>116 - Filled Doughnut (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="116---Filled-Doughnut-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M57,20 C57,8.954 44.24,0 28.5,0 C12.76,0 0,8.954 0,20 L0,28.996 L0,29 C0,40.046 12.76,49 28.5,49 C44.24,49 57,40.046 57,29 L57,28.996 L57,20 L57,20 Z M29,25 C23.477,25 19,22.314 19,19 C19,15.686 23.477,13 29,13 C34.523,13 39,15.686 39,19 C39,22.314 34.523,25 29,25 L29,25 Z" id="Fill-2144" fill="#EEAF4B" sketch:type="MSShapeGroup"></path>
+            <path d="M29,18.803 C32.591,18.803 35.894,19.521 38.565,20.72 C38.839,20.175 39,19.601 39,19.003 C39,15.689 34.523,13.003 29,13.003 C23.477,13.003 19,15.689 19,19.003 C19,19.601 19.161,20.175 19.435,20.72 C22.106,19.521 25.409,18.803 29,18.803" id="Fill-2145" fill="#FBD490" sketch:type="MSShapeGroup"></path>
+            <path d="M6.229,28.011 C4.909,26.82 3.729,25.473 2.731,24 M25.686,35.384 C23.815,35.26 21.952,35.013 20.115,34.637 M52.799,25.454 C48.176,30.485 41.637,33.381 35,34.597" id="Stroke-2146" stroke="#FBD490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M16.5,37.167 C16.29,37.179 16.083,37.178 15.875,37.176 L15.875,39.167 C15.875,40.564 14.731,41.708 13.333,41.708 C11.935,41.708 10.792,40.564 10.792,39.167 L10.792,35.63 C8.932,34.444 7.439,32.668 6.613,30.592 C5.974,28.985 7.299,27.116 8.825,26.696 C10.628,26.2 12.083,27.305 12.721,28.908 C13.185,30.077 15.192,30.909 16.5,30.833 C18.225,30.732 19.667,32.35 19.667,34 C19.667,35.802 18.223,37.066 16.5,37.167" id="Fill-2147" fill="#6A3311" sketch:type="MSShapeGroup"></path>
+            <path d="M11.571,23.638 L15.888,22.47 M27.396,31.125 L24.396,30.125 M46.729,19.954 L46.729,23.954 M21.022,5.211 L23.136,7.563 M45.963,12.554 L48.963,13.554 M35.105,26.9 L35.021,28.312 M41.896,29.625 L42.896,30.625 M42.865,7.181 L42.927,8.594" id="Stroke-2148" stroke="#6A3311" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M11.043,9.809 L12.043,13.809" id="Fill-2149" fill="#D75A4A" sketch:type="MSShapeGroup"></path>
+            <path d="M11.043,9.809 L12.043,13.809" id="Stroke-2150" stroke="#6D5C41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M6.229,18.354 L7.229,19.354 M35.063,7.387 L36.063,8.387" id="Stroke-2151" stroke="#6D5C41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

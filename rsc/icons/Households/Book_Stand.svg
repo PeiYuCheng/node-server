@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="51px" viewBox="0 0 60 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>102 - Book Stand (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="102---Book-Stand-(Flat)" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <path d="M7.999,50 C7.818,50 7.635,49.951 7.47,49.847 C7.002,49.556 6.859,48.938 7.152,48.47 L12.152,40.469 C12.444,40.001 13.061,39.858 13.53,40.152 C13.998,40.444 14.141,41.061 13.848,41.53 L8.848,49.53 C8.658,49.834 8.332,50 7.999,50" id="Fill-45" fill="#BFA380" sketch:type="MSShapeGroup"></path>
+            <path d="M52.001,50 C51.668,50 51.342,49.834 51.152,49.53 L46.152,41.53 C45.859,41.061 46.002,40.444 46.47,40.152 C46.938,39.858 47.556,40.001 47.848,40.469 L52.848,48.47 C53.141,48.938 52.998,49.556 52.53,49.847 C52.365,49.951 52.182,50 52.001,50" id="Fill-46" fill="#BFA380" sketch:type="MSShapeGroup"></path>
+            <path d="M19,8 C19,4.683 21.684,2 25,2 M19,8 C19,4.683 16.316,2 13,2 M19,8 L19,0" id="Stroke-47" stroke="#23A24D" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M16.025,8 C15.39,9.593 15,11.692 15,14 C15,18.97 16.791,23 19,23 C21.209,23 23,18.97 23,14 C23,11.692 22.61,9.593 21.975,8 L16.025,8" id="Fill-1480" fill="#DD691D" sketch:type="MSShapeGroup"></path>
+            <path d="M49,41 L9,41 C4.029,41 0,36.97 0,32 C0,27.029 4.029,23 9,23 L49,23 C53.971,23 58,27.029 58,32 C58,36.97 53.971,41 49,41 L49,41 Z" id="Fill-1481" fill="#553323" sketch:type="MSShapeGroup"></path>
+            <path d="M49,41 L9,41 C4.029,41 0,36.97 0,32 C0,27.029 4.029,23 9,23 L49,23 C53.971,23 58,27.029 58,32 C58,36.97 53.971,41 49,41 L49,41 Z" id="Stroke-1482" stroke="#BFA380" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M16,27 L20,27 L20,40 L16,40 L16,27 Z" id="Fill-1483" fill="#B12621" sketch:type="MSShapeGroup"></path>
+            <path d="M20,29 L24,29 L24,40 L20,40 L20,29 Z" id="Fill-1484" fill="#DD691D" sketch:type="MSShapeGroup"></path>
+            <path d="M24,26 L28,26 L28,40 L24,40 L24,26 Z" id="Fill-1485" fill="#ECBA16" sketch:type="MSShapeGroup"></path>
+            <path d="M28,28 L38,28 L38,32 L28,32 L28,28 Z" id="Fill-1486" fill="#61B972" sketch:type="MSShapeGroup"></path>
+            <path d="M28,32 L40,32 L40,36 L28,36 L28,32 Z" id="Fill-1487" fill="#23A24D" sketch:type="MSShapeGroup"></path>
+            <path d="M28,18 L40,18 L40,22 L28,22 L28,18 Z" id="Fill-1488" fill="#B0B6BB" sketch:type="MSShapeGroup"></path>
+            <path d="M28,36 L42,36 L42,40 L28,40 L28,36 Z" id="Fill-1489" fill="#3D6F44" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

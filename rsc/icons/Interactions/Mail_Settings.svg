@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="48px" viewBox="0 0 57 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>531 - Mail Settings (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="531---Mail-Settings-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M0,39 L56,39 L56,0 L0,0 L0,39 Z" id="Fill-1635" fill="#DCD6CD" sketch:type="MSShapeGroup"></path>
+            <path d="M30.965,22.107 C29.327,23.569 26.673,23.569 25.035,22.107 L22.948,20.264 C16.419,26.092 0,39 0,39 L56,39 C56,39 39.581,26.092 33.052,20.264 L30.965,22.107" id="Fill-1636" fill="#E8E3D9" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L25.035,22.107 C26.673,23.569 29.327,23.569 30.965,22.107 L56,0 L0,0" id="Fill-1637" fill="#EFECDE" sketch:type="MSShapeGroup"></path>
+            <path d="M57,34.846 L55.556,34.569 C53.414,34.157 52.431,31.653 53.721,29.893 L54.627,28.657 L52.669,26.699 L51.452,27.523 C49.646,28.748 47.18,27.672 46.849,25.515 L46.615,24 L43.846,24 L43.488,25.865 C43.084,27.96 40.67,28.961 38.903,27.764 L37.331,26.699 L35.373,28.657 L36.279,29.893 C37.569,31.653 36.587,34.157 34.444,34.569 L33,34.846 L33,37.616 L34.515,37.849 C36.672,38.181 37.747,40.646 36.523,42.452 L35.699,43.669 L37.657,45.628 L38.893,44.721 C40.653,43.431 43.156,44.414 43.568,46.556 L43.846,48 L46.615,48 L46.779,46.935 C47.119,44.73 49.675,43.671 51.474,44.99 L52.343,45.628 L54.301,43.669 L53.477,42.452 C52.253,40.646 53.328,38.181 55.485,37.849 L57,37.616 L57,34.846" id="Fill-1867" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M49,36 C49,38.209 47.209,40 45,40 C42.791,40 41,38.209 41,36 C41,33.791 42.791,32 45,32 C47.209,32 49,33.791 49,36 L49,36 Z" id="Fill-1868" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M49,36 C49,38.209 47.209,40 45,40 C42.791,40 41,38.209 41,36 C41,33.791 42.791,32 45,32 C47.209,32 49,33.791 49,36 L49,36 Z" id="Stroke-1869" stroke="#EDF0F1" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>27 - Fahrenheit (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="27---Fahrenheit-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M58,29 C58,45.016 45.016,58 29,58 C12.984,58 0,45.016 0,29 C0,12.984 12.984,0 29,0 C45.016,0 58,12.984 58,29" id="Fill-72" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M43,14 L25,14 C24.448,14 24,14.447 24,15 L24,44 C24,44.553 24.448,45 25,45 C25.552,45 26,44.553 26,44 L26,32 L39,32 C39.552,32 40,31.553 40,31 C40,30.447 39.552,30 39,30 L26,30 L26,16 L43,16 C43.552,16 44,15.553 44,15 C44,14.447 43.552,14 43,14" id="Fill-73" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M19,17 C19,18.657 17.657,20 16,20 C14.343,20 13,18.657 13,17 C13,15.343 14.343,14 16,14 C17.657,14 19,15.343 19,17 L19,17 Z" id="Stroke-692" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="42px" height="59px" viewBox="0 0 42 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>48 - Church (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="48---Church-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M25,4 L22,4 L22,1 C22,0.448 21.552,0 21,0 C20.448,0 20,0.448 20,1 L20,4 L17,4 C16.448,4 16,4.448 16,5 C16,5.552 16.448,6 17,6 L20,6 L20,11 C20,11.552 20.448,12 21,12 C21.552,12 22,11.552 22,11 L22,6 L25,6 C25.552,6 26,5.552 26,5 C26,4.448 25.552,4 25,4" id="Fill-12" fill="#CBB292" sketch:type="MSShapeGroup"></path>
+            <path d="M42,59 L0,59 L0,48 L8,39 L34,39 L42,48 L42,59" id="Fill-42" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M8,29 L34,29 L34,39 L8,39 L8,29 Z" id="Fill-43" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M35,29 L7,29 L15,22 L27,22 L35,29" id="Fill-44" fill="#E4C05C" sketch:type="MSShapeGroup"></path>
+            <path d="M26,16 L16,16 L21,9 L26,16" id="Fill-45" fill="#E4C05C" sketch:type="MSShapeGroup"></path>
+            <path d="M17,16 L25,16 L25,22 L17,22 L17,16 Z" id="Fill-46" fill="#ECF0F1" sketch:type="MSShapeGroup"></path>
+            <path d="M13,59 L13,51.5 C13,49.025 10.975,47 8.5,47 C6.025,47 4,49.025 4,51.5 L4,59 L13,59" id="Fill-47" fill="#4482C3" sketch:type="MSShapeGroup"></path>
+            <path d="M33.5,47 C31.025,47 29,49.025 29,51.5 L29,59 L38,59 L38,51.5 C38,49.025 35.975,47 33.5,47" id="Fill-48" fill="#4482C3" sketch:type="MSShapeGroup"></path>
+            <path d="M25,59 L25,48 C25,45.8 23.2,44 21,44 C18.8,44 17,45.8 17,48 L17,59 L25,59" id="Fill-49" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M16,32 C14.35,32 13,33.35 13,35 L13,39 L19,39 L19,35 C19,33.35 17.65,32 16,32" id="Fill-50" fill="#0096E6" sketch:type="MSShapeGroup"></path>
+            <path d="M26,32 C24.35,32 23,33.35 23,35 L23,39 L29,39 L29,35 C29,33.35 27.65,32 26,32" id="Fill-51" fill="#0096E6" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

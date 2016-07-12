@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="55px" viewBox="0 0 45 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>310 - Hide Bookmark (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="310---Hide-Bookmark-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M16,0 L0,0 L0,53.444 C0,53.938 0.598,54.186 0.948,53.836 L16,38.784 L31.052,53.836 C31.402,54.186 32,53.938 32,53.444 L32,0 L16,0" id="Fill-1096" fill="#D85A4A" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L32,0 L32,11 L0,11 L0,0 Z" id="Fill-1801" fill="#C13B2A" sketch:type="MSShapeGroup"></path>
+            <path d="M43.195,45.157 L43.088,45.321 C35.967,56.197 24.316,56.197 17.195,45.321 L17.195,45.32 L17.302,45.157 C24.422,34.281 36.074,34.281 43.195,45.157" id="Fill-2581" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M35.868,42.875 C35.868,46.139 33.222,48.784 29.958,48.784 C26.695,48.784 24.049,46.139 24.049,42.875 C24.049,39.611 26.695,36.966 29.958,36.966 C33.222,36.966 35.868,39.611 35.868,42.875" id="Fill-2582" fill="#556080" sketch:type="MSShapeGroup"></path>
+            <path d="M30.142,54.478 C24.888,54.478 19.993,51.42 16.358,45.868 L16,45.321 L16.465,44.609 C20.1,39.057 24.995,36 30.249,36 C35.502,36 40.397,39.057 44.031,44.609 L44.39,45.156 L43.925,45.868 C40.29,51.42 35.395,54.478 30.142,54.478 L30.142,54.478 Z M18.398,45.317 C21.604,49.941 25.754,52.478 30.142,52.478 C34.578,52.478 38.772,49.884 41.992,45.161 C38.786,40.537 34.635,38 30.249,38 C25.812,38 21.618,40.594 18.398,45.317 L18.398,45.317 Z" id="Fill-2583" fill="#B1D3F0" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

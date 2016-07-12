@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="46px" height="53px" viewBox="0 0 46 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>103 - Mac Mini (Flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="103---Mac-Mini-(Flat)" sketch:type="MSLayerGroup">
+            <path d="M40,40 L6,40 C2.7,40 0,37.3 0,34 L0,6 C0,2.7 2.7,0 6,0 L40,0 C43.3,0 46,2.7 46,6 L46,34 C46,37.3 43.3,40 40,40" id="Fill-505" fill="#E8EDEE" sketch:type="MSShapeGroup"></path>
+            <path d="M40,40 L6,40 C2.7,40 0,37.3 0,34 L0,47 C0,50.3 2.7,53 6,53 L40,53 C43.3,53 46,50.3 46,47 L46,34 C46,37.3 43.3,40 40,40" id="Fill-506" fill="#B0B6BB" sketch:type="MSShapeGroup"></path>
+            <path d="M8,46 L38,46" id="Stroke-507" stroke="#E8EDEE" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M26.277,20.401 C25.451,19.803 24.829,18.899 24.719,17.885 C24.687,17.593 24.691,17.31 24.727,17.036 C24.876,15.888 23.725,14.923 22.64,15.327 C21.856,15.619 21.002,16.185 20.049,17.172 C19.161,18.092 18.611,19.295 18.621,20.574 C18.644,23.575 21.083,26 24.09,26 C26.015,26 27.696,25.002 28.663,23.497 C29.278,22.54 28.689,21.326 27.587,21.043 C27.172,20.936 26.736,20.734 26.277,20.401" id="Fill-1264" fill="#B0B6BB" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,407 @@
+
+body {
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	-ms-touch-action: none;
+	background-color:#F0F0F0;
+	transition: all 1s;
+	outline: 0;
+}
+
+textarea {
+    resize: none;
+	outline-width: 0;
+	-ms-user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+}
+input {
+	 outline-width: 0;
+	-ms-user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;	
+ }
+  
+@font-face {
+    font-family: 'thin';
+    src: url(/rsc/fonts/thin.woff) format('woff');
+    font-weight: normal; font-style: normal;
+}
+@font-face {
+    font-family: 'light';
+    src: url(/rsc/fonts/light.woff) format('woff');
+    font-weight: normal; font-style: normal;
+}
+@font-face {
+    font-family: 'regular';
+    src: url(/rsc/fonts/regular.woff) format('woff');
+    font-weight: normal; font-style: normal;
+
+}
+@font-face {
+    font-family: 'bold';
+    src: url(/rsc/fonts/bold.woff) format('woff');
+    font-weight: normal; font-style: normal;
+}
+ 
+ .switch_off { width: 40px; height: 26px; transition: all .6s; background-color:#E0E0E0; border: 2px solid #EAEAEA; border-radius: 26px; }
+.switch_inner_off { transition: all .4s; width:26px; height:26px;  background-color:#B0B0B0; border-radius: 24px; }
+.switch_on { width: 40px; height: 26px; transition: all .6s; background-color:#A0EAA0; border: 2px solid #A0EAA0; border-radius: 26px; }
+.switch_inner_on { transition: all .4s; width:26px; margin-left: 14px; height:26px;  background-color:#50B050; border-radius: 24px; }
+.switch_text_on { color: #508050;  transition: all .6s; }
+.switch_text_off { color: #808080;  transition: all .6s; }
+
+
+/* ----------------------------------- session-info  -------------------------------- */
+
+.sess-panel {
+	cursor: default; 
+	transition: top .5s; 
+	z-index: 100001; 
+	background-color: #EFF2F6;
+	position: fixed; 
+	left: 50%; top: -350px; width: 298px; height:300px;
+	overflow: hidden;
+	border-top: 0px;
+	margin-left: -150px; 
+	border-radius: 0px 0px 5px 5px; 
+	color: #7C8696;
+}
+.sess-info {
+	box-shadow: 0px 2px 20px rgba(0,0,0,.25); 
+	border-radius: 0px 0px 5px 5px; 
+	border-top: 0px;
+	background-color:rgba(255,255,255,.95);
+	font-family: regular;
+	cursor: default; 
+	transition: all .5s;
+	z-index: 100000; 
+	position: fixed; 
+	left: 50%; top: -70px; width: 140px; height:45px; 
+	margin-left: -70px; 
+	padding-top: 3px;
+}
+.sess-title {
+	font-size: 12px;
+	width: 140px; 
+	text-align: center;
+	transition: all .5s;
+	color: #3D4D65;
+	text-overflow: ellipsis;
+	pointer-events: none;
+}
+.sess-id {
+	font-size: 30px; 
+	line-height: 28px; 
+	letter-spacing: 2px;
+	transition: all .5s;
+	width: 140px; 
+	text-align: center;
+	color: #D32B4F;
+	pointer-events: none;
+}
+.sess-panel-bt {
+	position: absolute;
+	text-align: center;
+	color: #707C8D;
+	background-color:#FFFFFF;
+	border: 0px solid #D0D0D0;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.2); 
+	border-radius: 3px;
+	left: 25px;
+	width: 250px;
+	font-size:16px;
+	font-family: light	
+}
+.sess-panel-text {
+	position: absolute;
+	text-align: center;
+	color:#707C8D;
+	width: 280px;
+	left: 10px;
+	font-size:16px;
+	font-family: light;
+}
+
+.sessinput::-ms-clear {
+    display: none;
+}
+.sessinput { 
+	position: absolute;
+	left: 30px; top: 80px;
+	outline: none; 
+	-ms-user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;		
+	font-family: light; 
+	box-sizing: border-box;
+	color: #303030;
+	font-size:40px; 
+	text-transform: uppercase;
+	transition: background 500ms;
+	width: 240px;
+	height: 55px;
+	background-color:#FFFFFF;
+	border: 1px solid #A0A0A0;
+	text-align: center;
+	letter-spacing:2px;
+}
+
+.participants_topbar {
+	cursor: default;
+	position: fixed;
+	background-color:rgba(60,60,60,.95);
+	color:#FFFFFF;
+	width: 100%;
+	height: 35px;
+}
+
+@keyframes aradar {
+    0% { width:140px; height:140px; margin-left: 80px; margin-top: 0px; opacity: 0;border: 0px solid #FFFFFF; }
+    1% { width:140px; height:140px; margin-left: 80px; margin-top: 0px; opacity: 1;border: 3px solid #FFFFFF; }
+    99% { width:260px; height:260px; margin-left: 20px; margin-top: -60px; opacity: 0; border: 2px solid #FFFFFF; }
+    100% { width:260px; height:260px; margin-left: 20px; margin-top: -60px; opacity: 0;  border: 0px solid #FFFFFF; }
+}
+@-webkit-keyframes aradar {
+    0% { width:140px; height:140px; margin-left: 80px; margin-top: 0px; opacity: 0;border: 0px solid #FFFFFF; }
+    1% { width:140px; height:140px; margin-left: 80px; margin-top: 0px; opacity: 1;border: 3px solid #FFFFFF; }
+    99% { width:260px; height:260px; margin-left: 20px; margin-top: -60px; opacity: 0; border: 2px solid #FFFFFF; }
+    100% { width:260px; height:260px; margin-left: 20px; margin-top: -60px; opacity: 0; border: 0px solid #FFFFFF; }
+}
+
+
+
+
+
+@keyframes aradar {
+    0% { width:0px; height:0px; margin-left: 150px; margin-top: 70px; opacity: 0;border: 0px solid #FFFFFF; }
+    1% { width:0px; height:0px; margin-left: 150px; margin-top: 70px; opacity: 1;border: 4px solid #FFFFFF; }
+    99% { width:257px; height:257px; margin-left: 20px; margin-top: -60px; opacity: 0; border: 3px solid #FFFFFF; }
+    100% { width:257px; height:257px; margin-left: 20px; margin-top: -60px; opacity: 0;  border: 0px solid #FFFFFF; }
+}
+@-webkit-keyframes aradar {
+    0% { width:0px; height:0px; margin-left: 150px; margin-top: 70px; opacity: 0;border: 0px solid #FFFFFF; }
+    1% { width:0px; height:0px; margin-left: 150px; margin-top: 70px; opacity: 1;border: 4px solid #FFFFFF; }
+    99% { width:257px; height:257px; margin-left: 20px; margin-top: -60px; opacity: 0; border: 3px solid #FFFFFF; }
+    100% { width:257px; height:257px; margin-left: 20px; margin-top: -60px; opacity: 0; border: 0px solid #FFFFFF; }
+}
+
+.radar {
+	animation: aradar 5s ease-out 0s infinite;
+	-webkit-animation: aradar 5s ease-out 0s infinite;
+	 border: 0px solid #FFFFFF;
+	 opacity: 0;
+	 position: absolute; pointer-events: none; 
+	 margin-left: 152px; width: 140px; height:140px; border-radius: 100%;
+
+}
+
+@keyframes flasher {
+    0% { opacity:1;}
+    50% { opacity: .2; }
+   100% { opacity: 1; }
+}
+@-webkit-keyframes flasher {
+    0% { opacity:1;}
+    50% { opacity: .2; }
+   100% { opacity: 1; }
+}
+.flash {
+	animation-delay: 2s;
+	animation-name: flasher;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out; 
+	-webkit-animation-delay: 2s;
+	-webkit-animation-name: flasher;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 3;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+/* ------------------------------------ Message  ------------------------------------ */
+
+.tellAskOverlay {
+	z-index: 150000;
+	display: none;
+	cursor: default;
+	background-color: rgba(220,220,220,.92);
+	transition: all 600ms;
+	opacity: 0;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.tellAskBox {
+	font-family: regular;
+	font-size: 24px;
+	padding: 20px;
+	cursor: default;
+	background-color: #FFFFFF;
+	transition: all 600ms;
+	box-shadow: 0px 0px 100px rgba(0,0,0,.35); 
+	width: 560px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 65%;
+	margin-left: -300px;
+	margin-top: -150px;
+}
+
+.rcOverlay {
+	z-index: 10000000; 
+	position: absolute; 
+	width: auto;
+	left: -52px; 
+	top: 2px; 
+	opacity: .8;
+	cursor: default; 
+	padding-left: 9px; 
+	padding-right: 7px; 
+	padding-top: 6px; 
+	padding-bottom: 0px; 
+	color:#FFFFFF; 
+	border-radius: 80px; 
+	text-align: center;
+}
+
+.msg_button {
+	cursor: default;
+	border:1px solid #808080;
+	border-radius: 4px;
+	margin: 10px;
+	color:#606060;
+	padding: 10px;
+	margin-left: 10px;
+	margin-top: 40px;
+	margin-right: 10px;
+	font-size:24px;
+	background-color:rgba(0,0,0,.1);
+	transition: all .1s;
+}
+
+.msg_btdown {
+	cursor: default;
+	border:1px solid #FFFFFF;
+	background-color:rgba(255,255,255,.85);
+	color:#000000;
+	border-radius: 4px;
+	padding: 10px;
+	margin-left: 10px;
+	margin-top: 40px;
+	margin-right: 10px;
+	font-size:24px;
+	transition: all .1s;
+}
+
+.message {
+	z-index:25000; 
+	transition: opacity .8s; 
+	transition-delay: opacity .2s; 
+	opacity: 0; 
+	display: table; 
+	position: absolute; 
+	left: 0px; top: 0px; width: 100%; height: 100%; 
+	background-color: rgba(230, 230, 230, .9); 
+	margin: auto; 
+	padding: auto; 
+	font-family: thin;
+}
+.message_inner {
+	margin: auto; 
+	padding: auto; 
+	display: table-cell; 
+	padding-top: 40px;
+	text-align: center; 
+	vertical-align: middle;
+	cursor: default;
+}
+.message_main {
+	font-size: 35px; 
+	color:#404040;
+	font-family: thin;
+	cursor: default;
+}
+.message_sub {
+	font-size: 24px; 
+	color:#404040;
+	overflow: hidden;
+	height: auto;
+	font-family: thin;
+	cursor: default;
+}
+.message_bar {
+	overflow: hidden;
+	margin: 0 auto; 
+	
+	text-align: center; 
+	border: 1px solid #A0A0A0;
+	border-radius: 14px;
+	width: 240px;
+	height: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	transition: all .5s;
+	opacity: 0;
+}
+.message_bar_inner {
+	background-color: #A0A0A0;
+	border-radius: 14px;
+	width: 0px;
+	height: 28px;
+	font-size: 0px;
+	transition: all .25s;
+}
+
+
+/* ----------------------------------- waitbox  -------------------------------- */
+
+@keyframes waitboxSpin {
+    0% {transform:rotate(0deg); border-radius: 10%;}
+    50% {transform:rotate(180deg);border-radius: 40%; }
+   100% {transform:rotate(360deg);border-radius: 10%; }
+}
+@-webkit-keyframes waitboxSpin {
+    0% {-webkit-transform:rotate(0deg); border-radius: 10%;}
+    50% {-webkit-transform:rotate(180deg);border-radius: 40%; }
+   100% {-webkit-transform:rotate(360deg);border-radius: 10%; }
+}
+
+.waitboxBg {
+	pointer-events: none;
+    position: absolute;
+	z-index: 100000;
+	left: 50%; top: 50%; margin: -40px; margin-top: -200px;
+	opacity: 0;
+    width: 80px; height: 80px;
+    background: rgba(0,0,0,.25);
+	border-radius: 100%;
+	transition: all .5s;
+}
+.waitbox {
+	pointer-events: none;
+	margin: 15px;
+    width: 50px; height: 50px;
+    background: rgba(255,255,255,.5);
+    animation-name: waitboxSpin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+	-webkit-animation-name: waitboxSpin;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+}
