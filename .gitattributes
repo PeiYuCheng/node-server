@@ -1,0 +1,28 @@
+# Enforce LF (\n) line endings for text files
+* text eol=lf
+
+*.js    text
+*.json  text
+
+*.css   text
+*.html  text
+
+*.jade  text
+
+*.sql   text
+
+# Front-end files
+*.ico   binary
+*.ttf   binary
+*.eot   binary
+*.png   binary
+*.jpg   binary
+*.pdf   binary
+
+# Documents
+*.xls
+*.xlsx
+*.doc
+*.docx
+*.ppt
+*.pptx

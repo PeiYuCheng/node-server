@@ -1,0 +1,86 @@
+######################
+# OS-generated files
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+######################
+# IDE & Tools files
+######################
+# IntelliJ IDEA, WebStorm, phpStorm
+.idea
+*.iml
+*.iws
+
+# npm
+.npm
+.node-gyp
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# vi buffers
+*~
+*.swp
+*.swo
+
+# Emacs buffers
+\#*
+.\#*
+
+# TextMate
+*.tmproj
+tmtags
+
+# Office documents (which should not be committed anyway!)
+~$*
+
+# Build & testing tools
+node_modules
+.vagrant
+*.patch
+
+######################
+# Logs and databases
+######################
+docs
+doc
+logs/
+coverage/
+*.log
+*.sqlite
+
+######################
+# User-data and backups
+######################
+#users/
+#backup/
+#sessions/
+
+######################
+# Binary and compiled files
+######################
+.ipa
+.apk
+.exe
+.zip
+.dmg
+.jar
+.zip
+
+######################
+# Projects checked out to this root
+######################
+# For Let's Encrypt, only necessary in production.
+.well-known
