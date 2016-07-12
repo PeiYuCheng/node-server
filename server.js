@@ -1,17 +1,25 @@
 const restify = require( 'restify' );
 const os = require( 'os' );
 const process = require( 'process' );
-const path = require('path');
+const path = require( 'path' );
+const fs = require( 'fs' );
 const assert = require( 'assert' );
+
+const package = require( './package.json' );
 
 /**
  * The port to listen to, provided by the PORT environment variable.
- * @type Numeric
+ * @type {Numeric}
  */
-var port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
+
+/**
+ * The request base path to query.php.
+ * @type {String}
+ */
+const basepath = '/bin/shared/query.php';
 
 function ping( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
@@ -22,119 +30,96 @@ function fexists( req, res ) {
 
 // POST request
 function preview( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function setdocinfo( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function getdocinfo( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 // POST
 function publish( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function setcontroller( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function setdevicedata( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function createsession( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function joinsession( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function savegrids( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function get_grids( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function get_icons( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function userpincreate( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function userpinadd( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function userpinactivate( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function addpinactivate( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function setuserinfo( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function userinfo( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function deletesession( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function quitsession( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function getlist( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 // TODO was "delete" in PHP
 function deleteboard( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function load( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
 function errlog( req, res ) {
-  res.setHeader('content-type', 'text/plain');
   //TODO
 }
 
@@ -157,36 +142,58 @@ function deleteFolder( req, res ) {
   // req.path
 }
 
-// function sms( $phone, $text ) {
-//   $data = file_get_contents( 'http://www.smsmatrix.com/matrix?username='.urlencode( 'jbmartinoli@exou.com' )
-//     .
-//     '&password='.urlencode( 'Protect128' )
-//     .
-//     '&phone='.urlencode( $phone )
-//     .
-//     '&callerid='.urlencode( '14185090580' )
-//     .
-//     '&txt='.urlencode( $text )
-//   );
-// }
+function sms( $phone, $text ) {
+  // $data = file_get_contents( 'http://www.smsmatrix.com/matrix?username='.urlencode( 'jbmartinoli@exou.com' )
+  //   .
+  //   '&password='.urlencode( 'Protect128' )
+  //   .
+  //   '&phone='.urlencode( $phone )
+  //   .
+  //   '&callerid='.urlencode( '14185090580' )
+  //   .
+  //   '&txt='.urlencode( $text )
+  // );
+}
 
 var server = restify.createServer( {
-  name: 'myapp',
-  version: '1.0.0'
+  name: package.name,
+  version: package.version
 } );
 server.use( restify.acceptParser( server.acceptable ) );
 server.use( restify.queryParser() );
 server.use( restify.bodyParser() );
 
 /**
- * Routers
+ * GET request router
  */
+server.get( basepath, function ( req, res, next ) {
+  res.setHeader( 'content-type', 'text/plain; charset=utf-8' );
+
+  console.log( 'Complete request parameters from : %s', JSON.stringify( req.params ) );
+
+  if ( 'fexists' in req.params ) {
+    return fexists( req, res );
+  }
+
+  // res.send( req.params );
+} );
 
 /**
- * Online Availability Monitoring
+ * POST request router
  */
-server.head( '/online', function ( req, res ) {
-  res.status( 200 ).end();
+server.post( basepath, function ( req, res, next ) {
+  res.setHeader( 'content-type', 'text/plain; charset=utf-8' );
+
+  if ( 'preview' in req.params ) {
+    return preview( req, res );
+  }
+
+  if ( 'publish' in req.params ) {
+    return publish( req, res );
+  }
+
+  res.setHeader( 'content-type', 'text/plain' );
+  res.send( req.params );
 } );
 
 /**
