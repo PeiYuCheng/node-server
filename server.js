@@ -23,9 +23,29 @@ function ping( req, res ) {
   //TODO
 }
 
-function fexists( req, res ) {
-  res.setHeader('content-type', 'text/plain');
-  //TODO
+/**
+ * Check if a folder exists
+ * @param  {[type]} req.params.fexists  Folder name
+ * @param  {[type]} res [description]
+ * @return {[type]}     [description]
+ */
+var fexists = function ( req, res ) {
+  var fexists = path.join('..', '..', req.params.fexists);
+
+  try {
+    fs.stat( fexists, function ( err, stats ) {
+      if ( err ) {
+        console.log( "Cannot find %s: %s", fexists, err );
+        res.send( 'NOT_FOUND' );
+      } else {
+        console.log( 'Found %s', fexists );
+        res.send( 'FOUND' );
+      }
+    } );
+  } catch ( e ) {
+    console.log( "Error finding directory '%s': %s", fexists, e.message )
+  }
+
 }
 
 // POST request
