@@ -1,3 +1,5 @@
+"use strict";
+
 const restify = require( 'restify' );
 const os = require( 'os' );
 const process = require( 'process' );
@@ -5,7 +7,7 @@ const path = require( 'path' );
 const fs = require( 'fs' );
 const assert = require( 'assert' );
 
-const package = require( './package.json' );
+const packagejson = require( './packagejson.json' );
 
 /**
  * The port to listen to, provided by the PORT environment variable.
@@ -19,9 +21,9 @@ const port = process.env.PORT || 8080;
  */
 const basepath = '/bin/shared/query.php';
 
-function ping( req, res ) {
-  //TODO
-}
+var ping = function( req, res ) {
+  // TODO
+};
 
 /**
  * Check if a folder exists
@@ -30,7 +32,7 @@ function ping( req, res ) {
  * @return {[type]}     [description]
  */
 var fexists = function ( req, res ) {
-  var fexists = path.join('..', '..', req.params.fexists);
+  var fexists = path.join( '..', '..', req.params.fexists );
 
   try {
     fs.stat( fexists, function ( err, stats ) {
@@ -43,113 +45,108 @@ var fexists = function ( req, res ) {
       }
     } );
   } catch ( e ) {
-    console.log( "Error finding directory '%s': %s", fexists, e.message )
+    console.log( "Error finding directory '%s': %s", fexists, e.message );
   }
-
-}
+};
 
 // POST request
-function preview( req, res ) {
-  //TODO
-}
+var preview = function ( req, res ) {
+  // TODO
+};
 
-function setdocinfo( req, res ) {
-  //TODO
-}
+var setdocinfo = function ( req, res ) {
+  // TODO
+};
 
-function getdocinfo( req, res ) {
-  //TODO
-}
+var getdocinfo = function ( req, res ) {
+  // TODO
+};
 
 // POST
-function publish( req, res ) {
-  //TODO
-}
+var publish = function ( req, res ) {
+  // TODO
+};
 
-function setcontroller( req, res ) {
-  //TODO
-}
+var setcontroller = function ( req, res ) {
+  // TODO
+};
 
-function setdevicedata( req, res ) {
-  //TODO
-}
+var setdevicedata = function ( req, res ) {
+  // TODO
+};
 
-function createsession( req, res ) {
-  //TODO
-}
+var createsession = function ( req, res ) {
+  // TODO
+};
 
-function joinsession( req, res ) {
-  //TODO
-}
+var joinsession = function ( req, res ) {
+  // TODO
+};
 
-function savegrids( req, res ) {
-  //TODO
-}
+var savegrids = function ( req, res ) {
+  // TODO
+};
 
-function get_grids( req, res ) {
-  //TODO
-}
+var get_grids = function ( req, res ) {
+  // TODO
+};
 
-function get_icons( req, res ) {
-  //TODO
-}
+var get_icons = function ( req, res ) {
+  // TODO
+};
 
-function userpincreate( req, res ) {
-  //TODO
-}
+var userpincreate = function ( req, res ) {
+  // TODO
+};
 
-function userpinadd( req, res ) {
-  //TODO
-}
+var userpinadd = function ( req, res ) {
+  // TODO
+};
 
-function userpinactivate( req, res ) {
-  //TODO
-}
+var userpinactivate = function ( req, res ) {
+  // TODO
+};
 
-function addpinactivate( req, res ) {
-  //TODO
-}
+var addpinactivate = function ( req, res ) {
+  // TODO
+};
 
-function setuserinfo( req, res ) {
-  //TODO
-}
+var setuserinfo = function ( req, res ) {
+  // TODO
+};
 
-function userinfo( req, res ) {
-  //TODO
-}
+var userinfo = function ( req, res ) {
+  // TODO
+};
 
-function deletesession( req, res ) {
-  //TODO
-}
+var deletesession = function ( req, res ) {
+  // TODO
+};
 
-function quitsession( req, res ) {
-  //TODO
-}
+var quitsession = function ( req, res ) {
+  // TODO
+};
 
-function getlist( req, res ) {
-  //TODO
-}
+var getlist = function ( req, res ) {
+  // TODO
+};
 
 // TODO was "delete" in PHP
-function deleteboard( req, res ) {
-  //TODO
-}
+var deleteboard = function ( req, res ) {
+  // TODO
+};
 
-function load( req, res ) {
-  //TODO
-}
+var load = function ( req, res ) {
+  // TODO
+};
 
-function errlog( req, res ) {
-  //TODO
-}
+var errlog = function ( req, res ) {
+  // TODO
+};
 
-/**
- * [get_list_for_user description]
- * @param  {[type]} req $uid
- * @param  {[type]} res [description]
- * @return {[type]}     [description]
- */
-function get_list_for_user( req, res ) {
+// Helper function from php.
+function get_list_for_user( userid ) {
+  // TODO
   // req.uid
 }
 
@@ -158,11 +155,12 @@ function get_list_for_user( req, res ) {
  * @param  {[type]} req   $path
  * @return {[type]}       [description]
  */
-function deleteFolder( req, res ) {
-  // req.path
+function deleteFolder( path ) {
+  // TODO
 }
 
-function sms( $phone, $text ) {
+function sms( phone, text ) {
+  // TODO
   // $data = file_get_contents( 'http://www.smsmatrix.com/matrix?username='.urlencode( 'jbmartinoli@exou.com' )
   //   .
   //   '&password='.urlencode( 'Protect128' )
@@ -176,8 +174,8 @@ function sms( $phone, $text ) {
 }
 
 var server = restify.createServer( {
-  name: package.name,
-  version: package.version
+  name: packagejson.name,
+  version: packagejson.version
 } );
 server.use( restify.acceptParser( server.acceptable ) );
 server.use( restify.queryParser() );
