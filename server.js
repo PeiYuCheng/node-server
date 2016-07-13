@@ -7,7 +7,7 @@ const path = require( 'path' );
 const fs = require( 'fs' );
 const assert = require( 'assert' );
 
-const packagejson = require( './packagejson.json' );
+const packagejson = require( './package.json' );
 
 /**
  * The port to listen to, provided by the PORT environment variable.
@@ -31,7 +31,7 @@ var ping = function( req, res ) {
  * @param  {[type]} res [description]
  * @return {[type]}     [description]
  */
-var fexists = function( req, res ) {
+var fexists = function( req, res, next ) {
 	var fexists = path.join( '..', '..', req.params.fexists );
 
 	try {
@@ -47,6 +47,8 @@ var fexists = function( req, res ) {
 	} catch ( e ) {
 		console.log( "Error finding directory '%s': %s", fexists, e.message );
 	}
+
+	return next();
 };
 
 // POST request
@@ -157,6 +159,7 @@ function get_list_for_user( userid ) {
  */
 function deleteFolder( path ) {
 	// TODO
+	return next();
 }
 
 function sms( phone, text ) {
@@ -190,10 +193,8 @@ server.get( basepath, function( req, res, next ) {
 	console.log( 'Complete request parameters from : %s', JSON.stringify( req.params ) );
 
 	if ( 'fexists' in req.params ) {
-		return fexists( req, res );
+		return fexists( req, res, next );
 	}
-
-	// res.send( req.params );
 } );
 
 /**
@@ -203,11 +204,11 @@ server.post( basepath, function( req, res, next ) {
 	res.setHeader( 'content-type', 'text/plain; charset=utf-8' );
 
 	if ( 'preview' in req.params ) {
-		return preview( req, res );
+		preview( req, res, next );
 	}
 
 	if ( 'publish' in req.params ) {
-		return publish( req, res );
+		return publish( req, res, next );
 	}
 
 	res.setHeader( 'content-type', 'text/plain' );
