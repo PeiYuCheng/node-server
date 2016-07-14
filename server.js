@@ -1,6 +1,7 @@
 "use strict";
 
 const restify = require( 'restify' );
+const mkdirp = require('mkdirp');
 const os = require( 'os' );
 const process = require( 'process' );
 const path = require( 'path' );
@@ -56,8 +57,46 @@ var preview = function( req, res ) {
 	// TODO
 };
 
-var setdocinfo = function( req, res ) {
-	// TODO
+var setdocinfo = function( req, res, next ) {
+  var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
+  var docIdFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid );
+
+  try {
+		fs.stat(boardsFolder, function( err, stats ){
+			if (err && err.code === 'ENOENT') {
+	  		mkdirp(boardsFolder, '0775', function(err){ //recursive mkdir
+	        if (err) { 
+	          console.log("Error making the directory '%s': %s", boardsFolder, err);
+	        }
+	      });
+			}
+		});
+		fs.stat(docIdFolder, function( err, stats ){
+			if (err && err.code === 'ENOENT') {
+		  	mkdirp(docIdFolder, '0775', function(err){
+		      if (err) { 
+		        console.log("Error making the directory '%s': %s", docIdFolder, err);
+		      }
+		    });
+		  }
+  	});
+  	fs.writeFile(
+  		path.join(docIdFolder, '/board.info'), 
+		  req.params.title + '~.~' + req.params.description + '~.~', 
+		  function(err) {
+	  		if (err) {
+	  			res.send(500);
+	  		} else {
+	  			res.send(200);
+	  		}
+		  }
+  	);
+
+  } catch ( e ) {
+    console.log( "Error setting doc info. '%s': %s", docIdFolder + '/board.info', e.message );
+  }
+
+  return next();
 };
 
 var getdocinfo = function( req, res ) {
@@ -195,6 +234,9 @@ server.get( basepath, function( req, res, next ) {
 	if ( 'fexists' in req.params ) {
 		return fexists( req, res, next );
 	}
+  if ( 'setdocinfo' in req.params ) {
+    return setdocinfo( req, res, next );
+  }
 } );
 
 /**

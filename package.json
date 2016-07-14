@@ -1,34 +1,38 @@
 {
-	"name": "ormiboard-backend",
-	"version": "0.0.1",
-	"description": "Ormiboard Backend in NodeJS",
-	"main": "server.js",
-	"scripts": {
-		"test": "jshint server.js",
-		"start": "node --harmony server.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+ssh://git@bitbucket.org/exou/ormiboard-backend-nodejs.git"
-	},
-	"keywords": [
-		"ormiboard",
-		"exou"
-	],
-	"author": "Jean-Baptiste Martinoli <jbmartinoli@exou.com>",
-	"contributors": [{
-		"name": "Pei Yu Cheng",
-		"email": "pcheng@exou.com"
-	}, {
-		"name": "Michael Sanford",
-		"email": "msanford@exou.com"
-	}],
-	"license": "SEE LICENSE IN LICENSE.md",
-	"homepage": "https://bitbucket.org/exou/ormiboard-backend-nodejs#readme",
-	"dependencies": {
-		"restify": "^4.1.1"
-	},
-	"devDependencies": {
-		"jshint": "^2.9.2"
-	}
+  "name": "ormiboard-backend",
+  "version": "0.0.1",
+  "description": "Ormiboard Backend in NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "jshint server.js",
+    "start": "node --harmony server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/exou/ormiboard-backend-nodejs.git"
+  },
+  "keywords": [
+    "ormiboard",
+    "exou"
+  ],
+  "author": "Jean-Baptiste Martinoli <jbmartinoli@exou.com>",
+  "contributors": [
+    {
+      "name": "Pei Yu Cheng",
+      "email": "pcheng@exou.com"
+    },
+    {
+      "name": "Michael Sanford",
+      "email": "msanford@exou.com"
+    }
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "homepage": "https://bitbucket.org/exou/ormiboard-backend-nodejs#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "restify": "^4.1.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.2"
+  }
 }
