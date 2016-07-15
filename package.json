@@ -29,6 +29,7 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://bitbucket.org/exou/ormiboard-backend-nodejs#readme",
   "dependencies": {
+    "async": "^2.0.0",
     "mkdirp": "^0.5.1",
     "restify": "^4.1.1"
   },
