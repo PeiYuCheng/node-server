@@ -31,7 +31,8 @@
   "dependencies": {
     "async": "^2.0.0",
     "mkdirp": "^0.5.1",
-    "restify": "^4.1.1"
+    "restify": "^4.1.1",
+    "sendmail": "^0.2.2"
   },
   "devDependencies": {
     "jshint": "^2.9.2"

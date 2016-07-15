@@ -7,6 +7,14 @@ const process = require( 'process' );
 const path = require( 'path' );
 const fs = require( 'fs' );
 const assert = require( 'assert' );
+const sendmail = require( 'sendmail' )( {
+	logger: {
+		debug: console.log,
+		info: console.info,
+		warn: console.warn,
+		error: console.error
+	}
+} );
 
 const packagejson = require( './package.json' );
 
@@ -153,8 +161,44 @@ var userpincreate = function( req, res, next ) {
 };
 
 var userpinadd = function( req, res, next ) {
-	// TODO
-};
+	var pin;
+	var userdata;
+	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
+	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data' );
+	var userInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+	var urlRoot = ( req.isSecure() ) ? 'https' : 'http' + '://' + req.headers.host + '/';
+
+	if ( !fs.accessSync( userInfoPath ) ) {
+		res.send( 'NOT FOUND' );
+		return false;
+	} else {
+		// Logic here differs from PHP original. Here, we choose a random
+		// PIN from 0000 to 9999, insread of only digits from [48-57].
+		pin = Math.floor( Math.random() * ( 9999 - 0 ) + 1 )
+
+		fs.writeFile( pinPath, pin, {
+			mode: '0755'
+		}, ( err ) => {
+			if ( err ) {
+				return errorHandler( req, res, err );
+			} else {
+				if ( req.params.local != 1 ) {
+					sendmail( {
+						from: 'notify@' + req.headers.host,
+						to: req.params.email,
+						subject: 'Your Ormiboard PIN: ' + pin,
+						content: 'Hello,\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
+					}, function( err, reply ) {
+						console.log( err && err.stack );
+						console.dir( reply );
+					} );
+				}
+			}
+		} );
+	}
+}
+
+
 
 var userpinactivate = function( req, res, next ) {
 	var pin;
@@ -174,8 +218,8 @@ var userpinactivate = function( req, res, next ) {
 	if ( ( req.params.pin === pin || req.params.pin == '0911' ) && req.params.userid != '' ) {
 		try {
 
-			if ( !fs.existsSync( userDataPath ) ) {
-				mkdirp.sync( userDataPath, 0775 );
+			if ( !fs.accessSync( userDataPath ) ) {
+				mkdirp.sync( userDataPath, '0775' );
 			}
 
 			fs.writeFile( userInfoPath,
@@ -367,4 +411,11 @@ server.get( '/health', function( req, res, next ) {
 server.listen( 8080, function() {
 	console.log( '%s listening at %s', server.name, server.url );
 	console.log( 'Environment: %s', process.env.NODE_ENV );
+
+	// Bootstrap global folders:
+	try {
+		fs.accessSync( path.join( '..', '..', 'data', 'pending' ) )
+	} catch ( e ) {
+		mkdirp( path.join( '..', '..', 'data', 'pending' ), '0775' );
+	}
 } );
