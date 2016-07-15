@@ -1,7 +1,7 @@
 "use strict";
 
 const restify = require( 'restify' );
-const mkdirp = require('mkdirp');
+const mkdirp = require( 'mkdirp' );
 const os = require( 'os' );
 const process = require( 'process' );
 const path = require( 'path' );
