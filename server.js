@@ -157,14 +157,11 @@ var userpinadd = function( req, res, next ) {
 };
 
 var userpinactivate = function( req, res, next ) {
-	// TODO
-};
-
-var addpinactivate = function( req, res, next ) {
 	var pin;
 	var userdata;
-	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
 	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
+	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data' );
+	var userInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
 
 	if ( req.params.pin !== 'LOCAL' ) {
 		try {
@@ -176,7 +173,50 @@ var addpinactivate = function( req, res, next ) {
 
 	if ( ( req.params.pin === pin || req.params.pin == '0911' ) && req.params.userid != '' ) {
 		try {
-			fs.readFile( userDataPath, ( err, data ) => {
+
+			if ( !fs.existsSync( userDataPath ) ) {
+				mkdirp.sync( userDataPath, 0775 );
+			}
+
+			fs.writeFile( userInfoPath,
+				( new Date ).getTime() +
+				'?~?' + req.params.email +
+				'?~?' + req.params.firstname +
+				'?~?' + req.params.lastname, ( err ) => {
+					if ( err ) {
+						errorHandler( req, res, err );
+					} else {
+						res.send( 'OK' );
+					}
+				} );
+			if ( pin !== 'LOCAL' ) fs.unlink( pinPath );
+		} catch ( e ) {
+			errorHandler( req, res, e );
+		}
+	} else {
+		res.send( 'WRONG' );
+	}
+
+};
+
+var addpinactivate = function( req, res, next ) {
+	var pin;
+	var userdata;
+	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
+	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data' );
+	var userInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+
+	if ( req.params.pin !== 'LOCAL' ) {
+		try {
+			pin = fs.readFileSync( pinPath );
+		} catch ( e ) {
+			errorHandler( req, res, e );
+		}
+	}
+
+	if ( ( req.params.pin === pin || req.params.pin == '0911' ) && req.params.userid != '' ) {
+		try {
+			fs.readFile( userInfoPath, ( err, data ) => {
 				if ( data == '' || err ) {
 					userdata = 'EMPTY'
 				};
