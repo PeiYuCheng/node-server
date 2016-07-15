@@ -22,7 +22,17 @@ const port = process.env.PORT || 8080;
  */
 const basepath = '/bin/shared/query.php';
 
-var ping = function( req, res ) {
+/**
+ * Error handler to send HTTP-500 if there was a problem.
+ * @param  {[type]} err [description]
+ * @return {[type]}     [description]
+ */
+var errorHandler = ( req, res, err ) => {
+	console.log( 'ERROR %s\nRequest: %s', err.message, JSON.stringify( req.params ) );
+	res.send( 500 );
+};
+
+var ping = function( req, res, next ) {
 	// TODO
 };
 
