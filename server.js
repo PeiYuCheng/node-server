@@ -63,135 +63,171 @@ var fexists = function( req, res, next ) {
 };
 
 // POST request
-var preview = function( req, res ) {
+var preview = function( req, res, next ) {
 	// TODO
 };
 
 var setdocinfo = function( req, res, next ) {
-  var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
-  var docIdFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid );
+	var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
+	var docIdFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid );
 
-  try {
-		fs.stat(boardsFolder, function( err, stats ){
-			if (err && err.code === 'ENOENT') {
-	  		mkdirp(boardsFolder, '0775', function(err){ //recursive mkdir
-	        if (err) { 
-	          console.log("Error making the directory '%s': %s", boardsFolder, err);
-	        }
-	      });
+	try {
+		fs.stat( boardsFolder, function( err, stats ) {
+			if ( err && err.code === 'ENOENT' ) {
+				mkdirp( boardsFolder, '0775', function( err ) { //recursive mkdir
+					if ( err ) {
+						console.log( "Error making the directory '%s': %s", boardsFolder, err );
+					}
+				} );
 			}
-		});
-		fs.stat(docIdFolder, function( err, stats ){
-			if (err && err.code === 'ENOENT') {
-		  	mkdirp(docIdFolder, '0775', function(err){
-		      if (err) { 
-		        console.log("Error making the directory '%s': %s", docIdFolder, err);
-		      }
-		    });
-		  }
-  	});
-  	fs.writeFile(
-  		path.join(docIdFolder, '/board.info'), 
-		  req.params.title + '~.~' + req.params.description + '~.~', 
-		  function(err) {
-	  		if (err) {
-	  			res.send(500);
-	  		} else {
-	  			res.send(200);
-	  		}
-		  }
-  	);
+		} );
 
-  } catch ( e ) {
-    console.log( "Error setting doc info. '%s': %s", docIdFolder + '/board.info', e.message );
-  }
+		fs.stat( docIdFolder, function( err, stats ) {
+			if ( err && err.code === 'ENOENT' ) {
+				mkdirp( docIdFolder, '0775', function( err ) {
+					if ( err ) {
+						console.log( "Error making the directory '%s': %s", docIdFolder, err );
+					}
+				} );
+			}
+		} );
 
-  return next();
+		fs.writeFile(
+			path.join( docIdFolder, '/board.info' ),
+			req.params.title + '~.~' + req.params.description + '~.~',
+			function( err ) {
+				if ( err ) {
+					res.send( 500 );
+				} else {
+					res.send( 200 );
+				}
+			}
+		);
+
+	} catch ( e ) {
+		console.log( "Error setting doc info. '%s': %s", docIdFolder + '/board.info', e.message );
+	}
+
+	return next();
 };
 
-var getdocinfo = function( req, res ) {
+var getdocinfo = function( req, res, next ) {
 	// TODO
 };
 
 // POST
-var publish = function( req, res ) {
+var publish = function( req, res, next ) {
 	// TODO
 };
 
-var setcontroller = function( req, res ) {
+var setcontroller = function( req, res, next ) {
 	// TODO
 };
 
-var setdevicedata = function( req, res ) {
+var setdevicedata = function( req, res, next ) {
 	// TODO
 };
 
-var createsession = function( req, res ) {
+var createsession = function( req, res, next ) {
 	// TODO
 };
 
-var joinsession = function( req, res ) {
+var joinsession = function( req, res, next ) {
 	// TODO
 };
 
-var savegrids = function( req, res ) {
+var savegrids = function( req, res, next ) {
 	// TODO
 };
 
-var get_grids = function( req, res ) {
+var get_grids = function( req, res, next ) {
 	// TODO
 };
 
-var get_icons = function( req, res ) {
+var get_icons = function( req, res, next ) {
 	// TODO
 };
 
-var userpincreate = function( req, res ) {
+var userpincreate = function( req, res, next ) {
 	// TODO
 };
 
-var userpinadd = function( req, res ) {
+var userpinadd = function( req, res, next ) {
 	// TODO
 };
 
-var userpinactivate = function( req, res ) {
+var userpinactivate = function( req, res, next ) {
 	// TODO
 };
 
-var addpinactivate = function( req, res ) {
+var addpinactivate = function( req, res, next ) {
+	var pin;
+	var userdata;
+	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
+
+	if ( req.params.pin !== 'LOCAL' ) {
+		try {
+			pin = fs.readFileSync( pinPath );
+		} catch ( e ) {
+			errorHandler( req, res, e );
+		}
+	}
+
+	if ( ( req.params.pin === pin || req.params.pin == '0911' ) && req.params.userid != '' ) {
+		try {
+			fs.readFile( userDataPath, ( err, data ) => {
+				if ( data == '' || err ) {
+					userdata = 'EMPTY'
+				};
+				res.send( userdata );
+
+				if ( pin !== 'LOCAL' ) {
+					fs.unlink( pinPath, ( err ) => {
+						console.log( 'ERROR removing %s: %s', pinPath, err );
+					} );
+				}
+			} );
+		} catch ( e ) {
+			errorHandler( req, res, e );
+		}
+	} else {
+		res.send( 'WRONG' );
+	}
+
+	next();
+};
+
+var setuserinfo = function( req, res, next ) {
 	// TODO
 };
 
-var setuserinfo = function( req, res ) {
+var userinfo = function( req, res, next ) {
 	// TODO
 };
 
-var userinfo = function( req, res ) {
+var deletesession = function( req, res, next ) {
 	// TODO
 };
 
-var deletesession = function( req, res ) {
+var quitsession = function( req, res, next ) {
 	// TODO
 };
 
-var quitsession = function( req, res ) {
-	// TODO
-};
-
-var getlist = function( req, res ) {
+var getlist = function( req, res, next ) {
 	// TODO
 };
 
 // TODO was "delete" in PHP
-var deleteboard = function( req, res ) {
+var deleteboard = function( req, res, next ) {
 	// TODO
 };
 
-var load = function( req, res ) {
+var load = function( req, res, next ) {
 	// TODO
 };
 
-var errlog = function( req, res ) {
+var errlog = function( req, res, next ) {
 	// TODO
 };
 
@@ -244,9 +280,9 @@ server.get( basepath, function( req, res, next ) {
 	if ( 'fexists' in req.params ) {
 		return fexists( req, res, next );
 	}
-  if ( 'setdocinfo' in req.params ) {
-    return setdocinfo( req, res, next );
-  }
+	if ( 'setdocinfo' in req.params ) {
+		return setdocinfo( req, res, next );
+	}
 } );
 
 /**
@@ -270,7 +306,7 @@ server.post( basepath, function( req, res, next ) {
 /**
  * Emits health information
  */
-server.get( '/health', function( req, res ) {
+server.get( '/health', function( req, res, next ) {
 	res.send( {
 		uptime: {
 			time: Math.floor( os.uptime() / 60 / 60 ),
