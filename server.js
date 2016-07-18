@@ -40,6 +40,22 @@ var errorHandler = ( req, res, err ) => {
 	res.send( 500 );
 };
 
+/**
+ * Easily compose Ormiboard data strings like '<field>!~!<field>'.
+ * @param  {Array} 	field			The values of the fields to be stringified.
+ * @param  {String} delimiter The delimiter to use.
+ * @return {String}           The resultant serialized data string.
+ */
+var ormiStringify = ( fields, delimiter ) => {
+
+	// There is no default delimiter, so one must always be passed.
+	if ( !Array.isArray( fields ) || delimiter == null ) {
+		return false;
+	}
+
+	return fields.join( delimiter );
+};
+
 var ping = function( req, res, next ) {
 	// TODO
 };
