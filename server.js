@@ -42,18 +42,19 @@ var errorHandler = ( req, res, err ) => {
 
 /**
  * Easily compose Ormiboard data strings like '<field>!~!<field>'.
- * @param  {Array} 	fields		The values of the fields to be stringified.
- * @param  {String} delimiter The delimiter to use.
- * @return {String}           The resultant serialized data string.
+ * @param  {Array} 	fields			The values of the fields to be stringified.
+ * @param  {String} delimiter 	The delimiter to use.
+ * @param	 {String} terminator	The optional string terminator.
+ * @return {String}           	The resultant serialized data string.
  */
-var ormiStringify = ( fields, delimiter ) => {
+var ormiStringify = ( fields, delimiter, terminator ) => {
 
 	// There is no default delimiter, so one must always be passed.
 	if ( !Array.isArray( fields ) || delimiter == null ) {
 		return false;
 	}
 
-	return fields.join( delimiter );
+	return fields.join( delimiter ) + terminator;
 };
 
 var ping = function( req, res, next ) {
