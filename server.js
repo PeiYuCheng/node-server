@@ -2,6 +2,7 @@
 
 const restify = require( 'restify' );
 const mkdirp = require( 'mkdirp' );
+const async = require( 'async' );
 const os = require( 'os' );
 const process = require( 'process' );
 const path = require( 'path' );
@@ -96,48 +97,91 @@ var setdocinfo = function( req, res, next ) {
 	var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
 	var docIdFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid );
 
-	try {
-		fs.stat( boardsFolder, function( err, stats ) {
-			if ( err && err.code === 'ENOENT' ) {
-				mkdirp( boardsFolder, '0775', function( err ) { //recursive mkdir
-					if ( err ) {
-						console.log( "Error making the directory '%s': %s", boardsFolder, err );
+	async.series([
+		function(callback) {
+			try {
+				fs.stat( boardsFolder, function( err, stats ) {
+					if ( err && err.code === 'ENOENT' ) {
+						mkdirp( boardsFolder, '0775', function( err ) {
+							if ( err ) {
+								throw new Error();
+							}
+							callback(null, null);
+						} );
 					}
-				} );
+				});
+			} catch (e) {
+				callback (e, null);
 			}
-		} );
+		},
 
-		fs.stat( docIdFolder, function( err, stats ) {
-			if ( err && err.code === 'ENOENT' ) {
-				mkdirp( docIdFolder, '0775', function( err ) {
-					if ( err ) {
-						console.log( "Error making the directory '%s': %s", docIdFolder, err );
+		function(callback) {
+			try {
+				fs.stat( docIdFolder, function( err, stats ) {
+					if ( err && err.code === 'ENOENT' ) {
+						mkdirp( docIdFolder, '0775', function( err ) {
+							if ( err ) {
+								throw new Error();
+							}
+							callback(null, null);
+						} );
 					}
-				} );
+				});
+			} catch (e) {
+				callback (e, null);
 			}
-		} );
+		},
 
-		fs.writeFile(
-			path.join( docIdFolder, '/board.info' ),
-			req.params.title + '~.~' + req.params.description + '~.~',
-			function( err ) {
-				if ( err ) {
-					res.send( 500 );
-				} else {
-					res.send( 200 );
-				}
+		function(callback) {
+			try {
+				fs.writeFile(
+					path.join( docIdFolder, '/board.info' ),
+					//req.params.title + '~.~' + req.params.description + '~.~',
+					ormiStringify( [
+						req.params.title,
+						req.params.description
+					], '~.~' , '~.~'),
+					function( err ) {
+						if ( err ) {
+							throw new Error();
+						} else {
+							callback(null, null);
+						}
+					}
+				);
+			} catch (e) {
+				callback (e, null);
 			}
-		);
-
-	} catch ( e ) {
-		console.log( "Error setting doc info. '%s': %s", docIdFolder + '/board.info', e.message );
-	}
-
-	return next();
+		}
+	], function(err, data) { //This function gets called after the two tasks have called their "task callbacks"
+      if (err) {
+  			console.log( "Error setting doc info. '%s': %s", docIdFolder + '/board.info', err );
+  			res.send( 500 );
+  			return next(err);
+      }
+			if (err === null) {
+				res.send( 200 );
+				return next();
+			}
+  });
 };
 
+
 var getdocinfo = function( req, res, next ) {
-	// TODO
+	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid, 'board.info');
+	try{
+		fs.readFile(docName, function (err, data){
+			if (err) {
+				res.send(500);
+				console.log("Error reading file '%s':%s", docName, data);
+			} else {
+				res.send(data.toString('utf8'));
+			}
+		});
+	} catch (e) {
+		res.send(500);
+		console.log( "Error geting doc info. '%s': %s", docName, e.message );
+	}
 };
 
 // POST
@@ -384,9 +428,12 @@ server.get( basepath, function( req, res, next ) {
 	if ( 'fexists' in req.params ) {
 		return fexists( req, res, next );
 	}
-	if ( 'setdocinfo' in req.params ) {
-		return setdocinfo( req, res, next );
-	}
+  if ( 'setdocinfo' in req.params ) {
+    return setdocinfo( req, res, next );
+  }
+  if ( 'getdocinfo' in req.params ) {
+    return getdocinfo( req, res, next );
+  }
 } );
 
 /**
