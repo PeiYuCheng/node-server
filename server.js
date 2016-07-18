@@ -42,7 +42,7 @@ var errorHandler = ( req, res, err ) => {
 
 /**
  * Easily compose Ormiboard data strings like '<field>!~!<field>'.
- * @param  {Array} 	field			The values of the fields to be stringified.
+ * @param  {Array} 	fields		The values of the fields to be stringified.
  * @param  {String} delimiter The delimiter to use.
  * @return {String}           The resultant serialized data string.
  */
