@@ -239,10 +239,13 @@ var userpinactivate = function( req, res, next ) {
 			}
 
 			fs.writeFile( userInfoPath,
-				( new Date ).getTime() +
-				'?~?' + req.params.email +
-				'?~?' + req.params.firstname +
-				'?~?' + req.params.lastname, ( err ) => {
+				ormiStringify( [
+					( new Date ).getTime(),
+					req.params.email,
+					req.params.firstname,
+					req.params.lastname
+				], '?~?' ),
+				( err ) => {
 					if ( err ) {
 						errorHandler( req, res, err );
 					} else {
