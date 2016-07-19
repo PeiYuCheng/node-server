@@ -418,7 +418,25 @@ var setuserinfo = function( req, res, next ) {
 };
 
 var userinfo = function( req, res, next ) {
-	// TODO
+	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info');
+	try{
+		fs.stat( docName, function( err, stats ) {
+			if ( err && err.code === 'ENOENT' ) {
+				res.send( 'NOT_FOUND' );
+			} else {
+				fs.readFile(docName, function (err, data){
+					if (err) {
+						throw new Error();
+					} else {
+						res.send(data.toString('utf8'));
+					}
+				});
+			}
+		});
+	} catch (e) {
+		return errorHandler( req, res, e );
+	}
+	next();
 };
 
 var deletesession = function( req, res, next ) {
