@@ -309,7 +309,48 @@ var get_icons = function( req, res, next ) {
 };
 
 var userpincreate = function( req, res, next ) {
-	// TODO
+	var pin;
+	var userdata;
+	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
+	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data' );
+	var userInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+	var urlRoot = ( req.isSecure() ) ? 'https' : 'http' + '://' + req.headers.host + '/';
+
+	if ( fs.accessSync( userInfoPath ) ) {
+		res.send( 'EXISTS' );
+	} else {
+		// Logic here differs from PHP original. Here, we choose a random
+		// PIN from 0000 to 9999, insread of only digits from [48-57].
+		pin = String( Math.random() ).substr( 2, 4 );
+
+		try {
+			fs.writeFile( pinPath, pin, {
+				mode: '0755'
+			}, ( err ) => {
+				if ( err ) {
+					return errorHandler( req, res, err );
+				} else {
+					if ( req.params.local != 1 ) {
+						sendmail( {
+							from: 'notify@' + req.headers.host,
+							to: req.params.email,
+							subject: 'Your Ormiboard PIN: ' + pin,
+							content: 'Hello ' + req.params.firstname + ',\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
+						}, function( err, reply ) {
+							if ( err ) {
+								throw err;
+							}
+							console.dir( reply );
+							res.send( 'OK' );
+						} );
+					}
+				}
+			} );
+		} catch ( e ) {
+			console.error( 'Failed to create pin for [%s]: %s', req.params.userid, e.message );
+			res.send( 500 );
+		}
+	}
 };
 
 var userpinadd = function( req, res, next ) {
@@ -650,6 +691,10 @@ server.get( basepath, function( req, res, next ) {
 
 	if ( 'userinfo' in req.params ) {
 		return userinfo( req, res, next );
+	}
+
+	if ( 'userpincreate' in req.params ) {
+		return userpincreate( req, res, next );
 	}
 
 	if ( 'load' in req.params ) {
