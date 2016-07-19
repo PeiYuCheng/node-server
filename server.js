@@ -369,25 +369,33 @@ var userpinadd = function( req, res, next ) {
 		// PIN from 0000 to 9999, insread of only digits from [48-57].
 		pin = String( Math.random() ).substr( 2, 4 );
 
-		fs.writeFile( pinPath, pin, {
-			mode: '0755'
-		}, ( err ) => {
-			if ( err ) {
-				return errorHandler( req, res, err );
-			} else {
-				if ( req.params.local != 1 ) {
-					sendmail( {
-						from: 'notify@' + req.headers.host,
-						to: req.params.email,
-						subject: 'Your Ormiboard PIN: ' + pin,
-						content: 'Hello,\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
-					}, function( err, reply ) {
-						console.log( err && err.stack );
-						console.dir( reply );
-					} );
+		try {
+			fs.writeFile( pinPath, pin, {
+				mode: '0755'
+			}, ( err ) => {
+				if ( err ) {
+					return errorHandler( req, res, err );
+				} else {
+					if ( req.params.local != 1 ) {
+						sendmail( {
+							from: 'notify@' + req.headers.host,
+							to: req.params.email,
+							subject: 'Your Ormiboard PIN: ' + pin,
+							content: 'Hello,\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
+						}, function( err, reply ) {
+							if ( err ) {
+								throw err;
+							}
+							console.dir( reply );
+							res.send( 'OK' );
+						} );
+					}
 				}
-			}
-		} );
+			} );
+		} catch ( e ) {
+			console.error( 'Failed to add pin for [%s]: %s', req.params.userid, e.message );
+			res.send( 500 );
+		}
 	}
 };
 
@@ -691,6 +699,10 @@ server.get( basepath, function( req, res, next ) {
 
 	if ( 'userinfo' in req.params ) {
 		return userinfo( req, res, next );
+	}
+
+	if ( 'userpinadd' in req.params ) {
+		return userpinadd( req, res, next );
 	}
 
 	if ( 'userpincreate' in req.params ) {
