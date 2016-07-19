@@ -142,7 +142,7 @@ var setdocinfo = function( req, res, next ) {
 					if ( err && err.code === 'ENOENT' ) {
 						mkdirp( boardsFolder, '0775', function( err ) {
 							if ( err ) {
-								throw new Error();
+								throw new Error(err);
 							} else {
 								callback( null, null );
 							}
@@ -162,7 +162,7 @@ var setdocinfo = function( req, res, next ) {
 					if ( err && err.code === 'ENOENT' ) {
 						mkdirp( docIdFolder, '0775', function( err ) {
 							if ( err ) {
-								throw new Error();
+								throw new Error(err);
 							} else {
 								callback( null, null );
 							}
@@ -186,7 +186,7 @@ var setdocinfo = function( req, res, next ) {
 					], '~.~', '~.~' ),
 					function( err ) {
 						if ( err ) {
-							throw new Error();
+							throw new Error(err);
 						} else {
 							callback( null, null );
 						}
@@ -199,15 +199,14 @@ var setdocinfo = function( req, res, next ) {
 		}
 	], function( err, data ) { //This function gets called after the two tasks have called their "task callbacks"
 		if ( err ) {
-			console.log( "Error setting doc info. '%s': %s", docIdFolder + '/board.info', err );
-			res.send( 500 );
-			return next( err );
+			return errorHandler( req, res, err );
 		}
 		if ( err === null ) {
 			res.send( 200 );
-			return next();
 		}
 	} );
+
+	return next();
 };
 
 
@@ -223,9 +222,10 @@ var getdocinfo = function( req, res, next ) {
 			}
 		} );
 	} catch ( e ) {
-		res.send( 500 );
-		console.log( "Error geting doc info. '%s': %s", docName, e.message );
+		return errorHandler( req, res, e );
 	}
+
+	return next();
 };
 
 // POST
@@ -250,11 +250,58 @@ var joinsession = function( req, res, next ) {
 };
 
 var savegrids = function( req, res, next ) {
-	// TODO
+	if (req.params.userid && req.params.age) {
+		var fileName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'grids.data' );
+		try {
+			fs.writeFile( //assuming that the parent folder exists 
+				fileName,
+				req.params.grids,
+				function( err ) {
+					if ( err ) {
+						throw new Error(err);
+					} else {
+						fs.stat (fileName, (err, stats) => {
+							if (err) {
+								throw new Error(err);
+							} else {
+								var mtime = Math.floor( new Date( stats.mtime ).valueOf() / 1000 );
+								res.send( 'AGE~$~' + mtime );
+							}
+						});
+					}
+				}
+			);			
+		} catch (e) {
+			return errorHandler( req, res, e );
+		}
+	} else {
+		res.send( 500 );
+	}
+
+	return next();
 };
 
 var get_grids = function( req, res, next ) {
-	// TODO
+	var fileName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'grids.data' );
+	try {
+		fs.stat( fileName, function( err, stats ) {
+			if ( err && err.code === 'ENOENT' ) {
+				throw new Error(err);
+			} else {
+				fs.readFile( fileName, function( err, data ) {
+					if ( err ) {
+						throw new Error(err);
+					} else {
+						res.send( data.toString( 'utf8' ) );
+					}
+				});
+			}
+		});
+	} catch (e) {
+		return errorHandler( req, res, e );
+	}
+
+	return next();
 };
 
 var get_icons = function( req, res, next ) {
@@ -405,37 +452,13 @@ var setuserinfo = function( req, res, next ) {
 	var userDataFolder = path.join( userIdFolder, 'data' );
 	var paths = [ dataFolder, usersFolder, userIdFolder, userDataFolder ];
 
-	var write = function( req, res ) {
-		try {
-			fs.writeFile(
-				path.join( userDataFolder, '/user.info' ),
-				ormiStringify( [
-					Math.round( new Date().getTime() / 1000 ),
-					req.params.email,
-					req.params.firstname,
-					req.params.lastname
-				], '?~?' ),
-				function( err ) {
-					if ( err ) {
-						throw new Error();
-					} else {
-						res.send( 200 );
-						return next();
-					}
-				}
-			);
-		} catch ( e ) {
-			return errorHandler( req, res, e );
-		}
-	};
-
 	async.forEachOfSeries( paths, function( value, key, callback ) {
 		try {
 			fs.stat( paths[ key ], function( err, stats ) {
 				if ( err && err.code === 'ENOENT' ) {
 					mkdirp( paths[ key ], '0775', function( err ) {
 						if ( err ) {
-							throw new Error();
+							throw new Error(err);
 						} else {
 							callback( null );
 						}
@@ -456,7 +479,30 @@ var setuserinfo = function( req, res, next ) {
 		}
 	} );
 
+	var write = function( req, res ) {
+		try {
+			fs.writeFile(
+				path.join( userDataFolder, '/user.info' ),
+				ormiStringify( [
+					Math.round( new Date().getTime() / 1000 ),
+					req.params.email,
+					req.params.firstname,
+					req.params.lastname
+				], '?~?' ),
+				function( err ) {
+					if ( err ) {
+						throw new Error(err);
+					} else {
+						res.send( 200 );
+					}
+				}
+			);
+		} catch ( e ) {
+			return errorHandler( req, res, e );
+		}
+	}
 
+	return next();
 };
 
 var userinfo = function( req, res, next ) {
@@ -466,9 +512,9 @@ var userinfo = function( req, res, next ) {
 			if ( err && err.code === 'ENOENT' ) {
 				res.send( 'NOT_FOUND' );
 			} else {
-				fs.readFile( docName, function( err, data ) {
-					if ( err ) {
-						throw new Error();
+				fs.readFile(docName, function (err, data){
+					if (err) {
+						throw new Error(err);
 					} else {
 						res.send( data.toString( 'utf8' ) );
 					}
@@ -478,7 +524,8 @@ var userinfo = function( req, res, next ) {
 	} catch ( e ) {
 		return errorHandler( req, res, e );
 	}
-	next();
+	
+	return next();
 };
 
 var deletesession = function( req, res, next ) {
@@ -607,6 +654,14 @@ server.get( basepath, function( req, res, next ) {
 
 	if ( 'load' in req.params ) {
 		return load( req, res, next );
+	}
+
+	if ( 'savegrids' in req.params ) {
+		return savegrids( req, res, next );
+	}
+
+	if ( 'get_grids' in req.params ) {
+		return get_grids( req, res, next );
 	}
 } );
 
