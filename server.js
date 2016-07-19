@@ -97,8 +97,8 @@ var setdocinfo = function( req, res, next ) {
 	var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
 	var docIdFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid );
 
-	async.series([
-		function(callback) {
+	async.series( [
+		function( callback ) {
 			try {
 				fs.stat( boardsFolder, function( err, stats ) {
 					if ( err && err.code === 'ENOENT' ) {
@@ -106,19 +106,19 @@ var setdocinfo = function( req, res, next ) {
 							if ( err ) {
 								throw new Error();
 							} else {
-								callback(null, null); 
+								callback( null, null );
 							}
 						} );
-					} else { 
-						callback(null, null); 
+					} else {
+						callback( null, null );
 					}
-				});
-			} catch (e) {
-				callback (e, null);
+				} );
+			} catch ( e ) {
+				callback( e, null );
 			}
 		},
 
-		function(callback) {
+		function( callback ) {
 			try {
 				fs.stat( docIdFolder, function( err, stats ) {
 					if ( err && err.code === 'ENOENT' ) {
@@ -126,66 +126,66 @@ var setdocinfo = function( req, res, next ) {
 							if ( err ) {
 								throw new Error();
 							} else {
-								callback(null, null); 
+								callback( null, null );
 							}
 						} );
-					} else { 
-						callback(null, null); 
+					} else {
+						callback( null, null );
 					}
-				});
-			} catch (e) {
-				callback (e, null);
+				} );
+			} catch ( e ) {
+				callback( e, null );
 			}
 		},
 
-		function(callback) {
+		function( callback ) {
 			try {
 				fs.writeFile(
 					path.join( docIdFolder, '/board.info' ),
 					ormiStringify( [
 						req.params.title,
 						req.params.description
-					], '~.~' , '~.~'),
+					], '~.~', '~.~' ),
 					function( err ) {
 						if ( err ) {
 							throw new Error();
-						} else { 
-							callback(null, null); 
-						}				
+						} else {
+							callback( null, null );
+						}
 					}
 				);
 
-			} catch (e) {
-				callback (e, null);
+			} catch ( e ) {
+				callback( e, null );
 			}
 		}
-	], function(err, data) { //This function gets called after the two tasks have called their "task callbacks"
-      if (err) {
-  			console.log( "Error setting doc info. '%s': %s", docIdFolder + '/board.info', err );
-  			res.send( 500 );
-  			return next(err);
-      }
-			if (err === null) {
-				res.send( 200 );
-				return next();
-			}
-  });
+	], function( err, data ) { //This function gets called after the two tasks have called their "task callbacks"
+		if ( err ) {
+			console.log( "Error setting doc info. '%s': %s", docIdFolder + '/board.info', err );
+			res.send( 500 );
+			return next( err );
+		}
+		if ( err === null ) {
+			res.send( 200 );
+			return next();
+		}
+	} );
 };
 
 
 var getdocinfo = function( req, res, next ) {
-	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid, 'board.info');
-	try{
-		fs.readFile(docName, function (err, data){
-			if (err) {
-				res.send(500);
-				console.log("Error reading file '%s':%s", docName, data);
+	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid, 'board.info' );
+	try {
+		fs.readFile( docName, function( err, data ) {
+			if ( err ) {
+				res.send( 500 );
+				console.log( "Error reading file '%s':%s", docName, data );
 			} else {
-				res.send(data.toString('utf8'));
+				res.send( data.toString( 'utf8' ) );
 			}
-		});
-	} catch (e) {
-		res.send(500);
+		} );
+	} catch ( e ) {
+		res.send( 500 );
 		console.log( "Error geting doc info. '%s': %s", docName, e.message );
 	}
 };
@@ -241,7 +241,7 @@ var userpinadd = function( req, res, next ) {
 	} else {
 		// Logic here differs from PHP original. Here, we choose a random
 		// PIN from 0000 to 9999, insread of only digits from [48-57].
-		pin = Math.floor( Math.random() * ( 9999 - 0 ) + 1 )
+		pin = Math.floor( Math.random() * ( 9999 - 0 ) + 1 );
 
 		fs.writeFile( pinPath, pin, {
 			mode: '0755'
@@ -263,10 +263,15 @@ var userpinadd = function( req, res, next ) {
 			}
 		} );
 	}
-}
+};
 
-
-
+/**
+ * userpinactivate
+ * @param  {String}    userid  	A user ID
+ * @param  {Numeric}   pin  		A pin
+ * @param  {Function}  next 		Middleware router
+ * @return {Void}
+ */
 var userpinactivate = function( req, res, next ) {
 	var pin;
 	var userdata;
@@ -291,7 +296,7 @@ var userpinactivate = function( req, res, next ) {
 
 			fs.writeFile( userInfoPath,
 				ormiStringify( [
-					( new Date ).getTime(),
+					( new Date() ).getTime(),
 					req.params.email,
 					req.params.firstname,
 					req.params.lastname
@@ -355,39 +360,39 @@ var addpinactivate = function( req, res, next ) {
 var setuserinfo = function( req, res, next ) {
 	var dataFolder = path.join( '..', '..', 'data' );
 	var usersFolder = path.join( dataFolder, 'users' );
-	var userIdFolder = path.join( usersFolder, req.params.userid);
-	var userDataFolder = path.join( userIdFolder, 'data');
-	var paths = [ dataFolder, usersFolder, userIdFolder, userDataFolder];
+	var userIdFolder = path.join( usersFolder, req.params.userid );
+	var userDataFolder = path.join( userIdFolder, 'data' );
+	var paths = [ dataFolder, usersFolder, userIdFolder, userDataFolder ];
 
-	async.forEachOfSeries ( paths, function(value, key , callback){
+	async.forEachOfSeries( paths, function( value, key, callback ) {
 		try {
-			fs.stat( paths[key], function( err, stats ) {
+			fs.stat( paths[ key ], function( err, stats ) {
 				if ( err && err.code === 'ENOENT' ) {
-					mkdirp( paths[key], '0775', function( err ) {
+					mkdirp( paths[ key ], '0775', function( err ) {
 						if ( err ) {
 							throw new Error();
 						} else {
-							callback(null);
+							callback( null );
 						}
 					} );
 				} else {
-					callback(null);
+					callback( null );
 				}
-			});
-		} catch (e) {
-			callback (e);
+			} );
+		} catch ( e ) {
+			callback( e );
 		}
-	}, function(err) {
-    if (err) {
+	}, function( err ) {
+		if ( err ) {
 			return errorHandler( req, res, err );
-    }
-		if (err === null) {
-			write(req, res);
+		}
+		if ( err === null ) {
+			write( req, res );
 
 		}
-  });
+	} );
 
-	var write = function(req, res) {
+	var write = function( req, res ) {
 		try {
 			fs.writeFile(
 				path.join( userDataFolder, '/user.info' ),
@@ -400,13 +405,13 @@ var setuserinfo = function( req, res, next ) {
 				function( err ) {
 					if ( err ) {
 						throw new Error();
-					} else { 
+					} else {
 						res.send( 200 );
 						return next();
 					}
 				}
 			);
-		} catch (e) {
+		} catch ( e ) {
 			return errorHandler( req, res, e );
 		}
 	}
@@ -490,18 +495,22 @@ server.get( basepath, function( req, res, next ) {
 	if ( 'fexists' in req.params ) {
 		return fexists( req, res, next );
 	}
-  if ( 'setdocinfo' in req.params ) {
-    return setdocinfo( req, res, next );
-  }
-  if ( 'getdocinfo' in req.params ) {
-    return getdocinfo( req, res, next );
-  }
-  if ( 'setuserinfo' in req.params ) {
-    return setuserinfo( req, res, next );
-  }
-  if ( 'userinfo' in req.params ) {
-    return userinfo( req, res, next );
-  }
+
+	if ( 'setdocinfo' in req.params ) {
+		return setdocinfo( req, res, next );
+	}
+
+	if ( 'getdocinfo' in req.params ) {
+		return getdocinfo( req, res, next );
+	}
+
+	if ( 'setuserinfo' in req.params ) {
+		return setuserinfo( req, res, next );
+	}
+
+	if ( 'userinfo' in req.params ) {
+		return userinfo( req, res, next );
+	}
 } );
 
 /**
@@ -549,7 +558,7 @@ server.listen( 8080, function() {
 
 	// Bootstrap global folders:
 	try {
-		fs.accessSync( path.join( '..', '..', 'data', 'pending' ) )
+		fs.accessSync( path.join( '..', '..', 'data', 'pending' ) );
 	} catch ( e ) {
 		mkdirp( path.join( '..', '..', 'data', 'pending' ), '0775' );
 	}
