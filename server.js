@@ -326,7 +326,7 @@ var userpinadd = function( req, res, next ) {
 	} else {
 		// Logic here differs from PHP original. Here, we choose a random
 		// PIN from 0000 to 9999, insread of only digits from [48-57].
-		pin = Math.floor( Math.random() * ( 9999 - 0 ) + 1 );
+		pin = String( Math.random() ).substr( 2, 4 );
 
 		fs.writeFile( pinPath, pin, {
 			mode: '0755'
