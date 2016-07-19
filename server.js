@@ -58,6 +58,24 @@ var ormiStringify = ( fields, delimiter, terminator ) => {
 	return fields.join( delimiter ) + terminator;
 };
 
+var endr = ( req, res, next ) => {
+	global $notrack;
+	$notrack = true;
+	$delay = ( ~~( ( microtime( true ) - $GLOBALS[ 'microstart' ] ) * 100000 ) / 100 );
+	$lline = microtime( true ).
+	'~'.$delay.
+	'~'.$_GET[ 'ping' ].
+	'~'.( isset( $_GET[ 'did' ] ) ? $_GET[ 'did' ] : "" ).
+	"\n";
+	if ( !file_exists( '../../data/log/' ) ) mkdir( '/log/', 0775, true );
+	if ( file_exists( '../../data/log/log.data' ) ) {
+		if ( filesize( '../../data/log/log.data' ) > 16000 ) {
+			@unlink( '../../data/log/log.data' );
+		}
+	}
+	file_put_contents( '../../data/log/log.data', $lline, FILE_APPEND );
+}
+
 var ping = function( req, res, next ) {
 	// TODO
 };
@@ -418,22 +436,22 @@ var setuserinfo = function( req, res, next ) {
 };
 
 var userinfo = function( req, res, next ) {
-	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info');
-	try{
+	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+	try {
 		fs.stat( docName, function( err, stats ) {
 			if ( err && err.code === 'ENOENT' ) {
 				res.send( 'NOT_FOUND' );
 			} else {
-				fs.readFile(docName, function (err, data){
-					if (err) {
+				fs.readFile( docName, function( err, data ) {
+					if ( err ) {
 						throw new Error();
 					} else {
-						res.send(data.toString('utf8'));
+						res.send( data.toString( 'utf8' ) );
 					}
-				});
+				} );
 			}
-		});
-	} catch (e) {
+		} );
+	} catch ( e ) {
 		return errorHandler( req, res, e );
 	}
 	next();
