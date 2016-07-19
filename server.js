@@ -498,8 +498,42 @@ var deleteboard = function( req, res, next ) {
 	// TODO
 };
 
+/**
+ * Load a given board and send it to the user
+ * @param  {[type]}   req  [description]
+ * @param  {[type]}   res  [description]
+ * @param  {Function} next [description]
+ * @return {[type]}        [description]
+ */
 var load = function( req, res, next ) {
-	// TODO
+	const userid = req.params.userid;
+	const fileroot = path.join( '..', '..', 'data', 'users', userid, 'boards', req.params.load, 'board.data' );
+
+	try {
+		fs.readFile( fileroot, function( err, board ) {
+
+			if ( err ) {
+				// Problem reading the file?
+
+				if ( err.code == 'ENOENT' ) {
+					// The file does not exist
+					console.warn( 'Board [%s] for user [%s] not found.', req.params.load, userid );
+					res.header( 'Content-Length', 0 );
+					res.status( 404 );
+				} else {
+					// An error other than the file not exists (e.g., permissions).
+					console.error( 'Error loading board [%s] for user [%s]: %s', req.params.load, userid, err.message );
+					res.send( 500 );
+				}
+
+			} else {
+				// Found the board: send it.
+				res.send( 200, board );
+			}
+		} );
+	} catch ( e ) {
+		console.error( 'Error loading board [%s] for user [%s]: %s', req.params.load, userid, e.message );
+	}
 };
 
 var errlog = function( req, res, next ) {
@@ -569,6 +603,10 @@ server.get( basepath, function( req, res, next ) {
 
 	if ( 'userinfo' in req.params ) {
 		return userinfo( req, res, next );
+	}
+
+	if ( 'load' in req.params ) {
+		return load( req, res, next );
 	}
 } );
 
