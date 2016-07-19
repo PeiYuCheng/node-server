@@ -249,6 +249,20 @@ var joinsession = function( req, res, next ) {
 	// TODO
 };
 
+var setsessiondata = ( req, res, next ) => {
+	const sessiondatapath = path.join( '..', '..', 'data', 'sessions', req.params.setsessiondata, 'session.data' );
+	try {
+		fs.writeFile( sessiondatapath, req.params.data, ( err ) => {
+			if ( err ) {
+				throw err;
+			}
+			res.send( 200 );
+		} );
+	} catch ( e ) {
+		console.error( 'Could not set session data {%s} for [%s]: %s', req.params.data, req.params.setsessiondata, e.message );
+	}
+};
+
 var savegrids = function( req, res, next ) {
 	if (req.params.userid && req.params.age) {
 		var fileName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'grids.data' );
@@ -711,6 +725,10 @@ server.get( basepath, function( req, res, next ) {
 
 	if ( 'load' in req.params ) {
 		return load( req, res, next );
+	}
+
+	if ( 'setsessiondata' in req.params ) {
+		return setsessiondata( req, res, next );
 	}
 
 	if ( 'savegrids' in req.params ) {
