@@ -142,7 +142,7 @@ var setdocinfo = function( req, res, next ) {
 					if ( err && err.code === 'ENOENT' ) {
 						mkdirp( boardsFolder, '0775', function( err ) {
 							if ( err ) {
-								throw new Error(err);
+								throw new Error( err );
 							} else {
 								callback( null, null );
 							}
@@ -162,7 +162,7 @@ var setdocinfo = function( req, res, next ) {
 					if ( err && err.code === 'ENOENT' ) {
 						mkdirp( docIdFolder, '0775', function( err ) {
 							if ( err ) {
-								throw new Error(err);
+								throw new Error( err );
 							} else {
 								callback( null, null );
 							}
@@ -186,7 +186,7 @@ var setdocinfo = function( req, res, next ) {
 					], '~.~', '~.~' ),
 					function( err ) {
 						if ( err ) {
-							throw new Error(err);
+							throw new Error( err );
 						} else {
 							callback( null, null );
 						}
@@ -264,28 +264,28 @@ var setsessiondata = ( req, res, next ) => {
 };
 
 var savegrids = function( req, res, next ) {
-	if (req.params.userid && req.params.age) {
+	if ( req.params.userid && req.params.age ) {
 		var fileName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'grids.data' );
 		try {
-			fs.writeFile( //assuming that the parent folder exists 
+			fs.writeFile( //assuming that the parent folder exists
 				fileName,
 				req.params.grids,
 				function( err ) {
 					if ( err ) {
-						throw new Error(err);
+						throw new Error( err );
 					} else {
-						fs.stat (fileName, (err, stats) => {
-							if (err) {
-								throw new Error(err);
+						fs.stat( fileName, ( err, stats ) => {
+							if ( err ) {
+								throw new Error( err );
 							} else {
 								var mtime = Math.floor( new Date( stats.mtime ).valueOf() / 1000 );
 								res.send( 'AGE~$~' + mtime );
 							}
-						});
+						} );
 					}
 				}
-			);			
-		} catch (e) {
+			);
+		} catch ( e ) {
 			return errorHandler( req, res, e );
 		}
 	} else {
@@ -300,18 +300,18 @@ var get_grids = function( req, res, next ) {
 	try {
 		fs.stat( fileName, function( err, stats ) {
 			if ( err && err.code === 'ENOENT' ) {
-				throw new Error(err);
+				throw new Error( err );
 			} else {
 				fs.readFile( fileName, function( err, data ) {
 					if ( err ) {
-						throw new Error(err);
+						throw new Error( err );
 					} else {
 						res.send( data.toString( 'utf8' ) );
 					}
-				});
+				} );
 			}
-		});
-	} catch (e) {
+		} );
+	} catch ( e ) {
 		return errorHandler( req, res, e );
 	}
 
@@ -521,7 +521,7 @@ var setuserinfo = function( req, res, next ) {
 				if ( err && err.code === 'ENOENT' ) {
 					mkdirp( paths[ key ], '0775', function( err ) {
 						if ( err ) {
-							throw new Error(err);
+							throw new Error( err );
 						} else {
 							callback( null );
 						}
@@ -554,7 +554,7 @@ var setuserinfo = function( req, res, next ) {
 				], '?~?' ),
 				function( err ) {
 					if ( err ) {
-						throw new Error(err);
+						throw new Error( err );
 					} else {
 						res.send( 200 );
 					}
@@ -575,9 +575,9 @@ var userinfo = function( req, res, next ) {
 			if ( err && err.code === 'ENOENT' ) {
 				res.send( 'NOT_FOUND' );
 			} else {
-				fs.readFile(docName, function (err, data){
-					if (err) {
-						throw new Error(err);
+				fs.readFile( docName, function( err, data ) {
+					if ( err ) {
+						throw new Error( err );
 					} else {
 						res.send( data.toString( 'utf8' ) );
 					}
@@ -587,7 +587,7 @@ var userinfo = function( req, res, next ) {
 	} catch ( e ) {
 		return errorHandler( req, res, e );
 	}
-	
+
 	return next();
 };
 
