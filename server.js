@@ -105,9 +105,12 @@ var setdocinfo = function( req, res, next ) {
 						mkdirp( boardsFolder, '0775', function( err ) {
 							if ( err ) {
 								throw new Error();
+							} else {
+								callback(null, null); 
 							}
-							callback(null, null);
 						} );
+					} else { 
+						callback(null, null); 
 					}
 				});
 			} catch (e) {
@@ -122,9 +125,12 @@ var setdocinfo = function( req, res, next ) {
 						mkdirp( docIdFolder, '0775', function( err ) {
 							if ( err ) {
 								throw new Error();
+							} else {
+								callback(null, null); 
 							}
-							callback(null, null);
 						} );
+					} else { 
+						callback(null, null); 
 					}
 				});
 			} catch (e) {
@@ -136,7 +142,6 @@ var setdocinfo = function( req, res, next ) {
 			try {
 				fs.writeFile(
 					path.join( docIdFolder, '/board.info' ),
-					//req.params.title + '~.~' + req.params.description + '~.~',
 					ormiStringify( [
 						req.params.title,
 						req.params.description
@@ -144,11 +149,12 @@ var setdocinfo = function( req, res, next ) {
 					function( err ) {
 						if ( err ) {
 							throw new Error();
-						} else {
-							callback(null, null);
-						}
+						} else { 
+							callback(null, null); 
+						}				
 					}
 				);
+
 			} catch (e) {
 				callback (e, null);
 			}
@@ -347,7 +353,63 @@ var addpinactivate = function( req, res, next ) {
 };
 
 var setuserinfo = function( req, res, next ) {
-	// TODO
+	var dataFolder = path.join( '..', '..', 'data' );
+	var usersFolder = path.join( dataFolder, 'users' );
+	var userIdFolder = path.join( usersFolder, req.params.userid);
+	var userDataFolder = path.join( userIdFolder, 'data');
+	var paths = [ dataFolder, usersFolder, userIdFolder, userDataFolder];
+
+	async.forEachOfSeries ( paths, function(value, key , callback){
+		try {
+			fs.stat( paths[key], function( err, stats ) {
+				if ( err && err.code === 'ENOENT' ) {
+					mkdirp( paths[key], '0775', function( err ) {
+						if ( err ) {
+							throw new Error();
+						} else {
+							callback(null);
+						}
+					} );
+				} else {
+					callback(null);
+				}
+			});
+		} catch (e) {
+			callback (e);
+		}
+	}, function(err) {
+    if (err) {
+			return errorHandler( req, res, err );
+    }
+		if (err === null) {
+			write(req, res);
+
+		}
+  });
+
+	var write = function(req, res) {
+		try {
+			fs.writeFile(
+				path.join( userDataFolder, '/user.info' ),
+				ormiStringify( [
+					Math.round( new Date().getTime() / 1000 ),
+					req.params.email,
+					req.params.firstname,
+					req.params.lastname
+				], '?~?' ),
+				function( err ) {
+					if ( err ) {
+						throw new Error();
+					} else { 
+						res.send( 200 );
+						return next();
+					}
+				}
+			);
+		} catch (e) {
+			return errorHandler( req, res, e );
+		}
+	}
 };
 
 var userinfo = function( req, res, next ) {
@@ -433,6 +495,12 @@ server.get( basepath, function( req, res, next ) {
   }
   if ( 'getdocinfo' in req.params ) {
     return getdocinfo( req, res, next );
+  }
+  if ( 'setuserinfo' in req.params ) {
+    return setuserinfo( req, res, next );
+  }
+  if ( 'userinfo' in req.params ) {
+    return userinfo( req, res, next );
   }
 } );
 
