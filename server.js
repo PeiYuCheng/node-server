@@ -58,26 +58,46 @@ var ormiStringify = ( fields, delimiter, terminator ) => {
 	return fields.join( delimiter ) + terminator;
 };
 
-var endr = ( req, res, next ) => {
-	global $notrack;
-	$notrack = true;
-	$delay = ( ~~( ( microtime( true ) - $GLOBALS[ 'microstart' ] ) * 100000 ) / 100 );
-	$lline = microtime( true ).
-	'~'.$delay.
-	'~'.$_GET[ 'ping' ].
-	'~'.( isset( $_GET[ 'did' ] ) ? $_GET[ 'did' ] : "" ).
-	"\n";
-	if ( !file_exists( '../../data/log/' ) ) mkdir( '/log/', 0775, true );
-	if ( file_exists( '../../data/log/log.data' ) ) {
-		if ( filesize( '../../data/log/log.data' ) > 16000 ) {
-			@unlink( '../../data/log/log.data' );
-		}
+/**
+ * Saves a log line with the ping latency.
+ * @param  {DateTime} startTime The time the request began.
+ * @param  {String} 	ping      req.params.ping
+ * @param  {String} 	did       req.params.did
+ * @return {Boolean}   	        True if successful.
+ */
+var endr = ( startTime, ping, did ) => {
+	const now = new Date().getTime();
+	const delay = now - startTime;
+	const logFile = path.join( '..', '..', 'data', 'log', 'log.data' );
+	const logLine = ormiStringify( [ now, delay, ping, did ], '~', os.EOL );
+
+	try {
+		fs.appendFile( logFile, logLine, ( err ) => {
+			if ( err ) {
+				throw err;
+			}
+
+			// Keep the log file at 16kb
+			fs.truncate( logFile, 16000, ( err ) => {
+				if ( err ) {
+					throw err;
+				}
+
+				return true;
+			} );
+		} );
+	} catch ( e ) {
+		console.error( 'There was an error saving endr: %s', e.message );
+		return false;
 	}
-	file_put_contents( '../../data/log/log.data', $lline, FILE_APPEND );
-}
+};
 
 var ping = function( req, res, next ) {
+	const startTime = new Date().getTime();
+
 	// TODO
+
+	// endr( startTime, req.params.ping, req.params.did );
 };
 
 /**
@@ -326,7 +346,10 @@ var userpinactivate = function( req, res, next ) {
 						res.send( 'OK' );
 					}
 				} );
-			if ( pin !== 'LOCAL' ) fs.unlink( pinPath );
+
+			if ( pin !== 'LOCAL' ) {
+				fs.unlink( pinPath );
+			}
 		} catch ( e ) {
 			errorHandler( req, res, e );
 		}
@@ -355,8 +378,8 @@ var addpinactivate = function( req, res, next ) {
 		try {
 			fs.readFile( userInfoPath, ( err, data ) => {
 				if ( data == '' || err ) {
-					userdata = 'EMPTY'
-				};
+					userdata = 'EMPTY';
+				}
 				res.send( userdata );
 
 				if ( pin !== 'LOCAL' ) {
@@ -382,6 +405,30 @@ var setuserinfo = function( req, res, next ) {
 	var userDataFolder = path.join( userIdFolder, 'data' );
 	var paths = [ dataFolder, usersFolder, userIdFolder, userDataFolder ];
 
+	var write = function( req, res ) {
+		try {
+			fs.writeFile(
+				path.join( userDataFolder, '/user.info' ),
+				ormiStringify( [
+					Math.round( new Date().getTime() / 1000 ),
+					req.params.email,
+					req.params.firstname,
+					req.params.lastname
+				], '?~?' ),
+				function( err ) {
+					if ( err ) {
+						throw new Error();
+					} else {
+						res.send( 200 );
+						return next();
+					}
+				}
+			);
+		} catch ( e ) {
+			return errorHandler( req, res, e );
+		}
+	};
+
 	async.forEachOfSeries( paths, function( value, key, callback ) {
 		try {
 			fs.stat( paths[ key ], function( err, stats ) {
@@ -406,33 +453,10 @@ var setuserinfo = function( req, res, next ) {
 		}
 		if ( err === null ) {
 			write( req, res );
-
 		}
 	} );
 
-	var write = function( req, res ) {
-		try {
-			fs.writeFile(
-				path.join( userDataFolder, '/user.info' ),
-				ormiStringify( [
-					Math.round( new Date().getTime() / 1000 ),
-					req.params.email,
-					req.params.firstname,
-					req.params.lastname
-				], '?~?' ),
-				function( err ) {
-					if ( err ) {
-						throw new Error();
-					} else {
-						res.send( 200 );
-						return next();
-					}
-				}
-			);
-		} catch ( e ) {
-			return errorHandler( req, res, e );
-		}
-	}
+
 };
 
 var userinfo = function( req, res, next ) {
@@ -495,7 +519,6 @@ function get_list_for_user( userid ) {
  */
 function deleteFolder( path ) {
 	// TODO
-	return next();
 }
 
 function sms( phone, text ) {
