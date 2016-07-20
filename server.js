@@ -2,6 +2,7 @@
 
 const restify = require( 'restify' );
 const mkdirp = require( 'mkdirp' );
+const util = require( 'util' );
 const async = require( 'async' );
 const os = require( 'os' );
 const process = require( 'process' );
@@ -15,6 +16,10 @@ const sendmail = require( 'sendmail' )( {
 		warn: console.warn,
 		error: console.error
 	}
+} );
+
+const smsclient = restify.createClient( {
+	url: 'https://www.smsmatrix.com/',
 } );
 
 const packagejson = require( './package.json' );
@@ -665,18 +670,30 @@ function deleteFolder( path ) {
 	// TODO
 }
 
+/**
+ * Helper function to send a GET request to an SMS processor.
+ * @param  {Numeric} 	phone Phone number of recipient.
+ * @param  {String} 	text  The content of the message to send.
+ * @return {Boolean}     	  Success status.
+ */
 function sms( phone, text ) {
-	// TODO
-	// $data = file_get_contents( 'http://www.smsmatrix.com/matrix?username='.urlencode( 'jbmartinoli@exou.com' )
-	//   .
-	//   '&password='.urlencode( 'Protect128' )
-	//   .
-	//   '&phone='.urlencode( $phone )
-	//   .
-	//   '&callerid='.urlencode( '14185090580' )
-	//   .
-	//   '&txt='.urlencode( $text )
-	// );
+	var smspath = util.format( '/matrix?username=%s&password=%s&phone=%s&callerid=%s&txt=%s',
+		encodeURIComponent( 'jbmartinoli@exou.com' ),
+		encodeURIComponent( 'Protect128' ),
+		encodeURIComponent( phone ),
+		encodeURIComponent( '14185090580' ),
+		encodeURIComponent( text )
+	);
+
+	smsclient.get( smspath, ( err, req, res, data ) => {
+		if ( err ) {
+			console.error( 'Error sending an SMS to [%s]: %s', smspath, err );
+			return false;
+		}
+
+		console.log( 'Sent activation SMS to [%s]', phone );
+		return true;
+	} );
 }
 
 var server = restify.createServer( {
@@ -756,6 +773,15 @@ server.post( basepath, function ( req, res, next ) {
 
 	res.setHeader( 'content-type', 'text/plain' );
 	res.send( req.params );
+} );
+
+/**
+ * Route to test SMS messages
+ * @param  {Numeric}	phone			The number ot send the SMS to.
+ * @param  {Numeric} 	message		The content of the message.
+ */
+server.get( '/test/sms/:phone/:message', ( req, res, next ) => {
+	res.send( sms( req.params.phone, req.params.message ) );
 } );
 
 /**
