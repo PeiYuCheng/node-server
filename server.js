@@ -260,7 +260,66 @@ var setdevicedata = function ( req, res, next ) {
 };
 
 var createsession = function ( req, res, next ) {
-	// TODO
+
+	var sessionPath = path.join( '..', '..', 'data', 'sessions', req.params.createsession );
+	var sessionDataPath = path.join( '..', '..', 'data', 'users', req.params.createsession, 'session.data' );
+	var sessionInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'session.info' );
+
+	try {
+		if ( !fs.accessSync( sessionPath ) ) {
+			mkdirp( sessionPath, '0775', ( err ) => {
+				if ( err ) {
+					throw e;
+				}
+			} );
+		}
+	} catch ( e ) {
+		console.error( 'Could not stat session path [%s]: %s', sessionPath, e.message );
+		res.send( 500 );
+		return false;
+	}
+
+	try {
+		if ( !fs.accessSync( sessionDataPath ) ) {
+			mkdirp( sessionPath, '0775', ( err ) => {
+				if ( err ) {
+					throw e;
+				}
+
+				fs.writeFile( sessionDataPath, req.params.data, ( err ) => {
+					if ( err ) {
+						throw err;
+					}
+					res.send( 200 );
+				} )
+			} );
+		}
+	} catch ( e ) {
+		console.error( 'Error saving session data at [%s]: %s', sessionPath, e.message );
+		res.send( 500 );
+		return false;
+	}
+
+	try {
+		if ( !fs.accessSync( sessionInfoPath ) ) {
+			mkdirp( sessionPath, '0775', ( err ) => {
+				if ( err ) {
+					throw e;
+				}
+
+				fs.writeFile( sessionInfoPath, 'H:' + req.params.createsession, ( err ) => {
+					if ( err ) {
+						throw err;
+					}
+					res.send( 200 );
+				} )
+			} );
+		}
+	} catch ( e ) {
+		console.error( 'Error saving session info at [%s]: %s', sessionPath, e.message );
+		res.send( 500 );
+		return false;
+	}
 };
 
 var joinsession = function ( req, res, next ) {
@@ -758,6 +817,10 @@ server.get( basepath, function ( req, res, next ) {
 		return load( req, res, next );
 	}
 
+	if ( 'createsession' in req.params ) {
+		return createsession( req, res, next );
+	}
+
 	if ( 'setdevicedata' in req.params ) {
 		return setdevicedata( req, res, next );
 	}
@@ -831,5 +894,11 @@ server.listen( 8080, function () {
 		fs.accessSync( path.join( '..', '..', 'data', 'pending' ) );
 	} catch ( e ) {
 		mkdirp( path.join( '..', '..', 'data', 'pending' ), '0775' );
+	}
+
+	try {
+		fs.accessSync( path.join( '..', '..', 'data', 'sessions' ) );
+	} catch ( e ) {
+		mkdirp( path.join( '..', '..', 'data', 'sessions' ), '0775' );
 	}
 } );
