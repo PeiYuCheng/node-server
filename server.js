@@ -7,6 +7,7 @@ const async = require( 'async' );
 const os = require( 'os' );
 const process = require( 'process' );
 const path = require( 'path' );
+const rimraf = require('rimraf'); //rm -Rf
 const fs = require( 'fs' );
 const assert = require( 'assert' );
 const sendmail = require( 'sendmail' )( {
@@ -345,7 +346,7 @@ var savegrids = function ( req, res, next ) {
 	if ( req.params.userid && req.params.age ) {
 		var fileName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'grids.data' );
 		try {
-			fs.writeFile( //assuming that the parent folder exists
+			fs.writeFile( //assuming that the parent folder exists, according to the PHP
 				fileName,
 				req.params.grids,
 				function ( err ) {
@@ -367,7 +368,7 @@ var savegrids = function ( req, res, next ) {
 			return errorHandler( req, res, e );
 		}
 	} else {
-		res.send( 500 );
+		return errorHandler( req, res, {message: 'missing parameters'} );
 	}
 
 	return next();
@@ -683,7 +684,26 @@ var getlist = function ( req, res, next ) {
 
 // TODO was "delete" in PHP
 var deleteboard = function ( req, res, next ) {
-	// TODO
+
+	if (req.params.authorid !== '' && req.params.authorid !== '.' && req.params.authorid !== '..'
+			&& req.params.delete !== '' && req.params.delete !== '.' && req.params.delete !== '..' ) {
+		var pathName = path.join( '..', '..', 'data', 'users', req.params.authorid, 'boards', req.params.delete );		
+		try {
+			rimraf( pathName, (err) => {
+				if (err) {
+					throw new Error(err);
+				} else {
+					res.send(200);
+				}
+			});
+		} catch ( e ) {
+			return errorHandler( req, res, e );
+		}
+	} else {
+		return errorHandler( req, res, {message: 'missing parameters'} );
+	}
+
+	return next();
 };
 
 /**
@@ -835,6 +855,10 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'get_grids' in req.params ) {
 		return get_grids( req, res, next );
+	}
+
+	if ( 'delete' in req.params ) {
+		return deleteboard( req, res, next );
 	}
 } );
 
