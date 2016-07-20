@@ -92,7 +92,7 @@ var endr = ( startTime, ping, did ) => {
 	}
 };
 
-var ping = function( req, res, next ) {
+var ping = function ( req, res, next ) {
 	const startTime = new Date().getTime();
 
 	// TODO
@@ -106,11 +106,11 @@ var ping = function( req, res, next ) {
  * @param  {[type]} res [description]
  * @return {[type]}     [description]
  */
-var fexists = function( req, res, next ) {
+var fexists = function ( req, res, next ) {
 	var fexists = path.join( '..', '..', req.params.fexists );
 
 	try {
-		fs.stat( fexists, function( err, stats ) {
+		fs.stat( fexists, function ( err, stats ) {
 			if ( err ) {
 				console.log( "Cannot find %s: %s", fexists, err );
 				res.send( 'NOT_FOUND' );
@@ -127,20 +127,20 @@ var fexists = function( req, res, next ) {
 };
 
 // POST request
-var preview = function( req, res, next ) {
+var preview = function ( req, res, next ) {
 	// TODO
 };
 
-var setdocinfo = function( req, res, next ) {
+var setdocinfo = function ( req, res, next ) {
 	var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
 	var docIdFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid );
 
 	async.series( [
-		function( callback ) {
+		function ( callback ) {
 			try {
-				fs.stat( boardsFolder, function( err, stats ) {
+				fs.stat( boardsFolder, function ( err, stats ) {
 					if ( err && err.code === 'ENOENT' ) {
-						mkdirp( boardsFolder, '0775', function( err ) {
+						mkdirp( boardsFolder, '0775', function ( err ) {
 							if ( err ) {
 								throw new Error( err );
 							} else {
@@ -156,11 +156,11 @@ var setdocinfo = function( req, res, next ) {
 			}
 		},
 
-		function( callback ) {
+		function ( callback ) {
 			try {
-				fs.stat( docIdFolder, function( err, stats ) {
+				fs.stat( docIdFolder, function ( err, stats ) {
 					if ( err && err.code === 'ENOENT' ) {
-						mkdirp( docIdFolder, '0775', function( err ) {
+						mkdirp( docIdFolder, '0775', function ( err ) {
 							if ( err ) {
 								throw new Error( err );
 							} else {
@@ -176,7 +176,7 @@ var setdocinfo = function( req, res, next ) {
 			}
 		},
 
-		function( callback ) {
+		function ( callback ) {
 			try {
 				fs.writeFile(
 					path.join( docIdFolder, '/board.info' ),
@@ -184,7 +184,7 @@ var setdocinfo = function( req, res, next ) {
 						req.params.title,
 						req.params.description
 					], '~.~', '~.~' ),
-					function( err ) {
+					function ( err ) {
 						if ( err ) {
 							throw new Error( err );
 						} else {
@@ -197,7 +197,7 @@ var setdocinfo = function( req, res, next ) {
 				callback( e, null );
 			}
 		}
-	], function( err, data ) { //This function gets called after the two tasks have called their "task callbacks"
+	], function ( err, data ) { //This function gets called after the two tasks have called their "task callbacks"
 		if ( err ) {
 			return errorHandler( req, res, err );
 		}
@@ -210,10 +210,10 @@ var setdocinfo = function( req, res, next ) {
 };
 
 
-var getdocinfo = function( req, res, next ) {
+var getdocinfo = function ( req, res, next ) {
 	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid, 'board.info' );
 	try {
-		fs.readFile( docName, function( err, data ) {
+		fs.readFile( docName, function ( err, data ) {
 			if ( err ) {
 				res.send( 500 );
 				console.log( "Error reading file '%s':%s", docName, data );
@@ -229,23 +229,23 @@ var getdocinfo = function( req, res, next ) {
 };
 
 // POST
-var publish = function( req, res, next ) {
+var publish = function ( req, res, next ) {
 	// TODO
 };
 
-var setcontroller = function( req, res, next ) {
+var setcontroller = function ( req, res, next ) {
 	// TODO
 };
 
-var setdevicedata = function( req, res, next ) {
+var setdevicedata = function ( req, res, next ) {
 	// TODO
 };
 
-var createsession = function( req, res, next ) {
+var createsession = function ( req, res, next ) {
 	// TODO
 };
 
-var joinsession = function( req, res, next ) {
+var joinsession = function ( req, res, next ) {
 	// TODO
 };
 
@@ -263,14 +263,14 @@ var setsessiondata = ( req, res, next ) => {
 	}
 };
 
-var savegrids = function( req, res, next ) {
+var savegrids = function ( req, res, next ) {
 	if ( req.params.userid && req.params.age ) {
 		var fileName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'grids.data' );
 		try {
 			fs.writeFile( //assuming that the parent folder exists
 				fileName,
 				req.params.grids,
-				function( err ) {
+				function ( err ) {
 					if ( err ) {
 						throw new Error( err );
 					} else {
@@ -295,14 +295,14 @@ var savegrids = function( req, res, next ) {
 	return next();
 };
 
-var get_grids = function( req, res, next ) {
+var get_grids = function ( req, res, next ) {
 	var fileName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'grids.data' );
 	try {
-		fs.stat( fileName, function( err, stats ) {
+		fs.stat( fileName, function ( err, stats ) {
 			if ( err && err.code === 'ENOENT' ) {
 				throw new Error( err );
 			} else {
-				fs.readFile( fileName, function( err, data ) {
+				fs.readFile( fileName, function ( err, data ) {
 					if ( err ) {
 						throw new Error( err );
 					} else {
@@ -318,11 +318,11 @@ var get_grids = function( req, res, next ) {
 	return next();
 };
 
-var get_icons = function( req, res, next ) {
+var get_icons = function ( req, res, next ) {
 	// TODO
 };
 
-var userpincreate = function( req, res, next ) {
+var userpincreate = function ( req, res, next ) {
 	var pin;
 	var userdata;
 	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
@@ -350,7 +350,7 @@ var userpincreate = function( req, res, next ) {
 							to: req.params.email,
 							subject: 'Your Ormiboard PIN: ' + pin,
 							content: 'Hello ' + req.params.firstname + ',\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
-						}, function( err, reply ) {
+						}, function ( err, reply ) {
 							if ( err ) {
 								throw err;
 							}
@@ -367,7 +367,7 @@ var userpincreate = function( req, res, next ) {
 	}
 };
 
-var userpinadd = function( req, res, next ) {
+var userpinadd = function ( req, res, next ) {
 	var pin;
 	var userdata;
 	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
@@ -396,7 +396,7 @@ var userpinadd = function( req, res, next ) {
 							to: req.params.email,
 							subject: 'Your Ormiboard PIN: ' + pin,
 							content: 'Hello,\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
-						}, function( err, reply ) {
+						}, function ( err, reply ) {
 							if ( err ) {
 								throw err;
 							}
@@ -420,7 +420,7 @@ var userpinadd = function( req, res, next ) {
  * @param  {Function}  next 		Middleware router
  * @return {Void}
  */
-var userpinactivate = function( req, res, next ) {
+var userpinactivate = function ( req, res, next ) {
 	var pin;
 	var userdata;
 	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
@@ -469,7 +469,7 @@ var userpinactivate = function( req, res, next ) {
 
 };
 
-var addpinactivate = function( req, res, next ) {
+var addpinactivate = function ( req, res, next ) {
 	var pin;
 	var userdata;
 	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
@@ -508,18 +508,18 @@ var addpinactivate = function( req, res, next ) {
 	next();
 };
 
-var setuserinfo = function( req, res, next ) {
+var setuserinfo = function ( req, res, next ) {
 	var dataFolder = path.join( '..', '..', 'data' );
 	var usersFolder = path.join( dataFolder, 'users' );
 	var userIdFolder = path.join( usersFolder, req.params.userid );
 	var userDataFolder = path.join( userIdFolder, 'data' );
 	var paths = [ dataFolder, usersFolder, userIdFolder, userDataFolder ];
 
-	async.forEachOfSeries( paths, function( value, key, callback ) {
+	async.forEachOfSeries( paths, function ( value, key, callback ) {
 		try {
-			fs.stat( paths[ key ], function( err, stats ) {
+			fs.stat( paths[ key ], function ( err, stats ) {
 				if ( err && err.code === 'ENOENT' ) {
-					mkdirp( paths[ key ], '0775', function( err ) {
+					mkdirp( paths[ key ], '0775', function ( err ) {
 						if ( err ) {
 							throw new Error( err );
 						} else {
@@ -533,7 +533,7 @@ var setuserinfo = function( req, res, next ) {
 		} catch ( e ) {
 			callback( e );
 		}
-	}, function( err ) {
+	}, function ( err ) {
 		if ( err ) {
 			return errorHandler( req, res, err );
 		}
@@ -542,7 +542,7 @@ var setuserinfo = function( req, res, next ) {
 		}
 	} );
 
-	var write = function( req, res ) {
+	var write = function ( req, res ) {
 		try {
 			fs.writeFile(
 				path.join( userDataFolder, '/user.info' ),
@@ -552,7 +552,7 @@ var setuserinfo = function( req, res, next ) {
 					req.params.firstname,
 					req.params.lastname
 				], '?~?' ),
-				function( err ) {
+				function ( err ) {
 					if ( err ) {
 						throw new Error( err );
 					} else {
@@ -568,14 +568,14 @@ var setuserinfo = function( req, res, next ) {
 	return next();
 };
 
-var userinfo = function( req, res, next ) {
+var userinfo = function ( req, res, next ) {
 	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
 	try {
-		fs.stat( docName, function( err, stats ) {
+		fs.stat( docName, function ( err, stats ) {
 			if ( err && err.code === 'ENOENT' ) {
 				res.send( 'NOT_FOUND' );
 			} else {
-				fs.readFile( docName, function( err, data ) {
+				fs.readFile( docName, function ( err, data ) {
 					if ( err ) {
 						throw new Error( err );
 					} else {
@@ -591,20 +591,20 @@ var userinfo = function( req, res, next ) {
 	return next();
 };
 
-var deletesession = function( req, res, next ) {
+var deletesession = function ( req, res, next ) {
 	// TODO
 };
 
-var quitsession = function( req, res, next ) {
+var quitsession = function ( req, res, next ) {
 	// TODO
 };
 
-var getlist = function( req, res, next ) {
+var getlist = function ( req, res, next ) {
 	// TODO
 };
 
 // TODO was "delete" in PHP
-var deleteboard = function( req, res, next ) {
+var deleteboard = function ( req, res, next ) {
 	// TODO
 };
 
@@ -615,12 +615,12 @@ var deleteboard = function( req, res, next ) {
  * @param  {Function} next [description]
  * @return {[type]}        [description]
  */
-var load = function( req, res, next ) {
+var load = function ( req, res, next ) {
 	const userid = req.params.userid;
 	const fileroot = path.join( '..', '..', 'data', 'users', userid, 'boards', req.params.load, 'board.data' );
 
 	try {
-		fs.readFile( fileroot, function( err, board ) {
+		fs.readFile( fileroot, function ( err, board ) {
 
 			if ( err ) {
 				// Problem reading the file?
@@ -646,7 +646,7 @@ var load = function( req, res, next ) {
 	}
 };
 
-var errlog = function( req, res, next ) {
+var errlog = function ( req, res, next ) {
 	// TODO
 };
 
@@ -690,7 +690,7 @@ server.use( restify.bodyParser() );
 /**
  * GET request router
  */
-server.get( basepath, function( req, res, next ) {
+server.get( basepath, function ( req, res, next ) {
 	res.setHeader( 'content-type', 'text/plain; charset=utf-8' );
 
 	console.log( 'Complete request parameters from : %s', JSON.stringify( req.params ) );
@@ -743,7 +743,7 @@ server.get( basepath, function( req, res, next ) {
 /**
  * POST request router
  */
-server.post( basepath, function( req, res, next ) {
+server.post( basepath, function ( req, res, next ) {
 	res.setHeader( 'content-type', 'text/plain; charset=utf-8' );
 
 	if ( 'preview' in req.params ) {
@@ -761,7 +761,7 @@ server.post( basepath, function( req, res, next ) {
 /**
  * Emits health information
  */
-server.get( '/health', function( req, res, next ) {
+server.get( '/health', function ( req, res, next ) {
 	res.send( {
 		uptime: {
 			time: Math.floor( os.uptime() / 60 / 60 ),
@@ -779,7 +779,7 @@ server.get( '/health', function( req, res, next ) {
 /**
  * Start the server
  */
-server.listen( 8080, function() {
+server.listen( 8080, function () {
 	console.log( '%s listening at %s', server.name, server.url );
 	console.log( 'Environment: %s', process.env.NODE_ENV );
 
