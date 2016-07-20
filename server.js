@@ -18,6 +18,8 @@ const sendmail = require( 'sendmail' )( {
 	}
 } );
 
+const env = process.env.NODE_ENV || 'DEVELOPMENT';
+
 const smsclient = restify.createClient( {
 	url: 'https://www.smsmatrix.com/',
 } );
@@ -243,7 +245,18 @@ var setcontroller = function ( req, res, next ) {
 };
 
 var setdevicedata = function ( req, res, next ) {
-	// TODO
+	var devicedatapath = path.join( '..', '..', 'data', 'users', req.params.userid, 'devices', req.params.did + '.data' );
+
+	try {
+		fs.writeFile( devicedatapath, req.params.data, ( err ) => {
+			if ( err ) {
+				throw err;
+			}
+			res.send( 200 );
+		} );
+	} catch ( e ) {
+		console.error( 'Could not set device data {%s} for [user %s; device %s]: %s', req.params.data, req.params.userid, req.params.did, e.message );
+	}
 };
 
 var createsession = function ( req, res, next ) {
@@ -255,7 +268,8 @@ var joinsession = function ( req, res, next ) {
 };
 
 var setsessiondata = ( req, res, next ) => {
-	const sessiondatapath = path.join( '..', '..', 'data', 'sessions', req.params.setsessiondata, 'session.data' );
+	var sessiondatapath = path.join( '..', '..', 'data', 'sessions', req.params.setsessiondata, 'session.data' );
+
 	try {
 		fs.writeFile( sessiondatapath, req.params.data, ( err ) => {
 			if ( err ) {
@@ -744,6 +758,10 @@ server.get( basepath, function ( req, res, next ) {
 		return load( req, res, next );
 	}
 
+	if ( 'setdevicedata' in req.params ) {
+		return setdevicedata( req, res, next );
+	}
+
 	if ( 'setsessiondata' in req.params ) {
 		return setsessiondata( req, res, next );
 	}
@@ -806,8 +824,7 @@ server.get( '/health', function ( req, res, next ) {
  * Start the server
  */
 server.listen( 8080, function () {
-	console.log( '%s listening at %s', server.name, server.url );
-	console.log( 'Environment: %s', process.env.NODE_ENV );
+	console.log( '%s listening at %s in %s environment...', server.name, server.url, env );
 
 	// Bootstrap global folders:
 	try {
