@@ -136,7 +136,57 @@ var fexists = function ( req, res, next ) {
 
 // POST request
 var preview = function ( req, res, next ) {
-	// TODO
+	var data = req.params.data.replace( '~`', '+' );
+	data = data.substr( data.indexOf( ',' ) + 1 );
+	var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
+	var paths = [ boardsFolder, path.join( boardsFolder, req.params.preview ) ];
+
+	async.forEachOfSeries( paths, function ( value, key, callback ) {
+		try {
+			fs.stat( paths[ key ], function ( err, stats ) {
+				if ( err && err.code === 'ENOENT' ) {
+					mkdirp( paths[ key ], '0775', function ( err ) {
+						if ( err ) {
+							throw new Error( err );
+						} else {
+							callback( null );
+						}
+					} );
+				} else {
+					callback( null );
+				}
+			} );
+		} catch ( e ) {
+			callback( e );
+		}
+	}, function ( err ) {
+		if ( err ) {
+			return errorHandler( req, res, err );
+		}
+		if ( err === null ) {
+			write( req, res );
+		}
+	} );
+
+	var write = function ( req, res ) {
+		try {
+			fs.writeFile(
+				path.join( boardsFolder, req.params.preview, req.params.slide + '.jpg' ),
+				new Buffer( data, 'base64' ),
+				function ( err ) {
+					if ( err ) {
+						throw new Error( err );
+					} else {
+						res.send( 200 );
+					}
+				}
+			);
+		} catch ( e ) {
+			return errorHandler( req, res, e );
+		}
+	}
+
+	return next();
 };
 
 var setdocinfo = function ( req, res, next ) {
