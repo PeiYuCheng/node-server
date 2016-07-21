@@ -325,7 +325,62 @@ var createsession = function ( req, res, next ) {
 };
 
 var joinsession = function ( req, res, next ) {
-	// TODO
+
+	var sessionPath = path.join( '..', '..', 'data', 'sessions', req.params.createsession );
+	var sessionDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'session.data' );
+	var sessionInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'session.info' );
+
+	if ( !fs.accessSync( sessionDataPath ) ) {
+		res.send( 'NOT FOUND' );
+	} else {
+		async.parallel( [
+			( callback ) => {
+				try {
+					fs.writeFile( sessionInfoPath, 'P:' + req.params.joinsession, ( err ) => {
+						if ( err ) {
+							throw err;
+						}
+						callback( null );
+					} );
+				} catch ( e ) {
+					callback( e );
+				}
+			},
+
+			( callback ) => {
+				try {
+					fs.writeFile( sessionInfoPath, 'H:' + req.params.createsession, ( err ) => {
+						if ( err ) {
+							throw err;
+						}
+						callback( null, null );
+					} );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			},
+
+			( callback ) => {
+				try {
+					fs.readFile( sessionDataPath, function ( err, data ) {
+						if ( err ) {
+							throw new Error( err );
+						} else {
+							callback( null, data.toString( 'utf8' ) );
+						}
+					} );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			}
+		], ( err, results ) => {
+			if ( err ) {
+				errorHandler( req, res, err );
+			}
+			res.send( 200, results[ 2 ] );
+		} );
+	}
+
 };
 
 var setsessiondata = ( req, res, next ) => {
@@ -713,7 +768,9 @@ var getlist = function ( req, res, next ) {
 // TODO was "delete" in PHP
 var deleteboard = function ( req, res, next ) {
 
-	if ( req.params.authorid !== '' && req.params.authorid !== '.' && req.params.authorid !== '..' && req.params.delete !== '' && req.params.delete !== '.' && req.params.delete !== '..' ) {
+	if ( req.params.authorid !== '' && req.params.authorid !== '.' && req.params.authorid !== '..' &&
+		req.params.delete !== '' && req.params.delete !== '.' && req.params.delete !== '..' ) {
+
 		var pathName = path.join( '..', '..', 'data', 'users', req.params.authorid, 'boards', req.params.delete );
 		try {
 			rimraf( pathName, ( err ) => {
@@ -728,7 +785,7 @@ var deleteboard = function ( req, res, next ) {
 		}
 	} else {
 		return errorHandler( req, res, {
-			message: 'invalid parameters'
+			message: 'missing parameters'
 		} );
 	}
 
@@ -872,6 +929,10 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'setdevicedata' in req.params ) {
 		return setdevicedata( req, res, next );
+	}
+
+	if ( 'joinsession' in req.params ) {
+		return joinsession( req, res, next );
 	}
 
 	if ( 'setsessiondata' in req.params ) {
