@@ -7,7 +7,7 @@ const async = require( 'async' );
 const os = require( 'os' );
 const process = require( 'process' );
 const path = require( 'path' );
-const rimraf = require('rimraf'); //rm -Rf
+const rimraf = require( 'rimraf' ); //rm -Rf
 const fs = require( 'fs' );
 const assert = require( 'assert' );
 const sendmail = require( 'sendmail' )( {
@@ -144,6 +144,7 @@ var setdocinfo = function ( req, res, next ) {
 	var docIdFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid );
 
 	async.series( [
+
 		function ( callback ) {
 			try {
 				fs.stat( boardsFolder, function ( err, stats ) {
@@ -368,7 +369,9 @@ var savegrids = function ( req, res, next ) {
 			return errorHandler( req, res, e );
 		}
 	} else {
-		return errorHandler( req, res, {message: 'missing parameters'} );
+		return errorHandler( req, res, {
+			message: 'missing parameters'
+		} );
 	}
 
 	return next();
@@ -527,8 +530,7 @@ var userpinactivate = function ( req, res, next ) {
 					req.params.email,
 					req.params.firstname,
 					req.params.lastname
-				], '?~?' ),
-				( err ) => {
+				], '?~?' ), ( err ) => {
 					if ( err ) {
 						errorHandler( req, res, err );
 					} else {
@@ -671,7 +673,33 @@ var userinfo = function ( req, res, next ) {
 };
 
 var deletesession = function ( req, res, next ) {
-	// TODO
+	var sessionPath = path.join( '..', '..', 'data', 'sessions', req.params.deletesession );
+	var userSessionPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'session.info' );
+
+	if ( req.params.deletesession !== '' && req.params.deletesession !== '.' && req.params.deletesession !== '..' ) {
+		try {
+			rimraf( sessionPath, ( err ) => {
+				if ( err ) {
+					throw new Error( err );
+				}
+			} );
+		} catch ( e ) {
+			return errorHandler( req, res, e );
+		}
+	}
+
+	try {
+		fs.unlink( userSessionPath, ( err ) => {
+			if ( err && err.code !== 'ENOENT' ) {
+				throw new Error( err );
+			} else {
+				res.send( 200 );
+			}
+		} );
+	} catch ( e ) {
+		return errorHandler( req, res, e );
+	}
+
 };
 
 var quitsession = function ( req, res, next ) {
@@ -685,22 +713,23 @@ var getlist = function ( req, res, next ) {
 // TODO was "delete" in PHP
 var deleteboard = function ( req, res, next ) {
 
-	if (req.params.authorid !== '' && req.params.authorid !== '.' && req.params.authorid !== '..'
-			&& req.params.delete !== '' && req.params.delete !== '.' && req.params.delete !== '..' ) {
-		var pathName = path.join( '..', '..', 'data', 'users', req.params.authorid, 'boards', req.params.delete );		
+	if ( req.params.authorid !== '' && req.params.authorid !== '.' && req.params.authorid !== '..' && req.params.delete !== '' && req.params.delete !== '.' && req.params.delete !== '..' ) {
+		var pathName = path.join( '..', '..', 'data', 'users', req.params.authorid, 'boards', req.params.delete );
 		try {
-			rimraf( pathName, (err) => {
-				if (err) {
-					throw new Error(err);
+			rimraf( pathName, ( err ) => {
+				if ( err ) {
+					throw new Error( err );
 				} else {
-					res.send(200);
+					res.send( 200 );
 				}
-			});
+			} );
 		} catch ( e ) {
 			return errorHandler( req, res, e );
 		}
 	} else {
-		return errorHandler( req, res, {message: 'missing parameters'} );
+		return errorHandler( req, res, {
+			message: 'invalid parameters'
+		} );
 	}
 
 	return next();
@@ -859,6 +888,10 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'delete' in req.params ) {
 		return deleteboard( req, res, next );
+	}
+
+	if ( 'deletesession' in req.params ) {
+		return deletesession( req, res, next );
 	}
 } );
 
