@@ -64,8 +64,11 @@ var ormiStringify = ( fields, delimiter, terminator ) => {
 	if ( !Array.isArray( fields ) || delimiter == null ) {
 		return false;
 	}
-
-	return fields.join( delimiter ) + terminator;
+	if ( terminator == null ) {
+		return fields.join( delimiter );
+	} else {
+		return fields.join( delimiter ) + terminator;
+	}
 };
 
 /**
@@ -965,7 +968,7 @@ var deletesession = function ( req, res, next ) {
 };
 
 var quitsession = function ( req, res, next ) {
-	var userSessionPath = path.join( '..', '..', 'data', 'users',req.params.userid, 'data', 'session.info');
+	var userSessionPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'session.info' );
 	try {
 		fs.unlink( userSessionPath, ( err ) => {
 			if ( err && err.code !== 'ENOENT' ) {
@@ -976,7 +979,7 @@ var quitsession = function ( req, res, next ) {
 		} );
 	} catch ( e ) {
 		return errorHandler( req, res, e );
-	}	
+	}
 };
 
 var getlist = function ( req, res, next ) {
@@ -1177,8 +1180,8 @@ server.get( basepath, function ( req, res, next ) {
 		return setcontroller( req, res, next );
 	}
 
-	if ('quitsession' in req.params){
-		return quitsession(req, res, next);
+	if ( 'quitsession' in req.params ) {
+		return quitsession( req, res, next );
 	}
 } );
 
