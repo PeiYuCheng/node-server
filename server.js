@@ -7,8 +7,10 @@ const async = require( 'async' );
 const os = require( 'os' );
 const process = require( 'process' );
 const path = require( 'path' );
+const replace = require( 'replace-in-file' );
 const rimraf = require( 'rimraf' ); //rm -Rf
 const fs = require( 'fs' );
+const fse = require( 'fs-extra' );
 const assert = require( 'assert' );
 const sendmail = require( 'sendmail' )( {
 	logger: {
@@ -289,7 +291,134 @@ var getdocinfo = function ( req, res, next ) {
 
 // POST
 var publish = function ( req, res, next ) {
-	// TODO
+	var part = parseInt( req.params.part );
+	var partmax = parseInt( req.params.partmax );
+
+	var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
+	var publishFolder = path.join( boardsFolder, req.params.publish );
+
+	async.series( [
+
+		function ( callback ) {
+			try {
+				fs.stat( publishFolder, function ( err, stats ) {
+					if ( err && err.code === 'ENOENT' ) {
+						mkdirp( publishFolder, '0775', function ( err ) {
+							if ( err ) {
+								throw new Error( err );
+							} else {
+								callback( null, null );
+							}
+						} );
+					} else {
+						callback( null, null );
+					}
+				} );
+			} catch ( e ) {
+				callback( e, null );
+			}
+		},
+
+		function ( callback ) {
+			if ( part === 0 ) {
+				try {
+					fs.writeFile(
+						path.join( publishFolder, 'data.part' ),
+						req.params.data,
+						function ( err ) {
+							if ( err ) {
+								throw new Error( err );
+							} else {
+								callback( null, null );
+							}
+						}
+					);
+				} catch ( e ) {
+					callback( e, null );
+				}
+			} else {
+				try {
+					fs.appendFile(
+						path.join( publishFolder, 'data.part' ),
+						req.params.data,
+						function ( err ) {
+							if ( err ) {
+								throw new Error( err );
+							} else {
+								callback( null, null );
+							}
+						}
+					);
+				} catch ( e ) {
+					callback( e, null );
+				}
+			}
+		},
+
+		function ( callback ) {
+			if ( part == partmax ) {
+				try {
+					fs.rename(
+						path.join( publishFolder, 'data.part' ),
+						path.join( publishFolder, 'board.data' ),
+						function ( err ) {
+							if ( err ) {
+								throw new Error( err );
+							} else {
+								callback( null, null );
+							}
+						}
+					);
+				} catch ( e ) {
+					callback( e, null );
+				}
+			} else {
+				callback( null, null );
+			}
+		},
+
+		function ( callback ) {
+			if ( part == partmax ) {
+				try {
+					fse.copy(
+						path.join( publishFolder, 'board.data' ),
+						path.join( publishFolder, 'board.html' ),
+						function ( err ) {
+							if ( err ) {
+								throw new Error( err );
+							} else {
+								replace( {
+										files: path.join( publishFolder, 'board.html' ),
+										replace: '~`',
+										with: '+'
+									},
+									function ( error, changedFiles ) {
+										if ( err ) {
+											throw new Error( err );
+										} else {
+											callback( null, null );
+										}
+									} );
+							}
+						} );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			} else {
+				callback( null, null );
+			}
+		}
+
+	], function ( err, data ) {
+		if ( err ) {
+			return errorHandler( req, res, err );
+		}
+		if ( err === null ) {
+			res.send( 200 );
+		}
+	} );
+
+	return next();
 };
 
 var setcontroller = function ( req, res, next ) {

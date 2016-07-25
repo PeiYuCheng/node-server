@@ -30,7 +30,9 @@
   "homepage": "https://bitbucket.org/exou/ormiboard-backend-nodejs#readme",
   "dependencies": {
     "async": "^2.0.0",
+    "fs-extra": "^0.30.0",
     "mkdirp": "^0.5.1",
+    "replace-in-file": "^1.1.1",
     "restify": "^4.1.1",
     "rimraf": "^2.5.3",
     "sendmail": "^0.2.2"
