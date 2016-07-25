@@ -422,7 +422,35 @@ var publish = function ( req, res, next ) {
 };
 
 var setcontroller = function ( req, res, next ) {
-	// TODO
+	var filePath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'controller.info' );
+	if ( req.params.did === '' ) {
+		try {
+			fs.unlink( filePath, ( err ) => {
+				if ( err && err.code !== 'ENOENT' ) {
+					throw new Error( err );
+				} else {
+					res.send( 200 );
+				}
+			} );
+		} catch ( e ) {
+			return errorHandler( req, res, e );
+		}
+	} else {
+		try {
+			fs.writeFile( //folder exist check is at SERVER INSTALL
+				filePath,
+				req.params.did,
+				function ( err ) {
+					if ( err ) {
+						throw new Error( err );
+					} else {
+						res.send( 200 );
+					}
+				} );
+		} catch ( e ) {
+			return errorHandler( req, res, e );
+		}
+	}
 };
 
 var setdevicedata = function ( req, res, next ) {
@@ -1132,6 +1160,10 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'deletesession' in req.params ) {
 		return deletesession( req, res, next );
+	}
+
+	if ( 'setcontroller' in req.params ) {
+		return setcontroller( req, res, next );
 	}
 } );
 
