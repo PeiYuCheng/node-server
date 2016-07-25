@@ -965,7 +965,18 @@ var deletesession = function ( req, res, next ) {
 };
 
 var quitsession = function ( req, res, next ) {
-	// TODO
+	var userSessionPath = path.join( '..', '..', 'data', 'users',req.params.userid, 'data', 'session.info');
+	try {
+		fs.unlink( userSessionPath, ( err ) => {
+			if ( err && err.code !== 'ENOENT' ) {
+				throw new Error( err );
+			} else {
+				res.send( 200 );
+			}
+		} );
+	} catch ( e ) {
+		return errorHandler( req, res, e );
+	}	
 };
 
 var getlist = function ( req, res, next ) {
@@ -1164,6 +1175,10 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'setcontroller' in req.params ) {
 		return setcontroller( req, res, next );
+	}
+
+	if ('quitsession' in req.params){
+		return quitsession(req, res, next);
 	}
 } );
 
