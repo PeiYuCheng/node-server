@@ -1056,9 +1056,60 @@ var errlog = function ( req, res, next ) {
 };
 
 // Helper function from php.
-function get_list_for_user( userid ) {
-	// TODO
-	// req.uid
+function get_list_for_user( uid ) {
+	var list;
+	var folder = path.join( '..', '..', 'data', 'users', uid, 'boards' );
+	var counter = 100;
+
+	try {
+		if ( fs.accessSync( folder ) ) {
+			fs.readdir( folder, ( err, folders ) => {
+
+				// List of folders and maybe files
+				async.map( folders, fs.stat, ( err, stats ) => {
+
+					// Filter out the list so it contains only folders
+					async.filter( stats, ( path, callback ) => {
+							fs.stat( path, ( err, stats ) => {
+								if ( stats.isDirectory() ) {
+									list = stats.
+								}
+							} )
+						},
+						( err, results ) => {
+
+						} );
+				} );
+			} );
+		} else {
+			throw new Error( 'Cannot stat' + folder );
+		}
+	} catch ( e ) {
+		console.error( 'Could get_list_for_user [%s]', uid, e.message );
+		return false;
+	}
+
+	// if ( file_exists( $folder ) ) {
+	if ( $handle = opendir( $folder ) ) {
+		while ( false !== ( $docid = readdir( $handle ) ) && $counter > 0 ) {
+			if ( $docid != '.' && $docid != '..' && $docid != 'data' && is_dir( $folder.$docid ) ) {
+				$age = filemtime( $folder.$docid.
+					"/board.data" );
+				//$docid = basename($file, '.data');
+				$title = file_exists( $folder.$docid.
+					'/board.info' ) ? file_get_contents( $folder.$docid.
+					'/board.info' ) : '';
+				$list. = $docid.
+				'~!~'.$age.
+				'~!~'.$title.
+				'~@~';
+				$counter--;
+			}
+		}
+		closedir( $handle );
+	}
+	// }
+	return $list;
 }
 
 /**
@@ -1166,6 +1217,10 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'get_grids' in req.params ) {
 		return get_grids( req, res, next );
+	}
+
+	if ( 'getlist' in req.params ) {
+		return getlist( req, res, next );
 	}
 
 	if ( 'delete' in req.params ) {
