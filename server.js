@@ -64,11 +64,8 @@ var ormiStringify = ( fields, delimiter, terminator ) => {
 	if ( !Array.isArray( fields ) || delimiter == null ) {
 		return false;
 	}
-	if ( terminator == null ) {
-		return fields.join( delimiter );
-	} else {
-		return fields.join( delimiter ) + terminator;
-	}
+	var ormiString = terminator == null ? fields.join( delimiter ) : fields.join( delimiter ) + terminator;
+	return ormiString;
 };
 
 /**
@@ -983,7 +980,25 @@ var quitsession = function ( req, res, next ) {
 };
 
 var getlist = function ( req, res, next ) {
-	// TODO
+	var data;
+	async.series( [
+
+			function ( callback ) {
+				data = get_list_for_user( req.params.getlist, callback );
+			}
+		],
+		function ( err, data ) {
+			if ( err ) {
+				return errorHandler( req, res, err );
+			}
+			if ( err === null ) {
+				if ( data === false ) {
+					res.send( 500 );
+				} else {
+					res.send( data.toString( 'utf8' ) );
+				}
+			}
+		} );
 };
 
 // TODO was "delete" in PHP
@@ -1055,61 +1070,123 @@ var errlog = function ( req, res, next ) {
 	// TODO
 };
 
-// Helper function from php.
-function get_list_for_user( uid ) {
-	var list;
+function get_list_for_user( uid, parentCallback ) {
+	var list = '';
 	var folder = path.join( '..', '..', 'data', 'users', uid, 'boards' );
 	var counter = 100;
+	var folderItems;
 
-	try {
-		if ( fs.accessSync( folder ) ) {
-			fs.readdir( folder, ( err, folders ) => {
-
-				// List of folders and maybe files
-				async.map( folders, fs.stat, ( err, stats ) => {
-
-					// Filter out the list so it contains only folders
-					async.filter( stats, ( path, callback ) => {
-							fs.stat( path, ( err, stats ) => {
-								if ( stats.isDirectory() ) {
-									list = stats.
-								}
-							} )
-						},
-						( err, results ) => {
-
-						} );
-				} );
+	async.series( [
+		//get folder content
+		function ( callback ) {
+			if ( fileExistsSync( folder ) ) {
+				try {
+					fs.readdir( folder, function ( err, items ) {
+						if ( err ) {
+							throw new Error( err );
+						} else {
+							folderItems = items;
+							callback( null, null );
+						}
+					} );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			}
+		},
+		
+		//filter folderItems. Get items that are directories and != 'data'		
+		function ( callback ) {
+			async.filter( folderItems, function ( item, filterCallback ) {
+				try {
+					filterCallback( null, item != 'data' && isDirectorySync( path.join( folder, item ) ) );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			}, function ( err, results ) {
+				if ( err ) {
+					callback( err, null );
+				} else {
+					folderItems = results;
+					callback( null, null );
+				}
 			} );
-		} else {
-			throw new Error( 'Cannot stat' + folder );
+		},
+		//get age and title of items, then append to string.	
+		function ( callback ) {
+			async.forEachSeries( folderItems, function ( item, forEachCallback ) {
+				if ( counter > 0 ) {
+					try {
+						fs.stat( path.join( folder, item, '/board.data' ), ( err, stats ) => {
+							if ( err ) {
+								forEachCallback( err );
+							} else {
+								var age = Math.floor( new Date( stats.mtime ).valueOf() / 1000 );
+								//get title, which is content of board.info file
+								fs.stat( path.join( folder, item, '/board.info' ), ( err, stats ) => {
+									if ( err && err.code === 'ENOENT' ) {
+										var title = '';
+										list = list.concat( ormiStringify( [ item, age, title ], '~!~', '~@~' ) );
+										counter--;
+										forEachCallback( null );
+									} else if ( err == null ) {
+										fs.readFile( path.join( folder, item, '/board.info' ), ( err, data ) => {
+											if ( err ) {
+												forEachCallback( err );
+											} else {
+												var title = data;
+												list = list.concat( ormiStringify( [ item, age, title ], '~!~', '~@~' ) );
+												counter--;
+												forEachCallback( null );
+											}
+										} );
+									} else { //fs.stat error
+										forEachCallback( err );
+									}
+								} );
+							}
+						} );
+					} catch ( e ) {
+						forEachCallback( e );
+					}
+				}
+			}, function ( err ) { //callback of forEachSeries
+				if ( err ) {
+					callback( err, null );
+				}
+				if ( err === null ) {
+					callback( null, null );
+				}
+			} );
 		}
-	} catch ( e ) {
-		console.error( 'Could get_list_for_user [%s]', uid, e.message );
+	], function ( err, data ) { //callback of async.series
+		if ( err ) {
+			parentCallback( err, null );
+		}
+		if ( err === null ) {
+			parentCallback( null, list );
+		}
+	} );
+}
+
+/**
+ * Helper function that determines whether file is accessible or not
+ */
+function fileExistsSync( filePath ) {
+	try {
+		fs.accessSync( filePath, fs.F_OK );
+		return true;
+	} catch ( err ) {
 		return false;
 	}
+}
 
-	// if ( file_exists( $folder ) ) {
-	if ( $handle = opendir( $folder ) ) {
-		while ( false !== ( $docid = readdir( $handle ) ) && $counter > 0 ) {
-			if ( $docid != '.' && $docid != '..' && $docid != 'data' && is_dir( $folder.$docid ) ) {
-				$age = filemtime( $folder.$docid.
-					"/board.data" );
-				//$docid = basename($file, '.data');
-				$title = file_exists( $folder.$docid.
-					'/board.info' ) ? file_get_contents( $folder.$docid.
-					'/board.info' ) : '';
-				$list. = $docid.
-				'~!~'.$age.
-				'~!~'.$title.
-				'~@~';
-				$counter--;
-			}
-		}
-		closedir( $handle );
+function isDirectorySync( filePath ) {
+	try {
+		return fs.statSync( filePath ).isDirectory();
+	} catch ( err ) {
+		return false;
 	}
-	// }
-	return $list;
 }
 
 /**
