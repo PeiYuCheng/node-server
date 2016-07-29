@@ -78,7 +78,7 @@ var ormiStringify = ( fields, delimiter, terminator ) => {
 var endr = ( startTime, ping, did ) => {
 	const now = new Date().getTime();
 	const delay = now - startTime;
-	const logFile = path.join( '..', '..', 'data', 'log', 'log.data' );
+	const logFile = path.join( '.', 'data', 'log', 'log.data' );
 	const logLine = ormiStringify( [ now, delay, ping, did ], '~', os.EOL );
 
 	try {
@@ -105,9 +105,334 @@ var endr = ( startTime, ping, did ) => {
 var ping = function ( req, res, next ) {
 	const startTime = new Date().getTime();
 
-	// TODO
+	var pingFolder = path.join( '.', 'data', 'users', req.params.ping );
+	var dataFolder = path.join( pingFolder, 'data' );
+	var devicesFolder = path.join( pingFolder, 'devices' );
+	var sessionInfoPath = path.join( dataFolder, 'session.info' );
+	var sessionDataPath;
+	var sid;
+	var sessionDataExist = false;
 
-	// endr( startTime, req.params.ping, req.params.did );
+
+	async.series( [
+
+			//check if (file_exists('../../data/users/'.$_GET['ping'].'/'))
+			//stop if doesn't exist
+			function ( callback ) {
+				try {
+					fs.stat( pingFolder, function ( err, stats ) {
+						if ( err && err.code === 'ENOENT' ) {
+							//do not excecute the rest of the functions if folder does not exist
+							callback( 'stop', null );
+						} else {
+							callback( null, null );
+						}
+					} );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			},
+
+			//create dataFolder, if it doesn't exist
+			function ( callback ) {
+				try {
+					mkdirp( dataFolder, '0775', function ( err ) {
+						if ( err ) {
+							console.log( "error mkdirp for dataFolder is: " + err );
+							if ( err.code == 'EEXIST' ) {
+								callback( null, null );
+							} else {
+								throw new Error( err );
+							}
+						} else {
+							callback( null, null );
+						}
+					} );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			},
+
+			//create deviceFolder, if it doesn't exist
+			function ( callback ) {
+				try {
+					mkdirp( devicesFolder, '0775', function ( err ) {
+						if ( err ) {
+							if ( err.code == 'EEXIST' ) {
+								callback( null, null );
+							} else {
+								throw new Error( err );
+							}
+						} else {
+							callback( null, null );
+						}
+					} );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			},
+
+			//write content to device data
+			function ( callback ) {
+				if ( req.params.did ) {
+					try {
+						fs.writeFile(
+							path.join( devicesFolder, req.params.did + '.data' ),
+							req.params.c,
+							function ( err ) {
+								if ( err ) {
+									throw new Error( err );
+								} else {
+									callback( null, null );
+								}
+							}
+						);
+					} catch ( e ) {
+						callback( e, null );
+					}
+				} else {
+					callback( null, null );
+				}
+			},
+
+			//get session.info content. Put content into var sid
+			function ( callback ) {
+				try {
+					fs.stat( sessionInfoPath, function ( err, stats ) {
+						if ( err && err.code === 'ENOENT' ) {
+							sid = '';
+							callback( null, sid + '!~!' );
+						} else {
+							fs.readFile( sessionInfoPath, 'utf8', function ( err, data ) {
+								if ( err ) {
+									throw new Error( err );
+								} else {
+									sid = data;
+									callback( null, sid + '!~!' );
+								}
+							} );
+						}
+					} );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			},
+
+			//if session.data exist, set sessionDataExist = true
+			//if not, delete session.info file
+			function ( callback ) {
+				if ( sid != '' ) {
+					sid = sid.substr( 2 );
+					sessionDataPath = path.join( '.', 'data', 'sessions', sid, 'session.data' );
+					try {
+						fs.stat( sessionDataPath, function ( err, stats ) {
+							if ( err && err.code === 'ENOENT' ) { //file does not exist
+								fs.unlink( sessionInfoPath, ( err ) => {
+									if ( err && err.code !== 'ENOENT' ) {
+										throw new Error( err );
+									} else {
+										callback( null, '!~!' );
+									}
+								} );
+							} else { //session.data exist
+								//set if condition for next function, to improve code readability
+								sessionDataExist = true;
+								callback( null, null );
+							}
+						} );
+					} catch ( e ) {
+						callback( e, null );
+					}
+				} else {
+					callback( null, 'NOT_FOUND!~!' );
+				}
+			},
+
+			//get content of session.data, and send it as result
+			function ( callback ) {
+				if ( sessionDataExist ) {
+					try {
+						fs.readFile( sessionDataPath, 'utf8', function ( err, data ) {
+							if ( err ) {
+								throw new Error( err );
+							} else {
+								callback( null, data + '!~!' );
+							}
+						} );
+					} catch ( e ) {
+						callback( e, null );
+					}
+				}
+			},
+
+			//write content, which is parameter c, to ping file
+			function ( callback ) {
+				if ( sessionDataExist ) {
+					try {
+						fs.writeFile(
+							path.join( '.', 'data', 'sessions', sid, req.params.ping ),
+							req.params.c,
+							function ( err ) {
+								if ( err ) {
+									throw new Error( err );
+								} else {
+									callback( null, null );
+								}
+							}
+						);
+					} catch ( e ) {
+						callback( e, null );
+					}
+				}
+			},
+
+			//get sid folder items
+			//populate 'list' with valuable information
+			function ( callback ) {
+				var details = req.params.p;
+				var list = '';
+				var initime = Math.round( new Date().getTime() / 1000 );
+				var count = 0;
+				var folder = path.join( '.', 'data', 'sessions', sid );
+
+				if ( sessionDataExist && req.params.p ) {
+					try {
+						//get folder items
+						fs.readdir( folder, function ( err, items ) {
+							if ( err ) {
+								throw new Error( err );
+							} else {
+								var folderItems = items;
+
+								//for each file, append to list, the content and elapsed time
+								//$list .= $file.'?~?'.file_get_contents($folder.$file).'?~?'.($initime-filemtime($folder.$file)).'*~*';
+								async.forEachSeries( folderItems, function ( item, forEachCallback ) {
+									count++;
+									try {
+										if ( details == '1' ) {
+											fs.readFile( path.join( folder, item ), ( err, fileContent ) => {
+												if ( err ) {
+													forEachCallback( err );
+												} else {
+													list = list.concat( item, '?~?', fileContent, '?~?' );
+													//get (initime - modification time)
+													fs.stat( path.join( folder, item ), ( err, stats ) => {
+														if ( err ) {
+															forEachCallback( err );
+														} else {
+															var mtime = Math.floor( new Date( stats.mtime ).valueOf() / 1000 );
+															list = list.concat( initime - mtime, '*~*' );
+															forEachCallback( null );
+														}
+													} );
+												}
+											} );
+										}
+									} catch ( e ) {
+										forEachCallback( e );
+									}
+								}, function ( err ) { //callback of forEachSeries
+									if ( err ) {
+										throw new Error( err );
+									}
+									if ( err === null ) {
+										var result = ( details == 1 ) ? list : count - 1;
+										callback( null, result );
+									}
+								} );
+
+							}
+						} );
+					} catch ( e ) {
+						callback( e, null );
+					}
+				}
+			},
+
+			//get file age if exist
+			function ( callback ) {
+				if ( req.params.age ) {
+					try {
+
+						var age;
+						fs.stat( path.join( '.', 'data', req.params.age ), function ( err, stats ) {
+							if ( err && err.code === 'ENOENT' ) {
+								age = 0;
+							} else {
+								age = Math.floor( new Date( stats.mtime ).valueOf() / 1000 );
+							}
+							callback( null, '!~!' + age + '!~!~??' );
+						} );
+
+					} catch ( e ) {
+						callback( e, null );
+					}
+
+				} else {
+					callback( null, '!~!0' + '!~!~??' );
+				}
+			},
+
+			function ( callback ) {
+				var controllerInfoPath = path.join( '.', 'data', 'users', req.params.ping, 'data', 'controller.info' );
+				var controllerId;
+				var controlString;
+
+				try {
+					fs.stat( controllerInfoPath, function ( err, stats ) {
+						if ( !err ) {
+							//controllerInfoPath exists
+							fs.readFile( controllerInfoPath, 'utf8', ( err, fileContent ) => {
+								if ( err ) {
+									throw new Error( err );
+								} else {
+									controllerId = fileContent;
+
+									if ( controllerId != req.params.did ) {
+										var controllerIdDataPath = path.join( '.', 'data', 'users', req.params.ping, 'devices', controllerId + '.data' );
+										//put file content into var controlString
+										fs.readFile( controllerIdDataPath, 'utf8', ( err, fileContent ) => {
+											if ( err ) {
+												throw new Error( err );
+											} else {
+												controlString = fileContent;
+												callback( null, controllerId + '!~!' + controlString );
+											}
+										} );
+									} else {
+										callback( null, controllerId + '!~!' );
+									}
+								}
+							} );
+
+						} else if ( err && err.code === 'ENOENT' ) { //controllerInfoPath doesn't exist
+							callback( null, null );
+						} else { //err getting controllerInfoPath stats
+							throw new Error( err );
+						}
+					} );
+				} catch ( e ) {
+					callback( e, null );
+				}
+			},
+
+			function ( callback ) {
+				endr( startTime, req.params.ping, req.params.did );
+				callback( null, null );
+			}
+
+		],
+		// optional callback
+		function ( err, results ) {
+			if ( err === 'stop' ) {
+				res.send( 'USER_UNKNOWN' );
+			} else if ( !err ) {
+				console.dir( results.join( '' ) );
+				res.send( results.join( '' ) );
+			} else {
+				return errorHandler( req, res, err );
+			}
+		} );
 };
 
 /**
@@ -117,7 +442,7 @@ var ping = function ( req, res, next ) {
  * @return {[type]}     [description]
  */
 var fexists = function ( req, res, next ) {
-	var fexists = path.join( '..', '..', req.params.fexists );
+	var fexists = path.join( '.', req.params.fexists );
 
 	try {
 		fs.stat( fexists, function ( err, stats ) {
@@ -140,7 +465,7 @@ var fexists = function ( req, res, next ) {
 var preview = function ( req, res, next ) {
 	var data = req.params.data.replace( '~`', '+' );
 	data = data.substr( data.indexOf( ',' ) + 1 );
-	var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
+	var boardsFolder = path.join( '.', 'data', 'users', req.params.userid, 'boards' );
 	var paths = [ boardsFolder, path.join( boardsFolder, req.params.preview ) ];
 
 	async.forEachOfSeries( paths, function ( value, key, callback ) {
@@ -192,8 +517,8 @@ var preview = function ( req, res, next ) {
 };
 
 var setdocinfo = function ( req, res, next ) {
-	var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
-	var docIdFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid );
+	var boardsFolder = path.join( '.', 'data', 'users', req.params.userid, 'boards' );
+	var docIdFolder = path.join( '.', 'data', 'users', req.params.userid, 'boards', req.params.docid );
 
 	async.series( [
 
@@ -272,7 +597,7 @@ var setdocinfo = function ( req, res, next ) {
 
 
 var getdocinfo = function ( req, res, next ) {
-	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards', req.params.docid, 'board.info' );
+	var docName = path.join( '.', 'data', 'users', req.params.userid, 'boards', req.params.docid, 'board.info' );
 	try {
 		fs.readFile( docName, function ( err, data ) {
 			if ( err ) {
@@ -294,7 +619,7 @@ var publish = function ( req, res, next ) {
 	var part = parseInt( req.params.part );
 	var partmax = parseInt( req.params.partmax );
 
-	var boardsFolder = path.join( '..', '..', 'data', 'users', req.params.userid, 'boards' );
+	var boardsFolder = path.join( '.', 'data', 'users', req.params.userid, 'boards' );
 	var publishFolder = path.join( boardsFolder, req.params.publish );
 
 	async.series( [
@@ -422,7 +747,7 @@ var publish = function ( req, res, next ) {
 };
 
 var setcontroller = function ( req, res, next ) {
-	var filePath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'controller.info' );
+	var filePath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'controller.info' );
 	if ( req.params.did === '' ) {
 		try {
 			fs.unlink( filePath, ( err ) => {
@@ -454,7 +779,7 @@ var setcontroller = function ( req, res, next ) {
 };
 
 var setdevicedata = function ( req, res, next ) {
-	var devicedatapath = path.join( '..', '..', 'data', 'users', req.params.userid, 'devices', req.params.did + '.data' );
+	var devicedatapath = path.join( '.', 'data', 'users', req.params.userid, 'devices', req.params.did + '.data' );
 
 	try {
 		fs.writeFile( devicedatapath, req.params.data, ( err ) => {
@@ -470,9 +795,9 @@ var setdevicedata = function ( req, res, next ) {
 
 var createsession = function ( req, res, next ) {
 
-	var sessionPath = path.join( '..', '..', 'data', 'sessions', req.params.createsession );
-	var sessionDataPath = path.join( '..', '..', 'data', 'users', req.params.createsession, 'session.data' );
-	var sessionInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'session.info' );
+	var sessionPath = path.join( '.', 'data', 'sessions', req.params.createsession );
+	var sessionDataPath = path.join( '.', 'data', 'users', req.params.createsession, 'session.data' );
+	var sessionInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'session.info' );
 
 	try {
 		if ( !fs.accessSync( sessionPath ) ) {
@@ -533,9 +858,9 @@ var createsession = function ( req, res, next ) {
 
 var joinsession = function ( req, res, next ) {
 
-	var sessionPath = path.join( '..', '..', 'data', 'sessions', req.params.createsession );
-	var sessionDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'session.data' );
-	var sessionInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'session.info' );
+	var sessionPath = path.join( '.', 'data', 'sessions', req.params.createsession );
+	var sessionDataPath = path.join( '.', 'data', 'users', req.params.userid, 'session.data' );
+	var sessionInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'session.info' );
 
 	if ( !fs.accessSync( sessionDataPath ) ) {
 		res.send( 'NOT FOUND' );
@@ -591,7 +916,7 @@ var joinsession = function ( req, res, next ) {
 };
 
 var setsessiondata = ( req, res, next ) => {
-	var sessiondatapath = path.join( '..', '..', 'data', 'sessions', req.params.setsessiondata, 'session.data' );
+	var sessiondatapath = path.join( '.', 'data', 'sessions', req.params.setsessiondata, 'session.data' );
 
 	try {
 		fs.writeFile( sessiondatapath, req.params.data, ( err ) => {
@@ -607,7 +932,7 @@ var setsessiondata = ( req, res, next ) => {
 
 var savegrids = function ( req, res, next ) {
 	if ( req.params.userid && req.params.age ) {
-		var fileName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'grids.data' );
+		var fileName = path.join( '.', 'data', 'users', req.params.userid, 'data', 'grids.data' );
 		try {
 			fs.writeFile( //assuming that the parent folder exists, according to the PHP
 				fileName,
@@ -640,7 +965,7 @@ var savegrids = function ( req, res, next ) {
 };
 
 var get_grids = function ( req, res, next ) {
-	var fileName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'grids.data' );
+	var fileName = path.join( '.', 'data', 'users', req.params.userid, 'data', 'grids.data' );
 	try {
 		fs.stat( fileName, function ( err, stats ) {
 			if ( err && err.code === 'ENOENT' ) {
@@ -669,9 +994,9 @@ var get_icons = function ( req, res, next ) {
 var userpincreate = function ( req, res, next ) {
 	var pin;
 	var userdata;
-	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
-	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data' );
-	var userInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+	var pinPath = path.join( '.', 'data', 'pending', req.params.userid );
+	var userDataPath = path.join( '.', 'data', 'users', req.params.userid, 'data' );
+	var userInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'user.info' );
 	var urlRoot = ( req.isSecure() ) ? 'https' : 'http' + '://' + req.headers.host + '/';
 
 	if ( fs.accessSync( userInfoPath ) ) {
@@ -714,9 +1039,9 @@ var userpincreate = function ( req, res, next ) {
 var userpinadd = function ( req, res, next ) {
 	var pin;
 	var userdata;
-	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
-	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data' );
-	var userInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+	var pinPath = path.join( '.', 'data', 'pending', req.params.userid );
+	var userDataPath = path.join( '.', 'data', 'users', req.params.userid, 'data' );
+	var userInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'user.info' );
 	var urlRoot = ( req.isSecure() ) ? 'https' : 'http' + '://' + req.headers.host + '/';
 
 	if ( !fs.accessSync( userInfoPath ) ) {
@@ -767,9 +1092,9 @@ var userpinadd = function ( req, res, next ) {
 var userpinactivate = function ( req, res, next ) {
 	var pin;
 	var userdata;
-	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
-	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data' );
-	var userInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+	var pinPath = path.join( '.', 'data', 'pending', req.params.userid );
+	var userDataPath = path.join( '.', 'data', 'users', req.params.userid, 'data' );
+	var userInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'user.info' );
 
 	if ( req.params.pin !== 'LOCAL' ) {
 		try {
@@ -815,9 +1140,9 @@ var userpinactivate = function ( req, res, next ) {
 var addpinactivate = function ( req, res, next ) {
 	var pin;
 	var userdata;
-	var pinPath = path.join( '..', '..', 'data', 'pending', req.params.userid );
-	var userDataPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data' );
-	var userInfoPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+	var pinPath = path.join( '.', 'data', 'pending', req.params.userid );
+	var userDataPath = path.join( '.', 'data', 'users', req.params.userid, 'data' );
+	var userInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'user.info' );
 
 	if ( req.params.pin !== 'LOCAL' ) {
 		try {
@@ -852,7 +1177,7 @@ var addpinactivate = function ( req, res, next ) {
 };
 
 var setuserinfo = function ( req, res, next ) {
-	var dataFolder = path.join( '..', '..', 'data' );
+	var dataFolder = path.join( '.', 'data' );
 	var usersFolder = path.join( dataFolder, 'users' );
 	var userIdFolder = path.join( usersFolder, req.params.userid );
 	var userDataFolder = path.join( userIdFolder, 'data' );
@@ -912,7 +1237,7 @@ var setuserinfo = function ( req, res, next ) {
 };
 
 var userinfo = function ( req, res, next ) {
-	var docName = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'user.info' );
+	var docName = path.join( '.', 'data', 'users', req.params.userid, 'data', 'user.info' );
 	try {
 		fs.stat( docName, function ( err, stats ) {
 			if ( err && err.code === 'ENOENT' ) {
@@ -935,8 +1260,8 @@ var userinfo = function ( req, res, next ) {
 };
 
 var deletesession = function ( req, res, next ) {
-	var sessionPath = path.join( '..', '..', 'data', 'sessions', req.params.deletesession );
-	var userSessionPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'session.info' );
+	var sessionPath = path.join( '.', 'data', 'sessions', req.params.deletesession );
+	var userSessionPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'session.info' );
 
 	if ( req.params.deletesession !== '' && req.params.deletesession !== '.' && req.params.deletesession !== '..' ) {
 		try {
@@ -965,7 +1290,7 @@ var deletesession = function ( req, res, next ) {
 };
 
 var quitsession = function ( req, res, next ) {
-	var userSessionPath = path.join( '..', '..', 'data', 'users', req.params.userid, 'data', 'session.info' );
+	var userSessionPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'session.info' );
 	try {
 		fs.unlink( userSessionPath, ( err ) => {
 			if ( err && err.code !== 'ENOENT' ) {
@@ -1007,7 +1332,7 @@ var deleteboard = function ( req, res, next ) {
 	if ( req.params.authorid !== '' && req.params.authorid !== '.' && req.params.authorid !== '..' &&
 		req.params.delete !== '' && req.params.delete !== '.' && req.params.delete !== '..' ) {
 
-		var pathName = path.join( '..', '..', 'data', 'users', req.params.authorid, 'boards', req.params.delete );
+		var pathName = path.join( '.', 'data', 'users', req.params.authorid, 'boards', req.params.delete );
 		try {
 			rimraf( pathName, ( err ) => {
 				if ( err ) {
@@ -1037,7 +1362,7 @@ var deleteboard = function ( req, res, next ) {
  */
 var load = function ( req, res, next ) {
 	const userid = req.params.userid;
-	const fileroot = path.join( '..', '..', 'data', 'users', userid, 'boards', req.params.load, 'board.data' );
+	const fileroot = path.join( '.', 'data', 'users', userid, 'boards', req.params.load, 'board.data' );
 
 	try {
 		fs.readFile( fileroot, function ( err, board ) {
@@ -1072,7 +1397,7 @@ var errlog = function ( req, res, next ) {
 
 function get_list_for_user( uid, parentCallback ) {
 	var list = '';
-	var folder = path.join( '..', '..', 'data', 'users', uid, 'boards' );
+	var folder = path.join( '.', 'data', 'users', uid, 'boards' );
 	var counter = 100;
 	var folderItems;
 
@@ -1094,7 +1419,7 @@ function get_list_for_user( uid, parentCallback ) {
 				}
 			}
 		},
-		
+
 		//filter folderItems. Get items that are directories and != 'data'		
 		function ( callback ) {
 			async.filter( folderItems, function ( item, filterCallback ) {
@@ -1112,11 +1437,13 @@ function get_list_for_user( uid, parentCallback ) {
 				}
 			} );
 		},
+
 		//get age and title of items, then append to string.	
 		function ( callback ) {
 			async.forEachSeries( folderItems, function ( item, forEachCallback ) {
 				if ( counter > 0 ) {
 					try {
+						//get modification time/age first
 						fs.stat( path.join( folder, item, '/board.data' ), ( err, stats ) => {
 							if ( err ) {
 								forEachCallback( err );
@@ -1315,6 +1642,10 @@ server.get( basepath, function ( req, res, next ) {
 	if ( 'quitsession' in req.params ) {
 		return quitsession( req, res, next );
 	}
+
+	if ( 'ping' in req.params ) {
+		return ping( req, res, next );
+	}
 } );
 
 /**
@@ -1370,14 +1701,14 @@ server.listen( 8080, function () {
 
 	// Bootstrap global folders:
 	try {
-		fs.accessSync( path.join( '..', '..', 'data', 'pending' ) );
+		fs.accessSync( path.join( '.', 'data', 'pending' ) );
 	} catch ( e ) {
-		mkdirp( path.join( '..', '..', 'data', 'pending' ), '0775' );
+		mkdirp( path.join( '.', 'data', 'pending' ), '0775' );
 	}
 
 	try {
-		fs.accessSync( path.join( '..', '..', 'data', 'sessions' ) );
+		fs.accessSync( path.join( '.', 'data', 'sessions' ) );
 	} catch ( e ) {
-		mkdirp( path.join( '..', '..', 'data', 'sessions' ), '0775' );
+		mkdirp( path.join( '.', 'data', 'sessions' ), '0775' );
 	}
 } );
