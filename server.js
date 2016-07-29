@@ -69,6 +69,21 @@ var ormiStringify = ( fields, delimiter, terminator ) => {
 };
 
 /**
+ * Filter out the files '.DS_Store' and 'thumbs.db' from an array of files.
+ * @param  {Array} 	files			The name of files from a directory.
+ * @return {Array}           	The filtered array of file names.
+ */
+var filterFolderFiles = ( files ) => {
+	var array = [];
+	for ( var i = 0; i < files.length; i++ ) {
+		if ( files[ i ] !== '.DS_Store' && files[ i ] !== 'thumbs.db' ) {
+			array.push( files[ i ] );
+		}
+	}
+	return array;
+}
+
+/**
  * Saves a log line with the ping latency.
  * @param  {DateTime} startTime The time the request began.
  * @param  {String} 	ping      req.params.ping
@@ -302,7 +317,7 @@ var ping = function ( req, res, next ) {
 							if ( err ) {
 								throw new Error( err );
 							} else {
-								var folderItems = items;
+								var folderItems = filterFolderFiles( items );
 
 								//for each file, append to list, the content and elapsed time
 								//$list .= $file.'?~?'.file_get_contents($folder.$file).'?~?'.($initime-filemtime($folder.$file)).'*~*';
@@ -1410,7 +1425,7 @@ function get_list_for_user( uid, parentCallback ) {
 						if ( err ) {
 							throw new Error( err );
 						} else {
-							folderItems = items;
+							folderItems = filterFolderFiles( items );
 							callback( null, null );
 						}
 					} );
