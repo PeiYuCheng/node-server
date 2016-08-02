@@ -306,7 +306,7 @@ var ping = function ( req, res, next ) {
 			function ( callback ) {
 				var details = req.params.p;
 				var list = '';
-				var initime = Math.round( new Date().getTime() / 1000 );
+				var initime = Math.floor( new Date().getTime() / 1000 );
 				var count = 0;
 				var folder = path.join( '.', 'data', 'sessions', sid );
 
@@ -1230,7 +1230,7 @@ var setuserinfo = function ( req, res, next ) {
 			fs.writeFile(
 				path.join( userDataFolder, '/user.info' ),
 				ormiStringify( [
-					Math.round( new Date().getTime() / 1000 ),
+					Math.floor( new Date().getTime() / 1000 ),
 					req.params.email,
 					req.params.firstname,
 					req.params.lastname
@@ -1406,8 +1406,61 @@ var load = function ( req, res, next ) {
 	}
 };
 
+function errorlog( string, callback ) {
+	var logFolder = path.join( '.', 'data', 'log' );
+
+	async.series( [
+
+		function ( callback ) {
+			try {
+				//create logFolder recursively
+				mkdirp( logFolder, '0775', function ( err ) {
+					if ( err ) {
+						if ( err.code == 'EEXIST' ) {
+							callback( null, null );
+						} else {
+							throw new Error( err );
+						}
+					} else {
+						callback( null, null );
+					}
+				} );
+			} catch ( e ) {
+				callback( e, null );
+			}
+		},
+
+		function ( callback ) {
+			try {
+				fs.appendFile(
+					path.join( logFolder, 'errlog.data' ), ( new Date().getTime() / 1000 ) + string + os.EOL, //time in second. Type float
+					function ( err ) {
+						if ( err ) {
+							throw new Error( err );
+						} else {
+							callback( null, null );
+						}
+					}
+				);
+			} catch ( e ) {
+				callback( e, null );
+			}
+		},
+
+	], function ( err, data ) {
+		if ( err ) {
+			return errorHandler( req, res, err );
+		}
+		if ( err === null ) {
+			callback();
+		}
+	} );
+}
+
 var errlog = function ( req, res, next ) {
-	// TODO
+	errorlog( req.params.errlog, function () {
+		res.send( 'LOGGED' );
+	} );
 };
 
 function get_list_for_user( uid, parentCallback ) {
@@ -1660,6 +1713,10 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'ping' in req.params ) {
 		return ping( req, res, next );
+	}
+
+	if ( 'errlog' in req.params ) {
+		return errlog( req, res, next );
 	}
 } );
 
