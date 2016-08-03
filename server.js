@@ -91,34 +91,92 @@ var filterFolderFiles = ( files ) => {
  * @return {Boolean}   	        True if successful.
  */
 var endr = ( startTime, ping, did ) => {
-	const now = new Date().getTime();
-	const delay = now - startTime;
+	const now = new Date().getTime() / 1000;
+	const delay = ~~ ( ( now - startTime ) * 100000 ) / 100;
+	const logFolder = path.join( '.', 'data', 'log' );
 	const logFile = path.join( '.', 'data', 'log', 'log.data' );
 	const logLine = ormiStringify( [ now, delay, ping, did ], '~', os.EOL );
 
-	try {
-		fs.appendFile( logFile, logLine, ( err ) => {
-			if ( err ) {
-				throw err;
+	async.series( [
+
+		function ( callback ) {
+			try {
+				//make sure logFolder is created
+				mkdirp( logFolder, '0775', function ( err ) {
+					if ( err ) {
+						if ( err.code == 'EEXIST' ) {
+							callback( null, null );
+						} else {
+							callback( err, null );
+						}
+					} else {
+						callback( null, null );
+					}
+				} );
+			} catch ( e ) {
+				callback( e, null );
 			}
+		},
 
-			// Keep the log file at 16kb
-			fs.truncate( logFile, 16000, ( err ) => {
-				if ( err ) {
-					throw err;
-				}
+		function ( callback ) {
+			try {
+				//delete file if file is larger than 16kb
+				fs.stat( logFile, function ( err, stats ) {
+					console.dir( err );
+					if ( err && err.code !== 'ENOENT' ) {
+						callback( err, null );
+					} else if ( err && err.code == 'ENOENT' ) {
+						callback( null, null );
+					} else {
 
-				return true;
-			} );
-		} );
-	} catch ( e ) {
-		console.error( 'There was an error saving endr: %s', e.message );
-		return false;
-	}
+						// delete the log file if larger than 16kb
+						if ( stats.size > 16000 ) {
+							fs.unlink( logFile, ( err ) => {
+								if ( err ) {
+									callback( err, null );
+								} else {
+									callback( null, null );
+								}
+							} );
+						} else {
+							callback( null, null );
+						}
+					}
+				} );
+			} catch ( e ) {
+				callback( e, null );
+			}
+		},
+
+		function ( callback ) {
+			try {
+				//append data to file
+				fs.appendFile( logFile, logLine, ( err ) => {
+					console.log( "appended: " + logLine );
+					if ( err ) {
+						callback( err, null );
+					} else {
+						callback( null, null );
+					}
+				} );
+			} catch ( e ) {
+				callback( e, null );
+			}
+		}
+
+	], function ( err, data ) {
+		if ( err ) {
+			console.error( 'There was an error saving endr: %s', err.message );
+			return false;
+		}
+		if ( err === null ) {
+			return true;
+		}
+	} );
 };
 
 var ping = function ( req, res, next ) {
-	const startTime = new Date().getTime();
+	const startTime = new Date().getTime() / 1000;
 
 	var pingFolder = path.join( '.', 'data', 'users', req.params.ping );
 	var dataFolder = path.join( pingFolder, 'data' );
