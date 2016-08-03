@@ -122,7 +122,6 @@ var endr = ( startTime, ping, did ) => {
 			try {
 				//delete file if file is larger than 16kb
 				fs.stat( logFile, function ( err, stats ) {
-					console.dir( err );
 					if ( err && err.code !== 'ENOENT' ) {
 						callback( err, null );
 					} else if ( err && err.code == 'ENOENT' ) {
@@ -152,7 +151,6 @@ var endr = ( startTime, ping, did ) => {
 			try {
 				//append data to file
 				fs.appendFile( logFile, logLine, ( err ) => {
-					console.log( "appended: " + logLine );
 					if ( err ) {
 						callback( err, null );
 					} else {
@@ -215,7 +213,7 @@ var ping = function ( req, res, next ) {
 							if ( err.code == 'EEXIST' ) {
 								callback( null, null );
 							} else {
-								throw new Error( err );
+								callback( err, null );
 							}
 						} else {
 							callback( null, null );
@@ -234,7 +232,7 @@ var ping = function ( req, res, next ) {
 							if ( err.code == 'EEXIST' ) {
 								callback( null, null );
 							} else {
-								throw new Error( err );
+								callback( err, null );
 							}
 						} else {
 							callback( null, null );
@@ -254,7 +252,7 @@ var ping = function ( req, res, next ) {
 							req.params.c,
 							function ( err ) {
 								if ( err ) {
-									throw new Error( err );
+									callback( err, null );
 								} else {
 									callback( null, null );
 								}
@@ -278,7 +276,7 @@ var ping = function ( req, res, next ) {
 						} else {
 							fs.readFile( sessionInfoPath, 'utf8', function ( err, data ) {
 								if ( err ) {
-									throw new Error( err );
+									callback( err, null );
 								} else {
 									sid = data;
 									callback( null, sid + '!~!' );
@@ -302,7 +300,7 @@ var ping = function ( req, res, next ) {
 							if ( err && err.code === 'ENOENT' ) { //file does not exist
 								fs.unlink( sessionInfoPath, ( err ) => {
 									if ( err && err.code !== 'ENOENT' ) {
-										throw new Error( err );
+										callback( err, null );
 									} else {
 										callback( null, '!~!' );
 									}
@@ -327,7 +325,7 @@ var ping = function ( req, res, next ) {
 					try {
 						fs.readFile( sessionDataPath, 'utf8', function ( err, data ) {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								callback( null, data + '!~!' );
 							}
@@ -347,7 +345,7 @@ var ping = function ( req, res, next ) {
 							req.params.c,
 							function ( err ) {
 								if ( err ) {
-									throw new Error( err );
+									callback( err, null );
 								} else {
 									callback( null, null );
 								}
@@ -373,7 +371,7 @@ var ping = function ( req, res, next ) {
 						//get folder items
 						fs.readdir( folder, function ( err, items ) {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								var folderItems = filterFolderFiles( items );
 
@@ -406,7 +404,7 @@ var ping = function ( req, res, next ) {
 									}
 								}, function ( err ) { //callback of forEachSeries
 									if ( err ) {
-										throw new Error( err );
+										callback( err, null );
 									}
 									if ( err === null ) {
 										var result = ( details == 1 ) ? list : count - 1;
@@ -457,7 +455,7 @@ var ping = function ( req, res, next ) {
 							//controllerInfoPath exists
 							fs.readFile( controllerInfoPath, 'utf8', ( err, fileContent ) => {
 								if ( err ) {
-									throw new Error( err );
+									callback( err, null );
 								} else {
 									controllerId = fileContent;
 
@@ -466,7 +464,7 @@ var ping = function ( req, res, next ) {
 										//put file content into var controlString
 										fs.readFile( controllerIdDataPath, 'utf8', ( err, fileContent ) => {
 											if ( err ) {
-												throw new Error( err );
+												callback( err, null );
 											} else {
 												controlString = fileContent;
 												callback( null, controllerId + '!~!' + controlString );
@@ -481,7 +479,7 @@ var ping = function ( req, res, next ) {
 						} else if ( err && err.code === 'ENOENT' ) { //controllerInfoPath doesn't exist
 							callback( null, null );
 						} else { //err getting controllerInfoPath stats
-							throw new Error( err );
+							callback( err, null );
 						}
 					} );
 				} catch ( e ) {
@@ -547,7 +545,7 @@ var preview = function ( req, res, next ) {
 				if ( err && err.code === 'ENOENT' ) {
 					mkdirp( paths[ key ], '0775', function ( err ) {
 						if ( err ) {
-							throw new Error( err );
+							callback( err, null );
 						} else {
 							callback( null );
 						}
@@ -575,7 +573,7 @@ var preview = function ( req, res, next ) {
 				new Buffer( data, 'base64' ),
 				function ( err ) {
 					if ( err ) {
-						throw new Error( err );
+						callback( err, null );
 					} else {
 						res.send( 200 );
 					}
@@ -601,7 +599,7 @@ var setdocinfo = function ( req, res, next ) {
 					if ( err && err.code === 'ENOENT' ) {
 						mkdirp( boardsFolder, '0775', function ( err ) {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								callback( null, null );
 							}
@@ -621,7 +619,7 @@ var setdocinfo = function ( req, res, next ) {
 					if ( err && err.code === 'ENOENT' ) {
 						mkdirp( docIdFolder, '0775', function ( err ) {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								callback( null, null );
 							}
@@ -645,7 +643,7 @@ var setdocinfo = function ( req, res, next ) {
 					], '~.~', '~.~' ),
 					function ( err ) {
 						if ( err ) {
-							throw new Error( err );
+							callback( err, null );
 						} else {
 							callback( null, null );
 						}
@@ -703,7 +701,7 @@ var publish = function ( req, res, next ) {
 					if ( err && err.code === 'ENOENT' ) {
 						mkdirp( publishFolder, '0775', function ( err ) {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								callback( null, null );
 							}
@@ -725,7 +723,7 @@ var publish = function ( req, res, next ) {
 						req.params.data,
 						function ( err ) {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								callback( null, null );
 							}
@@ -741,7 +739,7 @@ var publish = function ( req, res, next ) {
 						req.params.data,
 						function ( err ) {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								callback( null, null );
 							}
@@ -761,7 +759,7 @@ var publish = function ( req, res, next ) {
 						path.join( publishFolder, 'board.data' ),
 						function ( err ) {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								callback( null, null );
 							}
@@ -783,7 +781,7 @@ var publish = function ( req, res, next ) {
 						path.join( publishFolder, 'board.html' ),
 						function ( err ) {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								replace( {
 										files: path.join( publishFolder, 'board.html' ),
@@ -792,7 +790,7 @@ var publish = function ( req, res, next ) {
 									},
 									function ( error, changedFiles ) {
 										if ( err ) {
-											throw new Error( err );
+											callback( err, null );
 										} else {
 											callback( null, null );
 										}
@@ -825,7 +823,7 @@ var setcontroller = function ( req, res, next ) {
 		try {
 			fs.unlink( filePath, ( err ) => {
 				if ( err && err.code !== 'ENOENT' ) {
-					throw new Error( err );
+					callback( err, null );
 				} else {
 					res.send( 200 );
 				}
@@ -840,7 +838,7 @@ var setcontroller = function ( req, res, next ) {
 				req.params.did,
 				function ( err ) {
 					if ( err ) {
-						throw new Error( err );
+						callback( err, null );
 					} else {
 						res.send( 200 );
 					}
@@ -857,7 +855,7 @@ var setdevicedata = function ( req, res, next ) {
 	try {
 		fs.writeFile( devicedatapath, req.params.data, ( err ) => {
 			if ( err ) {
-				throw err;
+				errorHandler( req, res, err );
 			}
 			res.send( 200 );
 		} );
@@ -876,7 +874,7 @@ var createsession = function ( req, res, next ) {
 		if ( !fs.accessSync( sessionPath ) ) {
 			mkdirp( sessionPath, '0775', ( err ) => {
 				if ( err ) {
-					throw e;
+					errorHandler( req, res, err );
 				}
 			} );
 		}
@@ -890,12 +888,12 @@ var createsession = function ( req, res, next ) {
 		if ( !fs.accessSync( sessionDataPath ) ) {
 			mkdirp( sessionPath, '0775', ( err ) => {
 				if ( err ) {
-					throw e;
+					errorHandler( req, res, err );
 				}
 
 				fs.writeFile( sessionDataPath, req.params.data, ( err ) => {
 					if ( err ) {
-						throw err;
+						errorHandler( req, res, err );
 					}
 					res.send( 200 );
 				} )
@@ -911,12 +909,12 @@ var createsession = function ( req, res, next ) {
 		if ( !fs.accessSync( sessionInfoPath ) ) {
 			mkdirp( sessionPath, '0775', ( err ) => {
 				if ( err ) {
-					throw e;
+					errorHandler( req, res, err );
 				}
 
 				fs.writeFile( sessionInfoPath, 'H:' + req.params.createsession, ( err ) => {
 					if ( err ) {
-						throw err;
+						errorHandler( req, res, err );
 					}
 					res.send( 200 );
 				} )
@@ -943,7 +941,7 @@ var joinsession = function ( req, res, next ) {
 				try {
 					fs.writeFile( sessionInfoPath, 'P:' + req.params.joinsession, ( err ) => {
 						if ( err ) {
-							throw err;
+							callback( err, null );
 						}
 						callback( null );
 					} );
@@ -956,7 +954,7 @@ var joinsession = function ( req, res, next ) {
 				try {
 					fs.writeFile( sessionInfoPath, 'H:' + req.params.createsession, ( err ) => {
 						if ( err ) {
-							throw err;
+							callback( err, null );
 						}
 						callback( null, null );
 					} );
@@ -969,7 +967,7 @@ var joinsession = function ( req, res, next ) {
 				try {
 					fs.readFile( sessionDataPath, function ( err, data ) {
 						if ( err ) {
-							throw new Error( err );
+							callback( err, null );
 						} else {
 							callback( null, data.toString( 'utf8' ) );
 						}
@@ -994,7 +992,7 @@ var setsessiondata = ( req, res, next ) => {
 	try {
 		fs.writeFile( sessiondatapath, req.params.data, ( err ) => {
 			if ( err ) {
-				throw err;
+				errorHandler( req, res, err );
 			}
 			res.send( 200 );
 		} );
@@ -1012,11 +1010,11 @@ var savegrids = function ( req, res, next ) {
 				req.params.grids,
 				function ( err ) {
 					if ( err ) {
-						throw new Error( err );
+						callback( err, null );
 					} else {
 						fs.stat( fileName, ( err, stats ) => {
 							if ( err ) {
-								throw new Error( err );
+								callback( err, null );
 							} else {
 								var mtime = Math.floor( new Date( stats.mtime ).valueOf() / 1000 );
 								res.send( 'AGE~$~' + mtime );
@@ -1042,11 +1040,11 @@ var get_grids = function ( req, res, next ) {
 	try {
 		fs.stat( fileName, function ( err, stats ) {
 			if ( err && err.code === 'ENOENT' ) {
-				throw new Error( err );
+				callback( err, null );
 			} else {
 				fs.readFile( fileName, function ( err, data ) {
 					if ( err ) {
-						throw new Error( err );
+						callback( err, null );
 					} else {
 						res.send( data.toString( 'utf8' ) );
 					}
@@ -1094,7 +1092,7 @@ var userpincreate = function ( req, res, next ) {
 							content: 'Hello ' + req.params.firstname + ',\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
 						}, function ( err, reply ) {
 							if ( err ) {
-								throw err;
+								errorHandler( req, res, err );
 							}
 							console.dir( reply );
 							res.send( 'OK' );
@@ -1140,7 +1138,7 @@ var userpinadd = function ( req, res, next ) {
 							content: 'Hello,\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
 						}, function ( err, reply ) {
 							if ( err ) {
-								throw err;
+								errorHandler( req, res, err );
 							}
 							console.dir( reply );
 							res.send( 'OK' );
@@ -1262,7 +1260,7 @@ var setuserinfo = function ( req, res, next ) {
 				if ( err && err.code === 'ENOENT' ) {
 					mkdirp( paths[ key ], '0775', function ( err ) {
 						if ( err ) {
-							throw new Error( err );
+							callback( err, null );
 						} else {
 							callback( null );
 						}
@@ -1295,7 +1293,7 @@ var setuserinfo = function ( req, res, next ) {
 				], '?~?' ),
 				function ( err ) {
 					if ( err ) {
-						throw new Error( err );
+						callback( err, null );
 					} else {
 						res.send( 200 );
 					}
@@ -1318,7 +1316,7 @@ var userinfo = function ( req, res, next ) {
 			} else {
 				fs.readFile( docName, function ( err, data ) {
 					if ( err ) {
-						throw new Error( err );
+						callback( err, null );
 					} else {
 						res.send( data.toString( 'utf8' ) );
 					}
@@ -1340,7 +1338,7 @@ var deletesession = function ( req, res, next ) {
 		try {
 			rimraf( sessionPath, ( err ) => {
 				if ( err ) {
-					throw new Error( err );
+					callback( err, null );
 				}
 			} );
 		} catch ( e ) {
@@ -1351,7 +1349,7 @@ var deletesession = function ( req, res, next ) {
 	try {
 		fs.unlink( userSessionPath, ( err ) => {
 			if ( err && err.code !== 'ENOENT' ) {
-				throw new Error( err );
+				callback( err, null );
 			} else {
 				res.send( 200 );
 			}
@@ -1367,7 +1365,7 @@ var quitsession = function ( req, res, next ) {
 	try {
 		fs.unlink( userSessionPath, ( err ) => {
 			if ( err && err.code !== 'ENOENT' ) {
-				throw new Error( err );
+				callback( err, null );
 			} else {
 				res.send( 200 );
 			}
@@ -1409,7 +1407,7 @@ var deleteboard = function ( req, res, next ) {
 		try {
 			rimraf( pathName, ( err ) => {
 				if ( err ) {
-					throw new Error( err );
+					callback( err, null );
 				} else {
 					res.send( 200 );
 				}
@@ -1477,7 +1475,7 @@ function errorlog( string, callback ) {
 						if ( err.code == 'EEXIST' ) {
 							callback( null, null );
 						} else {
-							throw new Error( err );
+							callback( err, null );
 						}
 					} else {
 						callback( null, null );
@@ -1494,7 +1492,7 @@ function errorlog( string, callback ) {
 					path.join( logFolder, 'errlog.data' ), ( new Date().getTime() / 1000 ) + string + os.EOL, //time in second. Type float
 					function ( err ) {
 						if ( err ) {
-							throw new Error( err );
+							callback( err, null );
 						} else {
 							callback( null, null );
 						}
@@ -1534,7 +1532,7 @@ function get_list_for_user( uid, parentCallback ) {
 				try {
 					fs.readdir( folder, function ( err, items ) {
 						if ( err ) {
-							throw new Error( err );
+							callback( err, null );
 						} else {
 							folderItems = filterFolderFiles( items );
 							callback( null, null );
