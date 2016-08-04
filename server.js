@@ -997,8 +997,9 @@ var setsessiondata = ( req, res, next ) => {
 		fs.writeFile( sessiondatapath, req.params.data, ( err ) => {
 			if ( err ) {
 				errorHandler( req, res, err );
+			} else{
+				res.send( 200 );
 			}
-			res.send( 200 );
 		} );
 	} catch ( e ) {
 		console.error( 'Could not set session data {%s} for [%s]: %s', req.params.data, req.params.setsessiondata, e.message );
