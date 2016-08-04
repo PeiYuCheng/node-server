@@ -517,16 +517,20 @@ var fexists = function ( req, res, next ) {
 
 	try {
 		fs.stat( fexists, function ( err, stats ) {
-			if ( err ) {
-				console.log( "Cannot find %s: %s", fexists, err );
-				res.send( 'NOT_FOUND' );
+			if ( err ){
+				if(err.code === 'ENOENT'){
+					console.log( "Cannot find %s: %s", fexists, err );
+					res.send( 'NOT_FOUND' );					
+				} else {
+					return errorHandler( req, res, err );
+				}
 			} else {
 				console.log( 'Found %s', fexists );
 				res.send( 'FOUND' );
 			}
 		} );
 	} catch ( e ) {
-		console.log( "Error finding directory '%s': %s", fexists, e.message );
+		return errorHandler( req, res, e );
 	}
 
 	return next();
