@@ -47,8 +47,11 @@ const basepath = '/bin/shared/query.php';
  * @return {[type]}     [description]
  */
 var errorHandler = ( req, res, err ) => {
-	console.log( 'ERROR %s\nRequest: %s', err.message, JSON.stringify( req.params ) );
-	res.send( 500 );
+	var logData = 'ERROR: ' + err.message + '\nRequest: ' + JSON.stringify( req.params );
+	console.log( logData );
+	errorlog( logData, (err)=>{
+		res.send(500);
+	} );
 };
 
 /**
@@ -90,7 +93,7 @@ var filterFolderFiles = ( files ) => {
  * @param  {String} 	did       req.params.did
  * @return {Boolean}   	        True if successful.
  */
-var endr = ( startTime, ping, did ) => {
+var endr = ( startTime, ping, did, parentCallback ) => {
 	const now = new Date().getTime() / 1000;
 	const delay = ~~ ( ( now - startTime ) * 100000 ) / 100;
 	const logFolder = path.join( '.', 'data', 'log' );
@@ -163,13 +166,9 @@ var endr = ( startTime, ping, did ) => {
 		}
 
 	], function ( err, data ) {
-		if ( err ) {
-			console.error( 'There was an error saving endr: %s', err.message );
-			return false;
-		}
-		if ( err === null ) {
-			return true;
-		}
+			if (typeof parentCallback === 'function'){
+				parentCallback(err);
+			}
 	} );
 };
 
@@ -488,8 +487,9 @@ var ping = function ( req, res, next ) {
 			},
 
 			function ( callback ) {
-				endr( startTime, req.params.ping, req.params.did );
-				callback( null, null );
+				endr( startTime, req.params.ping, req.params.did, (err)=>{
+					callback( err, null );
+				} );
 			}
 
 		],
@@ -1508,18 +1508,22 @@ function errorlog( string, callback ) {
 		},
 
 	], function ( err, data ) {
-		if ( err ) {
-			return errorHandler( req, res, err );
-		}
-		if ( err === null ) {
-			callback();
-		}
+			if (err){
+				console.log("Error in errorlog: "+ err);				
+			}
+			if (typeof callback === 'function'){
+				callback(err);
+			}
 	} );
 }
 
 var errlog = function ( req, res, next ) {
-	errorlog( req.params.errlog, function () {
-		res.send( 'LOGGED' );
+	errorlog( req.params.errlog, function (err) {
+		if (err){
+			res.send(500);
+		} else {
+			res.send( 'LOGGED' );			
+		}
 	} );
 };
 
