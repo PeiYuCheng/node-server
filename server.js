@@ -497,7 +497,7 @@ var ping = function ( req, res, next ) {
 		function ( err, results ) {
 			if ( err === 'stop' ) {
 				res.send( 'USER_UNKNOWN' );
-			} else if ( !err ) {
+			} else if ( err === null) {
 				console.dir( results.join( '' ) );
 				res.send( results.join( '' ) );
 			} else {
@@ -827,7 +827,7 @@ var setcontroller = function ( req, res, next ) {
 		try {
 			fs.unlink( filePath, ( err ) => {
 				if ( err && err.code !== 'ENOENT' ) {
-					callback( err, null );
+					return errorHandler( req, res, err );
 				} else {
 					res.send( 200 );
 				}
@@ -842,7 +842,7 @@ var setcontroller = function ( req, res, next ) {
 				req.params.did,
 				function ( err ) {
 					if ( err ) {
-						callback( err, null );
+						return errorHandler( req, res, err );
 					} else {
 						res.send( 200 );
 					}
@@ -859,7 +859,7 @@ var setdevicedata = function ( req, res, next ) {
 	try {
 		fs.writeFile( devicedatapath, req.params.data, ( err ) => {
 			if ( err ) {
-				errorHandler( req, res, err );
+				return errorHandler( req, res, err );
 			}
 			res.send( 200 );
 		} );
@@ -878,7 +878,7 @@ var createsession = function ( req, res, next ) {
 		if ( !fs.accessSync( sessionPath ) ) {
 			mkdirp( sessionPath, '0775', ( err ) => {
 				if ( err ) {
-					errorHandler( req, res, err );
+					return errorHandler( req, res, err );
 				}
 			} );
 		}
@@ -892,12 +892,12 @@ var createsession = function ( req, res, next ) {
 		if ( !fs.accessSync( sessionDataPath ) ) {
 			mkdirp( sessionPath, '0775', ( err ) => {
 				if ( err ) {
-					errorHandler( req, res, err );
+					return errorHandler( req, res, err );
 				}
 
 				fs.writeFile( sessionDataPath, req.params.data, ( err ) => {
 					if ( err ) {
-						errorHandler( req, res, err );
+						return errorHandler( req, res, err );
 					}
 					res.send( 200 );
 				} )
@@ -913,12 +913,12 @@ var createsession = function ( req, res, next ) {
 		if ( !fs.accessSync( sessionInfoPath ) ) {
 			mkdirp( sessionPath, '0775', ( err ) => {
 				if ( err ) {
-					errorHandler( req, res, err );
+					return errorHandler( req, res, err );
 				}
 
 				fs.writeFile( sessionInfoPath, 'H:' + req.params.createsession, ( err ) => {
 					if ( err ) {
-						errorHandler( req, res, err );
+						return errorHandler( req, res, err );
 					}
 					res.send( 200 );
 				} )
@@ -982,7 +982,7 @@ var joinsession = function ( req, res, next ) {
 			}
 		], ( err, results ) => {
 			if ( err ) {
-				errorHandler( req, res, err );
+				return errorHandler( req, res, err );
 			}
 			res.send( 200, results[ 2 ] );
 		} );
@@ -996,7 +996,7 @@ var setsessiondata = ( req, res, next ) => {
 	try {
 		fs.writeFile( sessiondatapath, req.params.data, ( err ) => {
 			if ( err ) {
-				errorHandler( req, res, err );
+				return errorHandler( req, res, err );
 			} else{
 				res.send( 200 );
 			}
@@ -1015,11 +1015,11 @@ var savegrids = function ( req, res, next ) {
 				req.params.grids,
 				function ( err ) {
 					if ( err ) {
-						callback( err, null );
+						return errorHandler( req, res, err );
 					} else {
 						fs.stat( fileName, ( err, stats ) => {
 							if ( err ) {
-								callback( err, null );
+								return errorHandler( req, res, err );
 							} else {
 								var mtime = Math.floor( new Date( stats.mtime ).valueOf() / 1000 );
 								res.send( 'AGE~$~' + mtime );
@@ -1044,12 +1044,12 @@ var get_grids = function ( req, res, next ) {
 	var fileName = path.join( '.', 'data', 'users', req.params.userid, 'data', 'grids.data' );
 	try {
 		fs.stat( fileName, function ( err, stats ) {
-			if ( err && err.code === 'ENOENT' ) {
-				callback( err, null );
+			if ( err ){
+					return errorHandler( req, res, err );
 			} else {
 				fs.readFile( fileName, function ( err, data ) {
 					if ( err ) {
-						callback( err, null );
+						return errorHandler( req, res, err );
 					} else {
 						res.send( data.toString( 'utf8' ) );
 					}
@@ -1097,7 +1097,7 @@ var userpincreate = function ( req, res, next ) {
 							content: 'Hello ' + req.params.firstname + ',\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
 						}, function ( err, reply ) {
 							if ( err ) {
-								errorHandler( req, res, err );
+								return errorHandler( req, res, err );
 							}
 							console.dir( reply );
 							res.send( 'OK' );
@@ -1143,7 +1143,7 @@ var userpinadd = function ( req, res, next ) {
 							content: 'Hello,\r\n\r\nTo start using Ormiboard on your new device or browser, please enter your verification code: ' + pin + '\r\n\r\nOrmiboard will synchronize your navigation on the devices or browsers sharing the same account.\r\n\r\nNeed support? support@exou.com\r\n\r\nEXO U Team',
 						}, function ( err, reply ) {
 							if ( err ) {
-								errorHandler( req, res, err );
+								return errorHandler( req, res, err );
 							}
 							console.dir( reply );
 							res.send( 'OK' );
@@ -1176,7 +1176,7 @@ var userpinactivate = function ( req, res, next ) {
 		try {
 			pin = fs.readFileSync( pinPath );
 		} catch ( e ) {
-			errorHandler( req, res, e );
+			return errorHandler( req, res, e );
 		}
 	}
 
@@ -1195,7 +1195,7 @@ var userpinactivate = function ( req, res, next ) {
 					req.params.lastname
 				], '?~?' ), ( err ) => {
 					if ( err ) {
-						errorHandler( req, res, err );
+						return errorHandler( req, res, err );
 					} else {
 						res.send( 'OK' );
 					}
@@ -1205,7 +1205,7 @@ var userpinactivate = function ( req, res, next ) {
 				fs.unlink( pinPath );
 			}
 		} catch ( e ) {
-			errorHandler( req, res, e );
+			return errorHandler( req, res, e );
 		}
 	} else {
 		res.send( 'WRONG' );
@@ -1224,7 +1224,7 @@ var addpinactivate = function ( req, res, next ) {
 		try {
 			pin = fs.readFileSync( pinPath );
 		} catch ( e ) {
-			errorHandler( req, res, e );
+			return errorHandler( req, res, e );
 		}
 	}
 
@@ -1243,7 +1243,7 @@ var addpinactivate = function ( req, res, next ) {
 				}
 			} );
 		} catch ( e ) {
-			errorHandler( req, res, e );
+			return errorHandler( req, res, e );
 		}
 	} else {
 		res.send( 'WRONG' );
@@ -1298,7 +1298,7 @@ var setuserinfo = function ( req, res, next ) {
 				], '?~?' ),
 				function ( err ) {
 					if ( err ) {
-						callback( err, null );
+						return errorHandler( req, res, err );
 					} else {
 						res.send( 200 );
 					}
@@ -1321,7 +1321,7 @@ var userinfo = function ( req, res, next ) {
 			} else {
 				fs.readFile( docName, function ( err, data ) {
 					if ( err ) {
-						callback( err, null );
+						return errorHandler( req, res, err );
 					} else {
 						res.send( data.toString( 'utf8' ) );
 					}
@@ -1343,7 +1343,7 @@ var deletesession = function ( req, res, next ) {
 		try {
 			rimraf( sessionPath, ( err ) => {
 				if ( err ) {
-					callback( err, null );
+					return errorHandler( req, res, err );
 				}
 			} );
 		} catch ( e ) {
@@ -1354,7 +1354,7 @@ var deletesession = function ( req, res, next ) {
 	try {
 		fs.unlink( userSessionPath, ( err ) => {
 			if ( err && err.code !== 'ENOENT' ) {
-				callback( err, null );
+				return errorHandler( req, res, err );
 			} else {
 				res.send( 200 );
 			}
@@ -1370,7 +1370,7 @@ var quitsession = function ( req, res, next ) {
 	try {
 		fs.unlink( userSessionPath, ( err ) => {
 			if ( err && err.code !== 'ENOENT' ) {
-				callback( err, null );
+				return errorHandler( req, res, err );
 			} else {
 				res.send( 200 );
 			}
@@ -1391,8 +1391,7 @@ var getlist = function ( req, res, next ) {
 		function ( err, data ) {
 			if ( err ) {
 				return errorHandler( req, res, err );
-			}
-			if ( err === null ) {
+			} else {
 				if ( data === false ) {
 					res.send( 500 );
 				} else {
@@ -1412,7 +1411,7 @@ var deleteboard = function ( req, res, next ) {
 		try {
 			rimraf( pathName, ( err ) => {
 				if ( err ) {
-					callback( err, null );
+					return errorHandler( req, res, err );
 				} else {
 					res.send( 200 );
 				}
