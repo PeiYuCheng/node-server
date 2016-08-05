@@ -1064,7 +1064,18 @@ var get_grids = function ( req, res, next ) {
 };
 
 var get_icons = function ( req, res, next ) {
-	// TODO
+	var fileName = path.join('.','rsc','icons','icons.data');
+	try{
+		fs.readFile( fileName, function ( err, data ) {
+			if ( err ) {
+				return errorHandler( req, res, err );
+			} else {
+				res.send( data.toString( 'utf8' ) );
+			}
+		} );
+	} catch (e){
+		return errorHandler( req, res, e );
+	}
 };
 
 var userpincreate = function ( req, res, next ) {
@@ -1781,6 +1792,10 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'errlog' in req.params ) {
 		return errlog( req, res, next );
+	}
+
+	if ( 'get_icons' in req.params ) {
+		return get_icons( req, res, next);
 	}
 } );
 
