@@ -592,30 +592,9 @@ var preview = function ( req, res, next ) {
 };
 
 var setdocinfo = function ( req, res, next ) {
-	var boardsFolder = path.join( '.', 'data', 'users', req.params.userid, 'boards' );
 	var docIdFolder = path.join( '.', 'data', 'users', req.params.userid, 'boards', req.params.docid );
 
 	async.series( [
-
-		function ( callback ) {
-			try {
-				fs.stat( boardsFolder, function ( err, stats ) {
-					if ( err && err.code === 'ENOENT' ) {
-						mkdirp( boardsFolder, '0775', function ( err ) {
-							if ( err ) {
-								callback( err, null );
-							} else {
-								callback( null, null );
-							}
-						} );
-					} else {
-						callback( null, null );
-					}
-				} );
-			} catch ( e ) {
-				callback( e, null );
-			}
-		},
 
 		function ( callback ) {
 			try {
@@ -677,7 +656,7 @@ var getdocinfo = function ( req, res, next ) {
 		fs.readFile( docName, function ( err, data ) {
 			if ( err ) {
 				res.send( 500 );
-				console.log( "Error reading file '%s':%s", docName, data );
+				return errorHandler( req, res, err );
 			} else {
 				res.send( data.toString( 'utf8' ) );
 			}
@@ -1086,7 +1065,7 @@ var userpincreate = function ( req, res, next ) {
 	var userInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'user.info' );
 	var urlRoot = ( req.isSecure() ) ? 'https' : 'http' + '://' + req.headers.host + '/';
 
-	if ( fs.accessSync( userInfoPath ) ) {
+	if ( fileExistsSync( userInfoPath ) ) {
 		res.send( 'EXISTS' );
 	} else {
 		// Logic here differs from PHP original. Here, we choose a random
@@ -1109,10 +1088,15 @@ var userpincreate = function ( req, res, next ) {
 						}, function ( err, reply ) {
 							if ( err ) {
 								return errorHandler( req, res, err );
+							} else{
+								console.dir( reply );
+								res.send( 'OK' );
 							}
-							console.dir( reply );
-							res.send( 'OK' );
 						} );
+
+						if (req.params.phone){
+							sms(req.params.phone, 'Your Ormiboard verification code is: ' + pin);
+						}
 					}
 				}
 			} );
@@ -1155,10 +1139,15 @@ var userpinadd = function ( req, res, next ) {
 						}, function ( err, reply ) {
 							if ( err ) {
 								return errorHandler( req, res, err );
+							} else{
+								console.dir( reply );
+								res.send( 'OK' );
 							}
-							console.dir( reply );
-							res.send( 'OK' );
 						} );
+
+						if (req.params.phone){
+							sms(req.params.phone, 'Your Ormiboard verification code is: ' + pin);
+						}
 					}
 				}
 			} );
