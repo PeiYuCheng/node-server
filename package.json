@@ -38,6 +38,9 @@
     "sendmail": "^0.2.2"
   },
   "devDependencies": {
-    "jshint": "^2.9.2"
+    "chai": "^3.5.0",
+    "jshint": "^2.9.2",
+    "mocha": "^3.0.2",
+    "supertest": "^2.0.0"
   }
 }
