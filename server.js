@@ -208,7 +208,6 @@ var ping = function ( req, res, next ) {
 				try {
 					mkdirp( dataFolder, '0775', function ( err ) {
 						if ( err ) {
-							console.log( "error mkdirp for dataFolder is: " + err );
 							if ( err.code == 'EEXIST' ) {
 								callback( null, null );
 							} else {
@@ -380,7 +379,7 @@ var ping = function ( req, res, next ) {
 									count++;
 									try {
 										if ( details == '1' ) {
-											fs.readFile( path.join( folder, item ), ( err, fileContent ) => {
+											fs.readFile( path.join( folder, item ), 'utf8', ( err, fileContent ) => {
 												if ( err ) {
 													forEachCallback( err );
 												} else {
@@ -655,8 +654,11 @@ var getdocinfo = function ( req, res, next ) {
 	try {
 		fs.readFile( docName, function ( err, data ) {
 			if ( err ) {
-				res.send( 500 );
-				return errorHandler( req, res, err );
+				if(err.code === 'ENOENT' ){
+					res.send('');
+				} else {
+					return errorHandler( req, res, err );					
+				}
 			} else {
 				res.send( data.toString( 'utf8' ) );
 			}
@@ -849,26 +851,11 @@ var setdevicedata = function ( req, res, next ) {
 
 var createsession = function ( req, res, next ) {
 
-	var sessionPath = path.join( '.', 'data', 'sessions', req.params.createsession );
 	var sessionDataPath = path.join( '.', 'data', 'users', req.params.createsession, 'session.data' );
 	var sessionInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'session.info' );
 
 	try {
-		if ( !fs.accessSync( sessionPath ) ) {
-			mkdirp( sessionPath, '0775', ( err ) => {
-				if ( err ) {
-					return errorHandler( req, res, err );
-				}
-			} );
-		}
-	} catch ( e ) {
-		console.error( 'Could not stat session path [%s]: %s', sessionPath, e.message );
-		res.send( 500 );
-		return false;
-	}
-
-	try {
-		if ( !fs.accessSync( sessionDataPath ) ) {
+		if ( !fileExistsSync( sessionDataPath ) ) {
 			mkdirp( sessionPath, '0775', ( err ) => {
 				if ( err ) {
 					return errorHandler( req, res, err );
@@ -889,7 +876,7 @@ var createsession = function ( req, res, next ) {
 	}
 
 	try {
-		if ( !fs.accessSync( sessionInfoPath ) ) {
+		if ( !fileExistsSync( sessionInfoPath ) ) {
 			mkdirp( sessionPath, '0775', ( err ) => {
 				if ( err ) {
 					return errorHandler( req, res, err );
@@ -916,7 +903,7 @@ var joinsession = function ( req, res, next ) {
 	var sessionDataPath = path.join( '.', 'data', 'users', req.params.userid, 'session.data' );
 	var sessionInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'session.info' );
 
-	if ( !fs.accessSync( sessionDataPath ) ) {
+	if ( !fileExistsSync( sessionDataPath ) ) {
 		res.send( 'NOT FOUND' );
 	} else {
 		async.parallel( [
@@ -1115,7 +1102,7 @@ var userpinadd = function ( req, res, next ) {
 	var userInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'user.info' );
 	var urlRoot = ( req.isSecure() ) ? 'https' : 'http' + '://' + req.headers.host + '/';
 
-	if ( !fs.accessSync( userInfoPath ) ) {
+	if ( !fileExistsSync( userInfoPath ) ) {
 		res.send( 'NOT FOUND' );
 		return false;
 	} else {
@@ -1173,8 +1160,8 @@ var userpinactivate = function ( req, res, next ) {
 	var userInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'user.info' );
 
 	if ( req.params.pin !== 'LOCAL' ) {
-		try {
-			pin = fs.readFileSync( pinPath );
+		try {	
+			pin = fs.readFileSync( pinPath , 'utf8');
 		} catch ( e ) {
 			return errorHandler( req, res, e );
 		}
@@ -1183,7 +1170,7 @@ var userpinactivate = function ( req, res, next ) {
 	if ( ( req.params.pin === pin || req.params.pin == '0911' ) && req.params.userid != '' ) {
 		try {
 
-			if ( !fs.accessSync( userDataPath ) ) {
+			if ( !isDirectorySync( userDataPath ) ) {
 				mkdirp.sync( userDataPath, '0775' );
 			}
 
@@ -1222,7 +1209,7 @@ var addpinactivate = function ( req, res, next ) {
 
 	if ( req.params.pin !== 'LOCAL' ) {
 		try {
-			pin = fs.readFileSync( pinPath );
+			pin = fs.readFileSync( pinPath, 'utf8');
 		} catch ( e ) {
 			return errorHandler( req, res, e );
 		}
@@ -1230,7 +1217,7 @@ var addpinactivate = function ( req, res, next ) {
 
 	if ( ( req.params.pin === pin || req.params.pin == '0911' ) && req.params.userid != '' ) {
 		try {
-			fs.readFile( userInfoPath, ( err, data ) => {
+			fs.readFile( userInfoPath, 'utf8', ( err, data ) => {
 				if ( data == '' || err ) {
 					userdata = 'EMPTY';
 				}
@@ -1440,7 +1427,7 @@ var load = function ( req, res, next ) {
 	const fileroot = path.join( '.', 'data', 'users', userid, 'boards', req.params.load, 'board.data' );
 
 	try {
-		fs.readFile( fileroot, function ( err, board ) {
+		fs.readFile( fileroot, 'utf8', function ( err, board ) {
 
 			if ( err ) {
 				// Problem reading the file?
@@ -1589,7 +1576,7 @@ function get_list_for_user( uid, parentCallback ) {
 										counter--;
 										forEachCallback( null );
 									} else if ( err == null ) {
-										fs.readFile( path.join( folder, item, '/board.info' ), ( err, data ) => {
+										fs.readFile( path.join( folder, item, '/board.info' ), 'utf8', ( err, data ) => {
 											if ( err ) {
 												forEachCallback( err );
 											} else {
@@ -1711,6 +1698,14 @@ server.get( basepath, function ( req, res, next ) {
 		return getdocinfo( req, res, next );
 	}
 
+	if ( 'setcontroller' in req.params ) {
+		return setcontroller( req, res, next );
+	}
+
+	if ( 'setdevicedata' in req.params ) {
+		return setdevicedata( req, res, next );
+	}
+
 	if ( 'setuserinfo' in req.params ) {
 		return setuserinfo( req, res, next );
 	}
@@ -1719,12 +1714,20 @@ server.get( basepath, function ( req, res, next ) {
 		return userinfo( req, res, next );
 	}
 
+	if ( 'userpincreate' in req.params ) {
+		return userpincreate( req, res, next );
+	}
+
 	if ( 'userpinadd' in req.params ) {
 		return userpinadd( req, res, next );
 	}
 
-	if ( 'userpincreate' in req.params ) {
-		return userpincreate( req, res, next );
+	if ( 'userpinactivate' in req.params ) {
+		return userpinactivate( req, res, next );
+	}
+	
+	if ( 'addpinactivate' in req.params ) {
+		return addpinactivate( req, res, next );
 	}
 
 	if ( 'load' in req.params ) {
@@ -1733,10 +1736,6 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'createsession' in req.params ) {
 		return createsession( req, res, next );
-	}
-
-	if ( 'setdevicedata' in req.params ) {
-		return setdevicedata( req, res, next );
 	}
 
 	if ( 'joinsession' in req.params ) {
@@ -1755,6 +1754,10 @@ server.get( basepath, function ( req, res, next ) {
 		return get_grids( req, res, next );
 	}
 
+	if ( 'get_icons' in req.params ) {
+		return get_icons( req, res, next);
+	}
+
 	if ( 'getlist' in req.params ) {
 		return getlist( req, res, next );
 	}
@@ -1765,10 +1768,6 @@ server.get( basepath, function ( req, res, next ) {
 
 	if ( 'deletesession' in req.params ) {
 		return deletesession( req, res, next );
-	}
-
-	if ( 'setcontroller' in req.params ) {
-		return setcontroller( req, res, next );
 	}
 
 	if ( 'quitsession' in req.params ) {
@@ -1783,9 +1782,6 @@ server.get( basepath, function ( req, res, next ) {
 		return errlog( req, res, next );
 	}
 
-	if ( 'get_icons' in req.params ) {
-		return get_icons( req, res, next);
-	}
 } );
 
 /**
