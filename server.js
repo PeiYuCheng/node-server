@@ -49,8 +49,8 @@ const basepath = '/bin/shared/query.php';
 var errorHandler = ( req, res, err ) => {
 	var logData = 'ERROR: ' + err.message + '\nRequest: ' + JSON.stringify( req.params );
 	console.log( logData );
-	errorlog( logData, (err)=>{
-		res.send(500);
+	errorlog( logData, ( err ) => {
+		res.send( 500 );
 	} );
 };
 
@@ -166,9 +166,9 @@ var endr = ( startTime, ping, did, parentCallback ) => {
 		}
 
 	], function ( err, data ) {
-			if (typeof parentCallback === 'function'){
-				parentCallback(err);
-			}
+		if ( typeof parentCallback === 'function' ) {
+			parentCallback( err );
+		}
 	} );
 };
 
@@ -486,7 +486,7 @@ var ping = function ( req, res, next ) {
 			},
 
 			function ( callback ) {
-				endr( startTime, req.params.ping, req.params.did, (err)=>{
+				endr( startTime, req.params.ping, req.params.did, ( err ) => {
 					callback( err, null );
 				} );
 			}
@@ -496,7 +496,7 @@ var ping = function ( req, res, next ) {
 		function ( err, results ) {
 			if ( err === 'stop' ) {
 				res.send( 'USER_UNKNOWN' );
-			} else if ( err === null) {
+			} else if ( err === null ) {
 				console.dir( results.join( '' ) );
 				res.send( results.join( '' ) );
 			} else {
@@ -516,10 +516,10 @@ var fexists = function ( req, res, next ) {
 
 	try {
 		fs.stat( fexists, function ( err, stats ) {
-			if ( err ){
-				if(err.code === 'ENOENT'){
+			if ( err ) {
+				if ( err.code === 'ENOENT' ) {
 					console.log( "Cannot find %s: %s", fexists, err );
-					res.send( 'NOT_FOUND' );					
+					res.send( 'NOT_FOUND' );
 				} else {
 					return errorHandler( req, res, err );
 				}
@@ -654,10 +654,10 @@ var getdocinfo = function ( req, res, next ) {
 	try {
 		fs.readFile( docName, function ( err, data ) {
 			if ( err ) {
-				if(err.code === 'ENOENT' ){
-					res.send('');
+				if ( err.code === 'ENOENT' ) {
+					res.send( '' );
 				} else {
-					return errorHandler( req, res, err );					
+					return errorHandler( req, res, err );
 				}
 			} else {
 				res.send( data.toString( 'utf8' ) );
@@ -963,7 +963,7 @@ var setsessiondata = ( req, res, next ) => {
 		fs.writeFile( sessiondatapath, req.params.data, ( err ) => {
 			if ( err ) {
 				return errorHandler( req, res, err );
-			} else{
+			} else {
 				res.send( 200 );
 			}
 		} );
@@ -1010,8 +1010,8 @@ var get_grids = function ( req, res, next ) {
 	var fileName = path.join( '.', 'data', 'users', req.params.userid, 'data', 'grids.data' );
 	try {
 		fs.stat( fileName, function ( err, stats ) {
-			if ( err ){
-					return errorHandler( req, res, err );
+			if ( err ) {
+				return errorHandler( req, res, err );
 			} else {
 				fs.readFile( fileName, function ( err, data ) {
 					if ( err ) {
@@ -1030,8 +1030,8 @@ var get_grids = function ( req, res, next ) {
 };
 
 var get_icons = function ( req, res, next ) {
-	var fileName = path.join('.','rsc','icons','icons.data');
-	try{
+	var fileName = path.join( '.', 'rsc', 'icons', 'icons.data' );
+	try {
 		fs.readFile( fileName, function ( err, data ) {
 			if ( err ) {
 				return errorHandler( req, res, err );
@@ -1039,7 +1039,7 @@ var get_icons = function ( req, res, next ) {
 				res.send( data.toString( 'utf8' ) );
 			}
 		} );
-	} catch (e){
+	} catch ( e ) {
 		return errorHandler( req, res, e );
 	}
 };
@@ -1061,8 +1061,8 @@ var userpincreate = function ( req, res, next ) {
 
 		try {
 			fs.writeFile( pinPath, pin, {
-				mode: '0644'}
-			, ( err ) => {
+				mode: '0644'
+			}, ( err ) => {
 				if ( err ) {
 					return errorHandler( req, res, err );
 				} else {
@@ -1075,14 +1075,14 @@ var userpincreate = function ( req, res, next ) {
 						}, function ( err, reply ) {
 							if ( err ) {
 								return errorHandler( req, res, err );
-							} else{
+							} else {
 								console.dir( reply );
 								res.send( 'OK' );
 							}
 						} );
 
-						if (req.params.phone){
-							sms(req.params.phone, 'Your Ormiboard verification code is: ' + pin);
+						if ( req.params.phone ) {
+							sms( req.params.phone, 'Your Ormiboard verification code is: ' + pin );
 						}
 					}
 				}
@@ -1126,14 +1126,14 @@ var userpinadd = function ( req, res, next ) {
 						}, function ( err, reply ) {
 							if ( err ) {
 								return errorHandler( req, res, err );
-							} else{
+							} else {
 								console.dir( reply );
 								res.send( 'OK' );
 							}
 						} );
 
-						if (req.params.phone){
-							sms(req.params.phone, 'Your Ormiboard verification code is: ' + pin);
+						if ( req.params.phone ) {
+							sms( req.params.phone, 'Your Ormiboard verification code is: ' + pin );
 						}
 					}
 				}
@@ -1160,8 +1160,8 @@ var userpinactivate = function ( req, res, next ) {
 	var userInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'user.info' );
 
 	if ( req.params.pin !== 'LOCAL' ) {
-		try {	
-			pin = fs.readFileSync( pinPath , 'utf8');
+		try {
+			pin = fs.readFileSync( pinPath, 'utf8' );
 		} catch ( e ) {
 			return errorHandler( req, res, e );
 		}
@@ -1209,7 +1209,7 @@ var addpinactivate = function ( req, res, next ) {
 
 	if ( req.params.pin !== 'LOCAL' ) {
 		try {
-			pin = fs.readFileSync( pinPath, 'utf8');
+			pin = fs.readFileSync( pinPath, 'utf8' );
 		} catch ( e ) {
 			return errorHandler( req, res, e );
 		}
@@ -1495,21 +1495,21 @@ function errorlog( string, callback ) {
 		},
 
 	], function ( err, data ) {
-			if (err){
-				console.log("Error in errorlog: "+ err);				
-			}
-			if (typeof callback === 'function'){
-				callback(err);
-			}
+		if ( err ) {
+			console.log( "Error in errorlog: " + err );
+		}
+		if ( typeof callback === 'function' ) {
+			callback( err );
+		}
 	} );
 }
 
 var errlog = function ( req, res, next ) {
-	errorlog( req.params.errlog, function (err) {
-		if (err){
-			res.send(500);
+	errorlog( req.params.errlog, function ( err ) {
+		if ( err ) {
+			res.send( 500 );
 		} else {
-			res.send( 'LOGGED' );			
+			res.send( 'LOGGED' );
 		}
 	} );
 };
@@ -1725,7 +1725,7 @@ server.get( basepath, function ( req, res, next ) {
 	if ( 'userpinactivate' in req.params ) {
 		return userpinactivate( req, res, next );
 	}
-	
+
 	if ( 'addpinactivate' in req.params ) {
 		return addpinactivate( req, res, next );
 	}
@@ -1755,7 +1755,7 @@ server.get( basepath, function ( req, res, next ) {
 	}
 
 	if ( 'get_icons' in req.params ) {
-		return get_icons( req, res, next);
+		return get_icons( req, res, next );
 	}
 
 	if ( 'getlist' in req.params ) {
