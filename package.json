@@ -41,6 +41,7 @@
     "chai": "^3.5.0",
     "jshint": "^2.9.2",
     "mocha": "^3.0.2",
+    "random-words": "0.0.1",
     "supertest": "^2.0.0"
   }
 }
