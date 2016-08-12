@@ -268,9 +268,13 @@ var ping = function ( req, res, next ) {
 			function ( callback ) {
 				try {
 					fs.stat( sessionInfoPath, function ( err, stats ) {
-						if ( err && err.code === 'ENOENT' ) {
-							sid = '';
-							callback( null, sid + '!~!' );
+						if ( err ) {
+							if ( err.code === 'ENOENT' ) {
+								sid = '';
+								callback( null, sid + '!~!' );
+							} else {
+								callback( err, null );
+							}
 						} else {
 							fs.readFile( sessionInfoPath, 'utf8', function ( err, data ) {
 								if ( err ) {
@@ -331,6 +335,8 @@ var ping = function ( req, res, next ) {
 					} catch ( e ) {
 						callback( e, null );
 					}
+				} else {
+					callback( null, null );
 				}
 			},
 
@@ -352,6 +358,8 @@ var ping = function ( req, res, next ) {
 					} catch ( e ) {
 						callback( e, null );
 					}
+				} else {
+					callback( null, null );
 				}
 			},
 
@@ -415,6 +423,8 @@ var ping = function ( req, res, next ) {
 					} catch ( e ) {
 						callback( e, null );
 					}
+				} else {
+					callback( null, null );
 				}
 			},
 
@@ -851,8 +861,33 @@ var setdevicedata = function ( req, res, next ) {
 
 var createsession = function ( req, res, next ) {
 
-	var sessionDataPath = path.join( '.', 'data', 'users', req.params.createsession, 'session.data' );
+	var sessionPath = path.join( '.', 'data', 'sessions', req.params.createsession );
+	var sessionDataPath = path.join( '.', 'data', 'sessions', req.params.createsession, 'session.data' );
+	var sessionInfoFolder = path.join( '.', 'data', 'users', req.params.userid, 'data');
 	var sessionInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'session.info' );
+
+	var writeToFile = function ( path, data, req, res ) {
+		fs.writeFile( path, data, ( err ) => {
+			if ( err ) {
+				return errorHandler( req, res, err );
+			}
+			res.send( 200 );
+		} );
+	}
+
+	try {
+		if ( !fileExistsSync( sessionPath ) ) {
+			mkdirp( sessionPath, '0775', ( err ) => {
+				if ( err ) {
+					return errorHandler( req, res, err );
+				}
+			} );
+		}
+	} catch ( e ) {
+		console.error( 'Could not stat session path [%s]: %s', sessionPath, e.message );
+		res.send( 500 );
+		return false;
+	}
 
 	try {
 		if ( !fileExistsSync( sessionDataPath ) ) {
@@ -860,14 +895,10 @@ var createsession = function ( req, res, next ) {
 				if ( err ) {
 					return errorHandler( req, res, err );
 				}
-
-				fs.writeFile( sessionDataPath, req.params.data, ( err ) => {
-					if ( err ) {
-						return errorHandler( req, res, err );
-					}
-					res.send( 200 );
-				} )
+				writeToFile( sessionDataPath, req.params.data, req, res );
 			} );
+		} else {
+			writeToFile( sessionDataPath, req.params.data, req, res );
 		}
 	} catch ( e ) {
 		console.error( 'Error saving session data at [%s]: %s', sessionPath, e.message );
@@ -877,21 +908,17 @@ var createsession = function ( req, res, next ) {
 
 	try {
 		if ( !fileExistsSync( sessionInfoPath ) ) {
-			mkdirp( sessionPath, '0775', ( err ) => {
+			mkdirp( sessionInfoFolder, '0775', ( err ) => {
 				if ( err ) {
 					return errorHandler( req, res, err );
 				}
-
-				fs.writeFile( sessionInfoPath, 'H:' + req.params.createsession, ( err ) => {
-					if ( err ) {
-						return errorHandler( req, res, err );
-					}
-					res.send( 200 );
-				} )
+				writeToFile( sessionInfoPath, 'H:' + req.params.createsession, req, res );
 			} );
+		} else {
+			writeToFile( sessionInfoPath, 'H:' + req.params.createsession, req, res );
 		}
 	} catch ( e ) {
-		console.error( 'Error saving session info at [%s]: %s', sessionPath, e.message );
+		console.error( 'Error saving session info at [%s]: %s', sessionInfoFolder, e.message );
 		res.send( 500 );
 		return false;
 	}
@@ -899,12 +926,12 @@ var createsession = function ( req, res, next ) {
 
 var joinsession = function ( req, res, next ) {
 
-	var sessionPath = path.join( '.', 'data', 'sessions', req.params.createsession );
-	var sessionDataPath = path.join( '.', 'data', 'users', req.params.userid, 'session.data' );
+	var sessionPath = path.join( '.', 'data', 'sessions', req.params.joinsession );
+	var sessionDataPath = path.join( '.', 'data', 'sessions', req.params.joinsession, 'session.data' );
 	var sessionInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'session.info' );
 
-	if ( !fileExistsSync( sessionDataPath ) ) {
-		res.send( 'NOT FOUND' );
+	if ( !fileExistsSync( sessionPath ) ) {
+		res.send( 'NOT_FOUND' );
 	} else {
 		async.parallel( [
 			( callback ) => {
@@ -913,7 +940,7 @@ var joinsession = function ( req, res, next ) {
 						if ( err ) {
 							callback( err, null );
 						}
-						callback( null );
+						callback( null, null );
 					} );
 				} catch ( e ) {
 					callback( e );
@@ -922,7 +949,7 @@ var joinsession = function ( req, res, next ) {
 
 			( callback ) => {
 				try {
-					fs.writeFile( sessionInfoPath, 'H:' + req.params.createsession, ( err ) => {
+					fs.writeFile( path.join( sessionPath, req.params.userid ), '', ( err ) => {
 						if ( err ) {
 							callback( err, null );
 						}
