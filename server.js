@@ -1061,8 +1061,8 @@ var userpincreate = function ( req, res, next ) {
 
 		try {
 			fs.writeFile( pinPath, pin, {
-				mode: '0755'
-			}, ( err ) => {
+				mode: '0644'}
+			, ( err ) => {
 				if ( err ) {
 					return errorHandler( req, res, err );
 				} else {
@@ -1112,7 +1112,7 @@ var userpinadd = function ( req, res, next ) {
 
 		try {
 			fs.writeFile( pinPath, pin, {
-				mode: '0755'
+				mode: '0644'
 			}, ( err ) => {
 				if ( err ) {
 					return errorHandler( req, res, err );
