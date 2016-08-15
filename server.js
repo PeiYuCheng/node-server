@@ -1464,6 +1464,7 @@ var load = function ( req, res, next ) {
 					console.warn( 'Board [%s] for user [%s] not found.', req.params.load, userid );
 					res.header( 'Content-Length', 0 );
 					res.status( 404 );
+					res.end();
 				} else {
 					// An error other than the file not exists (e.g., permissions).
 					console.error( 'Error loading board [%s] for user [%s]: %s', req.params.load, userid, err.message );
