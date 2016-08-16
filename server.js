@@ -1435,7 +1435,7 @@ var deleteboard = function ( req, res, next ) {
 		}
 	} else {
 		return errorHandler( req, res, {
-			message: 'missing parameters'
+			message: 'illegal parameters'
 		} );
 	}
 
@@ -1564,6 +1564,8 @@ function get_list_for_user( uid, parentCallback ) {
 				} catch ( e ) {
 					callback( e, null );
 				}
+			} else {
+				callback( null, null);
 			}
 		},
 
