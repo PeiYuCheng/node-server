@@ -13,6 +13,7 @@ const supertest = require( 'supertest' );
 const util = require( 'util' );
 const async = require( 'async' );
 const mkdirp = require( 'mkdirp' );
+const fs = require( 'fs' );
 const os = require( 'os' );
 const process = require( 'process' );
 const path = require( 'path' );
@@ -31,16 +32,23 @@ const basePath = '/bin/shared/query.php'; //for supertest
 
 console.log( "testUrl is: " + testUrl );
 
-describe( "test function [fexists]", function () {	
+describe( "test function [fexists]", function () {
 	var testFolderPath = path.join( 'test', 'data', randomwords() );
+
 	before( function ( done ) {
 		mkdirp( testFolderPath, '0775', function ( err ) {
 			if ( err ) {
-				if ( err.code == 'EEXIST' ) {
-					done();
-				} else {
-					done( err );
-				}
+				done( JSON.stringify( err ) );
+			} else {
+				done();
+			}
+		} );
+	} );
+
+	after( function ( done ) {
+		rimraf( testFolderPath, ( err ) => {
+			if ( err ) {
+				done( JSON.stringify( err ) );
 			} else {
 				done();
 			}
@@ -128,7 +136,68 @@ describe( "test functions [setdocinfo] and [getdocinfo]", function () {
 	} );
 } );
 
-//userpincreate or userpinadd, userpinactivate, addpinactivate
+describe( "test functions [setuserinfo] and [userinfo]", function () {
+	var userid = randomwords();
+
+	after( function ( done ) {
+		var testFolderPath = path.join( '.', 'data', 'users', userid );
+		rimraf( testFolderPath, ( err ) => {
+			if ( err ) {
+				done( JSON.stringify( err ) );
+			} else {
+				done();
+			}
+		} );
+	} );
+
+	it( "setuserinfo of an unexisting user folder, returns status 200", function ( done ) {
+		console.log( "setuserinfo userid=" + userid );
+		server
+			.get( basePath )
+			.query( {
+				setuserinfo: true,
+				userid: userid,
+				email: 'setuserinfo email',
+				firstname: 'firstname',
+				lastname: 'lastname'
+			} )
+			.expect( 200, done );
+	} );
+
+	it( "setuserinfo  of an existing user folder, returns status 200", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				setuserinfo: true,
+				userid: userid,
+				email: 'setuserinfo email',
+				firstname: 'firstname',
+				lastname: 'lastname'
+			} )
+			.expect( 200, done );
+	} );
+
+	//returned data contains timestamp so it is not in the .expect()
+	it( "userinfo of an existing user, returns status 200 and userinfo", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userinfo: true,
+				userid: userid,
+			} )
+			.expect( 200, done )
+	} );
+
+	it( "userinfo of an non-existing user, returns status 200 and NOT_FOUND", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userinfo: true,
+				userid: randomwords(),
+			} )
+			.expect( 200, 'NOT_FOUND', done )
+	} );
+} );
 
 describe( "test through [createsession], [joinsession], [setsessiondata], [quitsession], [deletesession].", function () {
 	var createdSession = randomwords();
@@ -153,6 +222,7 @@ describe( "test through [createsession], [joinsession], [setsessiondata], [quits
 			if ( err ) {
 				done( JSON.stringify( err ) );
 			} else {
+
 				var testUserFolderPath = path.join( '.', 'data', 'users', userid );
 				rimraf( testUserFolderPath, ( err ) => {
 					if ( err ) {
@@ -281,9 +351,22 @@ describe( "test through [createsession], [joinsession], [setsessiondata], [quits
 } );
 
 //POST preview, setdocinfo, getdocinfo, POST publish, load, getlist, deleteboard
+//note: the tests for POST requests on PHP server doesn't behave as intended. 
+//			However, the same tests for NodeJS server works properly.
 describe( "test through [preview], [setdocinfo], [getdocinfo], [publish], [load], [getlist], [deleteboard].", function () {
 	var userid = randomwords();
 	var previewFolder = randomwords();
+
+	after( function ( done ) {
+		var testUserFolderPath = path.join( '.', 'data', 'users', userid );
+		rimraf( testUserFolderPath, ( err ) => {
+			if ( err ) {
+				done( JSON.stringify( err ) );
+			} else {
+				done();
+			}
+		} );
+	} );
 
 	//preview puts base64 data into a .jpg file
 	it( "preview POST request to write base64 img data to a file. Returns 200", function ( done ) {
@@ -296,16 +379,15 @@ describe( "test through [preview], [setdocinfo], [getdocinfo], [publish], [load]
 				slide: 'previewSlide',
 				data: 'data:image/gif;base64,R0lGODlhDwAPAKECAAAAzMzM/////wAAACwAAAAADwAPAAACIISPeQHsrZ5ModrLlN48CXF8m2iQ3YmmKqVlRtW4MLwWACH+H09wdGltaXplZCBieSBVbGVhZCBTbWFydFNhdmVyIQAAOw=='
 			} )
-			.expect( 200, done );
-
-		// .end(function(err, res){
-		// 	if (err) {
-		// 		return done(err);
-		// 	} else {
-		// 		console.log(res.text); 
-		// 		done();
-		// 	}
-		// });
+			.expect( 200 )
+			.end( function ( err, res ) {
+				if ( err ) {
+					return done( err );
+				} else {
+					//console.log(res.text); 
+					done();
+				}
+			} );
 	} );
 
 	it( "setdocinfo of user's board. Returns 200", function ( done ) {
@@ -473,4 +555,248 @@ describe( "test through [preview], [setdocinfo], [getdocinfo], [publish], [load]
 			} )
 			.expect( 500, done );
 	} );
+} );
+
+// need Mail Exchanger configured to send the email.
+describe( "Need Mail Exchanger configured for [userpinadd]. [addpinactivate].", function () {
+	var userid = randomwords();
+	var testFolderPath = path.join( '.', 'data', 'users', userid, 'data' );
+	var email = 'user email';
+	var phone = 'user phone';
+
+	before( function ( done ) {
+		console.log( "userpinadd userid is: " + userid );
+
+		mkdirp( testFolderPath, '0775', ( err ) => {
+			if ( err && err.code !== 'ENOENT' ) {
+				return done( err );
+			} else {
+
+				fs.writeFile(
+					path.join( testFolderPath, 'user.info' ),
+					'LOCAL',
+					function ( err ) {
+						err ? done( err ) : done();
+					}
+				);
+			}
+		} );
+	} );
+
+	after( function ( done ) {
+		var testUserFolder = path.join( '.', 'data', 'users', userid );
+
+		rimraf( testUserFolder, ( err ) => {
+			if ( err ) {
+				return done( JSON.stringify( err ) );
+			}
+			done();
+		} );
+	} );
+
+	it.skip( "userpinadd of a non-local user. Returns 200 and OK", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userpinadd: true,
+				userid: userid,
+				email: email,
+				local: 0,
+				phone: phone
+			} )
+			.expect( 200, 'OK', done );
+	} );
+
+	//works without MX. Creates the pending pin file for next test
+	it( "userpinadd of a local user. Returns 200 and OK", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userpinadd: true,
+				userid: userid,
+				email: email,
+				local: 1,
+				phone: phone
+			} )
+			.expect( 200, 'OK', done );
+	} );
+
+	it( "userpinadd of a non-existing user. Returns 200 and NOT_FOUND", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userpinadd: true,
+				userid: randomwords(),
+				email: email,
+				local: 1,
+				phone: phone
+			} )
+			.expect( 200, 'NOT_FOUND', done );
+	} );
+
+	it( "addpinactivate of a local user or the pin is wrong. Returns 200 and WRONG", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				addpinactivate: true,
+				userid: userid,
+				pin: 0
+			} )
+			.expect( 200, 'WRONG', done );
+	} );
+
+	it( "addpinactivate of a non-local user, the pin is right and the pin in file=LOCAL. \n Returns 200 and user info", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				addpinactivate: true,
+				userid: userid,
+				pin: '0911'
+			} )
+			.expect( 200, 'LOCAL', done );
+	} );
+} );
+
+// need Mail Exchanger configured to send the email.
+describe( "Need Mail Exchanger configured for [userpincreate]. [userpinactivate].", function () {
+	var existingUserid = randomwords();
+	var existingFolderPath = path.join( '.', 'data', 'users', existingUserid, 'data' );
+	var userid = randomwords();
+	var email = 'user email';
+	var phone = 'user phone';
+
+	before( function ( done ) {
+		console.log( "existingUserid is: " + existingUserid );
+		console.log( "userpinadd userid is: " + userid );
+
+		mkdirp( existingFolderPath, '0775', ( err ) => {
+			if ( err && err.code !== 'ENOENT' ) {
+				return done( err );
+			} else {
+
+				fs.writeFile(
+					path.join( existingFolderPath, 'user.info' ),
+					'LOCAL',
+					function ( err ) {
+						err ? done( err ) : done();
+					}
+				);
+			}
+		} );
+	} );
+
+	after( function ( done ) {
+		var pendingUserFile = path.join( '.', 'data', 'pending', userid );
+		var testUserFolder = path.join( '.', 'data', 'users', userid );
+		var ExistingUserFolder = path.join( '.', 'data', 'users', existingUserid );
+
+		rimraf( testUserFolder, ( err ) => {
+			if ( err ) {
+				return done( JSON.stringify( err ) );
+			} else {
+
+				rimraf( ExistingUserFolder, ( err ) => {
+					if ( err ) {
+						done( JSON.stringify( err ) );
+					} else {
+
+						fs.unlink( pendingUserFile, ( err ) => {
+							if ( err && err.code !== 'ENOENT' ) {
+								return done( JSON.stringify( err ) );
+							}
+							done();
+						} );
+					}
+				} );
+			}
+		} );
+
+
+	} );
+
+	it( "userpincreate of an existing user. Returns 200 and EXISTS.", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userpincreate: true,
+				userid: existingUserid,
+				local: 1,
+				firstname: 'userpincreate firstname',
+				email: email,
+				phone: phone
+			} )
+			.expect( 200, 'EXISTS', done );
+	} );
+
+	it( "userpincreate of an non-existing, LOCAL user. Returns 200 and OK.", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userpincreate: true,
+				userid: userid,
+				local: 1,
+				firstname: 'userpincreate firstname',
+				email: email,
+				phone: phone
+			} )
+			.expect( 200, 'OK', done );
+	} );
+
+	it.skip( "userpincreate of an non-existing, non-LOCAL user. Returns 200 and OK.", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userpincreate: true,
+				userid: userid,
+				local: 0,
+				firstname: 'userpincreate firstname',
+				email: email,
+				phone: phone
+			} )
+			.expect( 200, 'OK', done );
+	} );
+
+	it( "userpinactivate a pin that = LOCAL. Returns 200 and OK.", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userpinactivate: true,
+				userid: userid,
+				pin: 'LOCAL',
+				firstname: 'userpinactivate pin=LOCAL firstname',
+				email: email,
+				phone: phone
+			} )
+			.expect( 200, 'OK', done );
+	} );
+
+	it( "userpinactivate a wrong pin. Returns 200 and WRONG.", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userpinactivate: true,
+				userid: userid,
+				pin: 'A WRONG PIN',
+				firstname: 'userpinactivate pin=LOCAL firstname',
+				email: email,
+				phone: phone
+			} )
+			.expect( 200, 'WRONG', done );
+	} );
+
+	// this test will delete the pending/userid/ folder. so do it last.
+	it( "userpinactivate a pin that is right and != LOCAL. Returns 200 and OK.", function ( done ) {
+		server
+			.get( basePath )
+			.query( {
+				userpinactivate: true,
+				userid: userid,
+				pin: '0911',
+				firstname: 'userpinactivate pin!=LOCAL firstname',
+				email: email,
+				phone: phone
+			} )
+			.expect( 200, 'OK', done );
+	} );
+
 } );
