@@ -863,7 +863,7 @@ var createsession = function ( req, res, next ) {
 
 	var sessionPath = path.join( '.', 'data', 'sessions', req.params.createsession );
 	var sessionDataPath = path.join( '.', 'data', 'sessions', req.params.createsession, 'session.data' );
-	var sessionInfoFolder = path.join( '.', 'data', 'users', req.params.userid, 'data');
+	var sessionInfoFolder = path.join( '.', 'data', 'users', req.params.userid, 'data' );
 	var sessionInfoPath = path.join( '.', 'data', 'users', req.params.userid, 'data', 'session.info' );
 
 	var writeToFile = function ( path, data, req, res ) {
@@ -1104,13 +1104,18 @@ var userpincreate = function ( req, res, next ) {
 								return errorHandler( req, res, err );
 							} else {
 								console.dir( reply );
-								res.send( 'OK' );
+
+								if ( req.params.phone ) {
+									var smsSuccess = sms( req.params.phone, 'Your Ormiboard verification code is: ' + pin );
+									smsSuccess ? res.send( 'OK' ) : errorHandler( req, res, err );
+								} else {
+									res.send( 'OK' );
+								}
+
 							}
 						} );
-
-						if ( req.params.phone ) {
-							sms( req.params.phone, 'Your Ormiboard verification code is: ' + pin );
-						}
+					} else {
+						res.send( 'OK' );
 					}
 				}
 			} );
@@ -1155,13 +1160,19 @@ var userpinadd = function ( req, res, next ) {
 								return errorHandler( req, res, err );
 							} else {
 								console.dir( reply );
-								res.send( 'OK' );
+
+								if ( req.params.phone ) {
+									var smsSuccess = sms( req.params.phone, 'Your Ormiboard verification code is: ' + pin );
+									smsSuccess ? res.send( 'OK' ) : errorHandler( req, res, err );
+								} else {
+									res.send( 'OK' );
+								}
+
 							}
 						} );
 
-						if ( req.params.phone ) {
-							sms( req.params.phone, 'Your Ormiboard verification code is: ' + pin );
-						}
+					} else {
+						res.send( 'OK' );
 					}
 				}
 			} );
@@ -1180,7 +1191,7 @@ var userpinadd = function ( req, res, next ) {
  * @return {Void}
  */
 var userpinactivate = function ( req, res, next ) {
-	var pin;
+	var pin = req.params.pin;
 	var userdata;
 	var pinPath = path.join( '.', 'data', 'pending', req.params.userid );
 	var userDataPath = path.join( '.', 'data', 'users', req.params.userid, 'data' );
@@ -1210,13 +1221,19 @@ var userpinactivate = function ( req, res, next ) {
 				], '?~?' ), ( err ) => {
 					if ( err ) {
 						return errorHandler( req, res, err );
-					} else {
-						res.send( 'OK' );
 					}
 				} );
 
 			if ( pin !== 'LOCAL' ) {
-				fs.unlink( pinPath );
+				fs.unlink( pinPath, ( err ) => {
+					if ( err ) {
+						return errorHandler( req, res, e );
+					} else {
+						res.send( 'OK' );
+					}
+				} );
+			} else {
+				res.send( 'OK' );
 			}
 		} catch ( e ) {
 			return errorHandler( req, res, e );
@@ -1246,15 +1263,20 @@ var addpinactivate = function ( req, res, next ) {
 		try {
 			fs.readFile( userInfoPath, 'utf8', ( err, data ) => {
 				if ( data == '' || err ) {
-					userdata = 'EMPTY';
+					data = 'EMPTY';
 				}
-				res.send( userdata );
 
 				if ( pin !== 'LOCAL' ) {
 					fs.unlink( pinPath, ( err ) => {
-						console.log( 'ERROR removing %s: %s', pinPath, err );
+						if ( err ) {
+							console.log( 'ERROR removing %s: %s', pinPath, err );
+							return errorHandler( req, res, e );
+						}
 					} );
 				}
+
+				res.send( data );
+
 			} );
 		} catch ( e ) {
 			return errorHandler( req, res, e );
@@ -1565,7 +1587,7 @@ function get_list_for_user( uid, parentCallback ) {
 					callback( e, null );
 				}
 			} else {
-				callback( null, null);
+				callback( null, null );
 			}
 		},
 
@@ -1857,6 +1879,25 @@ server.get( '/health', function ( req, res, next ) {
 		},
 		loadavg: os.loadavg()
 	} );
+} );
+
+/**
+ * Serve static files
+ */
+server.get( /\/?.*/, restify.serveStatic( {
+	directory: __dirname,
+	default: 'index.html',
+	//match: /^((?!app.js).)*$/ 
+} ) );
+
+/**
+ * Event emited after all routes have been processed.
+ * Used for error logging
+ */
+server.on( 'after', function ( request, response, route, error ) {
+	if ( error ) {
+		console.error( `ERROR: ${error.body.code} ${error.body.message}` );
+	}
 } );
 
 /**
