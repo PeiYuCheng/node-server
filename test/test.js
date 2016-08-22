@@ -1089,6 +1089,12 @@ controller.info
 			}
 		} );
 
+		fs.unlink( path.join( '.', 'data', '1yearold' ), ( err ) => {
+			if ( err && err.code !== 'ENOENT' ) {
+				return done( JSON.stringify( err ) );
+			}
+		} );
+
 		rimraf( pingFolder, ( err ) => {
 			if ( err ) {
 				done( JSON.stringify( err ) );
