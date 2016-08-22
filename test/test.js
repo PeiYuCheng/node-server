@@ -17,7 +17,7 @@ const fs = require( 'fs' );
 const os = require( 'os' );
 const process = require( 'process' );
 const path = require( 'path' );
-const randomwords = require( "random-words" ); //to be changed to node js md5 crypto
+const randomwords = require( "random-words" ); //to be changed to node js md5 crypto to avoid userid collision
 const rimraf = require( 'rimraf' ); //rm -Rf
 
 /**
@@ -208,7 +208,7 @@ describe( "test through [createsession], [joinsession], [setsessiondata], [quits
 	before( function ( done ) {
 		var sessionInfoFolder = path.join( '.', 'data', 'users', userid, 'data' );
 		mkdirp( sessionInfoFolder, '0775', ( err ) => {
-			if ( err && err.code !== 'ENOENT' ) {
+			if ( err ) {
 				done( err );
 			} else {
 				done();
@@ -568,7 +568,7 @@ describe( "Need Mail Exchanger configured for [userpinadd]. [addpinactivate].", 
 		console.log( "userpinadd userid is: " + userid );
 
 		mkdirp( testFolderPath, '0775', ( err ) => {
-			if ( err && err.code !== 'ENOENT' ) {
+			if ( err ) {
 				return done( err );
 			} else {
 
@@ -670,7 +670,7 @@ describe( "Need Mail Exchanger configured for [userpincreate]. [userpinactivate]
 		console.log( "userpinadd userid is: " + userid );
 
 		mkdirp( existingFolderPath, '0775', ( err ) => {
-			if ( err && err.code !== 'ENOENT' ) {
+			if ( err ) {
 				return done( err );
 			} else {
 
@@ -799,4 +799,395 @@ describe( "Need Mail Exchanger configured for [userpincreate]. [userpinactivate]
 			.expect( 200, 'OK', done );
 	} );
 
+} );
+
+describe( '[setdevicedata]', function () {
+	var userid = randomwords();
+	var deviceDataFolder = path.join( '.', 'data', 'users', userid, 'devices' );
+
+	before( function ( done ) {
+		console.log( "setdevicedata userid is: " + userid );
+
+		mkdirp( deviceDataFolder, '0775', ( err ) => {
+			if ( err ) {
+				return done( err );
+			} else {
+				done();
+			}
+		} );
+	} );
+
+	var testUserFolder = path.join( '.', 'data', 'users', userid );
+	after( function ( done ) {
+		rimraf( testUserFolder, ( err ) => {
+			if ( err ) {
+				return done( JSON.stringify( err ) );
+			} else {
+				done();
+			}
+		} );
+	} );
+
+	it( "setdevicedata of an existing user. Returns 200.", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				setdevicedata: true,
+				userid: userid,
+				did: 'testDid',
+				data: 'someData'
+			} )
+			.expect( 200, done );
+	} );
+
+	it( "setdevicedata of an unexisting user. Returns 500.", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				setdevicedata: true,
+				userid: '',
+				did: '',
+				data: ''
+			} )
+			.expect( 500, done );
+	} );
+
+} );
+
+describe( "[savegrids], [get_grids]", function () {
+	var userid = randomwords();
+	var gridsFolder = path.join( '.', 'data', 'users', userid, 'data' );
+
+	before( function ( done ) {
+		console.log( "savegrids userid is: " + userid );
+
+		mkdirp( gridsFolder, '0775', ( err ) => {
+			if ( err ) {
+				return done( err );
+			} else {
+				done();
+			}
+		} );
+	} );
+
+	var testUserFolder = path.join( '.', 'data', 'users', userid );
+	after( function ( done ) {
+		rimraf( testUserFolder, ( err ) => {
+			if ( err ) {
+				return done( JSON.stringify( err ) );
+			} else {
+				done();
+			}
+		} );
+	} );
+
+	it( "savegrids of an existing user, returns 200.", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				savegrids: true,
+				userid: userid,
+				age: 'anyage',
+				grids: 'grid file content'
+			} )
+			.expect( 200 )
+			.end( function ( err, res ) {
+				if ( err ) {
+					return done( err );
+				} else {
+					console.log( 'savegrids returned data is: ' + res.text );
+					done();
+				}
+			} );
+	} );
+
+	it( "savegrids of an unexisting user, returns 500.", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				savegrids: true,
+				userid: '',
+				age: '',
+				grids: 'grid file content'
+			} )
+			.expect( 500, done );
+	} );
+
+	it( "get_grids of an existing grids.data file, returns 200 and file content", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				get_grids: true,
+				userid: userid,
+			} )
+			.expect( 200, 'grid file content', done );
+	} );
+
+	it( "get_grids of an unexisting grids.data file, returns 500", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				get_grids: true,
+				userid: randomwords()
+			} )
+			.expect( 500, done );
+	} );
+} );
+
+describe( "[get_icons]", ( done ) => {
+	var iconsDataFolder = path.join( '.', 'rsc', 'icons' );
+	var iconsDataFile = path.join( '.', 'rsc', 'icons', 'icons.data' );
+
+	before( function ( done ) {
+		fs.stat( iconsDataFolder, ( err, stats ) => {
+			if ( err && err.code === 'ENOENT' ) {
+
+				mkdirp( iconsDataFolder, '0775', ( err ) => {
+					if ( err ) {
+						return done( err );
+					} else {
+
+						fs.writeFile(
+							iconsDataFile,
+							'icons data',
+							function ( err ) {
+								err ? done( err ) : done();
+							}
+						);
+					}
+				} );
+			} else {
+				done();
+			}
+		} );
+	} );
+
+	it( "get_icons", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				get_icons: ''
+			} )
+			.expect( 200 )
+			.end( function ( err, res ) {
+				if ( err ) {
+					return done( err );
+				} else {
+					//console.log( 'get_icons returned data is: ' + res.text );
+					done();
+				}
+			} );
+	} );
+} );
+
+describe( "[ping]", function () {
+	var userid = randomwords();
+	var pingFolder = path.join( '.', 'data', 'users', userid );
+	var dataFolder = path.join( pingFolder, 'data' );
+	var devicesFolder = path.join( pingFolder, 'devices' );
+	var sessionInfoPath = path.join( dataFolder, 'session.info' );
+	var contollerInfoPath = path.join( dataFolder, 'controller.info' );
+	var controllerIdDataPath = path.join( devicesFolder, 'contollerInfo-mydeviceid.data' );
+	var sidFolder = path.join( '.', 'data', 'sessions', 'ssioninfo' );
+	var sessionDataPath = path.join( sidFolder, 'session.data' );
+
+	var nonCompleteUser = randomwords();
+	var nonCompleteUserFolder = path.join( '.', 'data', 'users', nonCompleteUser );
+
+	/** making the following folder achitecture for a complete user folder:
+
+				 				  data ----- ageFile 
+				 				 /    \       
+				 			users  sessions
+				 		 /     				\
+				   userid 			[session.info's content]
+		 			/			\ 					 |							
+		 		data   devices 		session.data     
+		 	  /	  				\
+session.info, 		[contoller.info's content].data
+controller.info
+
+	 */
+	before( function ( done ) {
+		console.log( "ping userid is: " + userid );
+
+		//making an uncomplete user folder
+		mkdirp( nonCompleteUserFolder, '0775', ( err ) => {
+			if ( err ) {
+				return done( err );
+			}
+		} );
+
+		mkdirp( dataFolder, '0775', ( err ) => {
+			if ( err ) {
+				return done( err );
+			} else {
+
+				mkdirp( devicesFolder, '0775', ( err ) => {
+					if ( err ) {
+						return done( err );
+					} else {
+
+						fs.writeFile( sessionInfoPath, 'sessioninfo', ( err ) => {
+							if ( err ) {
+								return done( err );
+							} else {
+
+								fs.writeFile( contollerInfoPath, 'contollerInfo-mydeviceid', ( err ) => {
+									if ( err ) {
+										return done( err );
+									} else {
+
+										fs.writeFile( controllerIdDataPath, 'controllerId data', ( err ) => {
+											if ( err ) {
+												return done( err );
+											} else {
+
+												mkdirp( sidFolder, '0775', ( err ) => {
+													if ( err ) {
+														return done( err );
+													} else {
+
+														fs.writeFile( sessionDataPath, 'sessiondata', ( err ) => {
+															if ( err ) {
+																return done( err );
+															} else {
+
+																fs.writeFile( path.join( '.', 'data', '1yearold' ), '1yearoldcontent', ( err ) => {
+																	if ( err ) {
+																		return done( err );
+																	} else {
+																		done();
+																	}
+																} );
+															}
+														} );
+													}
+												} );
+											}
+										} );
+									}
+								} );
+							}
+						} );
+					}
+				} );
+			}
+		} );
+	} );
+
+	after( function ( done ) {
+		rimraf( nonCompleteUserFolder, ( err ) => {
+			if ( err ) {
+				done( JSON.stringify( err ) );
+			}
+		} );
+
+		rimraf( sidFolder, ( err ) => {
+			if ( err ) {
+				done( JSON.stringify( err ) );
+			}
+		} );
+
+		rimraf( pingFolder, ( err ) => {
+			if ( err ) {
+				done( JSON.stringify( err ) );
+			} else {
+				done();
+			}
+		} );
+	} );
+
+	it( "1-ping an non existing user. Return 200 and USER_UNKNOWN", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				ping: randomwords()
+			} )
+			.expect( 200, 'USER_UNKNOWN', done );
+	} );
+
+	it( "2-ping user with all the files complete, p=1, did=controller.info. Return 200 and data", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				ping: userid,
+				did: 'contollerInfo-mydeviceid',
+				c: 'c for contents',
+				p: 1,
+				age: '1yearold'
+			} )
+			.expect( 200 )
+			.end( function ( err, res ) {
+				if ( err ) {
+					return done( err );
+				} else {
+					console.log( 'response of ping test 2: ' + res.text );
+					done();
+				}
+			} );
+	} );
+
+	it( "3-ping user with all the files complete, p=1, did!=controller.info. Return 200 and data", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				ping: userid,
+				did: 'some_did',
+				c: 'c for contents',
+				p: 1,
+				age: '1yearold'
+			} )
+			.expect( 200 )
+			.end( function ( err, res ) {
+				if ( err ) {
+					return done( err );
+				} else {
+					console.log( 'response of ping test 3: ' + res.text );
+					done();
+				}
+			} );
+	} );
+
+	it( "4-ping user with all the files complete, p!=1, did!=controller.info content. Return 200 and data", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				ping: userid,
+				did: 'some_did',
+				c: 'c for contents',
+				p: 0,
+				age: '1yearold'
+			} )
+			.expect( 200 )
+			.end( function ( err, res ) {
+				if ( err ) {
+					return done( err );
+				} else {
+					console.log( 'response of ping test 4: ' + res.text );
+					done();
+				}
+			} );
+	} );
+
+	it( "5-ping an existing user; no did; session.info file doesn't exist; age file doesn't exist. \nReturn 200 and data with NOT_FOUND!~!, age=0", ( done ) => {
+		server
+			.get( basePath )
+			.query( {
+				ping: nonCompleteUser,
+				did: '',
+				c: 'c for contents',
+				p: 1,
+				age: '1yearold'
+			} )
+			.expect( 200 )
+			.end( function ( err, res ) {
+				if ( err ) {
+					return done( err );
+				} else {
+					console.log( 'response of ping test 5: ' + res.text );
+					done();
+				}
+			} );
+	} );
 } );
