@@ -404,6 +404,8 @@ var ping = function ( req, res, next ) {
 													} );
 												}
 											} );
+										} else {
+											forEachCallback( null );
 										}
 									} catch ( e ) {
 										forEachCallback( e );
@@ -1010,6 +1012,8 @@ var savegrids = function ( req, res, next ) {
 					if ( err ) {
 						return errorHandler( req, res, err );
 					} else {
+
+						//get file modification time
 						fs.stat( fileName, ( err, stats ) => {
 							if ( err ) {
 								return errorHandler( req, res, err );
@@ -1135,7 +1139,7 @@ var userpinadd = function ( req, res, next ) {
 	var urlRoot = ( req.isSecure() ) ? 'https' : 'http' + '://' + req.headers.host + '/';
 
 	if ( !fileExistsSync( userInfoPath ) ) {
-		res.send( 'NOT FOUND' );
+		res.send( 'NOT_FOUND' );
 		return false;
 	} else {
 		// Logic here differs from PHP original. Here, we choose a random
