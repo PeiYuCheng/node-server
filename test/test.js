@@ -17,7 +17,8 @@ const fs = require( 'fs' );
 const os = require( 'os' );
 const process = require( 'process' );
 const path = require( 'path' );
-const randomwords = require( "random-words" ); //to be changed to node js md5 crypto to avoid userid collision
+const randomwords = require( "random-words" ); //randomwords and crypto are to avoid userid collision
+const crypto = require( 'crypto' );
 const rimraf = require( 'rimraf' ); //rm -Rf
 
 /**
@@ -33,7 +34,7 @@ const basePath = '/bin/shared/query.php'; //for supertest
 console.log( "testUrl is: " + testUrl );
 
 describe( "test function [fexists]", function () {
-	var testFolderPath = path.join( 'test', 'data', randomwords() );
+	var testFolderPath = path.join( 'test', 'data', crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" ) );
 
 	before( function ( done ) {
 		mkdirp( testFolderPath, '0775', function ( err ) {
@@ -73,7 +74,7 @@ describe( "test function [fexists]", function () {
 } );
 
 describe( "test functions [setdocinfo] and [getdocinfo]", function () {
-	var userid = randomwords();
+	var userid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 
 	after( function ( done ) {
 		var testFolderPath = path.join( '.', 'data', 'users', userid );
@@ -137,7 +138,7 @@ describe( "test functions [setdocinfo] and [getdocinfo]", function () {
 } );
 
 describe( "test functions [setuserinfo] and [userinfo]", function () {
-	var userid = randomwords();
+	var userid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 
 	after( function ( done ) {
 		var testFolderPath = path.join( '.', 'data', 'users', userid );
@@ -193,15 +194,15 @@ describe( "test functions [setuserinfo] and [userinfo]", function () {
 			.get( basePath )
 			.query( {
 				userinfo: true,
-				userid: randomwords(),
+				userid: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" ),
 			} )
 			.expect( 200, 'NOT_FOUND', done )
 	} );
 } );
 
 describe( "test through [createsession], [joinsession], [setsessiondata], [quitsession], [deletesession].", function () {
-	var createdSession = randomwords();
-	var userid = randomwords();
+	var createdSession = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
+	var userid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 	var data = 'data for createsession';
 
 	//this BEFORE is for PHP testing where the existence of the user folder is not checked.
@@ -313,7 +314,7 @@ describe( "test through [createsession], [joinsession], [setsessiondata], [quits
 			.get( basePath )
 			.query( {
 				quitsession: true,
-				userid: randomwords()
+				userid: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" )
 			} )
 			.expect( 200, done );
 	} );
@@ -332,8 +333,8 @@ describe( "test through [createsession], [joinsession], [setsessiondata], [quits
 		server
 			.get( basePath )
 			.query( {
-				deletesession: randomwords(),
-				userid: randomwords()
+				deletesession: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" ),
+				userid: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" )
 			} )
 			.expect( 200, done );
 	} );
@@ -354,8 +355,8 @@ describe( "test through [createsession], [joinsession], [setsessiondata], [quits
 //note: the tests for POST requests on PHP server doesn't behave as intended. 
 //			However, the same tests for NodeJS server works properly.
 describe( "test through [preview], [setdocinfo], [getdocinfo], [publish], [load], [getlist], [deleteboard].", function () {
-	var userid = randomwords();
-	var previewFolder = randomwords();
+	var userid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
+	var previewFolder = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 
 	after( function ( done ) {
 		var testUserFolderPath = path.join( '.', 'data', 'users', userid );
@@ -419,8 +420,8 @@ describe( "test through [preview], [setdocinfo], [getdocinfo], [publish], [load]
 			.get( basePath )
 			.query( {
 				getdocinfo: true,
-				userid: randomwords(),
-				docid: randomwords()
+				userid: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" ),
+				docid: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" )
 			} )
 			.expect( 200, '', done );
 	} );
@@ -493,7 +494,7 @@ describe( "test through [preview], [setdocinfo], [getdocinfo], [publish], [load]
 		server
 			.get( basePath )
 			.query( {
-				userid: randomwords(),
+				userid: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" ),
 				load: previewFolder
 			} )
 			.expect( 404 )
@@ -521,7 +522,7 @@ describe( "test through [preview], [setdocinfo], [getdocinfo], [publish], [load]
 		server
 			.get( basePath )
 			.query( {
-				getlist: 'unexisting user' + randomwords(),
+				getlist: 'unexisting user' + crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" ),
 			} )
 			.expect( 200, done );
 	} );
@@ -540,8 +541,8 @@ describe( "test through [preview], [setdocinfo], [getdocinfo], [publish], [load]
 		server
 			.get( basePath )
 			.query( {
-				authorid: randomwords(),
-				delete: randomwords()
+				authorid: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" ),
+				delete: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" )
 			} )
 			.expect( 200, done );
 	} );
@@ -559,7 +560,7 @@ describe( "test through [preview], [setdocinfo], [getdocinfo], [publish], [load]
 
 // need Mail Exchanger configured to send the email.
 describe( "Need Mail Exchanger configured for [userpinadd]. [addpinactivate].", function () {
-	var userid = randomwords();
+	var userid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 	var testFolderPath = path.join( '.', 'data', 'users', userid, 'data' );
 	var email = 'user email';
 	var phone = 'user phone';
@@ -626,7 +627,7 @@ describe( "Need Mail Exchanger configured for [userpinadd]. [addpinactivate].", 
 			.get( basePath )
 			.query( {
 				userpinadd: true,
-				userid: randomwords(),
+				userid: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" ),
 				email: email,
 				local: 1,
 				phone: phone
@@ -659,9 +660,9 @@ describe( "Need Mail Exchanger configured for [userpinadd]. [addpinactivate].", 
 
 // need Mail Exchanger configured to send the email.
 describe( "Need Mail Exchanger configured for [userpincreate]. [userpinactivate].", function () {
-	var existingUserid = randomwords();
+	var existingUserid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 	var existingFolderPath = path.join( '.', 'data', 'users', existingUserid, 'data' );
-	var userid = randomwords();
+	var userid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 	var email = 'user email';
 	var phone = 'user phone';
 
@@ -802,7 +803,7 @@ describe( "Need Mail Exchanger configured for [userpincreate]. [userpinactivate]
 } );
 
 describe( '[setdevicedata]', function () {
-	var userid = randomwords();
+	var userid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 	var deviceDataFolder = path.join( '.', 'data', 'users', userid, 'devices' );
 
 	before( function ( done ) {
@@ -855,7 +856,7 @@ describe( '[setdevicedata]', function () {
 } );
 
 describe( "[savegrids], [get_grids]", function () {
-	var userid = randomwords();
+	var userid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 	var gridsFolder = path.join( '.', 'data', 'users', userid, 'data' );
 
 	before( function ( done ) {
@@ -928,7 +929,7 @@ describe( "[savegrids], [get_grids]", function () {
 			.get( basePath )
 			.query( {
 				get_grids: true,
-				userid: randomwords()
+				userid: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" )
 			} )
 			.expect( 500, done );
 	} );
@@ -981,7 +982,7 @@ describe( "[get_icons]", ( done ) => {
 } );
 
 describe( "[ping]", function () {
-	var userid = randomwords();
+	var userid = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 	var pingFolder = path.join( '.', 'data', 'users', userid );
 	var dataFolder = path.join( pingFolder, 'data' );
 	var devicesFolder = path.join( pingFolder, 'devices' );
@@ -991,7 +992,7 @@ describe( "[ping]", function () {
 	var sidFolder = path.join( '.', 'data', 'sessions', 'ssioninfo' );
 	var sessionDataPath = path.join( sidFolder, 'session.data' );
 
-	var nonCompleteUser = randomwords();
+	var nonCompleteUser = crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" );
 	var nonCompleteUserFolder = path.join( '.', 'data', 'users', nonCompleteUser );
 
 	/** making the following folder achitecture for a complete user folder:
@@ -1108,7 +1109,7 @@ controller.info
 		server
 			.get( basePath )
 			.query( {
-				ping: randomwords()
+				ping: crypto.createHash( 'md5' ).update( randomwords() ).digest( "hex" )
 			} )
 			.expect( 200, 'USER_UNKNOWN', done );
 	} );
